@@ -4,13 +4,16 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Layout from "./components/Layout";
-import Home from "./pages/Home";
+import Dashboard from "./pages/Dashboard";
+import Query from "./pages/Query";
 import Settings from "./pages/Settings";
 import Graph from "./pages/Graph";
 import SearchPapers from "./pages/SearchPapers";
 import Researchers from "./pages/Researchers";
 import Email from "./pages/Email";
 import AuthCallback from "./pages/AuthCallback";
+import TotalRevenue from "./pages/TotalRevenue";
+import FastestRisingTopics from "./pages/FastestRisingTopics";
 import NotFound from "./pages/NotFound";
 import { SearchProvider } from "./contexts/SearchContext";
 import { QueryProvider } from "./contexts/QueryContext";
@@ -35,13 +38,16 @@ const App = () => (
                   <ResearchersProvider>
                     <Layout>
                       <Routes>
-                        <Route path="/" element={<Home />} />
+                        <Route path="/" element={<Dashboard />} />
+                        <Route path="/query" element={<Query />} />
                         <Route path="/search" element={<SearchPapers />} />
                         <Route path="/researchers" element={<Researchers />} />
                         <Route path="/settings" element={<Settings />} />
                         <Route path="/graph" element={<Graph />} />
                         <Route path="/email" element={<Email />} />
                         <Route path="/auth/callback" element={<AuthCallback />} />
+                        <Route path="/total-revenue" element={<TotalRevenue />} />
+                        <Route path="/fastest-rising-topics" element={<FastestRisingTopics />} />
                         <Route path="*" element={<NotFound />} />
                       </Routes>
                     </Layout>

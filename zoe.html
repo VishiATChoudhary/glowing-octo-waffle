@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grainy Dashboard Mockup</title>
+    <style>
+        /* --- 1. Setup & Variables --- */
+        :root {
+            --color-text-primary: #525B44;  /* Deep Olive */
+            --color-text-secondary: #5A6C57;
+            --color-accent: #85A98F;        /* Sage */
+            --color-card-bg: #D3F1DF;       /* Pale Mint */
+            --color-bg-main: #ffffff;       /* Pure White Background */
+            --border-radius: 24px;          /* Heavily rounded corners */
+        }
+
+        body {
+            margin: 0;
+            padding: 40px;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--color-bg-main);
+            color: var(--color-text-primary);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            box-sizing: border-box;
+        }
+
+        /* --- 2. The "Grainy" Card Style --- */
+        /* We use an SVG noise filter as a background image overlay */
+        .grainy-card {
+            background-color: var(--color-card-bg);
+            /* SVG Noise Pattern defined below */
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.15'/%3E%3C/svg%3E");
+            border-radius: var(--border-radius);
+            padding: 24px;
+            box-shadow: 0 4px 12px rgba(82, 91, 68, 0.05); /* Subtle shadow using brand color */
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* Utility classes for text sizes */
+        .text-xl { font-size: 3rem; font-weight: 700; line-height: 1; }
+        .text-lg { font-size: 1.5rem; font-weight: 600; }
+        .text-md { font-size: 1.1rem; font-weight: 600; }
+        .text-sm { font-size: 0.9rem; color: var(--color-text-secondary); }
+        .label-accent { color: var(--color-accent); font-weight: 600; }
+
+        /* --- 3. Layout Grid --- */
+        /* The main container mimics the hand-drawn layout structure */
+        .dashboard-container {
+            display: grid;
+            grid-template-columns: 1.6fr 1fr; /* Left column wider than right */
+            gap: 24px;
+            max-width: 1100px;
+            width: 100%;
+        }
+
+        .left-column {
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+        }
+
+        .right-column {
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+        }
+
+        /* --- 4. Components --- */
+
+        /* Top Left Hero Section */
+        .hero-section {
+            display: flex;
+            align-items: center;
+            gap: 24px;
+            min-height: 300px;
+        }
+
+        /* The Rotating Circle Container */
+        .circular-stat-container {
+            position: relative;
+            width: 220px;
+            height: 220px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* The Spinning Ring */
+        .rotating-ring {
+            position: absolute;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            border-radius: 50%;
+            /* Create the ring using a thick border with transparent sections */
+            border: 12px solid transparent;
+            border-top-color: var(--color-accent);
+            border-right-color: var(--color-accent);
+            /* Animation definition */
+            animation: spin 4s linear infinite;
+        }
+
+        @keyframes spin {
+            100% { transform: rotate(360deg); }
+        }
+
+        /* The Static Content inside the circle */
+        .circle-content {
+            z-index: 2;
+            text-align: center;
+        }
+
+        /* Outer labels for the hero section */
+        .hero-labels {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+        .trending-badge {
+            background: var(--color-accent);
+            color: white;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            display: inline-block;
+        }
+
+
+        /* Right Column Stats Stack */
+        .stat-card-stack {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap: 8px;
+        }
+
+        /* Bottom Left Grid (3 small cards) */
+        .bottom-three-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 16px;
+        }
+        .small-card-content {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            height: 80px;
+        }
+        /* CSS substitute for icons */
+        .icon-box { width: 24px; height: 24px; background: var(--color-accent); border-radius: 6px; opacity: 0.5; }
+
+
+        /* Bottom Right Chart Card */
+        .chart-card {
+            flex-grow: 1; /* Fills remaining height */
+            display: flex;
+            flex-direction: column;
+        }
+        .chart-mockup-container {
+            flex-grow: 1;
+            position: relative;
+            margin-top: 20px;
+        }
+        /* Mocking a line chart with SVG */
+        .mock-chart-svg {
+            width: 100%;
+            height: 100%;
+            overflow: visible;
+        }
+        .chart-line {
+            fill: none;
+            stroke: var(--color-text-primary);
+            stroke-width: 3;
+            stroke-linecap: round;
+        }
+        .chart-area {
+            fill: var(--color-accent);
+            opacity: 0.2;
+        }
+        .chart-x-axis {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 8px;
+        }
+
+    </style>
+</head>
+/Users/zoe/Desktop/Screenshot 2026-01-14 at 17.24.01.png<body>
+
+    <div class="dashboard-container">
+
+        <div class="left-column">
+            <div class="grainy-card hero-section">
+                <div class="circular-stat-container">
+                    <div class="rotating-ring"></div>
+                    <div class="circle-content">
+                        <div class="text-xl">84</div>
+                        <div class="text-md">new papers</div>
+                    </div>
+                </div>
+                <div class="hero-labels">
+                    <div>
+                        <div class="text-lg label-accent">2.7</div>
+                        <div class="text-sm">aver. entrepreneurial potential</div>
+                    </div>
+                    <div>
+                        <span class="trending-badge">Recycling Trending topic</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bottom-three-grid">
+                <div class="grainy-card">
+                    <div class="small-card-content">
+                        <div class="icon-box"></div> <div class="text-md">IVI GERMANY</div>
+                    </div>
+                </div>
+                <div class="grainy-card">
+                    <div class="small-card-content">
+                        <div class="icon-box" style="border-radius: 50%"></div> <div class="text-md">5个 CAS China</div>
+                    </div>
+                </div>
+                <div class="grainy-card">
+                    <div class="small-card-content">
+                        <div class="icon-box" style="transform: rotate(45deg)"></div> <div class="text-md">Most Active</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="right-column">
+            <div class="grainy-card stat-card-stack">
+                <div>
+                    <div class="text-lg">17</div>
+                    <div class="text-sm">researchers contacted in Last 4 weeks</div>
+                </div>
+            </div>
+            <div class="grainy-card stat-card-stack">
+                <div>
+                    <div class="text-lg">67%</div>
+                    <div class="text-sm">answer rate</div>
+                </div>
+            </div>
+
+            <div class="grainy-card chart-card">
+                <div class="text-md">Papers publication Entrepreunial Potential Development</div>
+                
+                <div class="chart-mockup-container">
+                    <svg class="mock-chart-svg" viewBox="0 0 300 100" preserveAspectRatio="none">
+                        <path class="chart-area" d="M0,100 L0,60 Q50,80 100,50 T200,30 T300,10 L300,100 Z" />
+                        <path class="chart-line" d="M0,60 Q50,80 100,50 T200,30 T300,10" />
+                    </svg>
+                </div>
+                <div class="chart-x-axis text-sm">
+                    <span>03/26</span>
+                    <span>04/26</span>
+                    <span>05/26</span>
+                    <span>06/26</span>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+</html>
