@@ -1,0 +1,1867 @@
+[
+  {
+    "id": "arxiv-2601.11520v1",
+    "arxivId": "2601.11520v1",
+    "title": "Empirical Coordination over Markov Channel with Independent Source",
+    "abstract": "We study joint source-channel coding over Markov channels through the empirical coordination framework. More specifically, we aim at determining the empirical distributions of source and channel symbols that can be induced by a coding scheme. We consider strictly causal encoders that generate channel inputs, without access to the past channel states, henceforth driving the current Markov state evolution. Our main result is the single-letter inner and outer bounds of the set of achievable joint distributions, coordinating all the symbols in the network. To establish the inner bound, we introduce a new notion of typicality, the input-driven Markov typicality, and develop its fundamental properties. Contrary to the classical block-Markov coding schemes that rely on blockwise independence for discrete memoryless channels, our analysis directly exploits the Markov channel structure and improves beyond the independence-based arguments.",
+    "authors": [
+      "Mengyuan Zhao",
+      "Maël Le Treust",
+      "Tobias J. Oechtering"
+    ],
+    "year": 2026,
+    "source": "arXiv",
+    "url": "http://arxiv.org/abs/2601.11520v1",
+    "citations": 0,
+    "pdfUrl": "https://arxiv.org/pdf/2601.11520v1",
+    "createdAt": "2026-01-20T23:35:43.923923"
+  },
+  {
+    "id": "arxiv-2601.11514v1",
+    "arxivId": "2601.11514v1",
+    "title": "ShapeR: Robust Conditional 3D Shape Generation from Casual Captures",
+    "abstract": "Recent advances in 3D shape generation have achieved impressive results, but most existing methods rely on clean, unoccluded, and well-segmented inputs. Such conditions are rarely met in real-world scenarios. We present ShapeR, a novel approach for conditional 3D object shape generation from casually captured sequences. Given an image sequence, we leverage off-the-shelf visual-inertial SLAM, 3D detection algorithms, and vision-language models to extract, for each object, a set of sparse SLAM points, posed multi-view images, and machine-generated captions. A rectified flow transformer trained to effectively condition on these modalities then generates high-fidelity metric 3D shapes. To ensure robustness to the challenges of casually captured data, we employ a range of techniques including on-the-fly compositional augmentations, a curriculum training scheme spanning object- and scene-level datasets, and strategies to handle background clutter. Additionally, we introduce a new evaluation benchmark comprising 178 in-the-wild objects across 7 real-world scenes with geometry annotations. Experiments show that ShapeR significantly outperforms existing approaches in this challenging setting, achieving an improvement of 2.7x in Chamfer distance compared to state of the art.",
+    "authors": [
+      "Yawar Siddiqui",
+      "Duncan Frost",
+      "Samir Aroudj",
+      "Armen Avetisyan",
+      "Henry Howard-Jenkins",
+      "Daniel DeTone",
+      "Pierre Moulon",
+      "Qirui Wu",
+      "Zhengqin Li",
+      "Julian Straub",
+      "Richard Newcombe",
+      "Jakob Engel"
+    ],
+    "year": 2026,
+    "source": "arXiv",
+    "url": "http://arxiv.org/abs/2601.11514v1",
+    "citations": 0,
+    "pdfUrl": "https://arxiv.org/pdf/2601.11514v1",
+    "createdAt": "2026-01-20T23:35:43.923926"
+  },
+  {
+    "id": "arxiv-2601.11509v1",
+    "arxivId": "2601.11509v1",
+    "title": "Predictive autoencoder-transformer model of Cu oxidation state from EELS and XAS spectra",
+    "abstract": "X-ray absorption spectroscopy (XAS) and electron energy-loss spectroscopy (EELS) produce detailed information about oxidation state, bonding, and coordination, making them essential for quantitative studies of redox and structure in functional materials. However, high-throughput quantitative analysis of these spectra, especially for mixed valence materials, remains challenging as diverse experimental conditions introduce noise, misalignment, broadening of the spectral features. We address this challenge by training a machine learning model consisting of an autoencoder to standardize the spectra and a transformer model to predict both Cu oxidation state and Bader charge directly from L-edge spectra. The model is trained on a large dataset of FEFF-simulated spectra and evaluates model performance on both simulated and experimental data. The results of the machine learning model exhibit highly accurate prediction across the domains of simulated and experimental XAS as well as experimental EELS. These advances enable future quantitative analysis of Cu redox processes under in situ and operando conditions.",
+    "authors": [
+      "Brian Lee",
+      "Linna Qiao",
+      "Samuel Gleason",
+      "Guangwen Zhou",
+      "Xiaohui Qu",
+      "Judith Yang",
+      "Jim Ciston",
+      "Deyu Lu"
+    ],
+    "year": 2026,
+    "source": "arXiv",
+    "url": "http://arxiv.org/abs/2601.11509v1",
+    "citations": 0,
+    "pdfUrl": "https://arxiv.org/pdf/2601.11509v1",
+    "createdAt": "2026-01-20T23:35:43.923928"
+  },
+  {
+    "id": "s2-dfa85a88b66b3443d7902bdd82a0306b0f134170",
+    "title": "Characterizing Electrode Materials and Interfaces in Solid-State Batteries",
+    "abstract": "Solid-state batteries (SSBs) could offer improved energy density and safety, but the evolution and degradation of electrode materials and interfaces within SSBs are distinct from conventional batteries with liquid electrolytes and represent a barrier to performance improvement. Over the past decade, a variety of imaging, scattering, and spectroscopic characterization methods has been developed or used for characterizing the unique aspects of materials in SSBs. These characterization efforts have yielded new understanding of the behavior of lithium metal anodes, alloy anodes, composite cathodes, and the interfaces of these various electrode materials with solid-state electrolytes (SSEs). This review provides a comprehensive overview of the characterization methods and strategies applied to SSBs, and it presents the mechanistic understanding of SSB materials and interfaces that has been derived from these methods. This knowledge has been critical for advancing SSB technology and will continue to guide the engineering of materials and interfaces toward practical performance.",
+    "authors": [
+      "Elif Pınar Alsaç",
+      "Douglas Lars Nelson",
+      "Sun Geun Yoon",
+      "K. Cavallaro",
+      "Congcheng Wang",
+      "S. Sandoval",
+      "Udochukwu D Eze",
+      "Won Joon Jeong",
+      "Matthew T. McDowell"
+    ],
+    "year": 2025,
+    "source": "Semantic Scholar",
+    "url": "https://www.semanticscholar.org/paper/dfa85a88b66b3443d7902bdd82a0306b0f134170",
+    "citations": 83,
+    "doi": "10.1021/acs.chemrev.4c00584",
+    "arxivId": null,
+    "createdAt": "2026-01-20T23:35:43.923930"
+  },
+  {
+    "id": "s2-3dc63dbf2cba1a62e98f5240bbcb006eb0fd7883",
+    "title": "Dendrite formation in solid-state batteries arising from lithium plating and electrolyte reduction",
+    "abstract": "",
+    "authors": [
+      "Haoyu Liu",
+      "Yudan Chen",
+      "Po‐Hsiu Chien",
+      "Ghoncheh Amouzandeh",
+      "Dewen Hou",
+      "Erica Truong",
+      "I. Oyekunle",
+      "Jamini Bhagu",
+      "Samuel W. Holder",
+      "H. Xiong",
+      "Peter L. Gor’kov",
+      "Jens T. Rosenberg",
+      "Samuel C. Grant",
+      "Yan-Yan Hu"
+    ],
+    "year": 2025,
+    "source": "Semantic Scholar",
+    "url": "https://www.semanticscholar.org/paper/3dc63dbf2cba1a62e98f5240bbcb006eb0fd7883",
+    "citations": 51,
+    "doi": "10.1038/s41563-024-02094-6",
+    "arxivId": null,
+    "createdAt": "2026-01-20T23:35:43.923932"
+  },
+  {
+    "id": "s2-1eb2289ad72e776a80f83f88fcc61bf44b4c10b3",
+    "title": "Electro-chemo-mechanics of anode-free solid-state batteries",
+    "abstract": "",
+    "authors": [
+      "S. Sandoval",
+      "Catherine G. Haslam",
+      "B. Vishnugopi",
+      "Daniel W. Liao",
+      "Jeong Seop Yoon",
+      "Se Hwan Park",
+      "Yixian Wang",
+      "David Mitlin",
+      "K. Hatzell",
+      "Donald J. Siegel",
+      "Partha P. Mukherjee",
+      "Neil P. Dasgupta",
+      "Jeff Sakamoto",
+      "Matthew T. McDowell"
+    ],
+    "year": 2025,
+    "source": "Semantic Scholar",
+    "url": "https://www.semanticscholar.org/paper/1eb2289ad72e776a80f83f88fcc61bf44b4c10b3",
+    "citations": 49,
+    "doi": "10.1038/s41563-024-02055-z",
+    "arxivId": null,
+    "createdAt": "2026-01-20T23:35:43.923934"
+  },
+  {
+    "id": "oa-W2321696461",
+    "title": "High-power all-solid-state batteries using sulfide superionic conductors",
+    "abstract": "",
+    "authors": [
+      "Yuki Kato",
+      "Satoshi Hori",
+      "Toshiya Saito",
+      "Kota Suzuki",
+      "Masaaki Hirayama",
+      "Akio Mitsui",
+      "Masao Yonemura",
+      "Hideki Iba",
+      "Ryoji Kanno"
+    ],
+    "year": 2016,
+    "source": "OpenAlex",
+    "url": "https://openalex.org/W2321696461",
+    "citations": 3293,
+    "doi": "https://doi.org/10.1038/nenergy.2016.30",
+    "createdAt": "2026-01-20T23:35:43.923936"
+  },
+  {
+    "id": "oa-W2237868774",
+    "title": "Interface Stability in Solid-State Batteries",
+    "abstract": "Development of high conductivity solid-state electrolytes for lithium ion batteries has proceeded rapidly in recent years, but incorporating these new materials into high-performing batteries has proven difficult. Interfacial resistance is now the limiting factor in many systems, but the exact mechanisms of this resistance have not been fully explained - in part because experimental evaluation of the interface can be very difficult. In this work, we develop a computational methodology to examine the thermodynamics of formation of resistive interfacial phases. The predicted interfacial phase formation is well correlated with experimental interfacial observations and battery performance. We calculate that thiophosphate electrolytes have especially high reactivity with high voltage cathodes and a narrow electrochemical stability window. We also find that a number of known electrolytes are not inherently stable but react in situ with the electrode to form passivating but ionically conducting barrier layers. As a reference for experimentalists, we tabulate the stability and expected decomposition products for a wide range of electrolyte, coating, and electrode materials including a number of high-performing combinations that have not yet been attempted experimentally.",
+    "authors": [
+      "William D. Richards",
+      "Lincoln J. Miara",
+      "Yan Wang",
+      "Jae Chul Kim",
+      "Gerbrand Ceder"
+    ],
+    "year": 2015,
+    "source": "OpenAlex",
+    "url": "https://openalex.org/W2237868774",
+    "citations": 1518,
+    "doi": "https://doi.org/10.1021/acs.chemmater.5b04082",
+    "createdAt": "2026-01-20T23:35:43.923938"
+  },
+  {
+    "id": "oa-W4321618060",
+    "title": "Challenges in speeding up solid-state battery development",
+    "abstract": "",
+    "authors": [
+      "Jürgen Janek",
+      "Wolfgang G. Zeier"
+    ],
+    "year": 2023,
+    "source": "OpenAlex",
+    "url": "https://openalex.org/W4321618060",
+    "citations": 1296,
+    "doi": "https://doi.org/10.1038/s41560-023-01208-9",
+    "createdAt": "2026-01-20T23:35:43.923940"
+  },
+  {
+    "id": "arxiv-2601.11503v1",
+    "arxivId": "2601.11503v1",
+    "title": "Halide diffusion in mixed-halide perovskites and heterojunctions",
+    "abstract": "Migration of halide defects guides ion transport in metal halide perovskites and controls the kinetics of halide mixing and phase separation. We study the diffusion of halide vacancies and interstitials in \\ce{CsPb(I_{x}Br_{1-x})_{3}} and \\ce{CsPbI_{3}}/\\ce{CsPbBr_{3}} heterojunctions by molecular dynamics simulations using neural network potentials trained on density functional theory calculations. We observe enhanced diffusion of both vacancies and interstitials in the mixed halide compounds compared to the single halide ones, as well as a difference in mobility between Br and I ions in the mixed compound. Diffusion across heterojunctions is governed by the interface structure, where a Br-rich interface blocks migration of vacancies in particular, but an I-rich interface is permeable.",
+    "authors": [
+      "Viren Tyagi",
+      "Mike Pols",
+      "Geert Brocks",
+      "Shuxia Tao"
+    ],
+    "year": 2026,
+    "source": "arXiv",
+    "url": "http://arxiv.org/abs/2601.11503v1",
+    "citations": 0,
+    "pdfUrl": "https://arxiv.org/pdf/2601.11503v1",
+    "createdAt": "2026-01-21T00:14:20.310155"
+  },
+  {
+    "id": "arxiv-2601.11446v1",
+    "arxivId": "2601.11446v1",
+    "title": "Coupling free electrons to a trapped-ion quantum computer",
+    "abstract": "Freely propagating electrons may serve as quantum probes that can become coherently correlated with other quantum systems, offering access to advanced metrological resources. We propose a setup that coherently couples free electrons in an electron microscope to a trapped-ion quantum processor, enabling non-destructive, quantum-coherent detection and the accumulation of information across multiple electrons. Our analysis shows that single electrons can induce resolvable qubit excitations, establishing a platform for practical applications such as quantum-enhanced, dose-efficient electron microscopy.",
+    "authors": [
+      "Elias Pescoller",
+      "Santiago Beltrán-Romero",
+      "Sebastian Egginger",
+      "Nicolas Jungwirth",
+      "Martino Zanetti",
+      "Dominik Hornof",
+      "Michael S. Seifner",
+      "Iva Březinová",
+      "Philipp Haslinger",
+      "Thomas Juffmann",
+      "Johannes Kofler",
+      "Philipp Schindler",
+      "Dennis Rätzel"
+    ],
+    "year": 2026,
+    "source": "arXiv",
+    "url": "http://arxiv.org/abs/2601.11446v1",
+    "citations": 0,
+    "pdfUrl": "https://arxiv.org/pdf/2601.11446v1",
+    "createdAt": "2026-01-21T00:14:20.310163"
+  },
+  {
+    "id": "arxiv-2601.11331v1",
+    "arxivId": "2601.11331v1",
+    "title": "Nanoscale wireframe SQUID on a cantilever by corner lithography",
+    "abstract": "We present the fabrication of nanoscale superconducting quantum interference devices (SQUIDs) at the apex of wireframe tips on self-aligned superconducting cantilever probes. The probes are made on silicon wafers using molding techniques in combination with corner lithography, which results in a nanowire frame tip with a tuneable apex structure. A shadow effect deposition using magnetron sputtering of Nb creates self-aligned superconducting wireframes on cantilevers with accompanying device circuitry. Superconducting weak links are realized at the apex of the wireframes with the use of focused ion beam nanopatterning. The realized SQUIDs have effective diameters ranging from several micrometers down to 100 nm and can be operated in magnetic fields up to 1 T. Furthermore, the nanowires in the wireframe can be used to flux modulate the SQUID locally. This fabrication process enables the production of wafer-scale templates for probes based on on-tip superconducting devices.",
+    "authors": [
+      "Thijs J. Roskamp",
+      "Tim Horstink",
+      "Melissa J Goodwin",
+      "Erwin Berenschot",
+      "Edin Sarajilic",
+      "Roeland Huijink",
+      "Niels Tas",
+      "Hans Hilgenkamp"
+    ],
+    "year": 2026,
+    "source": "arXiv",
+    "url": "http://arxiv.org/abs/2601.11331v1",
+    "citations": 0,
+    "pdfUrl": "https://arxiv.org/pdf/2601.11331v1",
+    "createdAt": "2026-01-21T00:14:20.310167"
+  },
+  {
+    "id": "arxiv-2601.11064v1",
+    "arxivId": "2601.11064v1",
+    "title": "Spectral Signatures of Heavy Quarkonia in a Rotating and Anisotropic Quark-Gluon Plasma: A Holographic Study",
+    "abstract": "We investigate the in-medium spectral functions and effective masses of heavy quarkonia charmonium ($J/Ψ$) and bottomonium ($Υ(1S)$) in a quark-gluon plasma (QGP) possessing both global rotation and spatial anisotropy. Using a gauge/gravity holographic model incorporating finite temperature, chemical potential, and warp factor, we compute the spectral signatures non-perturbatively. Our results show that both rotation and anisotropy enhance quarkonium dissociation, manifesting as peak suppression and width broadening in the spectral functions. Crucially, their effects are directional: anisotropy primarily dissociates longitudinally polarized states, while rotation more strongly disrupts transversely polarized ones. A competitive interplay exists: for small anisotropy, rotational effects dominate at high angular velocity, whereas for large anisotropy, anisotropy governs the dissociation regardless of rotation strength. Furthermore, rotation induces a non-monotonic temperature dependence in the transverse effective mass of $J/Ψ$, while strong anisotropy causes similar non-monotonicity in the longitudinal effective mass of $J/Ψ$. These findings reveal how the distinct symmetry breaking patterns induced by QGP rotation and anisotropy reshape the heavy quarkonium spectrum, providing new insights into polarization-dependent suppression in non-central heavy-ion collisions.",
+    "authors": [
+      "Xiang-Wei Shi",
+      "Sheng-Qin Feng"
+    ],
+    "year": 2026,
+    "source": "arXiv",
+    "url": "http://arxiv.org/abs/2601.11064v1",
+    "citations": 0,
+    "pdfUrl": "https://arxiv.org/pdf/2601.11064v1",
+    "createdAt": "2026-01-21T00:14:20.310169"
+  },
+  {
+    "id": "arxiv-2601.10997v1",
+    "arxivId": "2601.10997v1",
+    "title": "Data-driven Prediction of Ionic Conductivity in Solid-State Electrolytes with Machine Learning and Large Language Models",
+    "abstract": "Solid-state electrolytes (SSEs) are attractive for next-generation lithium-ion batteries due to improved safety and stability but their low room-temperature ionic conductivity hinders practical application. Experimental synthesis and testing of new SSEs remain time-consuming and resource intensive. Machine learning (ML) offers an accelerated route for SSE discovery; however, composition-only models neglect structural factors important for ion transport while graph neural networks (GNNs) are challenged by the scarcity of structure-labeled conductivity data and the prevalence of crystallographic disorder in CIFs. Here, we train two complementary predictors on the same room-temperature, structure-labeled dataset (n = 499). A gradient-boosted tree regressor (GBR) combining stoichiometric and geometric descriptors achieves best performance (MAE = 0.543 in log(S cm-1)), and Shapley Additive exPlanations (SHAP) identifies probe-occupiable volume (POAV) and lattice parameters as key correlations for conductivity. In parallel, we fine-tune large language models (LLMs) using compact text prompts derived from CIF metadata (formula with optional symmetry and disorder tags), avoiding direct use of raw atomic coordinates. Notably, Llama-3.1-8B-Instruct achieves high accuracy (MAE = 0.657 in log(S cm-1)) using formula and symmetry information, eliminating the need for numerical feature extraction from CIF files. Together, these results show that global geometric descriptors improve tree-based predictions and enable interpretable structure-property analysis, while LLMs provide a competitive low-preprocessing alternative for rapid SSE screening.",
+    "authors": [
+      "Haewon Kim",
+      "Taekgi Lee",
+      "Seongeun Hong",
+      "Kyeong-Ho Kim",
+      "Yongchul G. Chung"
+    ],
+    "year": 2026,
+    "source": "arXiv",
+    "url": "http://arxiv.org/abs/2601.10997v1",
+    "citations": 0,
+    "pdfUrl": "https://arxiv.org/pdf/2601.10997v1",
+    "createdAt": "2026-01-21T00:14:20.310171"
+  },
+  {
+    "id": "arxiv-2601.10938v1",
+    "arxivId": "2601.10938v1",
+    "title": "Are Universal Potentials Ready for Alkali-Ion Battery Kinetics?",
+    "abstract": "Accelerating alkali-ion battery discovery requires accurate modeling of atomic-scale kinetics, yet the reliability of universal machine learning interatomic potentials (uMLIPs) in capturing these high-energy landscapes remains uncertain. Here, we systematically benchmark state-of-the-art uMLIPs, including M3GNet, CHGNet, MACE, SevenNet, GRACE, and Orb, against DFT baselines for cathodes and solid electrolytes. We find that the Orb-v3 family excels in static migration barrier predictions (MAE $\\approx$ 75--111 meV), driven primarily by architectural refinements. Conversely, for dynamic transport, the GRACE model trained on the OMat24 dataset demonstrates superior fidelity in reproducing ion diffusivities and structural correlations. Our results reveal that while architectural sophistication (e.g., equivariance) is beneficial, the inclusion of high-temperature, non-equilibrium training data is the dominant driver of kinetic accuracy. These findings establish that modern uMLIPs are sufficiently robust to serve as zero-shot surrogates for high-throughput kinetic screening of next-generation energy storage materials.",
+    "authors": [
+      "Xingyu Guo",
+      "Cheng Gui",
+      "Zhenbin Wang"
+    ],
+    "year": 2026,
+    "source": "arXiv",
+    "url": "http://arxiv.org/abs/2601.10938v1",
+    "citations": 0,
+    "pdfUrl": "https://arxiv.org/pdf/2601.10938v1",
+    "createdAt": "2026-01-21T00:14:20.310174"
+  },
+  {
+    "id": "arxiv-2601.10703v1",
+    "arxivId": "2601.10703v1",
+    "title": "Scalable Spin Squeezing in Power-Law Interacting XXZ Models with Disorder",
+    "abstract": "While spin squeezing has been traditionally considered in all-to-all interacting models, recent works have shown that spin squeezing can occur in systems with power-law interactions, leading to direct testing in Rydberg atoms, trapped ions, ultracold atoms and nitrogen vacancy (NV) centers in diamond. For the latter, Wu. et al. Nature 646 (2025) demonstrated that spin squeezing is heavily affected by positional disorder, reducing any capacity for a practical squeezing advantage, which requires scalability with the system size. In this Letter we explore the robustness of spin-squeezing in two-dimensional lattices with a fraction of unoccupied lattice sites. Using semi-classical modeling, we demonstrate the existence of scalable squeezing in power-law interacting XXZ models up to a disorder threshold, above which squeezing is not scalable. We produce a phase diagram for scalable squeezing, and explain its absence in the aforementioned NV experiment. Our work illustrates the maximum disorder allowed for realizing scalable spin squeezing in a host of quantum simulators, highlights a regime with substantial tolerance to disorder, and identifies controlled defect creation as a promising route for scalable squeezing in solid-state systems.",
+    "authors": [
+      "Samuel E. Begg",
+      "Bishal K. Ghosh",
+      "Chong Zu",
+      "Chuanwei Zhang",
+      "Michael Kolodrubetz"
+    ],
+    "year": 2026,
+    "source": "arXiv",
+    "url": "http://arxiv.org/abs/2601.10703v1",
+    "citations": 0,
+    "pdfUrl": "https://arxiv.org/pdf/2601.10703v1",
+    "createdAt": "2026-01-21T00:14:20.310176"
+  },
+  {
+    "id": "arxiv-2601.10693v1",
+    "arxivId": "2601.10693v1",
+    "title": "Constant-Depth Unitary Preparation of Dicke States",
+    "abstract": "Dicke states serve as a critical resource in quantum metrology, communication, and computation. However, unitary preparation of Dicke states is limited to logarithmic depth in standard circuit models and existing constant-depth protocols require measurement and feed-forward. In this work, we present the first unitary, constant-depth protocols for exact Dicke state preparation. We overcome the logarithmic-depth barrier by moving beyond the standard circuit model and leveraging global interactions (native to architectures such as neutral atoms and trapped ions). Specifically, utilizing unbounded CZ gates (i.e. within the QAC$^0$ circuit class), we offer circuits for exact computation of constant-weight Dicke states, using polynomial ancillae, and approximation of weight-1 Dicke states (i.e. $W$ states), using only constant ancillae. Granted additional access to the quantum FAN-OUT operation (i.e. upgrading to the QAC$_f^0$ circuit class), we also achieve exact preparation of arbitrary-weight Dicke states, with polynomial ancillae. These protocols distinguish the constant-depth capabilities of quantum architectures based on connectivity and offer a novel path toward resolving a long-standing quantum complexity conjecture.",
+    "authors": [
+      "Francisca Vasconcelos",
+      "Malvika Raj Joshi"
+    ],
+    "year": 2026,
+    "source": "arXiv",
+    "url": "http://arxiv.org/abs/2601.10693v1",
+    "citations": 0,
+    "pdfUrl": "https://arxiv.org/pdf/2601.10693v1",
+    "createdAt": "2026-01-21T00:14:20.310177"
+  },
+  {
+    "id": "arxiv-2601.10634v1",
+    "arxivId": "2601.10634v1",
+    "title": "Medium-Induced Quarkonium Dissociation at Finite Chemical Potential and Weak Magnetic Field",
+    "abstract": "We investigate the in-medium modification and dissociation of heavy quarkonium in a hot QCD medium at finite quark chemical potential and in the weak magnetic-field regime. Starting from the one-loop resummed gluon propagator in the imaginary-time formalism, and incorporating non-perturbative effects through a phenomenological correction to the HTL description, we compute the real and imaginary parts of the dielectric permittivity. This, in turn, leads to a complex heavy-quark potential: the real part is used to determine binding energies by solving the nonrelativistic Schrödinger equation, while the imaginary part generates thermal decay widths, dominated by Landau damping. Within the explored parameter range, temperature has the greatest control over Debye screening, potential modification, and quarkonium stability, whereas finite density and weak magnetic fields introduce comparatively smaller quantitative changes. As the temperature increases, binding energies decrease and thermal widths grow, giving rise to the expected hierarchy between ground and excited states and a sequential suppression pattern in the dissociation temperatures. Overall, our results indicate that while finite chemical potential and weak magnetic fields can shift quarkonium properties in a measurable way, thermal effects remain the primary driver of dissociation, with direct relevance for heavy-ion collision phenomenology.",
+    "authors": [
+      "Indrani Nilima",
+      "Mujeeb Hasan",
+      "Mohammad Yousuf Jamal",
+      "Salman Ahamad Khan",
+      "B. K. Singh"
+    ],
+    "year": 2026,
+    "source": "arXiv",
+    "url": "http://arxiv.org/abs/2601.10634v1",
+    "citations": 0,
+    "pdfUrl": "https://arxiv.org/pdf/2601.10634v1",
+    "createdAt": "2026-01-21T00:14:20.310179"
+  },
+  {
+    "id": "arxiv-2601.10473v1",
+    "arxivId": "2601.10473v1",
+    "title": "Analysis and Experimental Demonstration of Amplitude Amplification for Combinatorial Optimization",
+    "abstract": "Quantum Amplitude Amplification (QAA), the generalization of Grover's algorithm, is capable of yielding optimal solutions to combinatorial optimization problems with high probabilities. In this work we extend the conventional 2-dimensional representation of Grover's (orthogonal collective states) to oracles which encode cost functions such as QUBO, and show that linear cost functions are a special case whereby an exact formula exists for determining optimal oracle parameter settings. Using simulations of problem sizes up to 40 qubits we demonstrate QAA's algorithmic performance across all possible solutions, with an emphasis on the closeness in Grover-like performance for solutions near the global optimum. We conclude with experimental demonstrations of generalized QAA on both IBMQ (superconducting) and IonQ (trapped ion) qubits, showing that the observed probabilities of each basis state match our equations as a function of varying the free parameters in the oracle and diffusion operators.",
+    "authors": [
+      "Daniel Koch",
+      "Brian Pardo",
+      "Kip Nieman"
+    ],
+    "year": 2026,
+    "source": "arXiv",
+    "url": "http://arxiv.org/abs/2601.10473v1",
+    "citations": 0,
+    "pdfUrl": "https://arxiv.org/pdf/2601.10473v1",
+    "createdAt": "2026-01-21T00:14:20.310181"
+  },
+  {
+    "id": "oa-W2808025896",
+    "title": "30 Years of Lithium‐Ion Batteries",
+    "abstract": "Abstract Over the past 30 years, significant commercial and academic progress has been made on Li‐based battery technologies. From the early Li‐metal anode iterations to the current commercial Li‐ion batteries (LIBs), the story of the Li‐based battery is full of breakthroughs and back tracing steps. This review will discuss the main roles of material science in the development of LIBs. As LIB research progresses and the materials of interest change, different emphases on the different subdisciplines of material science are placed. Early works on LIBs focus more on solid state physics whereas near the end of the 20th century, researchers began to focus more on the morphological aspects (surface coating, porosity, size, and shape) of electrode materials. While it is easy to point out which specific cathode and anode materials are currently good candidates for the next‐generation of batteries, it is difficult to explain exactly why those are chosen. In this review, for the reader a complete developmental story of LIB should be clearly drawn, along with an explanation of the reasons responsible for the various technological shifts. The review will end with a statement of caution for the current modern battery research along with a brief discussion on beyond lithium‐ion battery chemistries.",
+    "authors": [
+      "Matthew Li",
+      "Jun Lü",
+      "Zhongwei Chen",
+      "Khalil Amine"
+    ],
+    "year": 2018,
+    "source": "OpenAlex",
+    "url": "https://openalex.org/W2808025896",
+    "citations": 5646,
+    "doi": "https://doi.org/10.1002/adma.201800561",
+    "createdAt": "2026-01-21T00:14:20.310203"
+  },
+  {
+    "id": "oa-W1626854854",
+    "title": "Nano-sized transition-metal oxides as negative-electrode materials for lithium-ion batteries",
+    "abstract": "",
+    "authors": [
+      "Philippe Poizot",
+      "Stéphane Laruelle",
+      "Sylvie Grugeon",
+      "L. Dupont",
+      "J-M. Tarascon"
+    ],
+    "year": 2000,
+    "source": "OpenAlex",
+    "url": "https://openalex.org/W1626854854",
+    "citations": 7920,
+    "doi": "https://doi.org/10.1038/35035045",
+    "createdAt": "2026-01-21T00:14:20.310205"
+  },
+  {
+    "id": "oa-W2077937117",
+    "title": "Ageing mechanisms in lithium-ion batteries",
+    "abstract": "",
+    "authors": [
+      "Jens Vetter",
+      "Petr Novák",
+      "M. R. Wagner",
+      "C. Veit",
+      "Kai‐Christian Möller",
+      "Jürgen Besenhard",
+      "Martin Winter",
+      "Margret Wohlfahrt‐Mehrens",
+      "C. Vogler",
+      "A. Hammouche"
+    ],
+    "year": 2005,
+    "source": "OpenAlex",
+    "url": "https://openalex.org/W2077937117",
+    "citations": 3654,
+    "doi": "https://doi.org/10.1016/j.jpowsour.2005.01.006",
+    "createdAt": "2026-01-21T00:14:20.310207"
+  },
+  {
+    "id": "oa-W2079985616",
+    "title": "A review on the key issues for lithium-ion battery management in electric vehicles",
+    "abstract": "",
+    "authors": [
+      "Languang Lu",
+      "Xuebing Han",
+      "Jianqiu Li",
+      "Jianfeng Hua",
+      "Minggao Ouyang"
+    ],
+    "year": 2012,
+    "source": "OpenAlex",
+    "url": "https://openalex.org/W2079985616",
+    "citations": 4590,
+    "doi": "https://doi.org/10.1016/j.jpowsour.2012.10.060",
+    "createdAt": "2026-01-21T00:14:20.310209"
+  },
+  {
+    "id": "oa-W2328134238",
+    "title": "Promise and reality of post-lithium-ion batteries with high energy densities",
+    "abstract": "",
+    "authors": [
+      "Jang Wook Choi",
+      "Doron Aurbach"
+    ],
+    "year": 2016,
+    "source": "OpenAlex",
+    "url": "https://openalex.org/W2328134238",
+    "citations": 4778,
+    "doi": "https://doi.org/10.1038/natrevmats.2016.13",
+    "createdAt": "2026-01-21T00:14:20.310211"
+  },
+  {
+    "id": "oa-W2983762108",
+    "title": "Recycling lithium-ion batteries from electric vehicles",
+    "abstract": "",
+    "authors": [
+      "Gavin Harper",
+      "Roberto Sommerville",
+      "Emma Kendrick",
+      "Laura L. Driscoll",
+      "Peter R. Slater",
+      "Rustam Stolkin",
+      "Allan Walton",
+      "Paul A. Christensen",
+      "Oliver Heidrich",
+      "Simon Lambert",
+      "Andrew P. Abbott",
+      "Karl S. Ryder",
+      "Linda Gaines",
+      "Paul A. Anderson"
+    ],
+    "year": 2019,
+    "source": "OpenAlex",
+    "url": "https://openalex.org/W2983762108",
+    "citations": 3236,
+    "doi": "https://doi.org/10.1038/s41586-019-1682-5",
+    "createdAt": "2026-01-21T00:14:20.310212"
+  },
+  {
+    "id": "oa-W3013252775",
+    "title": "A reflection on lithium-ion battery cathode chemistry",
+    "abstract": "",
+    "authors": [
+      "Arumugam Manthiram"
+    ],
+    "year": 2020,
+    "source": "OpenAlex",
+    "url": "https://openalex.org/W3013252775",
+    "citations": 2490,
+    "doi": "https://doi.org/10.1038/s41467-020-15355-0",
+    "createdAt": "2026-01-21T00:14:20.310214"
+  },
+  {
+    "id": "oa-W2618037459",
+    "title": "Thermal runaway mechanism of lithium ion battery for electric vehicles: A review",
+    "abstract": "",
+    "authors": [
+      "Xuning Feng",
+      "Minggao Ouyang",
+      "Xiang Liu",
+      "Languang Lu",
+      "Yong Xia",
+      "Xiangming He"
+    ],
+    "year": 2017,
+    "source": "OpenAlex",
+    "url": "https://openalex.org/W2618037459",
+    "citations": 3513,
+    "doi": "https://doi.org/10.1016/j.ensm.2017.05.013",
+    "createdAt": "2026-01-21T00:14:20.310216"
+  },
+  {
+    "id": "oa-W2156562079",
+    "title": "Lithium-ion batteries. A look into the future",
+    "abstract": "A critical overview of the latest developments in the lithium ion batteries technology is reported. We first describe the evolution in the electrolyte area with particular attention to ionic liquids, discussing the expected application of these room temperature molten salts and listing the issues that still prevent their practical implementation. The attention is then focused on the electrode materials presently considered the most promising for enhancing the energy density of the batteries. At the anode side a discussion is provided on the status of development of high capacity tin and silicon lithium alloys. We show that the morphology that is the most likely to ensure commercial exploitation of these alloy electrodes is that involving carbon-based nanocomposites. We finally touch on super-high-capacity batteries, discussing the key cases of lithium-sulfur and lithium-air and attempting to forecast their chances to eventually reach the status of practically appealing energy storage systems. We conclude with a brief reflection on the amount of lithium reserves in view of its large use in the case of global conversion from gasoline-powered cars to hybrid and electric cars.",
+    "authors": [
+      "Bruno Scrosati",
+      "Jusef Hassoun",
+      "Yang‐Kook Sun"
+    ],
+    "year": 2011,
+    "source": "OpenAlex",
+    "url": "https://openalex.org/W2156562079",
+    "citations": 2528,
+    "doi": "https://doi.org/10.1039/c1ee01388b",
+    "createdAt": "2026-01-21T00:14:20.310217"
+  },
+  {
+    "id": "oa-W2032952916",
+    "title": "Thermal runaway caused fire and explosion of lithium ion battery",
+    "abstract": "",
+    "authors": [
+      "Qingsong Wang",
+      "Ping Ping",
+      "Xuejuan Zhao",
+      "Guanquan Chu",
+      "Jinhua Sun",
+      "Chunhua Chen"
+    ],
+    "year": 2012,
+    "source": "OpenAlex",
+    "url": "https://openalex.org/W2032952916",
+    "citations": 2798,
+    "doi": "https://doi.org/10.1016/j.jpowsour.2012.02.038",
+    "createdAt": "2026-01-21T00:14:20.310219"
+  },
+  {
+    "id": "s2-be7c1c7664fd855f7215b79d35857be664bd64b2",
+    "title": "Promise and reality of post-lithium-ion batteries with high energy densities",
+    "abstract": "",
+    "authors": [
+      "J. Choi",
+      "D. Aurbach"
+    ],
+    "year": 2016,
+    "source": "Semantic Scholar",
+    "url": "https://www.semanticscholar.org/paper/be7c1c7664fd855f7215b79d35857be664bd64b2",
+    "citations": 4066,
+    "doi": "10.1038/NATREVMATS.2016.13",
+    "arxivId": null,
+    "createdAt": "2026-01-20T23:57:28.178413"
+  },
+  {
+    "id": "s2-ab388cf99b6c06714fd1fc6b6fc55436b3d607dc",
+    "title": "30 Years of Lithium‐Ion Batteries",
+    "abstract": "Over the past 30 years, significant commercial and academic progress has been made on Li‐based battery technologies. From the early Li‐metal anode iterations to the current commercial Li‐ion batteries (LIBs), the story of the Li‐based battery is full of breakthroughs and back tracing steps. This review will discuss the main roles of material science in the development of LIBs. As LIB research progresses and the materials of interest change, different emphases on the different subdisciplines of material science are placed. Early works on LIBs focus more on solid state physics whereas near the end of the 20th century, researchers began to focus more on the morphological aspects (surface coating, porosity, size, and shape) of electrode materials. While it is easy to point out which specific cathode and anode materials are currently good candidates for the next‐generation of batteries, it is difficult to explain exactly why those are chosen. In this review, for the reader a complete developmental story of LIB should be clearly drawn, along with an explanation of the reasons responsible for the various technological shifts. The review will end with a statement of caution for the current modern battery research along with a brief discussion on beyond lithium‐ion battery chemistries.",
+    "authors": [
+      "Matthew Li",
+      "Jun Lu",
+      "Zhongwei Chen",
+      "K. Amine"
+    ],
+    "year": 2018,
+    "source": "Semantic Scholar",
+    "url": "https://www.semanticscholar.org/paper/ab388cf99b6c06714fd1fc6b6fc55436b3d607dc",
+    "citations": 4624,
+    "doi": "10.1002/adma.201800561",
+    "arxivId": null,
+    "createdAt": "2026-01-20T23:57:28.178414"
+  },
+  {
+    "id": "s2-a983a25907d54c890a3d53499dfd0633cc547d2b",
+    "title": "Critically assessing sodium-ion technology roadmaps and scenarios for techno-economic competitiveness against lithium-ion batteries",
+    "abstract": "",
+    "authors": [
+      "Adrian Yao",
+      "Sally M. Benson",
+      "William C. Chueh"
+    ],
+    "year": 2025,
+    "source": "Semantic Scholar",
+    "url": "https://www.semanticscholar.org/paper/a983a25907d54c890a3d53499dfd0633cc547d2b",
+    "citations": 134,
+    "doi": "10.1038/s41560-024-01701-9",
+    "arxivId": null,
+    "createdAt": "2026-01-20T23:57:28.178415"
+  },
+  {
+    "id": "arxiv-2601.11513v1",
+    "arxivId": "2601.11513v1",
+    "title": "Capacity Constraints Make Admissions Processes Less Predictable",
+    "abstract": "Machine learning models are often used to make predictions about admissions process outcomes, such as for colleges or jobs. However, such decision processes differ substantially from the conventional machine learning paradigm. Because admissions decisions are capacity-constrained, whether a student is admitted depends on the other applicants who apply. We show how this dependence affects predictive performance even in otherwise ideal settings. Theoretically, we introduce two concepts that characterize the relationship between admission function properties, machine learning representation, and generalization to applicant pool distribution shifts: instability, which measures how many existing decisions can change when a single new applicant is introduced; and variability, which measures the number of unique students whose decisions can change. Empirically, we illustrate our theory on individual-level admissions data from the New York City high school matching system, showing that machine learning performance degrades as the applicant pool increasingly differs from the training data. Furthermore, there are larger performance drops for schools using decision rules that are more unstable and variable. Our work raises questions about the reliability of predicting individual admissions probabilities.",
+    "authors": [
+      "Evan Dong",
+      "Nikhil Garg",
+      "Sarah Dean"
+    ],
+    "year": 2026,
+    "source": "arXiv",
+    "url": "http://arxiv.org/abs/2601.11513v1",
+    "citations": 0,
+    "pdfUrl": "https://arxiv.org/pdf/2601.11513v1",
+    "createdAt": "2026-01-20T23:35:43.923895"
+  },
+  {
+    "id": "arxiv-2601.11457v1",
+    "arxivId": "2601.11457v1",
+    "title": "Indoor Neutral-Host Networks Over Shared Spectrum and Shared Infrastructure: A Comparison Study of Real-World Deployments",
+    "abstract": "Indoor high-capacity connectivity is frequently constrained by significant building penetration loss and the inherent uplink power limitations of a typical outdoor macro-cell deployment. While Mobile Network Operators (MNOs) must optimize spectrum across low-band (<1 GHz) and mid-band (1-7 GHz) frequencies, uplink performance remains disproportionately degraded due to link budget asymmetry. Neutral-host (NH) networking provides a scalable alternative by transparently offloading MNO subscribers via spectrum sharing and shared infrastructure. We present a multi-site measurement study comparing Citizens Broadband Radio Service (CBRS)-enabled NH networks against public MNO 4G/5G macro deployments and Wi-Fi. Our results show: (i) significant building penetration loss with up to 15.5 dB in low-bands and 17.9 dB in mid-bands, resulting in a ~10 dB RSRP deficit for MNO mid-bands compared to low-bands; (ii) NH networks provide a 30 dB higher median indoor RSRP with indoor NH normalized downlink throughput matches MNO outdoor performance, while its uplink performance exceeds MNO levels in both indoor and outdoor settings; (iii) NH proximity enables superior uplink efficiency, utilizing 64-QAM for 56% of transmissions (versus <6% for MNOs) and reducing median UE transmit power by 5 dB; (iv) MNOs rely on low-band spectrum for indoor uplink transmissions, while the NH deployment maintains high-performance mid-band connectivity; and (v) NH outperforms MNOs in end-to-end throughput but trails Wi-Fi in uplink throughput and latency due to packet routing overhead to the MNO core.",
+    "authors": [
+      "Joshua Roy Palathinkal",
+      "Muhammad Iqbal Rochman",
+      "Vanlin Sathya",
+      "Mehmet Yavuz",
+      "Monisha Ghosh"
+    ],
+    "year": 2026,
+    "source": "arXiv",
+    "url": "http://arxiv.org/abs/2601.11457v1",
+    "citations": 0,
+    "pdfUrl": "https://arxiv.org/pdf/2601.11457v1",
+    "createdAt": "2026-01-20T23:35:43.923897"
+  },
+  {
+    "id": "arxiv-2601.11423v1",
+    "arxivId": "2601.11423v1",
+    "title": "Noisy Analysis of Quantum SMOTE on Condition Monitoring and Fault Classification in Industrial and Energy Systems",
+    "abstract": "Imbalanced datasets are a fundamental issue in industrial condition monitoring and fault classification pipelines, causing classical machine learning models to overfit the majority classes while failing to learn the minority fault patterns. This work presents a detailed benchmarking and robustness investigation of classical classifiers under class imbalance mitigation using the Quantum Synthetic Minority Oversampling Technique (QSMOTE) and quantum-inspired perturbations modelled using six noise channels. Four different datasets, the Solar Panel Image Dataset (SPID), the CWRU Bearing Dataset (CWRUBD), the Engine Failure Detection Dataset (EFDD), and the Industrial Fault Detection Dataset (IFDD), are tested across multi-class scenarios to determine the universality of these impacts. The results show that QSMOTE consistently corrects distributional skew and significantly enhances the performance of non-linear classifiers such as Random Forests (RF), Support Vector Machines (SVM), and Decision Trees (DT), yielding improvements of up to 170% on EFDD and achieving near-perfect accuracy ($\\geq$0.99) on IFDD. Linear and probabilistic models, such as Linear Regression (LR) and Naive Bayes (NB), produce mixed results, with significant degradation in overlapping feature spaces due to interpolation-induced boundary distortion. A parallel robustness analysis under different noise models reveals that ensemble models (RF) and margin-based learners (SVM) maintain strong resilience, often preserving over 95% of baseline accuracy even under maximum noise. In contrast, NB and DT show substantial instability, especially on high-variance datasets. The findings establish a rigorous baseline for understanding how classical models behave under realistic imbalance and quantum-inspired noise.",
+    "authors": [
+      "Amit S. Patel",
+      "Himanshukumar R. Patel",
+      "Bikash K. Behera"
+    ],
+    "year": 2026,
+    "source": "arXiv",
+    "url": "http://arxiv.org/abs/2601.11423v1",
+    "citations": 0,
+    "pdfUrl": "https://arxiv.org/pdf/2601.11423v1",
+    "createdAt": "2026-01-20T23:35:43.923899"
+  },
+  {
+    "id": "s2-535bd5e9cc73950ebd56ded874bab37f68219693",
+    "title": "Lithium Battery Degradation and Failure Mechanisms: A State-of-the-Art Review",
+    "abstract": "This paper provides a comprehensive analysis of the lithium battery degradation mechanisms and failure modes. It discusses these issues in a general context and then focuses on various families or material types used in the batteries, particularly in anodes and cathodes. The paper begins with a general overview of lithium batteries and their operations. It explains the fundamental principles of the electrochemical reaction that occurs in a battery, as well as the key components such as the anode, cathode, and electrolyte. The paper explores also the degradation processes and failure modes of lithium batteries. It examines the main factors contributing to these issues, including the operating temperature and current. It highlights the specific degradation mechanisms associated with each type of material, whether it is graphite, silicon, metallic lithium, cobalt, nickel, or manganese oxides used in the electrodes. Some degradations are due to the temperature and the current waveforms. Then, the importance of thermal management and current management is emphasized throughout the paper. It highlights the negative effects of overheating, excessive current, or inappropriate voltage on the stability and lifespan of lithium batteries. It also underscores the significance of battery management systems (BMS) in monitoring and controlling these parameters to minimize the degradation and the risk of failure. This work provides a summary of valuable insight into the development of BMS. It emphasizes the importance of understanding the degradation mechanisms and failure modes specific to different families of lithium batteries, as well as the critical influence of temperature and current quality. Rational management or efficient controlling of these parameters can enhance the performance, reliability, and lifespan of lithium batteries.",
+    "authors": [
+      "Joselyn Stephane Menye",
+      "M. Camara",
+      "B. Dakyo"
+    ],
+    "year": 2025,
+    "source": "Semantic Scholar",
+    "url": "https://www.semanticscholar.org/paper/535bd5e9cc73950ebd56ded874bab37f68219693",
+    "citations": 31,
+    "doi": "10.3390/en18020342",
+    "arxivId": null,
+    "createdAt": "2026-01-20T23:35:43.923901"
+  },
+  {
+    "id": "s2-a0fc1f92557bc6453686f2d31f15f06a24db2df9",
+    "title": "State Estimation of Lithium Battery Degradation Based on Dynamic Complexity Reduction Zonotopic Kalman Filter",
+    "abstract": "To realize the state estimation of lithium batteries under performance degradation, a zonotopic Kalman filter with dynamic complexity reduction is designed. First, a dual polarization equivalent circuit model is constructed, and the zonotopic filter is designed to estimate the state through prediction and update steps, and optimizes zonotope complexity by evaluating variations of the shape generator matrix. Additionally, a dual time-scale framework is introduced for a fast SOC update and slow SOH adjustment. Simulation results show that the proposed algorithm offers a higher accuracy and robustness in capturing battery degradation states.",
+    "authors": [
+      "Yaotao Zhou",
+      "Qian-Yi Shen",
+      "Ziyun Wang",
+      "Yan Wang",
+      "Zhicheng Ji"
+    ],
+    "year": 2025,
+    "source": "Semantic Scholar",
+    "url": "https://www.semanticscholar.org/paper/a0fc1f92557bc6453686f2d31f15f06a24db2df9",
+    "citations": 0,
+    "doi": "10.23919/CCC64809.2025.11179605",
+    "arxivId": null,
+    "createdAt": "2026-01-20T23:35:43.923903"
+  },
+  {
+    "id": "s2-db811a2f4a18aa5f56212108b8f31d8d2becbea6",
+    "title": "Lithium Battery Degradation Prediction Model Based on Capacity",
+    "abstract": "Lithium battery degradation prediction has received wide interest in battery management systems. Battery degradation also indirectly helps improve the deployment of electric vehicles. This paper pioneers a data-driven battery degradation prediction model based on capacity in combination with modified ensemble empirical mode decomposition, mean impact value (MIV) and bidirectional long and short-term memory (Bi-LSTM) neural network. The proposed model exhibits superior degradation performance and improves prediction accuracy. First, the original capacity data are decomposed into intrinsic mode functions (IMFs) by MEEMD, and then MIV is added to reduce the IMF dimensionality. Second, the remaining IMFs are used as input to the Bi-LSTM neural network. Then, the degradation value is predicted in the next step. The proposed model is trained and tested on two large datasets. In the analysis of the autoregressive degradation model experiment, the proposed model achieves 0.0110 mean absolute percentage error and 0.0143 mean absolute percentage error on the Ames Research Center dataset. This work proves the feasibility and benefits of using the proposed model and also highlights how feature extraction can be used to improve predictions. According to the analysis of the influence of internal parameters on battery degradation, the role of measured voltage, measured current, and temperature in degradation prediction is about 1/3 on the Ames Research Center dataset. Internal parameters are proven to help predict lithium battery capacity in the case of limited access to battery capacity data hindering degradation prediction based on capacity, bringing a new perspective to degradation prediction.",
+    "authors": [
+      "Muyangzi Lin"
+    ],
+    "year": 2024,
+    "source": "Semantic Scholar",
+    "url": "https://www.semanticscholar.org/paper/db811a2f4a18aa5f56212108b8f31d8d2becbea6",
+    "citations": 4,
+    "doi": "10.1109/TVT.2024.3373632",
+    "arxivId": null,
+    "createdAt": "2026-01-20T23:35:43.923904"
+  },
+  {
+    "id": "oa-W2962135525",
+    "title": "A review on the key issues of the lithium ion battery degradation among the whole life cycle",
+    "abstract": "",
+    "authors": [
+      "Xuebing Han",
+      "Languang Lu",
+      "Yuejiu Zheng",
+      "Xuning Feng",
+      "Zhe Li",
+      "Jianqiu Li",
+      "Minggao Ouyang"
+    ],
+    "year": 2019,
+    "source": "OpenAlex",
+    "url": "https://openalex.org/W2962135525",
+    "citations": 1530,
+    "doi": "https://doi.org/10.1016/j.etran.2019.100005",
+    "createdAt": "2026-01-20T23:35:43.923906"
+  },
+  {
+    "id": "oa-W2417460170",
+    "title": "Modeling of Lithium-Ion Battery Degradation for Cell Life Assessment",
+    "abstract": "Rechargeable lithium-ion batteries are promising candidates for building grid-level storage systems because of their high energy and power density, low discharge rate, and decreasing cost. A vital aspect in energy storage planning and operations is to accurately model the aging cost of battery cells, especially in irregular cycling operations. This paper proposes a semi-empirical lithium-ion battery degradation model that assesses battery cell life loss from operating profiles. We formulate the model by combining fundamental theories of battery degradation and our observations in battery aging test results. The model is adaptable to different types of lithium-ion batteries, and methods for tuning the model coefficients based on manufacturer's data are presented. A cycle-counting method is incorporated to identify stress cycles from irregular operations, allowing the degradation model to be applied to any battery energy storage (BES) applications. The usefulness of this model is demonstrated through an assessment of the degradation that a BES would incur by providing frequency control in the PJM regulation market.",
+    "authors": [
+      "Bolun Xu",
+      "Alexandre Oudalov",
+      "Andreas Ulbig",
+      "Göran Andersson",
+      "Daniel S. Kirschen"
+    ],
+    "year": 2016,
+    "source": "OpenAlex",
+    "url": "https://openalex.org/W2417460170",
+    "citations": 1002,
+    "doi": "https://doi.org/10.1109/tsg.2016.2578950",
+    "createdAt": "2026-01-20T23:35:43.923908"
+  },
+  {
+    "id": "oa-W3139510216",
+    "title": "Lithium ion battery degradation: what you need to know",
+    "abstract": "The expansion of lithium-ion batteries from consumer electronics to larger-scale transport and energy storage applications has made understanding the many mechanisms responsible for battery degradation increasingly important.",
+    "authors": [
+      "Jacqueline Edge",
+      "Simon E. J. O’Kane",
+      "Ryan Prosser",
+      "Niall Kirkaldy",
+      "Anisha N. Patel",
+      "Alastair Hales",
+      "Abir Ghosh",
+      "Weilong Ai",
+      "Jingyi Chen",
+      "Yang Jiang",
+      "Li Shen",
+      "Mei-Chin Pang",
+      "Laura Bravo Diaz",
+      "A. Tomaszewska",
+      "M. Waseem Marzook",
+      "Karthik Radhakrishnan",
+      "Huizhi Wang",
+      "Yatish Patel",
+      "Billy Wu",
+      "Gregory J. Offer"
+    ],
+    "year": 2021,
+    "source": "OpenAlex",
+    "url": "https://openalex.org/W3139510216",
+    "citations": 911,
+    "doi": "https://doi.org/10.1039/d1cp00359c",
+    "createdAt": "2026-01-20T23:35:43.923910"
+  },
+  {
+    "id": "arxiv-2601.11505v1",
+    "arxivId": "2601.11505v1",
+    "title": "MetaboNet: The Largest Publicly Available Consolidated Dataset for Type 1 Diabetes Management",
+    "abstract": "Progress in Type 1 Diabetes (T1D) algorithm development is limited by the fragmentation and lack of standardization across existing T1D management datasets. Current datasets differ substantially in structure and are time-consuming to access and process, which impedes data integration and reduces the comparability and generalizability of algorithmic developments. This work aims to establish a unified and accessible data resource for T1D algorithm development. Multiple publicly available T1D datasets were consolidated into a unified resource, termed the MetaboNet dataset. Inclusion required the availability of both continuous glucose monitoring (CGM) data and corresponding insulin pump dosing records. Additionally, auxiliary information such as reported carbohydrate intake and physical activity was retained when present. The MetaboNet dataset comprises 3135 subjects and 1228 patient-years of overlapping CGM and insulin data, making it substantially larger than existing standalone benchmark datasets. The resource is distributed as a fully public subset available for immediate download at https://metabo-net.org/ , and with a Data Use Agreement (DUA)-restricted subset accessible through their respective application processes. For the datasets in the latter subset, processing pipelines are provided to automatically convert the data into the standardized MetaboNet format. A consolidated public dataset for T1D research is presented, and the access pathways for both its unrestricted and DUA-governed components are described. The resulting dataset covers a broad range of glycemic profiles and demographics and thus can yield more generalizable algorithmic performance than individual datasets.",
+    "authors": [
+      "Miriam K. Wolff",
+      "Peter Calhoun",
+      "Eleonora Maria Aiello",
+      "Yao Qin",
+      "Sam F. Royston"
+    ],
+    "year": 2026,
+    "source": "arXiv",
+    "url": "http://arxiv.org/abs/2601.11505v1",
+    "citations": 0,
+    "pdfUrl": "https://arxiv.org/pdf/2601.11505v1",
+    "createdAt": "2026-01-20T23:35:43.923912"
+  },
+  {
+    "id": "s2-fa8c55e3a455eec9de9d363e18b697b5d2fb263c",
+    "title": "High‐Energy Lithium‐Ion Batteries: Recent Progress and a Promising Future in Applications",
+    "abstract": "",
+    "authors": [
+      "Jingjing Xu",
+      "Xingyun Cai",
+      "Songming Cai",
+      "Yaxin Shao",
+      "Chao Hu",
+      "Shirong Lu",
+      "Shujiang Ding"
+    ],
+    "year": 2023,
+    "source": "Semantic Scholar",
+    "url": "https://www.semanticscholar.org/paper/fa8c55e3a455eec9de9d363e18b697b5d2fb263c",
+    "citations": 807,
+    "doi": "10.1002/eem2.12450",
+    "arxivId": null,
+    "createdAt": "2026-01-20T23:57:28.178419"
+  },
+  {
+    "id": "s2-8e2efc23b5c57590ee0bf06bf2ad0aa54b2d5b6b",
+    "title": "Opportunities and Challenges of Lithium Ion Batteries in Automotive Applications",
+    "abstract": "Lithium ion batteries (LIBs) have transformed the consumer electronics (CE) sector and are beginning to power the electrification of the automotive sector. The unique requirements of the vehicle ap...",
+    "authors": [
+      "Alvaro G Masias",
+      "James Marcicki",
+      "W. Paxton"
+    ],
+    "year": 2021,
+    "source": "Semantic Scholar",
+    "url": "https://www.semanticscholar.org/paper/8e2efc23b5c57590ee0bf06bf2ad0aa54b2d5b6b",
+    "citations": 765,
+    "doi": "10.1021/ACSENERGYLETT.0C02584",
+    "arxivId": null,
+    "createdAt": "2026-01-20T23:35:43.923917"
+  },
+  {
+    "id": "s2-2b70d7485321e4c21866182266469d61fb0f7ae5",
+    "title": "Invited) Liquid and Solid State NMR Investigations of Electrolytes for Beyond Lithium Ion Applications",
+    "abstract": "",
+    "authors": [
+      "S. Greenbaum",
+      "Mallory P Gobet",
+      "Jing Peng",
+      "Stephen Munoz",
+      "A. Cresce",
+      "Selena M. Russell",
+      "O. Borodin",
+      "K. Xu",
+      "A. ZimmermanMichael",
+      "R. Leising"
+    ],
+    "year": 2017,
+    "source": "Semantic Scholar",
+    "url": "https://www.semanticscholar.org/paper/2b70d7485321e4c21866182266469d61fb0f7ae5",
+    "citations": 0,
+    "doi": "10.1149/ma2017-01/3/212",
+    "arxivId": null,
+    "createdAt": "2026-01-20T23:35:43.923919"
+  },
+  {
+    "id": "oa-W2613389393",
+    "title": "A review of lithium-ion battery state of charge estimation and management system in electric vehicle applications: Challenges and recommendations",
+    "abstract": "",
+    "authors": [
+      "M. A. Hannan",
+      "Molla Shahadat Hossain Lipu",
+      "Aini Hussain",
+      "Ahmed Mohamed"
+    ],
+    "year": 2017,
+    "source": "OpenAlex",
+    "url": "https://openalex.org/W2613389393",
+    "citations": 1805,
+    "doi": "https://doi.org/10.1016/j.rser.2017.05.001",
+    "createdAt": "2026-01-20T23:35:43.923920"
+  },
+  {
+    "id": "oa-W2017136542",
+    "title": "A review on lithium-ion battery ageing mechanisms and estimations for automotive applications",
+    "abstract": "",
+    "authors": [
+      "Anthony Barré",
+      "Benjamin Deguilhem",
+      "Sébastien Grolleau",
+      "Mathias Gérard",
+      "Frédéric Suard",
+      "Delphine Riu"
+    ],
+    "year": 2013,
+    "source": "OpenAlex",
+    "url": "https://openalex.org/W2017136542",
+    "citations": 1597,
+    "doi": "https://doi.org/10.1016/j.jpowsour.2013.05.040",
+    "createdAt": "2026-01-20T23:35:43.923922"
+  },
+  {
+    "id": "arxiv-2601.11382v1",
+    "arxivId": "2601.11382v1",
+    "title": "Effects of 2.45 GHz radiofrequency upon Leuconostoc mesenteroides Glucose-6-phosphate dehydrogenase enzymatic activity",
+    "abstract": "In this report we evaluate the effect in the enzyme activity of Glucose 6-phosphate Dehydrogenase from Leuconostoc mesenteroides by irradiation with 2.45 GHz radiofrequency at a power output of 0.1 W during a 91 h period. The results show that the RF irradiation preserves the activity of treated samples of this enzyme with respect to a non-treated sample that instead suffer an increased rate of activity loss. Our estimates indicate that the enzyme activation is due to a non-thermal effect. The results are consistent with reports about the effect of 2.45 GHz radiation upon other enzymatic systems.",
+    "authors": [
+      "G. Miño-Galaz",
+      "V. Castro-Fernandez",
+      "J. Martínez-Oyanedel",
+      "R. Reeves",
+      "J. Staforelli-Vivanco",
+      "N. Martínez"
+    ],
+    "year": 2026,
+    "source": "arXiv",
+    "url": "http://arxiv.org/abs/2601.11382v1",
+    "citations": 0,
+    "pdfUrl": "https://arxiv.org/pdf/2601.11382v1",
+    "createdAt": "2026-01-20T23:35:43.923941"
+  },
+  {
+    "id": "arxiv-2601.11288v1",
+    "arxivId": "2601.11288v1",
+    "title": "Compositional and morphological study of a Nuragic bronze figurine with neutron diffraction and neutron tomography",
+    "abstract": "Nuragic figurines are rare and unique examples of the mastery achieved by Sardinian craftsmen in the early Iron Age. These bronze artefacts were most likely cast using the lost wax technique: the shapes were moulded with relative ease, and even complex figures could be represented. However, the manufacturing process was not always a single-step solution: in some cases, the parts of the model were moulded separately and then assembled in a second place. The analytical study of these artefacts can help to understand the specific casting methods and to evaluate the techniques implemented by Sardinian craftsmen to produce such complex objects. In recent years, neutron diffraction (ND) and neutron imaging (NI) have proven to be among the most effective methods for non-invasive studies. ND and NI provide complementary quantitative and morphological information that can be the key to understanding the casting processes. In this work, the results of the analysis of a bronze figurine will be reported. The statuette represents a Nuragic warrior and was made available by the Soprintendenza Archeologia Belle Arti e Paesaggio per le province di Sassari e Nuoro (Sassari, Italy).",
+    "authors": [
+      "M. Cataldo",
+      "B. Billeci",
+      "S. Britto",
+      "N. Canu",
+      "M. Clemenza",
+      "G. Marcucci",
+      "A. Scherillo",
+      "V. Sipala",
+      "P. Oliva"
+    ],
+    "year": 2026,
+    "source": "arXiv",
+    "url": "http://arxiv.org/abs/2601.11288v1",
+    "citations": 0,
+    "pdfUrl": "https://arxiv.org/pdf/2601.11288v1",
+    "createdAt": "2026-01-20T23:35:43.923943"
+  },
+  {
+    "id": "arxiv-2601.11092v1",
+    "arxivId": "2601.11092v1",
+    "title": "Emission-line Diagnostics at $z\\gtrsim 2$: A Probe of the Ionizing Spectrum and $α$ Enhancement Beyond Cosmic Noon",
+    "abstract": "We analyze several key rest-optical emission-line ratios in a sample of 763 galaxies as well as composite spectra from JADES DR3 in the range $1.4 < z < 7$. These emission-line ratios include: [O III]$\\lambda5008$/H$β$, [N II]$λ6585$/H$α$, [S II]$λλ6718,6733$/H$α$, [O I]$λ6302$/H$α$, O32, R23, Ne3O2, and RO2Ne3. We find evidence for a harder ionizing spectrum at $z\\sim 3.5$ compared to $z\\sim 2$ at fixed gas-phase metallicity, resulting in a pronounced shift in the star-forming galaxy locus on the [N II]/H$α$ BPT diagram and the O32 vs. R23 diagram. At $z\\gtrsim 3.5$, star-forming galaxies occupy a common locus, indicating that ISM ionizing conditions at fixed gas-phase metallicity do not evolve strongly at these early cosmic times. There is a connection between ISM ionizing conditions and the chemical abundance patterns (i.e., $α$/Fe) in massive stars providing the ionizing radiation field. Therefore, the lack of evolution in ISM ionizing conditions at $z\\gtrsim 3.5$, followed by evolution towards a softer ionizing spectrum at fixed nebular metallicity as cosmic time proceeds to $z\\sim 2$ and lower redshift mirrors the chemical abundance patterns in Milky Way stars as a function of iron abundance. Our results highlight the diagnostic power of emission-line diagrams in the era of JWST to further our understanding of the ISM conditions into the Epoch of Reionization.",
+    "authors": [
+      "Leonardo Clarke",
+      "Natalie Lam",
+      "Alice E. Shapley",
+      "Michael W. Topping",
+      "Gabriel B. Brammer",
+      "Ryan L. Sanders",
+      "Naveen A. Reddy",
+      "Shreya Karthikeyan"
+    ],
+    "year": 2026,
+    "source": "arXiv",
+    "url": "http://arxiv.org/abs/2601.11092v1",
+    "citations": 0,
+    "pdfUrl": "https://arxiv.org/pdf/2601.11092v1",
+    "createdAt": "2026-01-20T23:35:43.923945"
+  },
+  {
+    "id": "oa-W2130893993",
+    "title": "Discharge Model for the Lithium Iron-Phosphate Electrode",
+    "abstract": "This paper develops a mathematical model for lithium intercalation and phase change in an iron phosphate-based lithium-ion cell in order to understand the cause for the low power capability of the material. The juxtaposition of the two phases is assumed to be in the form of a shrinking core, where a shell of one phase covers a core of the second phase. Diffusion of lithium through the shell and the movement of the phase interface are described and incorporated into a porous electrode model consisting of two different particle sizes. Open-circuit measurements are used to estimate the composition ranges of the single-phase region. Model-experimental comparisons under constant current show that ohmic drops in the matrix phase, contact resistances between the current collector and the porous matrix, and transport limitations in the iron phosphate particle limit the power capability of the cells. Various design options, consisting of decreasing the ohmic drops, using smaller particles, and substituting the liquid electrolyte by a gel are explored, and their relative importance discussed. The model developed in this paper can be used as a means of optimizing the cell design to suit a particular application.",
+    "authors": [
+      "Venkat Srinivasan",
+      "John Newman"
+    ],
+    "year": 2004,
+    "source": "OpenAlex",
+    "url": "https://openalex.org/W2130893993",
+    "citations": 720,
+    "doi": "https://doi.org/10.1149/1.1785012",
+    "createdAt": "2026-01-20T23:35:43.923949"
+  },
+  {
+    "id": "oa-W2048612231",
+    "title": "Hydrothermal synthesis of lithium iron phosphate cathodes",
+    "abstract": "",
+    "authors": [
+      "Shoufeng Yang",
+      "Peter Y. Zavalij",
+      "M. Stanley Whittingham"
+    ],
+    "year": 2001,
+    "source": "OpenAlex",
+    "url": "https://openalex.org/W2048612231",
+    "citations": 551,
+    "doi": "https://doi.org/10.1016/s1388-2481(01)00200-4",
+    "createdAt": "2026-01-20T23:35:43.923950"
+  },
+  {
+    "id": "oa-W1987065012",
+    "title": "Lithium iron phosphate based battery – Assessment of the aging parameters and development of cycle life model",
+    "abstract": "",
+    "authors": [
+      "Noshin Omar",
+      "Mohamed Abdel Monem",
+      "Yousef Firouz",
+      "Justin Salminen",
+      "Jelle Smekens",
+      "Omar Hegazy",
+      "Hamid Gaulous",
+      "Grietus Mulder",
+      "Peter Van den Bossche",
+      "Thierry Coosemans",
+      "Joeri Van Mierlo"
+    ],
+    "year": 2013,
+    "source": "OpenAlex",
+    "url": "https://openalex.org/W1987065012",
+    "citations": 695,
+    "doi": "https://doi.org/10.1016/j.apenergy.2013.09.003",
+    "createdAt": "2026-01-20T23:35:43.923952"
+  },
+  {
+    "id": "arxiv-2601.11521v1",
+    "arxivId": "2601.11521v1",
+    "title": "X-ray Polarization of the Intrabinary Shock in Redback Pulsar J1723$-$2837",
+    "abstract": "The intrabinary shocks (IBS) in spider pulsars emit non-thermal synchrotron X-rays from accelerated electrons and positrons in the shocked pulsar wind, likely energized by magnetic reconnection. The double-peaked X-ray light curves from these shocks have been well characterized in several spider systems. In this paper, we analyze Imaging X-ray Polarimetry Explorer (IXPE) observations of the redback pulsar J1723$-$2837 to examine the expected synchrotron polarization. Using advanced extraction methods that include spatial, temporal, and particle background weights, we constrain the polarization of the IBS. We compare different models for the magnetic field in the radiation zone and find that the best fit prefers a striped pulsar wind model over other polarized models, with maximum polarization degree of the IBS emission component $Π_{\\rm IBS}=36^{+16}_{-15}\\%$, in addition to an unpolarized non-IBS component. Since this is only 2.4$σ$, we cannot claim strong preference over an unpolarized model; we report a $99\\%$ confidence level upper limit on the total polarization of both IBS and non-IBS components $Π_{99}<36\\%$, which is improved over the $50\\%$ limit obtained in previous work. The best-fit polarization of the IBS component is consistent with numerical simulations. Detailed tests of such models are accessible to future measurements.",
+    "authors": [
+      "Andrew G. Sullivan",
+      "Jack T. Dinsmore",
+      "Roger W. Romani"
+    ],
+    "year": 2026,
+    "source": "arXiv",
+    "url": "http://arxiv.org/abs/2601.11521v1",
+    "citations": 0,
+    "pdfUrl": "https://arxiv.org/pdf/2601.11521v1",
+    "createdAt": "2026-01-20T23:35:43.923953"
+  },
+  {
+    "id": "arxiv-2601.11501v1",
+    "arxivId": "2601.11501v1",
+    "title": "Coding Schemes for the Noisy Torn Paper Channel",
+    "abstract": "To make DNA a suitable medium for archival data storage, it is essential to consider the decay process of the strands observed in DNA storage systems. This paper studies the decay process as a probabilistic noisy torn paper channel (TPC), which first corrupts the bits of the transmitted sequence in a probabilistic manner by substitutions, then breaks the sequence into a set of noisy unordered substrings. The present work devises coding schemes for the noisy TPC by embedding markers in the transmitted sequence. We investigate the use of static markers and markers connected to the data in the form of hash functions. These two tools have also been recently exploited to tackle the noiseless TPC. Simulations show that static markers excel at higher substitution probabilities, while data-dependent markers are superior at lower noise levels. Both approaches achieve reconstruction rates exceeding $99\\%$ with no false decodings observed, primarily limited by computational resources.",
+    "authors": [
+      "Frederik Walter",
+      "Maria Abu-Sini",
+      "Nils Weinhardt",
+      "Antonia Wachter-Zeh"
+    ],
+    "year": 2026,
+    "source": "arXiv",
+    "url": "http://arxiv.org/abs/2601.11501v1",
+    "citations": 0,
+    "pdfUrl": "https://arxiv.org/pdf/2601.11501v1",
+    "createdAt": "2026-01-20T23:35:43.923955"
+  },
+  {
+    "id": "s2-33048ebbc9564a5ec289a9abd6cba04fc5b68e47",
+    "title": "Electrical Energy Storage for the Grid: A Battery of Choices",
+    "abstract": "",
+    "authors": [
+      "B. Dunn",
+      "H. Kamath",
+      "J. Tarascon"
+    ],
+    "year": 2011,
+    "source": "Semantic Scholar",
+    "url": "https://www.semanticscholar.org/paper/33048ebbc9564a5ec289a9abd6cba04fc5b68e47",
+    "citations": 12815,
+    "doi": "10.1126/science.1212741",
+    "arxivId": null,
+    "createdAt": "2026-01-20T23:35:43.923957"
+  },
+  {
+    "id": "s2-37de4ae070c837e1f26731ffd78060ae2c1a702f",
+    "title": "Battery technologies for grid-scale energy storage",
+    "abstract": "",
+    "authors": [
+      "Taoli Jiang",
+      "Dongyang Shen",
+      "Zuodong Zhang",
+      "Hongxu Liu",
+      "Guili Zhao",
+      "Yidi Wang",
+      "Shunxin Tan",
+      "Ruihao Luo",
+      "Wei Chen"
+    ],
+    "year": 2025,
+    "source": "Semantic Scholar",
+    "url": "https://www.semanticscholar.org/paper/37de4ae070c837e1f26731ffd78060ae2c1a702f",
+    "citations": 54,
+    "doi": "10.1038/s44359-025-00067-9",
+    "arxivId": null,
+    "createdAt": "2026-01-20T23:35:43.923958"
+  },
+  {
+    "id": "s2-a714a09aa0654709f67561c0c5e624e374df3203",
+    "title": "A Review on the Recent Advances in Battery Development and Energy Storage Technologies",
+    "abstract": "Energy storage is a more sustainable choice to meet net-zero carbon foot print and decarbonization of the environment in the pursuit of an energy independent future, green energy transition, and uptake. The journey to reduced greenhouse gas emissions, increased grid stability and reliability, and improved green energy access and security are the result of innovation in energy storage systems. Renewable energy sources are fundamentally intermittent, which means they rely on the availability of natural resources like the sun and wind rather than continuously producing energy. Due to its ability to address the inherent intermittency of renewable energy sources, manage peak demand, enhance grid stability and reliability, and make it possible to integrate small-scale renewable energy systems into the grid, energy storage is essential for the continued development of renewable energy sources and the decentralization of energy generation. Accordingly, the development of an effective energy storage system has been prompted by the demand for unlimited supply of energy, primarily through harnessing of solar, chemical, and mechanical energy. Nonetheless, in order to achieve green energy transition and mitigate climate risks resulting from the use of fossil-based fuels, robust energy storage systems are necessary. Herein, the need for better, more effective energy storage devices such as batteries, supercapacitors, and bio-batteries is critically reviewed. Due to their low maintenance needs, supercapacitors are the devices of choice for energy storage in renewable energy producing facilities, most notably in harnessing wind energy. Moreover, supercapacitors possess robust charging and discharging cycles, high power density, low maintenance requirements, extended lifespan, and are environmentally friendly. On the other hand, combining aluminum with nonaqueous charge storage materials such as conductive polymers to make use of each material’s unique capabilities could be crucial for continued development of robust storage batteries. In general, energy density is a key component in battery development, and scientists are constantly developing new methods and technologies to make existing batteries more energy proficient and safe. This will make it possible to design energy storage devices that are more powerful and lighter for a range of applications. When there is an imbalance between supply and demand, energy storage systems (ESS) offer a way of increasing the effectiveness of electrical systems. They also play a central role in enhancing the reliability and excellence of electrical networks that can also be deployed in off-grid localities.",
+    "authors": [
+      "George G. Njema",
+      "R. B. O. Ouma",
+      "J. Kibet"
+    ],
+    "year": 2024,
+    "source": "Semantic Scholar",
+    "url": "https://www.semanticscholar.org/paper/a714a09aa0654709f67561c0c5e624e374df3203",
+    "citations": 183,
+    "doi": "10.1155/2024/2329261",
+    "arxivId": null,
+    "createdAt": "2026-01-20T23:35:43.923960"
+  },
+  {
+    "id": "oa-W2035837781",
+    "title": "Battery energy storage technology for power systems—An overview",
+    "abstract": "",
+    "authors": [
+      "K. Divya",
+      "Jacob Østergaard"
+    ],
+    "year": 2008,
+    "source": "OpenAlex",
+    "url": "https://openalex.org/W2035837781",
+    "citations": 1777,
+    "doi": "https://doi.org/10.1016/j.epsr.2008.09.017",
+    "createdAt": "2026-01-20T23:35:43.923962"
+  },
+  {
+    "id": "oa-W2151207643",
+    "title": "Li–O2 and Li–S batteries with high energy storage",
+    "abstract": "",
+    "authors": [
+      "Peter G. Bruce",
+      "Stefan A. Freunberger",
+      "Laurence J. Hardwick",
+      "Jean‐Marie Tarascon"
+    ],
+    "year": 2011,
+    "source": "OpenAlex",
+    "url": "https://openalex.org/W2151207643",
+    "citations": 9213,
+    "doi": "https://doi.org/10.1038/nmat3191",
+    "createdAt": "2026-01-20T23:35:43.923963"
+  },
+  {
+    "id": "arxiv-2601.10472v1",
+    "arxivId": "2601.10472v1",
+    "title": "From Weibel seeds to collisionless dynamos beyond pair-plasmas",
+    "abstract": "Bridging the spatiotemporal scales of magnetic seed field generation and subsequent dynamo amplification in the weakly collisional intracluster medium presents an extreme numerical challenge. We perform collisionless turbulence simulations with initially unmagnetized electrons that capture both magnetic seed generation via the electron Weibel instability and the ensuing dynamo amplification. Going beyond existing pair-plasma studies, we use an ion-to-electron mass ratio of 100 for which we find electron and ion dynamics are sufficiently decoupled. These simulations are enabled by the 10-moment collisionless fluid solver of Gkeyll, which evolves the full pressure tensor for all species. The electron heat-flux closure regulates pressure isotropization and effectively sets the magnetic Reynolds number. We investigate how the strength of of the closure influences the transition between a regime reminiscent of previous kinetic pair-plasma simulations and a more MHD-like dynamo regime.",
+    "authors": [
+      "Lise Hanebring",
+      "James Juno",
+      "Ammar Hakim",
+      "Jason M. TenBarge",
+      "Istvan Pusztai"
+    ],
+    "year": 2026,
+    "source": "arXiv",
+    "url": "http://arxiv.org/abs/2601.10472v1",
+    "citations": 0,
+    "pdfUrl": "https://arxiv.org/pdf/2601.10472v1",
+    "createdAt": "2026-01-21T00:14:20.310183"
+  },
+  {
+    "id": "arxiv-2601.10401v1",
+    "arxivId": "2601.10401v1",
+    "title": "A comparison of simulation tools for Muon-Induced X-ray Emission (MIXE) in thin films: a study case with lithium batteries",
+    "abstract": "We present a comparative study of three Monte Carlo simulation frameworks -SRIM, GEANT4, and PHITS- for modeling the transport, stopping, and atomic cascade of negative muons in micrometer-scale, multilayer systems relevant to Muon-Induced X-ray Emission (MIXE) experiments at the Paul Scherrer Institute (PSI). Using a lithium-ion battery as a benchmark target, simulated implantation profiles are compared with experimental data from the GIANT spectrometer. All three codes reproduce the overall muon depth distributions with good consistency, even across sharp density contrasts. SRIM provides reliable implantation estimates for compact geometries, whereas PHITS reproduces GEANT4 results with comparable accuracy and additionally generates muonic X-ray spectra. These spectra, however, exhibit a systematic energy offset in the K-line transitions of medium- and high-Z elements relative to theoretical and experimental values. Despite this bias, PHITS accurately captures relative intensities and spectral shapes, enabling element-specific line identification. The results demonstrate that SRIM and PHITS constitute practical tools for rapid estimation of muon implantation and stopping profiles, and that PHITS holds strong potential for predictive MIXE spectroscopy once its transition-energy bias is corrected.",
+    "authors": [
+      "Maxime Lamotte",
+      "Michael W. Heiss",
+      "Thomas Prokscha",
+      "Alex Amato"
+    ],
+    "year": 2026,
+    "source": "arXiv",
+    "url": "http://arxiv.org/abs/2601.10401v1",
+    "citations": 0,
+    "pdfUrl": "https://arxiv.org/pdf/2601.10401v1",
+    "createdAt": "2026-01-21T00:14:20.310186"
+  },
+  {
+    "id": "arxiv-2601.10320v1",
+    "arxivId": "2601.10320v1",
+    "title": "Molecular electrostatic potentials from machine learning models for dipole and quadrupole predictions",
+    "abstract": "The molecular electrostatic potential (MEP) is a key quantity for describing and predicting intermolecular and ion-molecule interactions. Here, we assess the ability of machine-learning (ML) models to infer the MEP, based on the equivariant graph-convolutional neural network architecture PiNet2 and trained on dipole and quadrupole moments. For the established QM9 dataset, we find that including the quadrupole contribution in the ML models substantially improves their ability to recover the MEP compared to dipole-only models. This trend is confirmed on the SPICE dataset, which spans a much broader region of organic chemical space. Together, this study underscores the central role of the quadrupole moment as a fitting target for ML models aiming at rapid access to the MEP.",
+    "authors": [
+      "Kadri Muuga",
+      "Lisanne Knijff",
+      "Chao Zhang"
+    ],
+    "year": 2026,
+    "source": "arXiv",
+    "url": "http://arxiv.org/abs/2601.10320v1",
+    "citations": 0,
+    "pdfUrl": "https://arxiv.org/pdf/2601.10320v1",
+    "createdAt": "2026-01-21T00:14:20.310187"
+  },
+  {
+    "id": "arxiv-2601.10293v1",
+    "arxivId": "2601.10293v1",
+    "title": "Updated electrical design of the Diagnostic Neutral Beam Injector in RFX-mod2",
+    "abstract": "The Diagnostic Neutral Beam Injector of the RFX-mod2 experiment (Consorzio RFX, Padova) is expected to provide novel and significant information about the Reversed Field Pinch confinement of fusion plasmas. The injection of the hydrogen beam in the plasma will allow Charge Exchange Recombination Spectroscopy (CXRS) and Motional Stark Effect diagnostics (MSE) to measure several quantities: ion speed, ion temperature, impurity content, intensity and pitch of the magnetic field. The DNBI is of particular importance for allowing the determination of these quantities at the core of the plasma. The present DNBI, built by the Budker Institute of Plasma Physics, features an arc discharge H+ source, coupled to a 4-grid 50 keV acceleration system. The 50 ms, 5 A ion beam is neutralized by charge exchange by means of a gas target; residual ions are then deflected by a magnetic field before injection in the torus chamber. The beam can be modulated at maximum 250 Hz. The DNBI will undergo extraordinary maintenance and a structural upgrade to improve its reliability and safety. This contribution presents the latest upgrades of the electrical plants and of the control system of the DNBI.",
+    "authors": [
+      "Marco Barbisan",
+      "Bruno Laterza",
+      "Luca Cinnirella",
+      "Lionello Marrelli",
+      "Federico Molon",
+      "Simone Peruzzo",
+      "Enrico Zampiva"
+    ],
+    "year": 2026,
+    "source": "arXiv",
+    "url": "http://arxiv.org/abs/2601.10293v1",
+    "citations": 0,
+    "pdfUrl": "https://arxiv.org/pdf/2601.10293v1",
+    "createdAt": "2026-01-21T00:14:20.310189"
+  },
+  {
+    "id": "arxiv-2601.10186v1",
+    "arxivId": "2601.10186v1",
+    "title": "Comprehensive Molecular-level Understanding of MgO Hydration through Computational Chemistry",
+    "abstract": "The hydration of magnesium oxide (MgO) to magnesium hydroxide (Mg(OH)$_2$) is a fundamental solid-surface chemical reaction with significant implications for materials science. Yet its molecular-level mechanism from water adsorption to Mg(OH)$_2$ nucleation and growth remains elusive due to its complex and multi-step nature. Here, we elucidate the molecular process of MgO hydration based on structures of the MgO/water interface obtained by a combined computational chemistry approach of potential-scaling molecular dynamics simulations and first-principles calculations without any a priori assumptions about reaction pathways. The result shows that the Mg$^{2+}$ dissolution follows the dissociative water adsorption. We find that this initial dissolution can proceed exothermically even from the defect-free surface with an average activation barrier of $\\sim$12 kcal/mol. This exothermicity depends crucially on the stabilization of the resulting surface vacancy, achieved by proton adsorption onto neighboring surface oxygen atoms. Further Mg$^{2+}$ dissolution then occurs in correlation with proton penetration into the solid. Moreover, we find that the Mg(OH)$_2$ nucleation and growth proceeds according to the dissolution-precipitation mechanism, rather than a solid-state reaction mechanism involving a direct topotactic transformation. In this process, Mg$^{2+}$ ions migrate away from the surface and form amorphous Mg-OH chains as precursors for Mg(OH)$_2$ nucleation. We also demonstrate that sufficient water facilitates the formation of more ordered crystalline nuclei. This computational study provides a comprehensive molecular-level understanding of MgO hydration, representing a foundational step toward elucidating the mechanisms of this class of complex and multi-step solid-surface chemical reactions.",
+    "authors": [
+      "Taichi Inagaki",
+      "Miho Hatanaka"
+    ],
+    "year": 2026,
+    "source": "arXiv",
+    "url": "http://arxiv.org/abs/2601.10186v1",
+    "citations": 0,
+    "pdfUrl": "https://arxiv.org/pdf/2601.10186v1",
+    "createdAt": "2026-01-21T00:14:20.310191"
+  },
+  {
+    "id": "arxiv-2601.10178v1",
+    "arxivId": "2601.10178v1",
+    "title": "HyMGP: A Customized MILP-Based Tool for Techno-Economic Planning of Islanded Microgrids",
+    "abstract": "This paper presents a customized microgrid planning algorithm and tool, HyMGP, for remote sites in arid regions, which is formulated as a Mixed Integer Linear Programming (MILP) problem. HyMGP is compared with HOMER Pro to evaluate its performance in optimizing the sizing of microgrid components, including photovoltaic panels (PVs), vertical axis wind turbines (VAWTs), and battery energy storage systems (BESS), for remote and off-grid applications. The study focuses on a standalone microgrid in the Saudi Arabia, considering high solar irradiance, limited wind availability, and a constant load profile composed of continuous cathodic protection and daytime cooling. In the simulation environment, comparisons with HOMER solutions demonstrate the advantages of HyMGP, which provides optimal and more flexible solutions by allowing user-defined component specifications and strictly enforcing all constraints. Further analysis shows that incorporating wind turbines reduces the Net Present Cost (NPC) by decreasing the required PV and battery capacities. Increasing battery autonomy leads to a higher NPC in both PV-only and hybrid systems due to the need for larger storage. Finally, lithium iron phosphate (Li-ion LFP) batteries are found to be more cost effective than lead acid, offering lower NPCs due to their longer lifespan, deeper discharge capability, and fewer replacement cycles.",
+    "authors": [
+      "Andres Intriago",
+      "Rongxing Hu",
+      "Nabil Mohammed",
+      "S. Gokul Krishnan",
+      "Konstantinos Kotsovos",
+      "Issam Gereige",
+      "Nesren Attiah",
+      "Ali Basaheeh",
+      "Sarah Aqeel",
+      "Hamad A. Saiari",
+      "Shehab Ahmed",
+      "Charalambos Konstantinou"
+    ],
+    "year": 2026,
+    "source": "arXiv",
+    "url": "http://arxiv.org/abs/2601.10178v1",
+    "citations": 0,
+    "pdfUrl": "https://arxiv.org/pdf/2601.10178v1",
+    "createdAt": "2026-01-21T00:14:20.310193"
+  },
+  {
+    "id": "arxiv-2601.10174v1",
+    "arxivId": "2601.10174v1",
+    "title": "A Neuroevolution Potential for Gallium Oxide: Accurate and Efficient Modeling of Polymorphism and Swift Heavy-Ion Irradiation",
+    "abstract": "Gallium oxide (Ga2O3) is a wide-bandgap semiconductor with promising applications in high-power and high-frequency electronics. However, its complex polymorphic nature poses substantial challenges for fundamental studies, particularly in understanding phase-transformation behaviors under nonequilibrium conditions. Here, we develop a robust, accurate, and computationally efficient machine-learning interatomic potential (MLIP) for Ga2O3 based on the neuroevolution potential (NEP) framework combined with an energy-dependent weighting strategy. The resulting NEP potential demonstrates clear advantages over the state-of-the-art tabGAP potential with respect to both accuracy and computational efficiency. Furthermore, we introduce a physically process-oriented sampling strategy to systematically augment the training dataset, thereby enhancing the MLIP performance for targeted physical phenomena. As a representative application, a dedicated NEP potential is constructed for swift heavy-ion (SHI) irradiation simulations of \\b{eta}-Ga2O3. The simulated results are in quantitative agreement with experimental observations and provide a consistent physical explanation for the reported experimental discrepancies regarding phase transformations in the ion track of \\b{eta}-Ga2O3.",
+    "authors": [
+      "Yaohui Gu",
+      "Binbo Li",
+      "Lingyang Jiang",
+      "Yuhui Hu",
+      "Wenqiang Liu",
+      "Lijun Xu",
+      "Pengfei Zhai",
+      "Jie Liu",
+      "Jinglai Duan"
+    ],
+    "year": 2026,
+    "source": "arXiv",
+    "url": "http://arxiv.org/abs/2601.10174v1",
+    "citations": 0,
+    "pdfUrl": "https://arxiv.org/pdf/2601.10174v1",
+    "createdAt": "2026-01-21T00:14:20.310195"
+  },
+  {
+    "id": "arxiv-2601.10140v1",
+    "arxivId": "2601.10140v1",
+    "title": "Density of States of Ru3 and Pt3 Clusters Supported on Sputter-Deposited TiO2",
+    "abstract": "In this work, 3-atom clusters, Ru3 and Pt3, were deposited onto radio frequency RF-sputter deposited TiO2, treated with Ar+ ion sputtering. Ru3 was deposited by both solution submersion and chemical vapor deposition of Ru3(CO)12, while Pt3 was deposited under ultra-high vacuum using a laser vaporisation cluster source. The valence electronic density of states (DOS) of the deposited clusters were analysed after heat treatment using ultraviolet photoelectron spectroscopy (UPS) and metastable impact electron spectroscopy (MIES), where UPS measures the top several layers while MIES measures only the top atomic layer. XPS was used to determine the cluster surface coverages. The DOS were found to be very similar between Ru3 deposited by solution submersion and chemical vapor deposition. MIES results for Ru3 had contributions from titania O 2p sites due to encapsulation by a reduced titania overlayer. For Pt3 clusters the UPS and MIES results provided evidence that Pt was present on the topmost layer, and encapsulation did not occur. The proposed reason for the encapsulation of Ru3 but not of Pt3 is the higher surface energy of Ru over Pt. It is concluded that Pt clusters deposited onto TiO2 can modify the outermost layer by adding discrete energy levels on the surface, whereas the Ru clusters being encapsulated just below the surface generate a broad distribution of energy states close to the Fermi level. The outcome of this work is that Pt3-cluster-modified surfaces could be used as catalysts for reactions where the Pt3 energy levels are suitable for the respective reaction. The implication of the DOS found for photocatalytic water splitting are discussed.",
+    "authors": [
+      "Liam Howard-Fabretto",
+      "Timothy J. Gorey",
+      "Guangjing Li",
+      "Siriluck Tesana",
+      "Gregory F. Metha",
+      "Scott L. Anderson",
+      "Gunther G. Andersson"
+    ],
+    "year": 2026,
+    "source": "arXiv",
+    "url": "http://arxiv.org/abs/2601.10140v1",
+    "citations": 0,
+    "pdfUrl": "https://arxiv.org/pdf/2601.10140v1",
+    "createdAt": "2026-01-21T00:14:20.310197"
+  },
+  {
+    "id": "arxiv-2601.10136v1",
+    "arxivId": "2601.10136v1",
+    "title": "Physics-informed neural networks for angular-momentum conservation in computational relativistic spin hydrodynamics",
+    "abstract": "Theoretical developments in relativistic spin hydrodynamics, which describes the macroscopic transport of spin angular momentum alongside other fundamental conserved quantities, have progressed rapidly since the experimental observation of the global spin polarization of $Λ$ hyperons in relativistic heavy-ion collision experiments. However, numerical simulations of relativistic spin hydrodynamics remain largely unaddressed due to computational challenges, particularly the accurate numerical conservation of total angular momentum. In this work, we propose the use of physics-informed neural networks (PINNs) for computational relativistic spin hydrodynamics. As a concrete application, we consider a rotating fluid confined within a cylindrical container. We show that angular-momentum conservation can be accurately achieved in the PINNs-based numerical framework. Furthermore, we investigate the spin-orbit conversion induced by the rotational viscous effect, which is the intrinsic dissipative process of relativistic spin hydrodynamics. Our analysis numerically identifies the mismatch between the transverse thermal vorticity and the spin potential as the driving mechanism of the spin-orbit conversion.",
+    "authors": [
+      "Hidefumi Matsuda",
+      "Koichi Hattori",
+      "Koichi Murase"
+    ],
+    "year": 2026,
+    "source": "arXiv",
+    "url": "http://arxiv.org/abs/2601.10136v1",
+    "citations": 0,
+    "pdfUrl": "https://arxiv.org/pdf/2601.10136v1",
+    "createdAt": "2026-01-21T00:14:20.310199"
+  },
+  {
+    "id": "arxiv-2601.10039v1",
+    "arxivId": "2601.10039v1",
+    "title": "Effects of parallel magnetic fields on sheaths near biased electrodes in a highly collisional Z-pinch plasma",
+    "abstract": "Sheath formation near biased electrodes in magnetic fields parallel to the wall is an understudied topic, especially within the context of Z-pinch fusion experiments. We perform 1X-2V Boltzmann-Poisson simulations of an axial cut at the pinch radius of a Z-pinch plasma between two biased electrodes with a magnetic field parallel to the wall. The collision frequencies are artificially increased to enhance thermalization of the plasma in the smaller simulation domain versus the actual experiment size; this increases the perpendicular mobility and partially de-magnetizes the ions resulting in non-monotonic sheath profiles with the potential increasing away from the wall to a peak before decaying. A classical sheath forms within an electron gyroradius from the wall not due to the natural thermal motion of the electrons, but due to the magnetized electrons gyrating into the wall; therefore, the sheath structure does not significantly change with bias potential or between electrodes. With increasing bias potential, a current is induced perpendicular to the wall due to changes in ion flow, differing from unmagnetized cases where current is induced by changes in electron flow. The magnetic field acts as a high resistivity with the perpendicular current density being three orders of magnitude lower than unmagnetized theoretical predictions. There is, however, significant flow parallel to the wall from the force balance between the pressure tensor and Lorentz force. These parallel flows induce a parallel current density three orders of magnitude larger than the perpendicular current density.",
+    "authors": [
+      "C. R. Skolar",
+      "B. Srinivasan"
+    ],
+    "year": 2026,
+    "source": "arXiv",
+    "url": "http://arxiv.org/abs/2601.10039v1",
+    "citations": 0,
+    "pdfUrl": "https://arxiv.org/pdf/2601.10039v1",
+    "createdAt": "2026-01-21T00:14:20.310201"
+  },
+  {
+    "id": "oa-W2796854462",
+    "title": "The lithium-ion battery: State of the art and future perspectives",
+    "abstract": "",
+    "authors": [
+      "Ghassan Zubi",
+      "Rodolfo Dufo‐López",
+      "Mónica Carvalho",
+      "Güzay Paşaoğlu"
+    ],
+    "year": 2018,
+    "source": "OpenAlex",
+    "url": "https://openalex.org/W2796854462",
+    "citations": 2348,
+    "doi": "https://doi.org/10.1016/j.rser.2018.03.002",
+    "createdAt": "2026-01-21T00:14:20.310221"
+  },
+  {
+    "id": "oa-W2636773388",
+    "title": "From Lithium‐Ion to Sodium‐Ion Batteries: Advantages, Challenges, and Surprises",
+    "abstract": "Abstract Mobile and stationary energy storage by rechargeable batteries is a topic of broad societal and economical relevance. Lithium‐ion battery (LIB) technology is at the forefront of the development, but a massively growing market will likely put severe pressure on resources and supply chains. Recently, sodium‐ion batteries (SIBs) have been reconsidered with the aim of providing a lower‐cost alternative that is less susceptible to resource and supply risks. On paper, the replacement of lithium by sodium in a battery seems straightforward at first, but unpredictable surprises are often found in practice. What happens when replacing lithium by sodium in electrode reactions? This review provides a state‐of‐the art overview on the redox behavior of materials when used as electrodes in lithium‐ion and sodium‐ion batteries, respectively. Advantages and challenges related to the use of sodium instead of lithium are discussed.",
+    "authors": [
+      "Prasant Kumar Nayak",
+      "Liangtao Yang",
+      "Wolfgang Brehm",
+      "Philipp Adelhelm"
+    ],
+    "year": 2017,
+    "source": "OpenAlex",
+    "url": "https://openalex.org/W2636773388",
+    "citations": 2442,
+    "doi": "https://doi.org/10.1002/anie.201703772",
+    "createdAt": "2026-01-21T00:14:20.310222"
+  },
+  {
+    "id": "oa-W2559148811",
+    "title": "The Development and Future of Lithium Ion Batteries",
+    "abstract": "This year, the battery industry celebrates the 25th anniversary of the introduction of the lithium ion rechargeable battery by Sony Corporation. The discovery of the system dates back to earlier work by Asahi Kasei in Japan, which used a combination of lower temperature carbons for the negative electrode to prevent solvent degradation and lithium cobalt dioxide modified somewhat from Goodenough's earlier work. The development by Sony was carried out within a few years by bringing together technology in film coating from their magnetic tape division and electrochemical technology from their battery division. The past 25 years has shown rapid growth in the sales and in the benefits of lithium ion in comparison to all the earlier rechargeable battery systems. Recent work on new materials shows that there is a good likelihood that the lithium ion battery will continue to improve in cost, energy, safety and power capability and will be a formidable competitor for some years to come.",
+    "authors": [
+      "George E. Blomgren"
+    ],
+    "year": 2016,
+    "source": "OpenAlex",
+    "url": "https://openalex.org/W2559148811",
+    "citations": 1835,
+    "doi": "https://doi.org/10.1149/2.0251701jes",
+    "createdAt": "2026-01-21T00:14:20.310224"
+  },
+  {
+    "id": "oa-W2908542802",
+    "title": "Lithium-ion batteries: outlook on present, future, and hybridized technologies",
+    "abstract": "Key insights into the evolution of lithium-ion batteries: present, future, and hybridized technologies.",
+    "authors": [
+      "Taehoon Kim",
+      "Wentao Song",
+      "Dae‐Yong Son",
+      "Luis K. Ono",
+      "Yabing Qi"
+    ],
+    "year": 2019,
+    "source": "OpenAlex",
+    "url": "https://openalex.org/W2908542802",
+    "citations": 2217,
+    "doi": "https://doi.org/10.1039/c8ta10513h",
+    "createdAt": "2026-01-21T00:14:20.310226"
+  },
+  {
+    "id": "oa-W2116064024",
+    "title": "A Critical Review of Thermal Issues in Lithium-Ion Batteries",
+    "abstract": "Lithium-ion batteries are well-suited for fully electric and hybrid electric vehicles due to their high specific energy and energy density relative to other rechargeable cell chemistries. However, these batteries have not been widely deployed commercially in these vehicles yet due to safety, cost, and poor low temperature performance, which are all challenges related to battery thermal management. In this paper, a critical review of the available literature on the major thermal issues for lithium-ion batteries is presented. Specific attention is paid to the effects of temperature and thermal management on capacity/power fade, thermal runaway, and pack electrical imbalance and to the performance of lithium-ion cells at cold temperatures. Furthermore, insights gained from previous experimental and modeling investigations are elucidated. These include the need for more accurate heat generation measurements, improved modeling of the heat generation rate, and clarity in the relative magnitudes of the various thermal effects observed at high charge and discharge rates seen in electric vehicle applications. From an analysis of the literature, the requirements for lithium-ion thermal management systems for optimal performance in these applications are suggested, and it is clear that no existing thermal management strategy or technology meets all these requirements.",
+    "authors": [
+      "Todd M. Bandhauer",
+      "Srinivas Garimella",
+      "Thomas F. Fuller"
+    ],
+    "year": 2011,
+    "source": "OpenAlex",
+    "url": "https://openalex.org/W2116064024",
+    "citations": 1987,
+    "doi": "https://doi.org/10.1149/1.3515880",
+    "createdAt": "2026-01-21T00:14:20.310228"
+  },
+  {
+    "id": "oa-W2065852943",
+    "title": "Tin-Based Amorphous Oxide: A High-Capacity Lithium-Ion-Storage Material",
+    "abstract": "A high-capacity lithium-storage material in metal-oxide form has been synthesized that can replace the carbon-based lithium intercalation materials currently in extensive use as the negative electrode (anode) of lithium-ion rechargeable batteries. This tin-based amorphous composite oxide (TCO) contains Sn(II)-O as the active center for lithium insertion and other glass-forming elements, which make up an oxide network. The TCO anode yields a specific capacity for reversible lithium adsorption more than 50 percent higher than those of the carbon families that persists after charge-discharge cycling when coupled with a lithium cobalt oxide cathode. Lithium-7 nuclear magnetic resonance measurements evidenced the high ionic state of lithium retained in the charged state, in which TCO accepted 8 moles of lithium ions per unit mole.",
+    "authors": [
+      "Yoshio Idota",
+      "Tadahiko Kubota",
+      "Akihiro Matsufuji",
+      "Yukio Maekawa",
+      "Tsutomu Miyasaka"
+    ],
+    "year": 1997,
+    "source": "OpenAlex",
+    "url": "https://openalex.org/W2065852943",
+    "citations": 2561,
+    "doi": "https://doi.org/10.1126/science.276.5317.1395",
+    "createdAt": "2026-01-21T00:14:20.310230"
+  },
+  {
+    "id": "oa-W3005657800",
+    "title": "Guidelines and trends for next-generation rechargeable lithium and lithium-ion batteries",
+    "abstract": "This review article summarizes the current trends and provides guidelines towards next-generation rechargeable lithium and lithium-ion battery chemistries.",
+    "authors": [
+      "Feixiang Wu",
+      "Joachim Maier",
+      "Yan Yu"
+    ],
+    "year": 2020,
+    "source": "OpenAlex",
+    "url": "https://openalex.org/W3005657800",
+    "citations": 2061,
+    "doi": "https://doi.org/10.1039/c7cs00863e",
+    "createdAt": "2026-01-21T00:14:20.310232"
+  },
+  {
+    "id": "oa-W2110395021",
+    "title": "Poly(ethylene oxide)-based electrolytes for lithium-ion batteries",
+    "abstract": "This article reviews PEO-based electrolytes for lithium-ion batteries.",
+    "authors": [
+      "Zhigang Xue",
+      "Dan He",
+      "Xiaolin Xie"
+    ],
+    "year": 2015,
+    "source": "OpenAlex",
+    "url": "https://openalex.org/W2110395021",
+    "citations": 2130,
+    "doi": "https://doi.org/10.1039/c5ta03471j",
+    "createdAt": "2026-01-21T00:14:20.310233"
+  },
+  {
+    "id": "oa-W2753749122",
+    "title": "An Outlook on Lithium Ion Battery Technology",
+    "abstract": "Lithium ion batteries as a power source are dominating in portable electronics, penetrating the electric vehicle market, and on the verge of entering the utility market for grid-energy storage. Depending on the application, trade-offs among the various performance parameters-energy, power, cycle life, cost, safety, and environmental impact-are often needed, which are linked to severe materials chemistry challenges. The current lithium ion battery technology is based on insertion-reaction electrodes and organic liquid electrolytes. With an aim to increase the energy density or optimize the other performance parameters, new electrode materials based on both insertion reaction and dominantly conversion reaction along with solid electrolytes and lithium metal anode are being intensively pursued. This article presents an outlook on lithium ion technology by providing first the current status and then the progress and challenges with the ongoing approaches. In light of the formidable challenges with some of the approaches, the article finally points out practically viable near-term strategies.",
+    "authors": [
+      "Arumugam Manthiram"
+    ],
+    "year": 2017,
+    "source": "OpenAlex",
+    "url": "https://openalex.org/W2753749122",
+    "citations": 1601,
+    "doi": "https://doi.org/10.1021/acscentsci.7b00288",
+    "createdAt": "2026-01-21T00:14:20.310235"
+  },
+  {
+    "id": "oa-W2169518199",
+    "title": "Simulation and Optimization of the Dual Lithium Ion Insertion Cell",
+    "abstract": "The galvanostatic charge and discharge of a dual lithium ion insertion (rocking‐chair) cell are modeled. Transport in the electrolyte is described with concentrated solution theory. Insertion of lithium into and out of the active electrode material is simulated using superposition, greatly simplifying the numerical calculations. Simulation results are presented for the cell, and these results are compared with experimental data from the literature. Criteria are established to assess the importance of diffusion in the solid matrix and of transport in the electrolytic solution. Various procedures to optimize the utilization of active material are considered. Simulation results for the dual lithium ion insertion cell are compared with those for a cell with a solid lithium negative electrode.",
+    "authors": [
+      "Thomas F. Fuller",
+      "Marc Doyle",
+      "John Newman"
+    ],
+    "year": 1994,
+    "source": "OpenAlex",
+    "url": "https://openalex.org/W2169518199",
+    "citations": 1928,
+    "doi": "https://doi.org/10.1149/1.2054684",
+    "createdAt": "2026-01-21T00:14:20.310237"
+  },
+  {
+    "id": "s2-7eb8d966834cccbd08d7e6407699e45c22b409be",
+    "title": "Recycling lithium-ion batteries from electric vehicles",
+    "abstract": "",
+    "authors": [
+      "Gavin Harper",
+      "R. Sommerville",
+      "E. Kendrick",
+      "L. Driscoll",
+      "P. Slater",
+      "R. Stolkin",
+      "A. Walton",
+      "Paul Christensen",
+      "O. Heidrich",
+      "S. Lambert",
+      "A. Abbott",
+      "Karl S. Ryder",
+      "L. Gaines",
+      "P. Anderson"
+    ],
+    "year": 2019,
+    "source": "Semantic Scholar",
+    "url": "https://www.semanticscholar.org/paper/7eb8d966834cccbd08d7e6407699e45c22b409be",
+    "citations": 2669,
+    "doi": "10.1038/s41586-019-1682-5",
+    "arxivId": null,
+    "createdAt": "2026-01-20T23:57:28.178416"
+  },
+  {
+    "id": "s2-1a5ed3b95d131954b010c38016491b076466f8bd",
+    "title": "Toward Direct Regeneration of Spent Lithium-Ion Batteries: A Next-Generation Recycling Method.",
+    "abstract": "The popularity of portable electronic devices and electric vehicles has led to the drastically increasing consumption of lithium-ion batteries recently, raising concerns about the disposal and recycling of spent lithium-ion batteries. However, the recycling rate of lithium-ion batteries worldwide at present is extremely low. Many factors limit the promotion of the battery recycling rate: outdated recycling technology is the most critical one. Existing metallurgy-based recycling methods rely on continuous decomposition and extraction steps with high-temperature roasting/acid leaching processes and many chemical reagents. These methods are tedious with worse economic feasibility, and the recycling products are mostly alloys or salts, which can only be used as precursors. To simplify the process and improve the economic benefits, novel recycling methods are in urgent demand, and direct recycling/regeneration is therefore proposed as a next-generation method. Herein, a comprehensive review of the origin, current status, and prospect of direct recycling methods is provided. We have systematically analyzed current recycling methods and summarized their limitations, pointing out the necessity of developing direct recycling methods. A detailed analysis for discussions of the advantages, limitations, and obstacles is conducted. Guidance for future direct recycling methods toward large-scale industrialization as well as green and efficient recycling systems is also provided.",
+    "authors": [
+      "Junxiong Wang",
+      "Junhua Ma",
+      "Zhaofeng Zhuang",
+      "Zheng Liang",
+      "Kai Jia",
+      "Guanjun Ji",
+      "Guangmin Zhou",
+      "Hui–Ming Cheng"
+    ],
+    "year": 2024,
+    "source": "Semantic Scholar",
+    "url": "https://www.semanticscholar.org/paper/1a5ed3b95d131954b010c38016491b076466f8bd",
+    "citations": 248,
+    "doi": "10.1021/acs.chemrev.3c00884",
+    "arxivId": null,
+    "createdAt": "2026-01-20T23:57:28.178417"
+  },
+  {
+    "id": "s2-6c22b1b43e9f4beaa2ec1a5e3a188c64e6c0cc30",
+    "title": "\"Fast-Charging\" Anode Materials for Lithium-Ion Batteries from Perspective of Ion Diffusion in Crystal Structure.",
+    "abstract": "\"Fast-charging\" lithium-ion batteries have gained a multitude of attention in recent years since they could be applied to energy storage areas like electric vehicles, grids, and subsea operations. Unfortunately, the excellent energy density could fail to sustain optimally while lithium-ion batteries are exposed to fast-charging conditions. In actuality, the crystal structure of electrode materials represents the critical factor for influencing the electrode performance. Accordingly, employing anode materials with low diffusion barrier could improve the \"fast-charging\" performance of the lithium-ion battery. In this Review, first, the \"fast-charging\" principle of lithium-ion battery and ion diffusion path in the crystal are briefly outlined. Next, the application prospects of \"fast-charging\" anode materials with various crystal structures are evaluated to search \"fast-charging\" anode materials with stable, safe, and long lifespan, solving the remaining challenges associated with high power and high safety. Finally, summarizing recent research advances for typical \"fast-charging\" anode materials, including preparation methods for advanced morphologies and the latest techniques for ameliorating performance. Furthermore, an outlook is given on the ongoing breakthroughs for \"fast-charging\" anode materials of lithium-ion batteries. Intercalated materials (niobium-based, carbon-based, titanium-based, vanadium-based) with favorable cycling stability are predominantly limited by undesired electronic conductivity and theoretical specific capacity. Accordingly, addressing the electrical conductivity of these materials constitutes an effective trend for realizing fast-charging. The conversion-type transition metal oxide and phosphorus-based materials with high theoretical specific capacity typically undergoes significant volume variation during charging and discharging. Consequently, alleviating the volume expansion could significantly fulfill the application of these materials in fast-charging batteries.",
+    "authors": [
+      "Rui Wang",
+      "Lu Wang",
+      "Rui Liu",
+      "Xiangye Li",
+      "Youzhi Wu",
+      "F. Ran"
+    ],
+    "year": 2024,
+    "source": "Semantic Scholar",
+    "url": "https://www.semanticscholar.org/paper/6c22b1b43e9f4beaa2ec1a5e3a188c64e6c0cc30",
+    "citations": 190,
+    "doi": "10.1021/acsnano.3c08712",
+    "arxivId": null,
+    "createdAt": "2026-01-20T23:57:28.178417"
+  },
+  {
+    "id": "s2-1f52cb103746c46f2e2a0fd0d8d3c4ee414fdbd3",
+    "title": "Thermal runaway mechanism of lithium ion battery for electric vehicles: A review",
+    "abstract": "",
+    "authors": [
+      "Xuning Feng",
+      "M. Ouyang",
+      "Xiang Liu",
+      "Languang Lu",
+      "Yong Xia",
+      "Xiangming He"
+    ],
+    "year": 2018,
+    "source": "Semantic Scholar",
+    "url": "https://www.semanticscholar.org/paper/1f52cb103746c46f2e2a0fd0d8d3c4ee414fdbd3",
+    "citations": 3021,
+    "doi": "10.1016/J.ENSM.2017.05.013",
+    "arxivId": null,
+    "createdAt": "2026-01-20T23:57:28.178418"
+  },
+  {
+    "id": "s2-d0e0f47530e2ab508db003d47c180f7b016b732e",
+    "title": "A reflection on lithium-ion battery cathode chemistry",
+    "abstract": "Lithium-ion batteries have aided the portable electronics revolution for nearly three decades. They are now enabling vehicle electrification and beginning to enter the utility industry. The emergence and dominance of lithium-ion batteries are due to their higher energy density compared to other rechargeable battery systems, enabled by the design and development of high-energy density electrode materials. Basic science research, involving solid-state chemistry and physics, has been at the center of this endeavor, particularly during the 1970s and 1980s. With the award of the 2019 Nobel Prize in Chemistry to the development of lithium-ion batteries, it is enlightening to look back at the evolution of the cathode chemistry that made the modern lithium-ion technology feasible. This review article provides a reflection on how fundamental studies have facilitated the discovery, optimization, and rational design of three major categories of oxide cathodes for lithium-ion batteries, and a personal perspective on the future of this important area. The 2019 Nobel Prize in Chemistry has been awarded to a trio of pioneers of the modern lithium-ion battery. Here, Professor Arumugam Manthiram looks back at the evolution of cathode chemistry, discussing the three major categories of oxide cathode materials with an emphasis on the fundamental solid-state chemistry that has enabled these advances.",
+    "authors": [
+      "A. Manthiram"
+    ],
+    "year": 2020,
+    "source": "Semantic Scholar",
+    "url": "https://www.semanticscholar.org/paper/d0e0f47530e2ab508db003d47c180f7b016b732e",
+    "citations": 1937,
+    "doi": "10.1038/s41467-020-15355-0",
+    "arxivId": null,
+    "createdAt": "2026-01-20T23:57:28.178419"
+  },
+  {
+    "id": "s2-91c2639bd188266d384d8f8116dc291c5df98873",
+    "title": "Energy consumption of current and future production of lithium-ion and post lithium-ion battery cells",
+    "abstract": "Due to the rapidly increasing demand for electric vehicles, the need for battery cells is also increasing considerably. However, the production of battery cells requires enormous amounts of energy, which is expensive and produces greenhouse gas emissions. Here, by combining data from literature and from own research, we analyse how much energy lithium-ion battery (LIB) and post lithium-ion battery (PLIB) cell production requires on cell and macro-economic levels, currently and in the future (until 2040). On the cell level, we find that PLIB cells require less energy than LIB cells per produced cell energy. On the macro-economic level, we find that the energy consumption for the global production of LIB and PLIB cells will be 130,000 GWh if no measures are taken. Yet, it is possible to optimize future production and save up to 66% of this energy demand. Battery manufacturing requires enormous amounts of energy and has important environmental implications. New research by Florian Degen and colleagues evaluates the energy consumption of current and future production of lithium-ion and post-lithium-ion batteries.",
+    "authors": [
+      "F. Degen",
+      "M. Winter",
+      "D. Bendig",
+      "J. Tübke"
+    ],
+    "year": 2023,
+    "source": "Semantic Scholar",
+    "url": "https://www.semanticscholar.org/paper/91c2639bd188266d384d8f8116dc291c5df98873",
+    "citations": 477,
+    "doi": "10.1038/s41560-023-01355-z",
+    "arxivId": null,
+    "createdAt": "2026-01-20T23:57:28.178420"
+  },
+  {
+    "id": "s2-daf5f775ef07cbcb60911e044c8a0aaf50ca4ed0",
+    "title": "Direct regeneration of degraded lithium-ion battery cathodes with a multifunctional organic lithium salt",
+    "abstract": "The recycling of spent lithium-ion batteries is an effective approach to alleviating environmental concerns and promoting resource conservation. LiFePO_4 batteries have been widely used in electric vehicles and energy storage stations. Currently, lithium loss, resulting in formation of Fe(III) phase, is mainly responsible for the capacity fade of LiFePO_4 cathode. Another factor is poor electrical conductivity that limits its rate capability. Here, we report the use of a multifunctional organic lithium salt (3,4-dihydroxybenzonitrile dilithium) to restore spent LiFePO_4 cathode by direct regeneration. The degraded LiFePO_4 particles are well coupled with the functional groups of the organic lithium salt, so that lithium fills vacancies and cyano groups create a reductive atmosphere to inhibit Fe(III) phase. At the same time, pyrolysis of the salt produces an amorphous conductive carbon layer that coats the LiFePO_4 particles, which improves Li-ion and electron transfer kinetics. The restored LiFePO_4 cathode shows good cycling stability and rate performance (a high capacity retention of 88% after 400 cycles at 5 C). This lithium salt can also be used to recover degraded transition metal oxide-based cathodes. A techno-economic analysis suggests that this strategy has higher environmental and economic benefits, compared with the traditional recycling methods. Sustainable recycle of spent Li ion batteries is an effective strategy to alleviate environmental concerns and support resource conservation. Here, authors report the direct regeneration of LiFePO_4 cathode using multifunctional organic lithium salts, leading to high environmental and economic benefits.",
+    "authors": [
+      "Guanjun Ji",
+      "Junxiong Wang",
+      "Zheng Liang",
+      "Kai Jia",
+      "Junhua Ma",
+      "Zhaofeng Zhuang",
+      "Guangmin Zhou",
+      "Hui‐Ming Cheng"
+    ],
+    "year": 2023,
+    "source": "Semantic Scholar",
+    "url": "https://www.semanticscholar.org/paper/daf5f775ef07cbcb60911e044c8a0aaf50ca4ed0",
+    "citations": 338,
+    "doi": "10.1038/s41467-023-36197-6",
+    "arxivId": null,
+    "createdAt": "2026-01-20T23:57:28.178421"
+  },
+  {
+    "id": "s2-fe0929dafe6b6dee41185c294372c26a573bca03",
+    "title": "From Lithium-Ion to Sodium-Ion Batteries: Advantages, Challenges, and Surprises.",
+    "abstract": "",
+    "authors": [
+      "P. Nayak",
+      "Liangtao Yang",
+      "Wolfgang Brehm",
+      "P. Adelhelm"
+    ],
+    "year": 2018,
+    "source": "Semantic Scholar",
+    "url": "https://www.semanticscholar.org/paper/fe0929dafe6b6dee41185c294372c26a573bca03",
+    "citations": 2023,
+    "doi": "10.1002/anie.201703772",
+    "arxivId": null,
+    "createdAt": "2026-01-20T23:57:28.178422"
+  },
+  {
+    "id": "s2-53c1840b47486fdc0e31cd02985eea59c535eeee",
+    "title": "Health prognostics for lithium-ion batteries: mechanisms, methods, and prospects",
+    "abstract": "Critical review of main aging mechanisms and health prognostic methods for lithium-ion batteries. Comprehensive summary of challenges and prospects for future trends with potential solutions.",
+    "authors": [
+      "Yunhong Che",
+      "Xiaosong Hu",
+      "Xianke Lin",
+      "Jia Guo",
+      "R. Teodorescu"
+    ],
+    "year": 2023,
+    "source": "Semantic Scholar",
+    "url": "https://www.semanticscholar.org/paper/53c1840b47486fdc0e31cd02985eea59c535eeee",
+    "citations": 200,
+    "doi": "10.1039/d2ee03019e",
+    "arxivId": null,
+    "createdAt": "2026-01-20T23:57:28.178422"
+  },
+  {
+    "id": "s2-9bf8a94eda2c9dc0a7cf78157e4a5f0a2ff00496",
+    "title": "Data-driven capacity estimation of commercial lithium-ion batteries from voltage relaxation",
+    "abstract": "Accurate capacity estimation is crucial for the reliable and safe operation of lithium-ion batteries. In particular, exploiting the relaxation voltage curve features could enable battery capacity estimation without additional cycling information. Here, we report the study of three datasets comprising 130 commercial lithium-ion cells cycled under various conditions to evaluate the capacity estimation approach. One dataset is collected for model building from batteries with LiNi0.86Co0.11Al0.03O2-based positive electrodes. The other two datasets, used for validation, are obtained from batteries with LiNi0.83Co0.11Mn0.07O2-based positive electrodes and batteries with the blend of Li(NiCoMn)O2 - Li(NiCoAl)O2 positive electrodes. Base models that use machine learning methods are employed to estimate the battery capacity using features derived from the relaxation voltage profiles. The best model achieves a root-mean-square error of 1.1% for the dataset used for the model building. A transfer learning model is then developed by adding a featured linear transformation to the base model. This extended model achieves a root-mean-square error of less than 1.7% on the datasets used for the model validation, indicating the successful applicability of the capacity estimation approach utilizing cell voltage relaxation. Accurate capacity estimation is crucial for lithium-ion batteries' reliable and safe operation. Here, the authors propose an approach exploiting features from the relaxation voltage curve for battery capacity estimation without requiring other previous cycling information.",
+    "authors": [
+      "Jiangong Zhu",
+      "Yixiu Wang",
+      "Yuan Huang",
+      "R. Bhushan Gopaluni",
+      "Yankai Cao",
+      "M. Heere",
+      "M. Mühlbauer",
+      "Liuda Mereacre",
+      "Haifeng Dai",
+      "Xinhua Liu",
+      "A. Senyshyn",
+      "Xuezhe Wei",
+      "M. Knapp",
+      "Helmut Ehrenberg"
+    ],
+    "year": 2022,
+    "source": "Semantic Scholar",
+    "url": "https://www.semanticscholar.org/paper/9bf8a94eda2c9dc0a7cf78157e4a5f0a2ff00496",
+    "citations": 548,
+    "doi": "10.1038/s41467-022-29837-w",
+    "arxivId": null,
+    "createdAt": "2026-01-20T23:57:28.178423"
+  },
+  {
+    "id": "s2-a9762ed6fea42adf0d2049ed1c05f9fcb399d1a6",
+    "title": "Recycling of Lithium‐Ion Batteries—Current State of the Art, Circular Economy, and Next Generation Recycling",
+    "abstract": "Being successfully introduced into the market only 30 years ago, lithium‐ion batteries have become state‐of‐the‐art power sources for portable electronic devices and the most promising candidate for energy storage in stationary or electric vehicle applications. This widespread use in a multitude of industrial and private applications leads to the need for recycling and reutilization of their constituent components. Improving the “recycling technology” of lithium ion batteries is a continuous effort and recycling is far from maturity today. The complexity of lithium ion batteries with varying active and inactive material chemistries interferes with the desire to establish one robust recycling procedure for all kinds of lithium ion batteries. Therefore, the current state of the art needs to be analyzed, improved, and adapted for the coming cell chemistries and components. This paper provides an overview of regulations and new battery directive demands. It covers current practices in material collection, sorting, transportation, handling, and recycling. Future generations of batteries will further increase the diversity of cell chemistry and components. Therefore, this paper presents predictions related to the challenges of future battery recycling with regard to battery materials and chemical composition, and discusses future approaches to battery recycling.",
+    "authors": [
+      "Jonas Neumann",
+      "Martina Petraniková",
+      "M. Meeus",
+      "Jorge D. Gamarra",
+      "R. Younesi",
+      "M. Winter",
+      "S. Nowak"
+    ],
+    "year": 2022,
+    "source": "Semantic Scholar",
+    "url": "https://www.semanticscholar.org/paper/a9762ed6fea42adf0d2049ed1c05f9fcb399d1a6",
+    "citations": 549,
+    "doi": "10.1002/aenm.202102917",
+    "arxivId": null,
+    "createdAt": "2026-01-20T23:57:28.178424"
+  },
+  {
+    "id": "s2-a507a3991ad68e10495202cfa3ef9f425529893a",
+    "title": "Post-lithium-ion battery cell production and its compatibility with lithium-ion cell production infrastructure",
+    "abstract": "",
+    "authors": [
+      "Fabian Duffner",
+      "Niklas Kronemeyer",
+      "J. Tübke",
+      "J. Leker",
+      "M. Winter",
+      "R. Schmuch"
+    ],
+    "year": 2021,
+    "source": "Semantic Scholar",
+    "url": "https://www.semanticscholar.org/paper/a507a3991ad68e10495202cfa3ef9f425529893a",
+    "citations": 942,
+    "doi": "10.1038/s41560-020-00748-8",
+    "arxivId": null,
+    "createdAt": "2026-01-20T23:57:28.178424"
+  },
+  {
+    "id": "s2-a72d22c0663a2c77d702b0a20680751b0ca1630b",
+    "title": "Fast charging of energy-dense lithium-ion batteries",
+    "abstract": "",
+    "authors": [
+      "Chaoyang Wang",
+      "Teng Liu",
+      "Xiao-Guang Yang",
+      "S. Ge",
+      "Nathaniel V. Stanley",
+      "Eric S. Rountree",
+      "Y. Leng",
+      "B. McCarthy"
+    ],
+    "year": 2022,
+    "source": "Semantic Scholar",
+    "url": "https://www.semanticscholar.org/paper/a72d22c0663a2c77d702b0a20680751b0ca1630b",
+    "citations": 612,
+    "doi": "10.1038/s41586-022-05281-0",
+    "arxivId": null,
+    "createdAt": "2026-01-20T23:57:28.178425"
+  },
+  {
+    "id": "s2-dd0533f10303df86ab7285da5d198bf152204a30",
+    "title": "Review—\"Knees\" in Lithium-Ion Battery Aging Trajectories",
+    "abstract": "\n Lithium-ion batteries can last many years but sometimes exhibit rapid, nonlinear degradation that severely limits battery lifetime. Here, we review prior work on “knees” in lithium-ion battery aging trajectories. We first review definitions for knees and three classes of “internal state trajectories” (termed snowball, hidden, and threshold trajectories) that can cause a knee. We then discuss six knee “pathways”, including lithium plating, electrode saturation, resistance growth, electrolyte and additive depletion, percolation-limited connectivity, and mechanical deformation, some of which have internal state trajectories with signals that are electrochemically undetectable. We also identify key design and usage sensitivities for knees. Finally, we discuss challenges and opportunities for knee modeling and prediction. Our findings illustrate the complexity and subtlety of lithium-ion battery degradation and can aid both academic and industrial efforts to improve battery lifetime.",
+    "authors": [
+      "Peter M. Attia",
+      "Alexa Bills",
+      "F. Planella",
+      "Philipp Dechent",
+      "Gonccalo dos Reis",
+      "M. Dubarry",
+      "Paul Gasper",
+      "Richard Gilchrist",
+      "Samuel Greenbank",
+      "D. Howey",
+      "Ouyang Liu",
+      "Edwin Khoo",
+      "Yuliya Preger",
+      "A. Soni",
+      "S. Sripad",
+      "A. Stefanopoulou",
+      "V. Sulzer"
+    ],
+    "year": 2022,
+    "source": "Semantic Scholar",
+    "url": "https://www.semanticscholar.org/paper/dd0533f10303df86ab7285da5d198bf152204a30",
+    "citations": 313,
+    "doi": "10.1149/1945-7111/ac6d13",
+    "arxivId": "2201.02891",
+    "createdAt": "2026-01-20T23:57:28.178426"
+  },
+  {
+    "id": "s2-cd4608b4746fd5af3369574412ce802c239e02c0",
+    "title": "Fast Charging Anode Materials for Lithium‐Ion Batteries: Current Status and Perspectives",
+    "abstract": "With the enormous development of the electric vehicle market, fast charging battery technology is highly required. However, the slow kinetics and lithium plating under fast charging condition of traditional graphite anode hinder the fast charging capability of lithium‐ion batteries. To develop anode materials with rapid Li‐ions diffusion capability and fast reaction kinetics has received widely attentions. This review summarizes the current status in the exploration of fast charging anode materials, mainly including the critical challenge of achieving fast charging capability, the inherent structures and lithium storage mechanisms of various anode materials, as well as the recent progress to improve the rate performance involving morphology regulation, structure design, surface/interface modification, as well as forming multiphase systems. Finally, the challenges and future directions of developing fast charging Li‐ion batteries are highlighted.",
+    "authors": [
+      "Shengqiang Li",
+      "Kai Wang",
+      "Gefei Zhang",
+      "Shani Li",
+      "Yanan Xu",
+      "Xu-Dong Zhang",
+      "Xiong Zhang",
+      "Shuanghao Zheng",
+      "Xianzhong Sun",
+      "Yanwei Ma"
+    ],
+    "year": 2022,
+    "source": "Semantic Scholar",
+    "url": "https://www.semanticscholar.org/paper/cd4608b4746fd5af3369574412ce802c239e02c0",
+    "citations": 447,
+    "doi": "10.1002/adfm.202200796",
+    "arxivId": null,
+    "createdAt": "2026-01-20T23:57:28.178426"
+  },
+  {
+    "id": "s2-ae6318ae650dfb772bb2278b2c38314a6f8f2706",
+    "title": "Co-Estimation of State-of-Charge and State-of- Health for Lithium-Ion Batteries Using an Enhanced Electrochemical Model",
+    "abstract": "Real-time electrochemical state information of lithium-ion batteries attributes to a high-fidelity estimation of state-of-charge (SOC) and state-of-health (SOH) in advanced battery management systems. However, the consumption of recyclable lithium ions, loss of the active materials, and the interior resistance increase resulted from the irreversible side reactions cause severe battery performance decay. To maintain accurate battery state estimation over time, a scheme using the reduced-order electrochemical model and the dual nonlinear filters is presented in this article for the reliable co-estimations of cell SOC and SOH. Specifically, the full-order pseudo-two-dimensional model is first simplified with Padé approximation while ensuring precision and observability. Next, the feasibility and performance of SOC estimator are revealed by accessing unmeasurable physical variables, such as the surface and bulk solid-phase concentration. To well reflect battery degradation, three key aging factors including the loss of lithium ions, loss of active materials, and resistance increment, are simultaneously identified, leading to an appreciable precision improvement of SOC estimation online particular for aged cells. Finally, extensive verification experiments are carried out over the cell's lifespan. The results demonstrate the performance of the proposed SOC/SOH co-estimation scheme.",
+    "authors": [
+      "Yizhao Gao",
+      "Kailong Liu",
+      "Chong Zhu",
+      "Xi Zhang",
+      "Dong Zhang"
+    ],
+    "year": 2022,
+    "source": "Semantic Scholar",
+    "url": "https://www.semanticscholar.org/paper/ae6318ae650dfb772bb2278b2c38314a6f8f2706",
+    "citations": 280,
+    "doi": "10.1109/TIE.2021.3066946",
+    "arxivId": null,
+    "createdAt": "2026-01-20T23:57:28.178427"
+  }
+]

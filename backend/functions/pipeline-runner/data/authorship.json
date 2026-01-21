@@ -1,0 +1,5747 @@
+[
+  {
+    "paperId": "arxiv-2601.11520v1",
+    "researcherId": "researcher-a1b6de4b901e",
+    "role": "author"
+  },
+  {
+    "paperId": "arxiv-2601.11520v1",
+    "researcherId": "researcher-24e949ba109b",
+    "role": "author"
+  },
+  {
+    "paperId": "arxiv-2601.11520v1",
+    "researcherId": "researcher-2c46de31f892",
+    "role": "author"
+  },
+  {
+    "paperId": "arxiv-2601.11514v1",
+    "researcherId": "researcher-4de11fd2f0e3",
+    "role": "author"
+  },
+  {
+    "paperId": "arxiv-2601.11514v1",
+    "researcherId": "researcher-18ae2c7f2012",
+    "role": "author"
+  },
+  {
+    "paperId": "arxiv-2601.11514v1",
+    "researcherId": "researcher-8908adc3a3fa",
+    "role": "author"
+  },
+  {
+    "paperId": "arxiv-2601.11514v1",
+    "researcherId": "researcher-d4ca6169d9af",
+    "role": "author"
+  },
+  {
+    "paperId": "arxiv-2601.11514v1",
+    "researcherId": "researcher-66422703972c",
+    "role": "author"
+  },
+  {
+    "paperId": "arxiv-2601.11514v1",
+    "researcherId": "researcher-5e8786f00d03",
+    "role": "author"
+  },
+  {
+    "paperId": "arxiv-2601.11514v1",
+    "researcherId": "researcher-295675d6dcd9",
+    "role": "author"
+  },
+  {
+    "paperId": "arxiv-2601.11514v1",
+    "researcherId": "researcher-d2f078fee5ac",
+    "role": "author"
+  },
+  {
+    "paperId": "arxiv-2601.11514v1",
+    "researcherId": "researcher-f4eb4c739bc7",
+    "role": "author"
+  },
+  {
+    "paperId": "arxiv-2601.11514v1",
+    "researcherId": "researcher-3445ec1731a0",
+    "role": "author"
+  },
+  {
+    "paperId": "arxiv-2601.11514v1",
+    "researcherId": "researcher-cbd6bcadc925",
+    "role": "author"
+  },
+  {
+    "paperId": "arxiv-2601.11514v1",
+    "researcherId": "researcher-9ed1b9d220ed",
+    "role": "author"
+  },
+  {
+    "paperId": "arxiv-2601.11509v1",
+    "researcherId": "researcher-24921764f4cd",
+    "role": "author"
+  },
+  {
+    "paperId": "arxiv-2601.11509v1",
+    "researcherId": "researcher-0a47c7d7eecb",
+    "role": "author"
+  },
+  {
+    "paperId": "arxiv-2601.11509v1",
+    "researcherId": "researcher-b47126ae3cc3",
+    "role": "author"
+  },
+  {
+    "paperId": "arxiv-2601.11509v1",
+    "researcherId": "researcher-0a91d873332f",
+    "role": "author"
+  },
+  {
+    "paperId": "arxiv-2601.11509v1",
+    "researcherId": "researcher-6aaf8e6a8af6",
+    "role": "author"
+  },
+  {
+    "paperId": "arxiv-2601.11509v1",
+    "researcherId": "researcher-4e83eeecb735",
+    "role": "author"
+  },
+  {
+    "paperId": "arxiv-2601.11509v1",
+    "researcherId": "researcher-1b9daed4c45c",
+    "role": "author"
+  },
+  {
+    "paperId": "arxiv-2601.11509v1",
+    "researcherId": "researcher-1df1337867c1",
+    "role": "author"
+  },
+  {
+    "paperId": "s2-dfa85a88b66b3443d7902bdd82a0306b0f134170",
+    "researcherId": "researcher-a3d10c0875c6",
+    "role": "author"
+  },
+  {
+    "paperId": "s2-dfa85a88b66b3443d7902bdd82a0306b0f134170",
+    "researcherId": "researcher-8b902927a43b",
+    "role": "author"
+  },
+  {
+    "paperId": "s2-dfa85a88b66b3443d7902bdd82a0306b0f134170",
+    "researcherId": "researcher-8496586bf502",
+    "role": "author"
+  },
+  {
+    "paperId": "s2-dfa85a88b66b3443d7902bdd82a0306b0f134170",
+    "researcherId": "researcher-386caf4982cf",
+    "role": "author"
+  },
+  {
+    "paperId": "s2-dfa85a88b66b3443d7902bdd82a0306b0f134170",
+    "researcherId": "researcher-e0d32cfc72cf",
+    "role": "author"
+  },
+  {
+    "paperId": "s2-dfa85a88b66b3443d7902bdd82a0306b0f134170",
+    "researcherId": "researcher-e3ebcdf1794a",
+    "role": "author"
+  },
+  {
+    "paperId": "s2-dfa85a88b66b3443d7902bdd82a0306b0f134170",
+    "researcherId": "researcher-b35277dbde8a",
+    "role": "author"
+  },
+  {
+    "paperId": "s2-dfa85a88b66b3443d7902bdd82a0306b0f134170",
+    "researcherId": "researcher-5a1d907430f4",
+    "role": "author"
+  },
+  {
+    "paperId": "s2-dfa85a88b66b3443d7902bdd82a0306b0f134170",
+    "researcherId": "researcher-6d15e30c8fb8",
+    "role": "author"
+  },
+  {
+    "paperId": "s2-3dc63dbf2cba1a62e98f5240bbcb006eb0fd7883",
+    "researcherId": "researcher-7725bede18c5",
+    "role": "author"
+  },
+  {
+    "paperId": "s2-3dc63dbf2cba1a62e98f5240bbcb006eb0fd7883",
+    "researcherId": "researcher-7ce436a0acaa",
+    "role": "author"
+  },
+  {
+    "paperId": "s2-3dc63dbf2cba1a62e98f5240bbcb006eb0fd7883",
+    "researcherId": "researcher-496a99f4354e",
+    "role": "author"
+  },
+  {
+    "paperId": "s2-3dc63dbf2cba1a62e98f5240bbcb006eb0fd7883",
+    "researcherId": "researcher-1d15f411e8a1",
+    "role": "author"
+  },
+  {
+    "paperId": "s2-3dc63dbf2cba1a62e98f5240bbcb006eb0fd7883",
+    "researcherId": "researcher-b11ac996bd52",
+    "role": "author"
+  },
+  {
+    "paperId": "s2-3dc63dbf2cba1a62e98f5240bbcb006eb0fd7883",
+    "researcherId": "researcher-4f021362d03c",
+    "role": "author"
+  },
+  {
+    "paperId": "s2-3dc63dbf2cba1a62e98f5240bbcb006eb0fd7883",
+    "researcherId": "researcher-f5c30bb691cd",
+    "role": "author"
+  },
+  {
+    "paperId": "s2-3dc63dbf2cba1a62e98f5240bbcb006eb0fd7883",
+    "researcherId": "researcher-933604103d70",
+    "role": "author"
+  },
+  {
+    "paperId": "s2-3dc63dbf2cba1a62e98f5240bbcb006eb0fd7883",
+    "researcherId": "researcher-07e83ff16e0c",
+    "role": "author"
+  },
+  {
+    "paperId": "s2-3dc63dbf2cba1a62e98f5240bbcb006eb0fd7883",
+    "researcherId": "researcher-37f56f720182",
+    "role": "author"
+  },
+  {
+    "paperId": "s2-3dc63dbf2cba1a62e98f5240bbcb006eb0fd7883",
+    "researcherId": "researcher-437c2b7a70d8",
+    "role": "author"
+  },
+  {
+    "paperId": "s2-3dc63dbf2cba1a62e98f5240bbcb006eb0fd7883",
+    "researcherId": "researcher-c185a036d7b8",
+    "role": "author"
+  },
+  {
+    "paperId": "s2-3dc63dbf2cba1a62e98f5240bbcb006eb0fd7883",
+    "researcherId": "researcher-7f27e9673c13",
+    "role": "author"
+  },
+  {
+    "paperId": "s2-3dc63dbf2cba1a62e98f5240bbcb006eb0fd7883",
+    "researcherId": "researcher-968342adf21b",
+    "role": "author"
+  },
+  {
+    "paperId": "s2-1eb2289ad72e776a80f83f88fcc61bf44b4c10b3",
+    "researcherId": "researcher-e3ebcdf1794a",
+    "role": "author"
+  },
+  {
+    "paperId": "s2-1eb2289ad72e776a80f83f88fcc61bf44b4c10b3",
+    "researcherId": "researcher-84639462ef5a",
+    "role": "author"
+  },
+  {
+    "paperId": "s2-1eb2289ad72e776a80f83f88fcc61bf44b4c10b3",
+    "researcherId": "researcher-523f0410b63e",
+    "role": "author"
+  },
+  {
+    "paperId": "s2-1eb2289ad72e776a80f83f88fcc61bf44b4c10b3",
+    "researcherId": "researcher-9ae1d6a4d5ca",
+    "role": "author"
+  },
+  {
+    "paperId": "s2-1eb2289ad72e776a80f83f88fcc61bf44b4c10b3",
+    "researcherId": "researcher-c8e970886143",
+    "role": "author"
+  },
+  {
+    "paperId": "s2-1eb2289ad72e776a80f83f88fcc61bf44b4c10b3",
+    "researcherId": "researcher-7301f75e1caf",
+    "role": "author"
+  },
+  {
+    "paperId": "s2-1eb2289ad72e776a80f83f88fcc61bf44b4c10b3",
+    "researcherId": "researcher-f4cff2e186b0",
+    "role": "author"
+  },
+  {
+    "paperId": "s2-1eb2289ad72e776a80f83f88fcc61bf44b4c10b3",
+    "researcherId": "researcher-a58d906c5394",
+    "role": "author"
+  },
+  {
+    "paperId": "s2-1eb2289ad72e776a80f83f88fcc61bf44b4c10b3",
+    "researcherId": "researcher-475cf70a525a",
+    "role": "author"
+  },
+  {
+    "paperId": "s2-1eb2289ad72e776a80f83f88fcc61bf44b4c10b3",
+    "researcherId": "researcher-840fda6063f3",
+    "role": "author"
+  },
+  {
+    "paperId": "s2-1eb2289ad72e776a80f83f88fcc61bf44b4c10b3",
+    "researcherId": "researcher-e5c9d9f5ffd2",
+    "role": "author"
+  },
+  {
+    "paperId": "s2-1eb2289ad72e776a80f83f88fcc61bf44b4c10b3",
+    "researcherId": "researcher-d7e5edcc3043",
+    "role": "author"
+  },
+  {
+    "paperId": "s2-1eb2289ad72e776a80f83f88fcc61bf44b4c10b3",
+    "researcherId": "researcher-94c57bd1f412",
+    "role": "author"
+  },
+  {
+    "paperId": "s2-1eb2289ad72e776a80f83f88fcc61bf44b4c10b3",
+    "researcherId": "researcher-6d15e30c8fb8",
+    "role": "author"
+  },
+  {
+    "paperId": "oa-W2321696461",
+    "researcherId": "researcher-7eebabda38c2",
+    "role": "author"
+  },
+  {
+    "paperId": "oa-W2321696461",
+    "researcherId": "researcher-1ca524796c7a",
+    "role": "author"
+  },
+  {
+    "paperId": "oa-W2321696461",
+    "researcherId": "researcher-56d30d5855ec",
+    "role": "author"
+  },
+  {
+    "paperId": "oa-W2321696461",
+    "researcherId": "researcher-590db12852ce",
+    "role": "author"
+  },
+  {
+    "paperId": "oa-W2321696461",
+    "researcherId": "researcher-48063f1a0fd4",
+    "role": "author"
+  },
+  {
+    "paperId": "oa-W2321696461",
+    "researcherId": "researcher-b93c4b91a220",
+    "role": "author"
+  },
+  {
+    "paperId": "oa-W2321696461",
+    "researcherId": "researcher-2cd7df42e70c",
+    "role": "author"
+  },
+  {
+    "paperId": "oa-W2321696461",
+    "researcherId": "researcher-b54750ae49b9",
+    "role": "author"
+  },
+  {
+    "paperId": "oa-W2321696461",
+    "researcherId": "researcher-ad781c4aa781",
+    "role": "author"
+  },
+  {
+    "paperId": "oa-W2237868774",
+    "researcherId": "researcher-6bbd3455837c",
+    "role": "author"
+  },
+  {
+    "paperId": "oa-W2237868774",
+    "researcherId": "researcher-9f8578fd281e",
+    "role": "author"
+  },
+  {
+    "paperId": "oa-W2237868774",
+    "researcherId": "researcher-e1e3ddfed88a",
+    "role": "author"
+  },
+  {
+    "paperId": "oa-W2237868774",
+    "researcherId": "researcher-0917a5ef7f01",
+    "role": "author"
+  },
+  {
+    "paperId": "oa-W2237868774",
+    "researcherId": "researcher-aa1b22abba9e",
+    "role": "author"
+  },
+  {
+    "paperId": "oa-W4321618060",
+    "researcherId": "researcher-815717786a2b",
+    "role": "author"
+  },
+  {
+    "paperId": "oa-W4321618060",
+    "researcherId": "researcher-64e88b87ba37",
+    "role": "author"
+  },
+  {
+    "paperId": "arxiv-2601.11503v1",
+    "researcherId": "researcher-71d18f589143",
+    "role": "author"
+  },
+  {
+    "paperId": "arxiv-2601.11503v1",
+    "researcherId": "researcher-d3de1330474a",
+    "role": "author"
+  },
+  {
+    "paperId": "arxiv-2601.11503v1",
+    "researcherId": "researcher-87219e7c914b",
+    "role": "author"
+  },
+  {
+    "paperId": "arxiv-2601.11503v1",
+    "researcherId": "researcher-999aeea02c4f",
+    "role": "author"
+  },
+  {
+    "paperId": "arxiv-2601.11446v1",
+    "researcherId": "researcher-988a393981df",
+    "role": "author"
+  },
+  {
+    "paperId": "arxiv-2601.11446v1",
+    "researcherId": "researcher-20396aa0294d",
+    "role": "author"
+  },
+  {
+    "paperId": "arxiv-2601.11446v1",
+    "researcherId": "researcher-b441dfa52426",
+    "role": "author"
+  },
+  {
+    "paperId": "arxiv-2601.11446v1",
+    "researcherId": "researcher-0676f0df9899",
+    "role": "author"
+  },
+  {
+    "paperId": "arxiv-2601.11446v1",
+    "researcherId": "researcher-0d9407a9b47d",
+    "role": "author"
+  },
+  {
+    "paperId": "arxiv-2601.11446v1",
+    "researcherId": "researcher-ece856fcd01b",
+    "role": "author"
+  },
+  {
+    "paperId": "arxiv-2601.11446v1",
+    "researcherId": "researcher-a665fc6c98a3",
+    "role": "author"
+  },
+  {
+    "paperId": "arxiv-2601.11446v1",
+    "researcherId": "researcher-17a3c4bb0427",
+    "role": "author"
+  },
+  {
+    "paperId": "arxiv-2601.11446v1",
+    "researcherId": "researcher-8a98b57f3b2d",
+    "role": "author"
+  },
+  {
+    "paperId": "arxiv-2601.11446v1",
+    "researcherId": "researcher-7e6a32d96d69",
+    "role": "author"
+  },
+  {
+    "paperId": "arxiv-2601.11446v1",
+    "researcherId": "researcher-3ca87b0875d8",
+    "role": "author"
+  },
+  {
+    "paperId": "arxiv-2601.11446v1",
+    "researcherId": "researcher-58179f532155",
+    "role": "author"
+  },
+  {
+    "paperId": "arxiv-2601.11446v1",
+    "researcherId": "researcher-e25ac803e616",
+    "role": "author"
+  },
+  {
+    "paperId": "arxiv-2601.11331v1",
+    "researcherId": "researcher-b9df76244492",
+    "role": "author"
+  },
+  {
+    "paperId": "arxiv-2601.11331v1",
+    "researcherId": "researcher-0f2d723f4d2d",
+    "role": "author"
+  },
+  {
+    "paperId": "arxiv-2601.11331v1",
+    "researcherId": "researcher-41ba1c5a9df7",
+    "role": "author"
+  },
+  {
+    "paperId": "arxiv-2601.11331v1",
+    "researcherId": "researcher-3941386ac079",
+    "role": "author"
+  },
+  {
+    "paperId": "arxiv-2601.11331v1",
+    "researcherId": "researcher-72f7a7bbac23",
+    "role": "author"
+  },
+  {
+    "paperId": "arxiv-2601.11331v1",
+    "researcherId": "researcher-944587f39e26",
+    "role": "author"
+  },
+  {
+    "paperId": "arxiv-2601.11331v1",
+    "researcherId": "researcher-13cc37287e29",
+    "role": "author"
+  },
+  {
+    "paperId": "arxiv-2601.11331v1",
+    "researcherId": "researcher-4b402de2b1ed",
+    "role": "author"
+  },
+  {
+    "paperId": "arxiv-2601.11064v1",
+    "researcherId": "researcher-871bf0bc0bc9",
+    "role": "author"
+  },
+  {
+    "paperId": "arxiv-2601.11064v1",
+    "researcherId": "researcher-3f277247f196",
+    "role": "author"
+  },
+  {
+    "paperId": "arxiv-2601.10997v1",
+    "researcherId": "researcher-e8244c090532",
+    "role": "author"
+  },
+  {
+    "paperId": "arxiv-2601.10997v1",
+    "researcherId": "researcher-5f765cb43bfd",
+    "role": "author"
+  },
+  {
+    "paperId": "arxiv-2601.10997v1",
+    "researcherId": "researcher-5a9640d489b1",
+    "role": "author"
+  },
+  {
+    "paperId": "arxiv-2601.10997v1",
+    "researcherId": "researcher-eb6228a44b5b",
+    "role": "author"
+  },
+  {
+    "paperId": "arxiv-2601.10997v1",
+    "researcherId": "researcher-63222c5d57f7",
+    "role": "author"
+  },
+  {
+    "paperId": "arxiv-2601.10938v1",
+    "researcherId": "researcher-cfe132086e58",
+    "role": "author"
+  },
+  {
+    "paperId": "arxiv-2601.10938v1",
+    "researcherId": "researcher-b2f0f8a27fbb",
+    "role": "author"
+  },
+  {
+    "paperId": "arxiv-2601.10938v1",
+    "researcherId": "researcher-80a598f1abad",
+    "role": "author"
+  },
+  {
+    "paperId": "arxiv-2601.10703v1",
+    "researcherId": "researcher-5063829c1fa4",
+    "role": "author"
+  },
+  {
+    "paperId": "arxiv-2601.10703v1",
+    "researcherId": "researcher-5eb57a1e0588",
+    "role": "author"
+  },
+  {
+    "paperId": "arxiv-2601.10703v1",
+    "researcherId": "researcher-0cfb702dd127",
+    "role": "author"
+  },
+  {
+    "paperId": "arxiv-2601.10703v1",
+    "researcherId": "researcher-9fdfe4f9d933",
+    "role": "author"
+  },
+  {
+    "paperId": "arxiv-2601.10703v1",
+    "researcherId": "researcher-ef0251437a94",
+    "role": "author"
+  },
+  {
+    "paperId": "arxiv-2601.10693v1",
+    "researcherId": "researcher-91bd3a3b88e4",
+    "role": "author"
+  },
+  {
+    "paperId": "arxiv-2601.10693v1",
+    "researcherId": "researcher-d85bbbc46a4d",
+    "role": "author"
+  },
+  {
+    "paperId": "arxiv-2601.10634v1",
+    "researcherId": "researcher-9b70d46c1039",
+    "role": "author"
+  },
+  {
+    "paperId": "arxiv-2601.10634v1",
+    "researcherId": "researcher-1a5408853421",
+    "role": "author"
+  },
+  {
+    "paperId": "arxiv-2601.10634v1",
+    "researcherId": "researcher-4d19a57f6b2b",
+    "role": "author"
+  },
+  {
+    "paperId": "arxiv-2601.10634v1",
+    "researcherId": "researcher-e6d752aaee3f",
+    "role": "author"
+  },
+  {
+    "paperId": "arxiv-2601.10634v1",
+    "researcherId": "researcher-88f3f82f201d",
+    "role": "author"
+  },
+  {
+    "paperId": "arxiv-2601.10473v1",
+    "researcherId": "researcher-6f0db6d2776f",
+    "role": "author"
+  },
+  {
+    "paperId": "arxiv-2601.10473v1",
+    "researcherId": "researcher-fc9eed911d2a",
+    "role": "author"
+  },
+  {
+    "paperId": "arxiv-2601.10473v1",
+    "researcherId": "researcher-f341c17e064b",
+    "role": "author"
+  },
+  {
+    "paperId": "oa-W2808025896",
+    "researcherId": "researcher-1b6a43d80041",
+    "role": "author"
+  },
+  {
+    "paperId": "oa-W2808025896",
+    "researcherId": "researcher-802faadf58f6",
+    "role": "author"
+  },
+  {
+    "paperId": "oa-W2808025896",
+    "researcherId": "researcher-a3d8d61a9dba",
+    "role": "author"
+  },
+  {
+    "paperId": "oa-W2808025896",
+    "researcherId": "researcher-c09ca02c9549",
+    "role": "author"
+  },
+  {
+    "paperId": "oa-W1626854854",
+    "researcherId": "researcher-d9fcfc75fad6",
+    "role": "author"
+  },
+  {
+    "paperId": "oa-W1626854854",
+    "researcherId": "researcher-68303814c8fa",
+    "role": "author"
+  },
+  {
+    "paperId": "oa-W1626854854",
+    "researcherId": "researcher-9c99376df9d0",
+    "role": "author"
+  },
+  {
+    "paperId": "oa-W1626854854",
+    "researcherId": "researcher-708792ec0da5",
+    "role": "author"
+  },
+  {
+    "paperId": "oa-W1626854854",
+    "researcherId": "researcher-6025b761eebe",
+    "role": "author"
+  },
+  {
+    "paperId": "oa-W2077937117",
+    "researcherId": "researcher-7c8262547570",
+    "role": "author"
+  },
+  {
+    "paperId": "oa-W2077937117",
+    "researcherId": "researcher-026afac83e80",
+    "role": "author"
+  },
+  {
+    "paperId": "oa-W2077937117",
+    "researcherId": "researcher-51e5a16bd75a",
+    "role": "author"
+  },
+  {
+    "paperId": "oa-W2077937117",
+    "researcherId": "researcher-69cd31e39ad6",
+    "role": "author"
+  },
+  {
+    "paperId": "oa-W2077937117",
+    "researcherId": "researcher-dccca7a50988",
+    "role": "author"
+  },
+  {
+    "paperId": "oa-W2077937117",
+    "researcherId": "researcher-00673f8937d1",
+    "role": "author"
+  },
+  {
+    "paperId": "oa-W2077937117",
+    "researcherId": "researcher-a00e3bde3b41",
+    "role": "author"
+  },
+  {
+    "paperId": "oa-W2077937117",
+    "researcherId": "researcher-cdf2e3d7036d",
+    "role": "author"
+  },
+  {
+    "paperId": "oa-W2077937117",
+    "researcherId": "researcher-316d72071b4f",
+    "role": "author"
+  },
+  {
+    "paperId": "oa-W2077937117",
+    "researcherId": "researcher-cd1bb08a0662",
+    "role": "author"
+  },
+  {
+    "paperId": "oa-W2079985616",
+    "researcherId": "researcher-16bf05089673",
+    "role": "author"
+  },
+  {
+    "paperId": "oa-W2079985616",
+    "researcherId": "researcher-8c7da6936ed1",
+    "role": "author"
+  },
+  {
+    "paperId": "oa-W2079985616",
+    "researcherId": "researcher-30a25726a905",
+    "role": "author"
+  },
+  {
+    "paperId": "oa-W2079985616",
+    "researcherId": "researcher-ce3a4380673f",
+    "role": "author"
+  },
+  {
+    "paperId": "oa-W2079985616",
+    "researcherId": "researcher-05908475ff04",
+    "role": "author"
+  },
+  {
+    "paperId": "oa-W2328134238",
+    "researcherId": "researcher-073c03fa0b9c",
+    "role": "author"
+  },
+  {
+    "paperId": "oa-W2328134238",
+    "researcherId": "researcher-0e894bb1676b",
+    "role": "author"
+  },
+  {
+    "paperId": "oa-W2983762108",
+    "researcherId": "researcher-5b0c64e462a0",
+    "role": "author"
+  },
+  {
+    "paperId": "oa-W2983762108",
+    "researcherId": "researcher-17c26912b198",
+    "role": "author"
+  },
+  {
+    "paperId": "oa-W2983762108",
+    "researcherId": "researcher-593e958823b6",
+    "role": "author"
+  },
+  {
+    "paperId": "oa-W2983762108",
+    "researcherId": "researcher-bd135f9c0512",
+    "role": "author"
+  },
+  {
+    "paperId": "oa-W2983762108",
+    "researcherId": "researcher-d903081bd755",
+    "role": "author"
+  },
+  {
+    "paperId": "oa-W2983762108",
+    "researcherId": "researcher-5526c3d3066f",
+    "role": "author"
+  },
+  {
+    "paperId": "oa-W2983762108",
+    "researcherId": "researcher-dfc25c225490",
+    "role": "author"
+  },
+  {
+    "paperId": "oa-W2983762108",
+    "researcherId": "researcher-8fbed0a0879f",
+    "role": "author"
+  },
+  {
+    "paperId": "oa-W2983762108",
+    "researcherId": "researcher-04ce567cc86e",
+    "role": "author"
+  },
+  {
+    "paperId": "oa-W2983762108",
+    "researcherId": "researcher-5e9b0f12987a",
+    "role": "author"
+  },
+  {
+    "paperId": "oa-W2983762108",
+    "researcherId": "researcher-778702ef9373",
+    "role": "author"
+  },
+  {
+    "paperId": "oa-W2983762108",
+    "researcherId": "researcher-c935ef2e066e",
+    "role": "author"
+  },
+  {
+    "paperId": "oa-W2983762108",
+    "researcherId": "researcher-175627cc5d20",
+    "role": "author"
+  },
+  {
+    "paperId": "oa-W2983762108",
+    "researcherId": "researcher-ce80262048ae",
+    "role": "author"
+  },
+  {
+    "paperId": "oa-W3013252775",
+    "researcherId": "researcher-b8838349df6b",
+    "role": "author"
+  },
+  {
+    "paperId": "oa-W2618037459",
+    "researcherId": "researcher-156689431b5f",
+    "role": "author"
+  },
+  {
+    "paperId": "oa-W2618037459",
+    "researcherId": "researcher-05908475ff04",
+    "role": "author"
+  },
+  {
+    "paperId": "oa-W2618037459",
+    "researcherId": "researcher-7dfb74697dd8",
+    "role": "author"
+  },
+  {
+    "paperId": "oa-W2618037459",
+    "researcherId": "researcher-16bf05089673",
+    "role": "author"
+  },
+  {
+    "paperId": "oa-W2618037459",
+    "researcherId": "researcher-e29e0f92379b",
+    "role": "author"
+  },
+  {
+    "paperId": "oa-W2618037459",
+    "researcherId": "researcher-8476e40a0e9d",
+    "role": "author"
+  },
+  {
+    "paperId": "oa-W2156562079",
+    "researcherId": "researcher-14db88e2fd85",
+    "role": "author"
+  },
+  {
+    "paperId": "oa-W2156562079",
+    "researcherId": "researcher-516f98144454",
+    "role": "author"
+  },
+  {
+    "paperId": "oa-W2156562079",
+    "researcherId": "researcher-334f772963b2",
+    "role": "author"
+  },
+  {
+    "paperId": "oa-W2032952916",
+    "researcherId": "researcher-1646c01763db",
+    "role": "author"
+  },
+  {
+    "paperId": "oa-W2032952916",
+    "researcherId": "researcher-2a66ff510a3c",
+    "role": "author"
+  },
+  {
+    "paperId": "oa-W2032952916",
+    "researcherId": "researcher-ac9dff6fc7f4",
+    "role": "author"
+  },
+  {
+    "paperId": "oa-W2032952916",
+    "researcherId": "researcher-bf47aee11428",
+    "role": "author"
+  },
+  {
+    "paperId": "oa-W2032952916",
+    "researcherId": "researcher-dc3087c3a812",
+    "role": "author"
+  },
+  {
+    "paperId": "oa-W2032952916",
+    "researcherId": "researcher-4343802f317d",
+    "role": "author"
+  },
+  {
+    "paperId": "arxiv-2601.11503v1",
+    "researcherId": "researcher-7e397f865b32",
+    "role": "author"
+  },
+  {
+    "paperId": "arxiv-2601.11503v1",
+    "researcherId": "researcher-1e8122ef9b19",
+    "role": "author"
+  },
+  {
+    "paperId": "arxiv-2601.11503v1",
+    "researcherId": "researcher-acb54040ca4d",
+    "role": "author"
+  },
+  {
+    "paperId": "arxiv-2601.11503v1",
+    "researcherId": "researcher-9ac295e3b70c",
+    "role": "author"
+  },
+  {
+    "paperId": "arxiv-2601.11446v1",
+    "researcherId": "researcher-e86e42a1657e",
+    "role": "author"
+  },
+  {
+    "paperId": "arxiv-2601.11446v1",
+    "researcherId": "researcher-e824f83f5637",
+    "role": "author"
+  },
+  {
+    "paperId": "arxiv-2601.11446v1",
+    "researcherId": "researcher-16bf87c1fae9",
+    "role": "author"
+  },
+  {
+    "paperId": "arxiv-2601.11446v1",
+    "researcherId": "researcher-f6f88a40ff7a",
+    "role": "author"
+  },
+  {
+    "paperId": "arxiv-2601.11446v1",
+    "researcherId": "researcher-3026e6ca7fdc",
+    "role": "author"
+  },
+  {
+    "paperId": "arxiv-2601.11446v1",
+    "researcherId": "researcher-98a4281c529f",
+    "role": "author"
+  },
+  {
+    "paperId": "arxiv-2601.11446v1",
+    "researcherId": "researcher-2057cc8e7ad0",
+    "role": "author"
+  },
+  {
+    "paperId": "arxiv-2601.11446v1",
+    "researcherId": "researcher-ef843faf8aa2",
+    "role": "author"
+  },
+  {
+    "paperId": "arxiv-2601.11446v1",
+    "researcherId": "researcher-32b78a176356",
+    "role": "author"
+  },
+  {
+    "paperId": "arxiv-2601.11446v1",
+    "researcherId": "researcher-faafabc64c23",
+    "role": "author"
+  },
+  {
+    "paperId": "arxiv-2601.11446v1",
+    "researcherId": "researcher-508f29b73529",
+    "role": "author"
+  },
+  {
+    "paperId": "arxiv-2601.11446v1",
+    "researcherId": "researcher-8e249aa36125",
+    "role": "author"
+  },
+  {
+    "paperId": "arxiv-2601.11446v1",
+    "researcherId": "researcher-4ff19a4ab99b",
+    "role": "author"
+  },
+  {
+    "paperId": "arxiv-2601.11331v1",
+    "researcherId": "researcher-4b517f33fdd4",
+    "role": "author"
+  },
+  {
+    "paperId": "arxiv-2601.11331v1",
+    "researcherId": "researcher-838eebbc4c2a",
+    "role": "author"
+  },
+  {
+    "paperId": "arxiv-2601.11331v1",
+    "researcherId": "researcher-176cd519e44a",
+    "role": "author"
+  },
+  {
+    "paperId": "arxiv-2601.11331v1",
+    "researcherId": "researcher-7c646ddf6af7",
+    "role": "author"
+  },
+  {
+    "paperId": "arxiv-2601.11331v1",
+    "researcherId": "researcher-4cec5d91e41b",
+    "role": "author"
+  },
+  {
+    "paperId": "arxiv-2601.11331v1",
+    "researcherId": "researcher-34c35a343db5",
+    "role": "author"
+  },
+  {
+    "paperId": "arxiv-2601.11331v1",
+    "researcherId": "researcher-686227830ba9",
+    "role": "author"
+  },
+  {
+    "paperId": "arxiv-2601.11331v1",
+    "researcherId": "researcher-936722964749",
+    "role": "author"
+  },
+  {
+    "paperId": "s2-be7c1c7664fd855f7215b79d35857be664bd64b2",
+    "researcherId": "researcher-68c2342ddf50",
+    "role": "author"
+  },
+  {
+    "paperId": "s2-be7c1c7664fd855f7215b79d35857be664bd64b2",
+    "researcherId": "researcher-36145b3616ac",
+    "role": "author"
+  },
+  {
+    "paperId": "s2-ab388cf99b6c06714fd1fc6b6fc55436b3d607dc",
+    "researcherId": "researcher-040761ff8570",
+    "role": "author"
+  },
+  {
+    "paperId": "s2-ab388cf99b6c06714fd1fc6b6fc55436b3d607dc",
+    "researcherId": "researcher-a2e826abe1db",
+    "role": "author"
+  },
+  {
+    "paperId": "s2-ab388cf99b6c06714fd1fc6b6fc55436b3d607dc",
+    "researcherId": "researcher-1061b98b6c43",
+    "role": "author"
+  },
+  {
+    "paperId": "s2-ab388cf99b6c06714fd1fc6b6fc55436b3d607dc",
+    "researcherId": "researcher-8956394bcbd4",
+    "role": "author"
+  },
+  {
+    "paperId": "s2-a983a25907d54c890a3d53499dfd0633cc547d2b",
+    "researcherId": "researcher-d8a8b1e7b051",
+    "role": "author"
+  },
+  {
+    "paperId": "s2-a983a25907d54c890a3d53499dfd0633cc547d2b",
+    "researcherId": "researcher-5eae51b2b82d",
+    "role": "author"
+  },
+  {
+    "paperId": "s2-a983a25907d54c890a3d53499dfd0633cc547d2b",
+    "researcherId": "researcher-e8f56807abba",
+    "role": "author"
+  },
+  {
+    "paperId": "oa-W1626854854",
+    "researcherId": "researcher-2aae51ecffb3",
+    "role": "author"
+  },
+  {
+    "paperId": "oa-W1626854854",
+    "researcherId": "researcher-1ad525618de8",
+    "role": "author"
+  },
+  {
+    "paperId": "oa-W1626854854",
+    "researcherId": "researcher-efcc7399e25e",
+    "role": "author"
+  },
+  {
+    "paperId": "oa-W1626854854",
+    "researcherId": "researcher-bc2d8ec3cf8d",
+    "role": "author"
+  },
+  {
+    "paperId": "oa-W1626854854",
+    "researcherId": "researcher-c479b4be2cc3",
+    "role": "author"
+  },
+  {
+    "paperId": "oa-W2077937117",
+    "researcherId": "researcher-25de22113f83",
+    "role": "author"
+  },
+  {
+    "paperId": "oa-W2077937117",
+    "researcherId": "researcher-1ef4ddaf1e6c",
+    "role": "author"
+  },
+  {
+    "paperId": "oa-W2077937117",
+    "researcherId": "researcher-d456a28d0f33",
+    "role": "author"
+  },
+  {
+    "paperId": "oa-W2077937117",
+    "researcherId": "researcher-263b98a96e73",
+    "role": "author"
+  },
+  {
+    "paperId": "oa-W2077937117",
+    "researcherId": "researcher-502bdd7d2ddf",
+    "role": "author"
+  },
+  {
+    "paperId": "oa-W2077937117",
+    "researcherId": "researcher-314bcf92f4e3",
+    "role": "author"
+  },
+  {
+    "paperId": "oa-W2077937117",
+    "researcherId": "researcher-8d0659b9b962",
+    "role": "author"
+  },
+  {
+    "paperId": "oa-W2077937117",
+    "researcherId": "researcher-7c3802d471d4",
+    "role": "author"
+  },
+  {
+    "paperId": "oa-W2077937117",
+    "researcherId": "researcher-e97c984dd3c8",
+    "role": "author"
+  },
+  {
+    "paperId": "oa-W2077937117",
+    "researcherId": "researcher-c72ef7a506a6",
+    "role": "author"
+  },
+  {
+    "paperId": "arxiv-2601.11513v1",
+    "researcherId": "researcher-8aac1fa5df0e",
+    "role": "author"
+  },
+  {
+    "paperId": "arxiv-2601.11513v1",
+    "researcherId": "researcher-9f94e662e2bb",
+    "role": "author"
+  },
+  {
+    "paperId": "arxiv-2601.11513v1",
+    "researcherId": "researcher-798e5b488f73",
+    "role": "author"
+  },
+  {
+    "paperId": "arxiv-2601.11457v1",
+    "researcherId": "researcher-75946c4c2397",
+    "role": "author"
+  },
+  {
+    "paperId": "arxiv-2601.11457v1",
+    "researcherId": "researcher-bf7130117928",
+    "role": "author"
+  },
+  {
+    "paperId": "arxiv-2601.11457v1",
+    "researcherId": "researcher-3c74d20bf8e6",
+    "role": "author"
+  },
+  {
+    "paperId": "arxiv-2601.11457v1",
+    "researcherId": "researcher-b7eea62910fb",
+    "role": "author"
+  },
+  {
+    "paperId": "arxiv-2601.11457v1",
+    "researcherId": "researcher-ca4693cdf2b2",
+    "role": "author"
+  },
+  {
+    "paperId": "arxiv-2601.11423v1",
+    "researcherId": "researcher-da2fc059c4d3",
+    "role": "author"
+  },
+  {
+    "paperId": "arxiv-2601.11423v1",
+    "researcherId": "researcher-c3f4e63d3b43",
+    "role": "author"
+  },
+  {
+    "paperId": "arxiv-2601.11423v1",
+    "researcherId": "researcher-c6db0aa320fa",
+    "role": "author"
+  },
+  {
+    "paperId": "s2-535bd5e9cc73950ebd56ded874bab37f68219693",
+    "researcherId": "researcher-97458ca0d0a7",
+    "role": "author"
+  },
+  {
+    "paperId": "s2-535bd5e9cc73950ebd56ded874bab37f68219693",
+    "researcherId": "researcher-77c42fb2e61f",
+    "role": "author"
+  },
+  {
+    "paperId": "s2-535bd5e9cc73950ebd56ded874bab37f68219693",
+    "researcherId": "researcher-f7002b395c82",
+    "role": "author"
+  },
+  {
+    "paperId": "s2-a0fc1f92557bc6453686f2d31f15f06a24db2df9",
+    "researcherId": "researcher-84f4cef87101",
+    "role": "author"
+  },
+  {
+    "paperId": "s2-a0fc1f92557bc6453686f2d31f15f06a24db2df9",
+    "researcherId": "researcher-2db5ab409367",
+    "role": "author"
+  },
+  {
+    "paperId": "s2-a0fc1f92557bc6453686f2d31f15f06a24db2df9",
+    "researcherId": "researcher-591056d21769",
+    "role": "author"
+  },
+  {
+    "paperId": "s2-a0fc1f92557bc6453686f2d31f15f06a24db2df9",
+    "researcherId": "researcher-6088a0af6968",
+    "role": "author"
+  },
+  {
+    "paperId": "s2-a0fc1f92557bc6453686f2d31f15f06a24db2df9",
+    "researcherId": "researcher-f7addcd0e7df",
+    "role": "author"
+  },
+  {
+    "paperId": "s2-db811a2f4a18aa5f56212108b8f31d8d2becbea6",
+    "researcherId": "researcher-f269a945df46",
+    "role": "author"
+  },
+  {
+    "paperId": "oa-W2962135525",
+    "researcherId": "researcher-e05f278e5fec",
+    "role": "author"
+  },
+  {
+    "paperId": "oa-W2962135525",
+    "researcherId": "researcher-7c11181c564b",
+    "role": "author"
+  },
+  {
+    "paperId": "oa-W2962135525",
+    "researcherId": "researcher-5a4c142f61d1",
+    "role": "author"
+  },
+  {
+    "paperId": "oa-W2962135525",
+    "researcherId": "researcher-e57d120f602f",
+    "role": "author"
+  },
+  {
+    "paperId": "oa-W2962135525",
+    "researcherId": "researcher-a91fe6958aa4",
+    "role": "author"
+  },
+  {
+    "paperId": "oa-W2962135525",
+    "researcherId": "researcher-9af677cec6f9",
+    "role": "author"
+  },
+  {
+    "paperId": "oa-W2962135525",
+    "researcherId": "researcher-96dd267f4d1a",
+    "role": "author"
+  },
+  {
+    "paperId": "oa-W2417460170",
+    "researcherId": "researcher-a2db29d5fe34",
+    "role": "author"
+  },
+  {
+    "paperId": "oa-W2417460170",
+    "researcherId": "researcher-7717d6dd80f2",
+    "role": "author"
+  },
+  {
+    "paperId": "oa-W2417460170",
+    "researcherId": "researcher-3f9815271766",
+    "role": "author"
+  },
+  {
+    "paperId": "oa-W2417460170",
+    "researcherId": "researcher-955147d28356",
+    "role": "author"
+  },
+  {
+    "paperId": "oa-W2417460170",
+    "researcherId": "researcher-3258b859d17c",
+    "role": "author"
+  },
+  {
+    "paperId": "oa-W3139510216",
+    "researcherId": "researcher-b8b759627d2b",
+    "role": "author"
+  },
+  {
+    "paperId": "oa-W3139510216",
+    "researcherId": "researcher-48e0e5189a69",
+    "role": "author"
+  },
+  {
+    "paperId": "oa-W3139510216",
+    "researcherId": "researcher-40ba93da55da",
+    "role": "author"
+  },
+  {
+    "paperId": "oa-W3139510216",
+    "researcherId": "researcher-01b4348ba21d",
+    "role": "author"
+  },
+  {
+    "paperId": "oa-W3139510216",
+    "researcherId": "researcher-c0bc53a97f97",
+    "role": "author"
+  },
+  {
+    "paperId": "oa-W3139510216",
+    "researcherId": "researcher-69cf60044d31",
+    "role": "author"
+  },
+  {
+    "paperId": "oa-W3139510216",
+    "researcherId": "researcher-da69c51699ca",
+    "role": "author"
+  },
+  {
+    "paperId": "oa-W3139510216",
+    "researcherId": "researcher-f6c7f8dc27eb",
+    "role": "author"
+  },
+  {
+    "paperId": "oa-W3139510216",
+    "researcherId": "researcher-33d6a08b54d5",
+    "role": "author"
+  },
+  {
+    "paperId": "oa-W3139510216",
+    "researcherId": "researcher-0de3241df70e",
+    "role": "author"
+  },
+  {
+    "paperId": "oa-W3139510216",
+    "researcherId": "researcher-649559fef6dc",
+    "role": "author"
+  },
+  {
+    "paperId": "oa-W3139510216",
+    "researcherId": "researcher-69ea83328d94",
+    "role": "author"
+  },
+  {
+    "paperId": "oa-W3139510216",
+    "researcherId": "researcher-43e2e81d1078",
+    "role": "author"
+  },
+  {
+    "paperId": "oa-W3139510216",
+    "researcherId": "researcher-fca5a057a32f",
+    "role": "author"
+  },
+  {
+    "paperId": "oa-W3139510216",
+    "researcherId": "researcher-ee7f50e9126f",
+    "role": "author"
+  },
+  {
+    "paperId": "oa-W3139510216",
+    "researcherId": "researcher-2272db7ad165",
+    "role": "author"
+  },
+  {
+    "paperId": "oa-W3139510216",
+    "researcherId": "researcher-aa4c2bf3549c",
+    "role": "author"
+  },
+  {
+    "paperId": "oa-W3139510216",
+    "researcherId": "researcher-81b3fa4b0b69",
+    "role": "author"
+  },
+  {
+    "paperId": "oa-W3139510216",
+    "researcherId": "researcher-544814c323a7",
+    "role": "author"
+  },
+  {
+    "paperId": "oa-W3139510216",
+    "researcherId": "researcher-1addb70fe183",
+    "role": "author"
+  },
+  {
+    "paperId": "arxiv-2601.11505v1",
+    "researcherId": "researcher-b0fc3b054e51",
+    "role": "author"
+  },
+  {
+    "paperId": "arxiv-2601.11505v1",
+    "researcherId": "researcher-fee69d90310e",
+    "role": "author"
+  },
+  {
+    "paperId": "arxiv-2601.11505v1",
+    "researcherId": "researcher-3f78f8de856d",
+    "role": "author"
+  },
+  {
+    "paperId": "arxiv-2601.11505v1",
+    "researcherId": "researcher-78de84aae9b6",
+    "role": "author"
+  },
+  {
+    "paperId": "arxiv-2601.11505v1",
+    "researcherId": "researcher-5d8c252132e8",
+    "role": "author"
+  },
+  {
+    "paperId": "s2-fa8c55e3a455eec9de9d363e18b697b5d2fb263c",
+    "researcherId": "researcher-c2bd5f886773",
+    "role": "author"
+  },
+  {
+    "paperId": "s2-fa8c55e3a455eec9de9d363e18b697b5d2fb263c",
+    "researcherId": "researcher-19bfd31e9d86",
+    "role": "author"
+  },
+  {
+    "paperId": "s2-fa8c55e3a455eec9de9d363e18b697b5d2fb263c",
+    "researcherId": "researcher-f193a368eff5",
+    "role": "author"
+  },
+  {
+    "paperId": "s2-fa8c55e3a455eec9de9d363e18b697b5d2fb263c",
+    "researcherId": "researcher-958dc176e76d",
+    "role": "author"
+  },
+  {
+    "paperId": "s2-fa8c55e3a455eec9de9d363e18b697b5d2fb263c",
+    "researcherId": "researcher-7b094745044f",
+    "role": "author"
+  },
+  {
+    "paperId": "s2-fa8c55e3a455eec9de9d363e18b697b5d2fb263c",
+    "researcherId": "researcher-d524bdeb7c32",
+    "role": "author"
+  },
+  {
+    "paperId": "s2-fa8c55e3a455eec9de9d363e18b697b5d2fb263c",
+    "researcherId": "researcher-531bded56a7c",
+    "role": "author"
+  },
+  {
+    "paperId": "s2-8e2efc23b5c57590ee0bf06bf2ad0aa54b2d5b6b",
+    "researcherId": "researcher-f8a07b5fc462",
+    "role": "author"
+  },
+  {
+    "paperId": "s2-8e2efc23b5c57590ee0bf06bf2ad0aa54b2d5b6b",
+    "researcherId": "researcher-4f6473dc5635",
+    "role": "author"
+  },
+  {
+    "paperId": "s2-8e2efc23b5c57590ee0bf06bf2ad0aa54b2d5b6b",
+    "researcherId": "researcher-d58b9f7002be",
+    "role": "author"
+  },
+  {
+    "paperId": "s2-2b70d7485321e4c21866182266469d61fb0f7ae5",
+    "researcherId": "researcher-5db3689c2850",
+    "role": "author"
+  },
+  {
+    "paperId": "s2-2b70d7485321e4c21866182266469d61fb0f7ae5",
+    "researcherId": "researcher-18efc593b471",
+    "role": "author"
+  },
+  {
+    "paperId": "s2-2b70d7485321e4c21866182266469d61fb0f7ae5",
+    "researcherId": "researcher-0b152acaffe8",
+    "role": "author"
+  },
+  {
+    "paperId": "s2-2b70d7485321e4c21866182266469d61fb0f7ae5",
+    "researcherId": "researcher-442f614914dc",
+    "role": "author"
+  },
+  {
+    "paperId": "s2-2b70d7485321e4c21866182266469d61fb0f7ae5",
+    "researcherId": "researcher-cba414d9602f",
+    "role": "author"
+  },
+  {
+    "paperId": "s2-2b70d7485321e4c21866182266469d61fb0f7ae5",
+    "researcherId": "researcher-1b8a216afb88",
+    "role": "author"
+  },
+  {
+    "paperId": "s2-2b70d7485321e4c21866182266469d61fb0f7ae5",
+    "researcherId": "researcher-1807dba8e4a5",
+    "role": "author"
+  },
+  {
+    "paperId": "s2-2b70d7485321e4c21866182266469d61fb0f7ae5",
+    "researcherId": "researcher-328dff164b9d",
+    "role": "author"
+  },
+  {
+    "paperId": "s2-2b70d7485321e4c21866182266469d61fb0f7ae5",
+    "researcherId": "researcher-56ca2431a01d",
+    "role": "author"
+  },
+  {
+    "paperId": "s2-2b70d7485321e4c21866182266469d61fb0f7ae5",
+    "researcherId": "researcher-422906a11310",
+    "role": "author"
+  },
+  {
+    "paperId": "oa-W2613389393",
+    "researcherId": "researcher-89d4812c5946",
+    "role": "author"
+  },
+  {
+    "paperId": "oa-W2613389393",
+    "researcherId": "researcher-1017eea02a10",
+    "role": "author"
+  },
+  {
+    "paperId": "oa-W2613389393",
+    "researcherId": "researcher-8f98b1a17a28",
+    "role": "author"
+  },
+  {
+    "paperId": "oa-W2613389393",
+    "researcherId": "researcher-d95974321fd0",
+    "role": "author"
+  },
+  {
+    "paperId": "oa-W2017136542",
+    "researcherId": "researcher-beddc4322ac3",
+    "role": "author"
+  },
+  {
+    "paperId": "oa-W2017136542",
+    "researcherId": "researcher-eee60bda8bfc",
+    "role": "author"
+  },
+  {
+    "paperId": "oa-W2017136542",
+    "researcherId": "researcher-42b80b9666fc",
+    "role": "author"
+  },
+  {
+    "paperId": "oa-W2017136542",
+    "researcherId": "researcher-7c86d744288a",
+    "role": "author"
+  },
+  {
+    "paperId": "oa-W2017136542",
+    "researcherId": "researcher-73077b2695f4",
+    "role": "author"
+  },
+  {
+    "paperId": "oa-W2017136542",
+    "researcherId": "researcher-da44b119442e",
+    "role": "author"
+  },
+  {
+    "paperId": "arxiv-2601.11520v1",
+    "researcherId": "researcher-5fc132847575",
+    "role": "author"
+  },
+  {
+    "paperId": "arxiv-2601.11520v1",
+    "researcherId": "researcher-c5da6fcd6eac",
+    "role": "author"
+  },
+  {
+    "paperId": "arxiv-2601.11520v1",
+    "researcherId": "researcher-48e8ac6229c4",
+    "role": "author"
+  },
+  {
+    "paperId": "arxiv-2601.11514v1",
+    "researcherId": "researcher-9b488290f45d",
+    "role": "author"
+  },
+  {
+    "paperId": "arxiv-2601.11514v1",
+    "researcherId": "researcher-5c1ccfb06724",
+    "role": "author"
+  },
+  {
+    "paperId": "arxiv-2601.11514v1",
+    "researcherId": "researcher-77cfa01e5a90",
+    "role": "author"
+  },
+  {
+    "paperId": "arxiv-2601.11514v1",
+    "researcherId": "researcher-d6dac501ed5d",
+    "role": "author"
+  },
+  {
+    "paperId": "arxiv-2601.11514v1",
+    "researcherId": "researcher-dfcc4ef75fdd",
+    "role": "author"
+  },
+  {
+    "paperId": "arxiv-2601.11514v1",
+    "researcherId": "researcher-8d25d350fa3b",
+    "role": "author"
+  },
+  {
+    "paperId": "arxiv-2601.11514v1",
+    "researcherId": "researcher-81d8b4f48ed3",
+    "role": "author"
+  },
+  {
+    "paperId": "arxiv-2601.11514v1",
+    "researcherId": "researcher-42f4832fa931",
+    "role": "author"
+  },
+  {
+    "paperId": "arxiv-2601.11514v1",
+    "researcherId": "researcher-37592eb4f04e",
+    "role": "author"
+  },
+  {
+    "paperId": "arxiv-2601.11514v1",
+    "researcherId": "researcher-da08d5d56d46",
+    "role": "author"
+  },
+  {
+    "paperId": "arxiv-2601.11514v1",
+    "researcherId": "researcher-2c698c1aebf5",
+    "role": "author"
+  },
+  {
+    "paperId": "arxiv-2601.11514v1",
+    "researcherId": "researcher-dca03beed146",
+    "role": "author"
+  },
+  {
+    "paperId": "arxiv-2601.11509v1",
+    "researcherId": "researcher-758584638f3e",
+    "role": "author"
+  },
+  {
+    "paperId": "arxiv-2601.11509v1",
+    "researcherId": "researcher-fb40422a5d5d",
+    "role": "author"
+  },
+  {
+    "paperId": "arxiv-2601.11509v1",
+    "researcherId": "researcher-0b70e76fb138",
+    "role": "author"
+  },
+  {
+    "paperId": "arxiv-2601.11509v1",
+    "researcherId": "researcher-125a7a9adae0",
+    "role": "author"
+  },
+  {
+    "paperId": "arxiv-2601.11509v1",
+    "researcherId": "researcher-876fcf53f366",
+    "role": "author"
+  },
+  {
+    "paperId": "arxiv-2601.11509v1",
+    "researcherId": "researcher-e510a14a092e",
+    "role": "author"
+  },
+  {
+    "paperId": "arxiv-2601.11509v1",
+    "researcherId": "researcher-c173ff10034b",
+    "role": "author"
+  },
+  {
+    "paperId": "arxiv-2601.11509v1",
+    "researcherId": "researcher-6c4e39bdcfde",
+    "role": "author"
+  },
+  {
+    "paperId": "s2-dfa85a88b66b3443d7902bdd82a0306b0f134170",
+    "researcherId": "researcher-5a1f25cb629c",
+    "role": "author"
+  },
+  {
+    "paperId": "s2-dfa85a88b66b3443d7902bdd82a0306b0f134170",
+    "researcherId": "researcher-c4ddb7ddafc2",
+    "role": "author"
+  },
+  {
+    "paperId": "s2-dfa85a88b66b3443d7902bdd82a0306b0f134170",
+    "researcherId": "researcher-c463ca8eaa31",
+    "role": "author"
+  },
+  {
+    "paperId": "s2-dfa85a88b66b3443d7902bdd82a0306b0f134170",
+    "researcherId": "researcher-bd85d856dfc1",
+    "role": "author"
+  },
+  {
+    "paperId": "s2-dfa85a88b66b3443d7902bdd82a0306b0f134170",
+    "researcherId": "researcher-686800a655ab",
+    "role": "author"
+  },
+  {
+    "paperId": "s2-dfa85a88b66b3443d7902bdd82a0306b0f134170",
+    "researcherId": "researcher-97d758025338",
+    "role": "author"
+  },
+  {
+    "paperId": "s2-dfa85a88b66b3443d7902bdd82a0306b0f134170",
+    "researcherId": "researcher-a8d2de11b0a1",
+    "role": "author"
+  },
+  {
+    "paperId": "s2-dfa85a88b66b3443d7902bdd82a0306b0f134170",
+    "researcherId": "researcher-fc8cf29386a7",
+    "role": "author"
+  },
+  {
+    "paperId": "s2-dfa85a88b66b3443d7902bdd82a0306b0f134170",
+    "researcherId": "researcher-386f4b069818",
+    "role": "author"
+  },
+  {
+    "paperId": "s2-3dc63dbf2cba1a62e98f5240bbcb006eb0fd7883",
+    "researcherId": "researcher-12d722450c71",
+    "role": "author"
+  },
+  {
+    "paperId": "s2-3dc63dbf2cba1a62e98f5240bbcb006eb0fd7883",
+    "researcherId": "researcher-b2304fcf4a64",
+    "role": "author"
+  },
+  {
+    "paperId": "s2-3dc63dbf2cba1a62e98f5240bbcb006eb0fd7883",
+    "researcherId": "researcher-a59855bcc3a2",
+    "role": "author"
+  },
+  {
+    "paperId": "s2-3dc63dbf2cba1a62e98f5240bbcb006eb0fd7883",
+    "researcherId": "researcher-3850a4648707",
+    "role": "author"
+  },
+  {
+    "paperId": "s2-3dc63dbf2cba1a62e98f5240bbcb006eb0fd7883",
+    "researcherId": "researcher-c42c57ffe60d",
+    "role": "author"
+  },
+  {
+    "paperId": "s2-3dc63dbf2cba1a62e98f5240bbcb006eb0fd7883",
+    "researcherId": "researcher-cef149d30aec",
+    "role": "author"
+  },
+  {
+    "paperId": "s2-3dc63dbf2cba1a62e98f5240bbcb006eb0fd7883",
+    "researcherId": "researcher-21d307796c47",
+    "role": "author"
+  },
+  {
+    "paperId": "s2-3dc63dbf2cba1a62e98f5240bbcb006eb0fd7883",
+    "researcherId": "researcher-1294c8f21b65",
+    "role": "author"
+  },
+  {
+    "paperId": "s2-3dc63dbf2cba1a62e98f5240bbcb006eb0fd7883",
+    "researcherId": "researcher-de12d4ef284b",
+    "role": "author"
+  },
+  {
+    "paperId": "s2-3dc63dbf2cba1a62e98f5240bbcb006eb0fd7883",
+    "researcherId": "researcher-535e50ef0e70",
+    "role": "author"
+  },
+  {
+    "paperId": "s2-3dc63dbf2cba1a62e98f5240bbcb006eb0fd7883",
+    "researcherId": "researcher-9025d1126cac",
+    "role": "author"
+  },
+  {
+    "paperId": "s2-3dc63dbf2cba1a62e98f5240bbcb006eb0fd7883",
+    "researcherId": "researcher-b44139297ddd",
+    "role": "author"
+  },
+  {
+    "paperId": "s2-3dc63dbf2cba1a62e98f5240bbcb006eb0fd7883",
+    "researcherId": "researcher-0092ec62af36",
+    "role": "author"
+  },
+  {
+    "paperId": "s2-3dc63dbf2cba1a62e98f5240bbcb006eb0fd7883",
+    "researcherId": "researcher-ed83231b09a5",
+    "role": "author"
+  },
+  {
+    "paperId": "s2-1eb2289ad72e776a80f83f88fcc61bf44b4c10b3",
+    "researcherId": "researcher-97d758025338",
+    "role": "author"
+  },
+  {
+    "paperId": "s2-1eb2289ad72e776a80f83f88fcc61bf44b4c10b3",
+    "researcherId": "researcher-e0bc20ccbb30",
+    "role": "author"
+  },
+  {
+    "paperId": "s2-1eb2289ad72e776a80f83f88fcc61bf44b4c10b3",
+    "researcherId": "researcher-c85fbad3132c",
+    "role": "author"
+  },
+  {
+    "paperId": "s2-1eb2289ad72e776a80f83f88fcc61bf44b4c10b3",
+    "researcherId": "researcher-d47debe260aa",
+    "role": "author"
+  },
+  {
+    "paperId": "s2-1eb2289ad72e776a80f83f88fcc61bf44b4c10b3",
+    "researcherId": "researcher-c09c992bbafc",
+    "role": "author"
+  },
+  {
+    "paperId": "s2-1eb2289ad72e776a80f83f88fcc61bf44b4c10b3",
+    "researcherId": "researcher-0af4d255bce6",
+    "role": "author"
+  },
+  {
+    "paperId": "s2-1eb2289ad72e776a80f83f88fcc61bf44b4c10b3",
+    "researcherId": "researcher-499f72a50cd3",
+    "role": "author"
+  },
+  {
+    "paperId": "s2-1eb2289ad72e776a80f83f88fcc61bf44b4c10b3",
+    "researcherId": "researcher-05f42333efdc",
+    "role": "author"
+  },
+  {
+    "paperId": "s2-1eb2289ad72e776a80f83f88fcc61bf44b4c10b3",
+    "researcherId": "researcher-3877a738cb25",
+    "role": "author"
+  },
+  {
+    "paperId": "s2-1eb2289ad72e776a80f83f88fcc61bf44b4c10b3",
+    "researcherId": "researcher-42c030e6068c",
+    "role": "author"
+  },
+  {
+    "paperId": "s2-1eb2289ad72e776a80f83f88fcc61bf44b4c10b3",
+    "researcherId": "researcher-7ef6fb8cdb81",
+    "role": "author"
+  },
+  {
+    "paperId": "s2-1eb2289ad72e776a80f83f88fcc61bf44b4c10b3",
+    "researcherId": "researcher-95a0a051aa3f",
+    "role": "author"
+  },
+  {
+    "paperId": "s2-1eb2289ad72e776a80f83f88fcc61bf44b4c10b3",
+    "researcherId": "researcher-b11811c2115c",
+    "role": "author"
+  },
+  {
+    "paperId": "s2-1eb2289ad72e776a80f83f88fcc61bf44b4c10b3",
+    "researcherId": "researcher-386f4b069818",
+    "role": "author"
+  },
+  {
+    "paperId": "oa-W2321696461",
+    "researcherId": "researcher-0938766a13ea",
+    "role": "author"
+  },
+  {
+    "paperId": "oa-W2321696461",
+    "researcherId": "researcher-beaad8675e62",
+    "role": "author"
+  },
+  {
+    "paperId": "oa-W2321696461",
+    "researcherId": "researcher-28d77e35fb59",
+    "role": "author"
+  },
+  {
+    "paperId": "oa-W2321696461",
+    "researcherId": "researcher-e486f57e3c51",
+    "role": "author"
+  },
+  {
+    "paperId": "oa-W2321696461",
+    "researcherId": "researcher-76a75c05377f",
+    "role": "author"
+  },
+  {
+    "paperId": "oa-W2321696461",
+    "researcherId": "researcher-f8cbf7dc657f",
+    "role": "author"
+  },
+  {
+    "paperId": "oa-W2321696461",
+    "researcherId": "researcher-72fe40c83551",
+    "role": "author"
+  },
+  {
+    "paperId": "oa-W2321696461",
+    "researcherId": "researcher-56b4ed2dd2e1",
+    "role": "author"
+  },
+  {
+    "paperId": "oa-W2321696461",
+    "researcherId": "researcher-a5bbbba18cc1",
+    "role": "author"
+  },
+  {
+    "paperId": "oa-W2237868774",
+    "researcherId": "researcher-aacdd3ed9d68",
+    "role": "author"
+  },
+  {
+    "paperId": "oa-W2237868774",
+    "researcherId": "researcher-1fb4ca2bf58f",
+    "role": "author"
+  },
+  {
+    "paperId": "oa-W2237868774",
+    "researcherId": "researcher-6088a0af6968",
+    "role": "author"
+  },
+  {
+    "paperId": "oa-W2237868774",
+    "researcherId": "researcher-033bddce9fd4",
+    "role": "author"
+  },
+  {
+    "paperId": "oa-W2237868774",
+    "researcherId": "researcher-dae7fa4c5283",
+    "role": "author"
+  },
+  {
+    "paperId": "oa-W4321618060",
+    "researcherId": "researcher-947b67f3b35c",
+    "role": "author"
+  },
+  {
+    "paperId": "oa-W4321618060",
+    "researcherId": "researcher-4a7c9981a4b0",
+    "role": "author"
+  },
+  {
+    "paperId": "arxiv-2601.11382v1",
+    "researcherId": "researcher-aefe4ac59282",
+    "role": "author"
+  },
+  {
+    "paperId": "arxiv-2601.11382v1",
+    "researcherId": "researcher-e348db7bc67f",
+    "role": "author"
+  },
+  {
+    "paperId": "arxiv-2601.11382v1",
+    "researcherId": "researcher-eed96385276a",
+    "role": "author"
+  },
+  {
+    "paperId": "arxiv-2601.11382v1",
+    "researcherId": "researcher-f23c934cfeb1",
+    "role": "author"
+  },
+  {
+    "paperId": "arxiv-2601.11382v1",
+    "researcherId": "researcher-758ff2c0bf1c",
+    "role": "author"
+  },
+  {
+    "paperId": "arxiv-2601.11382v1",
+    "researcherId": "researcher-fdc63431bb77",
+    "role": "author"
+  },
+  {
+    "paperId": "arxiv-2601.11288v1",
+    "researcherId": "researcher-c640efe02226",
+    "role": "author"
+  },
+  {
+    "paperId": "arxiv-2601.11288v1",
+    "researcherId": "researcher-6f1e7b01fcf7",
+    "role": "author"
+  },
+  {
+    "paperId": "arxiv-2601.11288v1",
+    "researcherId": "researcher-9bbce1b05e3f",
+    "role": "author"
+  },
+  {
+    "paperId": "arxiv-2601.11288v1",
+    "researcherId": "researcher-9ff4e732f2ab",
+    "role": "author"
+  },
+  {
+    "paperId": "arxiv-2601.11288v1",
+    "researcherId": "researcher-1f91bf5e1da2",
+    "role": "author"
+  },
+  {
+    "paperId": "arxiv-2601.11288v1",
+    "researcherId": "researcher-2bf2d145143b",
+    "role": "author"
+  },
+  {
+    "paperId": "arxiv-2601.11288v1",
+    "researcherId": "researcher-74083cb7cd90",
+    "role": "author"
+  },
+  {
+    "paperId": "arxiv-2601.11288v1",
+    "researcherId": "researcher-cba12cdf5d3a",
+    "role": "author"
+  },
+  {
+    "paperId": "arxiv-2601.11288v1",
+    "researcherId": "researcher-e3788e2c3a31",
+    "role": "author"
+  },
+  {
+    "paperId": "arxiv-2601.11092v1",
+    "researcherId": "researcher-10796fa8424a",
+    "role": "author"
+  },
+  {
+    "paperId": "arxiv-2601.11092v1",
+    "researcherId": "researcher-b6a03f7e309c",
+    "role": "author"
+  },
+  {
+    "paperId": "arxiv-2601.11092v1",
+    "researcherId": "researcher-d8c35e4a9347",
+    "role": "author"
+  },
+  {
+    "paperId": "arxiv-2601.11092v1",
+    "researcherId": "researcher-d7848470ec12",
+    "role": "author"
+  },
+  {
+    "paperId": "arxiv-2601.11092v1",
+    "researcherId": "researcher-0931b5482217",
+    "role": "author"
+  },
+  {
+    "paperId": "arxiv-2601.11092v1",
+    "researcherId": "researcher-0170de500680",
+    "role": "author"
+  },
+  {
+    "paperId": "arxiv-2601.11092v1",
+    "researcherId": "researcher-fea459531320",
+    "role": "author"
+  },
+  {
+    "paperId": "arxiv-2601.11092v1",
+    "researcherId": "researcher-d46d4b106deb",
+    "role": "author"
+  },
+  {
+    "paperId": "oa-W2130893993",
+    "researcherId": "researcher-fa1740b0391a",
+    "role": "author"
+  },
+  {
+    "paperId": "oa-W2130893993",
+    "researcherId": "researcher-519f7300f14e",
+    "role": "author"
+  },
+  {
+    "paperId": "oa-W2048612231",
+    "researcherId": "researcher-58bf0e1a87fd",
+    "role": "author"
+  },
+  {
+    "paperId": "oa-W2048612231",
+    "researcherId": "researcher-c1ad4647008d",
+    "role": "author"
+  },
+  {
+    "paperId": "oa-W2048612231",
+    "researcherId": "researcher-848ff500ec7c",
+    "role": "author"
+  },
+  {
+    "paperId": "oa-W1987065012",
+    "researcherId": "researcher-2e0a0082d316",
+    "role": "author"
+  },
+  {
+    "paperId": "oa-W1987065012",
+    "researcherId": "researcher-12f4845ab956",
+    "role": "author"
+  },
+  {
+    "paperId": "oa-W1987065012",
+    "researcherId": "researcher-017ecd9621dc",
+    "role": "author"
+  },
+  {
+    "paperId": "oa-W1987065012",
+    "researcherId": "researcher-148146c5220a",
+    "role": "author"
+  },
+  {
+    "paperId": "oa-W1987065012",
+    "researcherId": "researcher-90fd427eda8b",
+    "role": "author"
+  },
+  {
+    "paperId": "oa-W1987065012",
+    "researcherId": "researcher-a0c690cd8665",
+    "role": "author"
+  },
+  {
+    "paperId": "oa-W1987065012",
+    "researcherId": "researcher-86c9d348e9d9",
+    "role": "author"
+  },
+  {
+    "paperId": "oa-W1987065012",
+    "researcherId": "researcher-6d72ee7516b1",
+    "role": "author"
+  },
+  {
+    "paperId": "oa-W1987065012",
+    "researcherId": "researcher-8a5df5ec6638",
+    "role": "author"
+  },
+  {
+    "paperId": "oa-W1987065012",
+    "researcherId": "researcher-b7aaaa616210",
+    "role": "author"
+  },
+  {
+    "paperId": "oa-W1987065012",
+    "researcherId": "researcher-62473364ee6a",
+    "role": "author"
+  },
+  {
+    "paperId": "arxiv-2601.11521v1",
+    "researcherId": "researcher-4865bf9e6d04",
+    "role": "author"
+  },
+  {
+    "paperId": "arxiv-2601.11521v1",
+    "researcherId": "researcher-3c5ca17db2f4",
+    "role": "author"
+  },
+  {
+    "paperId": "arxiv-2601.11521v1",
+    "researcherId": "researcher-203aaf4215a7",
+    "role": "author"
+  },
+  {
+    "paperId": "arxiv-2601.11501v1",
+    "researcherId": "researcher-445f5bdbdded",
+    "role": "author"
+  },
+  {
+    "paperId": "arxiv-2601.11501v1",
+    "researcherId": "researcher-d96c88dda4a1",
+    "role": "author"
+  },
+  {
+    "paperId": "arxiv-2601.11501v1",
+    "researcherId": "researcher-7c6a35aebc60",
+    "role": "author"
+  },
+  {
+    "paperId": "arxiv-2601.11501v1",
+    "researcherId": "researcher-07f96148d559",
+    "role": "author"
+  },
+  {
+    "paperId": "s2-33048ebbc9564a5ec289a9abd6cba04fc5b68e47",
+    "researcherId": "researcher-d3ee4e373c1c",
+    "role": "author"
+  },
+  {
+    "paperId": "s2-33048ebbc9564a5ec289a9abd6cba04fc5b68e47",
+    "researcherId": "researcher-e31a252c8e58",
+    "role": "author"
+  },
+  {
+    "paperId": "s2-33048ebbc9564a5ec289a9abd6cba04fc5b68e47",
+    "researcherId": "researcher-26cf9143ff34",
+    "role": "author"
+  },
+  {
+    "paperId": "s2-37de4ae070c837e1f26731ffd78060ae2c1a702f",
+    "researcherId": "researcher-cb3be225953b",
+    "role": "author"
+  },
+  {
+    "paperId": "s2-37de4ae070c837e1f26731ffd78060ae2c1a702f",
+    "researcherId": "researcher-20d9b14c93e3",
+    "role": "author"
+  },
+  {
+    "paperId": "s2-37de4ae070c837e1f26731ffd78060ae2c1a702f",
+    "researcherId": "researcher-8b2dcf05ba62",
+    "role": "author"
+  },
+  {
+    "paperId": "s2-37de4ae070c837e1f26731ffd78060ae2c1a702f",
+    "researcherId": "researcher-c3e20665c966",
+    "role": "author"
+  },
+  {
+    "paperId": "s2-37de4ae070c837e1f26731ffd78060ae2c1a702f",
+    "researcherId": "researcher-b2c5539a3ef6",
+    "role": "author"
+  },
+  {
+    "paperId": "s2-37de4ae070c837e1f26731ffd78060ae2c1a702f",
+    "researcherId": "researcher-66809bb002f0",
+    "role": "author"
+  },
+  {
+    "paperId": "s2-37de4ae070c837e1f26731ffd78060ae2c1a702f",
+    "researcherId": "researcher-c7abd8232edc",
+    "role": "author"
+  },
+  {
+    "paperId": "s2-37de4ae070c837e1f26731ffd78060ae2c1a702f",
+    "researcherId": "researcher-ce6718bbe641",
+    "role": "author"
+  },
+  {
+    "paperId": "s2-37de4ae070c837e1f26731ffd78060ae2c1a702f",
+    "researcherId": "researcher-3e6840fea9da",
+    "role": "author"
+  },
+  {
+    "paperId": "s2-a714a09aa0654709f67561c0c5e624e374df3203",
+    "researcherId": "researcher-9934b22eb8a4",
+    "role": "author"
+  },
+  {
+    "paperId": "s2-a714a09aa0654709f67561c0c5e624e374df3203",
+    "researcherId": "researcher-1782d8e955d3",
+    "role": "author"
+  },
+  {
+    "paperId": "s2-a714a09aa0654709f67561c0c5e624e374df3203",
+    "researcherId": "researcher-334c30ac9b58",
+    "role": "author"
+  },
+  {
+    "paperId": "oa-W2035837781",
+    "researcherId": "researcher-ba9393ec27d3",
+    "role": "author"
+  },
+  {
+    "paperId": "oa-W2035837781",
+    "researcherId": "researcher-e5f1f6e391fc",
+    "role": "author"
+  },
+  {
+    "paperId": "oa-W2151207643",
+    "researcherId": "researcher-265fbc9ef8f9",
+    "role": "author"
+  },
+  {
+    "paperId": "oa-W2151207643",
+    "researcherId": "researcher-d30115f32b35",
+    "role": "author"
+  },
+  {
+    "paperId": "oa-W2151207643",
+    "researcherId": "researcher-ef92fea4ac3b",
+    "role": "author"
+  },
+  {
+    "paperId": "oa-W2151207643",
+    "researcherId": "researcher-985cd5dcbd2e",
+    "role": "author"
+  },
+  {
+    "paperId": "arxiv-2601.11503v1",
+    "researcherId": "researcher-9d037cba7c55",
+    "role": "author"
+  },
+  {
+    "paperId": "arxiv-2601.11503v1",
+    "researcherId": "researcher-c59ce1a1d2e6",
+    "role": "author"
+  },
+  {
+    "paperId": "arxiv-2601.11503v1",
+    "researcherId": "researcher-0f75dbaee4c3",
+    "role": "author"
+  },
+  {
+    "paperId": "arxiv-2601.11503v1",
+    "researcherId": "researcher-75fd4645f258",
+    "role": "author"
+  },
+  {
+    "paperId": "arxiv-2601.11446v1",
+    "researcherId": "researcher-bd381c790eda",
+    "role": "author"
+  },
+  {
+    "paperId": "arxiv-2601.11446v1",
+    "researcherId": "researcher-d0446afffd5d",
+    "role": "author"
+  },
+  {
+    "paperId": "arxiv-2601.11446v1",
+    "researcherId": "researcher-5581e9334183",
+    "role": "author"
+  },
+  {
+    "paperId": "arxiv-2601.11446v1",
+    "researcherId": "researcher-f5e69a8fef08",
+    "role": "author"
+  },
+  {
+    "paperId": "arxiv-2601.11446v1",
+    "researcherId": "researcher-d0c02e00d3da",
+    "role": "author"
+  },
+  {
+    "paperId": "arxiv-2601.11446v1",
+    "researcherId": "researcher-07b09380726f",
+    "role": "author"
+  },
+  {
+    "paperId": "arxiv-2601.11446v1",
+    "researcherId": "researcher-cb2fbb967695",
+    "role": "author"
+  },
+  {
+    "paperId": "arxiv-2601.11446v1",
+    "researcherId": "researcher-1c1d36d5c7b8",
+    "role": "author"
+  },
+  {
+    "paperId": "arxiv-2601.11446v1",
+    "researcherId": "researcher-2f074a6e3526",
+    "role": "author"
+  },
+  {
+    "paperId": "arxiv-2601.11446v1",
+    "researcherId": "researcher-5109773610e5",
+    "role": "author"
+  },
+  {
+    "paperId": "arxiv-2601.11446v1",
+    "researcherId": "researcher-590851782e89",
+    "role": "author"
+  },
+  {
+    "paperId": "arxiv-2601.11446v1",
+    "researcherId": "researcher-da6a58112f31",
+    "role": "author"
+  },
+  {
+    "paperId": "arxiv-2601.11446v1",
+    "researcherId": "researcher-a33cdfa59ba3",
+    "role": "author"
+  },
+  {
+    "paperId": "arxiv-2601.11331v1",
+    "researcherId": "researcher-f76c577636d6",
+    "role": "author"
+  },
+  {
+    "paperId": "arxiv-2601.11331v1",
+    "researcherId": "researcher-574c2c919192",
+    "role": "author"
+  },
+  {
+    "paperId": "arxiv-2601.11331v1",
+    "researcherId": "researcher-26b4462e7029",
+    "role": "author"
+  },
+  {
+    "paperId": "arxiv-2601.11331v1",
+    "researcherId": "researcher-93f53e28dd59",
+    "role": "author"
+  },
+  {
+    "paperId": "arxiv-2601.11331v1",
+    "researcherId": "researcher-0a75e88fae6a",
+    "role": "author"
+  },
+  {
+    "paperId": "arxiv-2601.11331v1",
+    "researcherId": "researcher-c096d87af129",
+    "role": "author"
+  },
+  {
+    "paperId": "arxiv-2601.11331v1",
+    "researcherId": "researcher-b7ab465f73f6",
+    "role": "author"
+  },
+  {
+    "paperId": "arxiv-2601.11331v1",
+    "researcherId": "researcher-94a884159234",
+    "role": "author"
+  },
+  {
+    "paperId": "arxiv-2601.11064v1",
+    "researcherId": "researcher-bac02e9829e4",
+    "role": "author"
+  },
+  {
+    "paperId": "arxiv-2601.11064v1",
+    "researcherId": "researcher-f64c92e6bb55",
+    "role": "author"
+  },
+  {
+    "paperId": "arxiv-2601.10997v1",
+    "researcherId": "researcher-1f343424dd74",
+    "role": "author"
+  },
+  {
+    "paperId": "arxiv-2601.10997v1",
+    "researcherId": "researcher-e901e2aaaa92",
+    "role": "author"
+  },
+  {
+    "paperId": "arxiv-2601.10997v1",
+    "researcherId": "researcher-bfaf5f145afc",
+    "role": "author"
+  },
+  {
+    "paperId": "arxiv-2601.10997v1",
+    "researcherId": "researcher-8acddec8ed11",
+    "role": "author"
+  },
+  {
+    "paperId": "arxiv-2601.10997v1",
+    "researcherId": "researcher-59f36b38805b",
+    "role": "author"
+  },
+  {
+    "paperId": "arxiv-2601.10938v1",
+    "researcherId": "researcher-84964bc89bb6",
+    "role": "author"
+  },
+  {
+    "paperId": "arxiv-2601.10938v1",
+    "researcherId": "researcher-c20e201ecef6",
+    "role": "author"
+  },
+  {
+    "paperId": "arxiv-2601.10938v1",
+    "researcherId": "researcher-a21288f95ff2",
+    "role": "author"
+  },
+  {
+    "paperId": "arxiv-2601.10703v1",
+    "researcherId": "researcher-25a40f046264",
+    "role": "author"
+  },
+  {
+    "paperId": "arxiv-2601.10703v1",
+    "researcherId": "researcher-db4d4de9906e",
+    "role": "author"
+  },
+  {
+    "paperId": "arxiv-2601.10703v1",
+    "researcherId": "researcher-fc4dce017e7d",
+    "role": "author"
+  },
+  {
+    "paperId": "arxiv-2601.10703v1",
+    "researcherId": "researcher-6709b0d6bd37",
+    "role": "author"
+  },
+  {
+    "paperId": "arxiv-2601.10703v1",
+    "researcherId": "researcher-e6c80a02e081",
+    "role": "author"
+  },
+  {
+    "paperId": "arxiv-2601.10693v1",
+    "researcherId": "researcher-9e4fbbef79ce",
+    "role": "author"
+  },
+  {
+    "paperId": "arxiv-2601.10693v1",
+    "researcherId": "researcher-afac7716033d",
+    "role": "author"
+  },
+  {
+    "paperId": "arxiv-2601.10634v1",
+    "researcherId": "researcher-081d8fadfc88",
+    "role": "author"
+  },
+  {
+    "paperId": "arxiv-2601.10634v1",
+    "researcherId": "researcher-ae7980763f58",
+    "role": "author"
+  },
+  {
+    "paperId": "arxiv-2601.10634v1",
+    "researcherId": "researcher-38d6cada89ea",
+    "role": "author"
+  },
+  {
+    "paperId": "arxiv-2601.10634v1",
+    "researcherId": "researcher-bb8552a9125e",
+    "role": "author"
+  },
+  {
+    "paperId": "arxiv-2601.10634v1",
+    "researcherId": "researcher-3f2902b66017",
+    "role": "author"
+  },
+  {
+    "paperId": "arxiv-2601.10473v1",
+    "researcherId": "researcher-fbd77f43f8bc",
+    "role": "author"
+  },
+  {
+    "paperId": "arxiv-2601.10473v1",
+    "researcherId": "researcher-a55b94491171",
+    "role": "author"
+  },
+  {
+    "paperId": "arxiv-2601.10473v1",
+    "researcherId": "researcher-66556e4a7169",
+    "role": "author"
+  },
+  {
+    "paperId": "arxiv-2601.10472v1",
+    "researcherId": "researcher-4fad49ddb6d7",
+    "role": "author"
+  },
+  {
+    "paperId": "arxiv-2601.10472v1",
+    "researcherId": "researcher-7d6256ce2598",
+    "role": "author"
+  },
+  {
+    "paperId": "arxiv-2601.10472v1",
+    "researcherId": "researcher-ea10313dff14",
+    "role": "author"
+  },
+  {
+    "paperId": "arxiv-2601.10472v1",
+    "researcherId": "researcher-92c162a121a1",
+    "role": "author"
+  },
+  {
+    "paperId": "arxiv-2601.10472v1",
+    "researcherId": "researcher-98c3a5b55e3a",
+    "role": "author"
+  },
+  {
+    "paperId": "arxiv-2601.10401v1",
+    "researcherId": "researcher-4fbda5d062ca",
+    "role": "author"
+  },
+  {
+    "paperId": "arxiv-2601.10401v1",
+    "researcherId": "researcher-c7a1853f2a00",
+    "role": "author"
+  },
+  {
+    "paperId": "arxiv-2601.10401v1",
+    "researcherId": "researcher-6f37b8528a47",
+    "role": "author"
+  },
+  {
+    "paperId": "arxiv-2601.10401v1",
+    "researcherId": "researcher-0676993de3c9",
+    "role": "author"
+  },
+  {
+    "paperId": "arxiv-2601.10320v1",
+    "researcherId": "researcher-eb14a3b577cc",
+    "role": "author"
+  },
+  {
+    "paperId": "arxiv-2601.10320v1",
+    "researcherId": "researcher-e9e49ee9d718",
+    "role": "author"
+  },
+  {
+    "paperId": "arxiv-2601.10320v1",
+    "researcherId": "researcher-f2a288f9d4e5",
+    "role": "author"
+  },
+  {
+    "paperId": "arxiv-2601.10293v1",
+    "researcherId": "researcher-e53a3c0c4198",
+    "role": "author"
+  },
+  {
+    "paperId": "arxiv-2601.10293v1",
+    "researcherId": "researcher-8b4d28da09eb",
+    "role": "author"
+  },
+  {
+    "paperId": "arxiv-2601.10293v1",
+    "researcherId": "researcher-8be82cdadc1d",
+    "role": "author"
+  },
+  {
+    "paperId": "arxiv-2601.10293v1",
+    "researcherId": "researcher-0ac7b76c0687",
+    "role": "author"
+  },
+  {
+    "paperId": "arxiv-2601.10293v1",
+    "researcherId": "researcher-c73c7c68a1cc",
+    "role": "author"
+  },
+  {
+    "paperId": "arxiv-2601.10293v1",
+    "researcherId": "researcher-0560c46f205d",
+    "role": "author"
+  },
+  {
+    "paperId": "arxiv-2601.10293v1",
+    "researcherId": "researcher-19bfc7821c9d",
+    "role": "author"
+  },
+  {
+    "paperId": "arxiv-2601.10186v1",
+    "researcherId": "researcher-82d5fb0214ba",
+    "role": "author"
+  },
+  {
+    "paperId": "arxiv-2601.10186v1",
+    "researcherId": "researcher-bf85d8a9dd46",
+    "role": "author"
+  },
+  {
+    "paperId": "arxiv-2601.10178v1",
+    "researcherId": "researcher-e6a1d2af4d9e",
+    "role": "author"
+  },
+  {
+    "paperId": "arxiv-2601.10178v1",
+    "researcherId": "researcher-50397bc1e92f",
+    "role": "author"
+  },
+  {
+    "paperId": "arxiv-2601.10178v1",
+    "researcherId": "researcher-e892b37c74e6",
+    "role": "author"
+  },
+  {
+    "paperId": "arxiv-2601.10178v1",
+    "researcherId": "researcher-51f6a9577a0a",
+    "role": "author"
+  },
+  {
+    "paperId": "arxiv-2601.10178v1",
+    "researcherId": "researcher-a921cffcbed3",
+    "role": "author"
+  },
+  {
+    "paperId": "arxiv-2601.10178v1",
+    "researcherId": "researcher-982c166b0ddf",
+    "role": "author"
+  },
+  {
+    "paperId": "arxiv-2601.10178v1",
+    "researcherId": "researcher-8f60cfe824d1",
+    "role": "author"
+  },
+  {
+    "paperId": "arxiv-2601.10178v1",
+    "researcherId": "researcher-b7dcb1123b8b",
+    "role": "author"
+  },
+  {
+    "paperId": "arxiv-2601.10178v1",
+    "researcherId": "researcher-85a536b41cd8",
+    "role": "author"
+  },
+  {
+    "paperId": "arxiv-2601.10178v1",
+    "researcherId": "researcher-9ac4199b64ee",
+    "role": "author"
+  },
+  {
+    "paperId": "arxiv-2601.10178v1",
+    "researcherId": "researcher-46879813b95e",
+    "role": "author"
+  },
+  {
+    "paperId": "arxiv-2601.10178v1",
+    "researcherId": "researcher-1a2162c52bf3",
+    "role": "author"
+  },
+  {
+    "paperId": "arxiv-2601.10174v1",
+    "researcherId": "researcher-1856974e5ce1",
+    "role": "author"
+  },
+  {
+    "paperId": "arxiv-2601.10174v1",
+    "researcherId": "researcher-9d95e01e05e5",
+    "role": "author"
+  },
+  {
+    "paperId": "arxiv-2601.10174v1",
+    "researcherId": "researcher-1b773ec37cad",
+    "role": "author"
+  },
+  {
+    "paperId": "arxiv-2601.10174v1",
+    "researcherId": "researcher-e85679cfbc8e",
+    "role": "author"
+  },
+  {
+    "paperId": "arxiv-2601.10174v1",
+    "researcherId": "researcher-e78c29b83834",
+    "role": "author"
+  },
+  {
+    "paperId": "arxiv-2601.10174v1",
+    "researcherId": "researcher-27691275bcfb",
+    "role": "author"
+  },
+  {
+    "paperId": "arxiv-2601.10174v1",
+    "researcherId": "researcher-468ffb9cc8a3",
+    "role": "author"
+  },
+  {
+    "paperId": "arxiv-2601.10174v1",
+    "researcherId": "researcher-28f453a3070a",
+    "role": "author"
+  },
+  {
+    "paperId": "arxiv-2601.10174v1",
+    "researcherId": "researcher-51e73c1bed47",
+    "role": "author"
+  },
+  {
+    "paperId": "arxiv-2601.10140v1",
+    "researcherId": "researcher-4cffd6b2d2a2",
+    "role": "author"
+  },
+  {
+    "paperId": "arxiv-2601.10140v1",
+    "researcherId": "researcher-75ee6744f3dd",
+    "role": "author"
+  },
+  {
+    "paperId": "arxiv-2601.10140v1",
+    "researcherId": "researcher-c07332481722",
+    "role": "author"
+  },
+  {
+    "paperId": "arxiv-2601.10140v1",
+    "researcherId": "researcher-c045e5b48ff1",
+    "role": "author"
+  },
+  {
+    "paperId": "arxiv-2601.10140v1",
+    "researcherId": "researcher-45db7e0150ae",
+    "role": "author"
+  },
+  {
+    "paperId": "arxiv-2601.10140v1",
+    "researcherId": "researcher-327215521a58",
+    "role": "author"
+  },
+  {
+    "paperId": "arxiv-2601.10140v1",
+    "researcherId": "researcher-c124de0961f2",
+    "role": "author"
+  },
+  {
+    "paperId": "arxiv-2601.10136v1",
+    "researcherId": "researcher-19631a7176b9",
+    "role": "author"
+  },
+  {
+    "paperId": "arxiv-2601.10136v1",
+    "researcherId": "researcher-fc324a8e8349",
+    "role": "author"
+  },
+  {
+    "paperId": "arxiv-2601.10136v1",
+    "researcherId": "researcher-162e1c63fdaf",
+    "role": "author"
+  },
+  {
+    "paperId": "arxiv-2601.10039v1",
+    "researcherId": "researcher-907f9051c516",
+    "role": "author"
+  },
+  {
+    "paperId": "arxiv-2601.10039v1",
+    "researcherId": "researcher-aa8d168512a2",
+    "role": "author"
+  },
+  {
+    "paperId": "oa-W2808025896",
+    "researcherId": "researcher-a72e22e5dabf",
+    "role": "author"
+  },
+  {
+    "paperId": "oa-W2808025896",
+    "researcherId": "researcher-d6efbec7831d",
+    "role": "author"
+  },
+  {
+    "paperId": "oa-W2808025896",
+    "researcherId": "researcher-d39728eba0b9",
+    "role": "author"
+  },
+  {
+    "paperId": "oa-W2808025896",
+    "researcherId": "researcher-4bdf2f7469fa",
+    "role": "author"
+  },
+  {
+    "paperId": "oa-W1626854854",
+    "researcherId": "researcher-f511f67a1bb2",
+    "role": "author"
+  },
+  {
+    "paperId": "oa-W1626854854",
+    "researcherId": "researcher-9dce115e3c4c",
+    "role": "author"
+  },
+  {
+    "paperId": "oa-W1626854854",
+    "researcherId": "researcher-926a7400b4b3",
+    "role": "author"
+  },
+  {
+    "paperId": "oa-W1626854854",
+    "researcherId": "researcher-73cd7b86b8f3",
+    "role": "author"
+  },
+  {
+    "paperId": "oa-W1626854854",
+    "researcherId": "researcher-e5a163e08988",
+    "role": "author"
+  },
+  {
+    "paperId": "oa-W2077937117",
+    "researcherId": "researcher-f298409cbde4",
+    "role": "author"
+  },
+  {
+    "paperId": "oa-W2077937117",
+    "researcherId": "researcher-c9af4ea3c6a6",
+    "role": "author"
+  },
+  {
+    "paperId": "oa-W2077937117",
+    "researcherId": "researcher-c59de4635a83",
+    "role": "author"
+  },
+  {
+    "paperId": "oa-W2077937117",
+    "researcherId": "researcher-b899caf9aa00",
+    "role": "author"
+  },
+  {
+    "paperId": "oa-W2077937117",
+    "researcherId": "researcher-72fbcf0c993e",
+    "role": "author"
+  },
+  {
+    "paperId": "oa-W2077937117",
+    "researcherId": "researcher-72f24dcf7f30",
+    "role": "author"
+  },
+  {
+    "paperId": "oa-W2077937117",
+    "researcherId": "researcher-055813d5216e",
+    "role": "author"
+  },
+  {
+    "paperId": "oa-W2077937117",
+    "researcherId": "researcher-263fd2c102a2",
+    "role": "author"
+  },
+  {
+    "paperId": "oa-W2077937117",
+    "researcherId": "researcher-42a97c5aa54a",
+    "role": "author"
+  },
+  {
+    "paperId": "oa-W2077937117",
+    "researcherId": "researcher-f398ffedbf94",
+    "role": "author"
+  },
+  {
+    "paperId": "oa-W2079985616",
+    "researcherId": "researcher-fcc25e227fcd",
+    "role": "author"
+  },
+  {
+    "paperId": "oa-W2079985616",
+    "researcherId": "researcher-254b3ec9022f",
+    "role": "author"
+  },
+  {
+    "paperId": "oa-W2079985616",
+    "researcherId": "researcher-a7032bb1f885",
+    "role": "author"
+  },
+  {
+    "paperId": "oa-W2079985616",
+    "researcherId": "researcher-6b43c5ac48fd",
+    "role": "author"
+  },
+  {
+    "paperId": "oa-W2079985616",
+    "researcherId": "researcher-335231bddd1d",
+    "role": "author"
+  },
+  {
+    "paperId": "oa-W2328134238",
+    "researcherId": "researcher-9bc47d9bdc7f",
+    "role": "author"
+  },
+  {
+    "paperId": "oa-W2328134238",
+    "researcherId": "researcher-6479b4a6d460",
+    "role": "author"
+  },
+  {
+    "paperId": "oa-W2983762108",
+    "researcherId": "researcher-8352bb8baa94",
+    "role": "author"
+  },
+  {
+    "paperId": "oa-W2983762108",
+    "researcherId": "researcher-b7271e0bc45e",
+    "role": "author"
+  },
+  {
+    "paperId": "oa-W2983762108",
+    "researcherId": "researcher-d09674bc3c21",
+    "role": "author"
+  },
+  {
+    "paperId": "oa-W2983762108",
+    "researcherId": "researcher-ef59a53f16d9",
+    "role": "author"
+  },
+  {
+    "paperId": "oa-W2983762108",
+    "researcherId": "researcher-96aeb5e9cf3b",
+    "role": "author"
+  },
+  {
+    "paperId": "oa-W2983762108",
+    "researcherId": "researcher-840617609971",
+    "role": "author"
+  },
+  {
+    "paperId": "oa-W2983762108",
+    "researcherId": "researcher-96ce346ac821",
+    "role": "author"
+  },
+  {
+    "paperId": "oa-W2983762108",
+    "researcherId": "researcher-73e719b285a8",
+    "role": "author"
+  },
+  {
+    "paperId": "oa-W2983762108",
+    "researcherId": "researcher-d1799b5fd183",
+    "role": "author"
+  },
+  {
+    "paperId": "oa-W2983762108",
+    "researcherId": "researcher-278ef9309e89",
+    "role": "author"
+  },
+  {
+    "paperId": "oa-W2983762108",
+    "researcherId": "researcher-fe7211718e7f",
+    "role": "author"
+  },
+  {
+    "paperId": "oa-W2983762108",
+    "researcherId": "researcher-3c1414de170d",
+    "role": "author"
+  },
+  {
+    "paperId": "oa-W2983762108",
+    "researcherId": "researcher-fbe783c56f32",
+    "role": "author"
+  },
+  {
+    "paperId": "oa-W2983762108",
+    "researcherId": "researcher-0221438111c6",
+    "role": "author"
+  },
+  {
+    "paperId": "oa-W3013252775",
+    "researcherId": "researcher-0759fbbf584a",
+    "role": "author"
+  },
+  {
+    "paperId": "oa-W2618037459",
+    "researcherId": "researcher-300f17654d23",
+    "role": "author"
+  },
+  {
+    "paperId": "oa-W2618037459",
+    "researcherId": "researcher-335231bddd1d",
+    "role": "author"
+  },
+  {
+    "paperId": "oa-W2618037459",
+    "researcherId": "researcher-be6ef31d6603",
+    "role": "author"
+  },
+  {
+    "paperId": "oa-W2618037459",
+    "researcherId": "researcher-fcc25e227fcd",
+    "role": "author"
+  },
+  {
+    "paperId": "oa-W2618037459",
+    "researcherId": "researcher-d5f6450730ea",
+    "role": "author"
+  },
+  {
+    "paperId": "oa-W2618037459",
+    "researcherId": "researcher-5917e6d4a56d",
+    "role": "author"
+  },
+  {
+    "paperId": "oa-W2156562079",
+    "researcherId": "researcher-59419a2b0369",
+    "role": "author"
+  },
+  {
+    "paperId": "oa-W2156562079",
+    "researcherId": "researcher-57b65172567a",
+    "role": "author"
+  },
+  {
+    "paperId": "oa-W2156562079",
+    "researcherId": "researcher-626874f7684a",
+    "role": "author"
+  },
+  {
+    "paperId": "oa-W2032952916",
+    "researcherId": "researcher-f17ff680dd27",
+    "role": "author"
+  },
+  {
+    "paperId": "oa-W2032952916",
+    "researcherId": "researcher-f06429f8e014",
+    "role": "author"
+  },
+  {
+    "paperId": "oa-W2032952916",
+    "researcherId": "researcher-2470fc4eadd8",
+    "role": "author"
+  },
+  {
+    "paperId": "oa-W2032952916",
+    "researcherId": "researcher-4a0c5b8249a1",
+    "role": "author"
+  },
+  {
+    "paperId": "oa-W2032952916",
+    "researcherId": "researcher-401de54fe537",
+    "role": "author"
+  },
+  {
+    "paperId": "oa-W2032952916",
+    "researcherId": "researcher-04eee760e3ae",
+    "role": "author"
+  },
+  {
+    "paperId": "oa-W2796854462",
+    "researcherId": "researcher-294bc97cc03f",
+    "role": "author"
+  },
+  {
+    "paperId": "oa-W2796854462",
+    "researcherId": "researcher-b9083cf468cd",
+    "role": "author"
+  },
+  {
+    "paperId": "oa-W2796854462",
+    "researcherId": "researcher-dadfd474972e",
+    "role": "author"
+  },
+  {
+    "paperId": "oa-W2796854462",
+    "researcherId": "researcher-cb561764796e",
+    "role": "author"
+  },
+  {
+    "paperId": "oa-W2636773388",
+    "researcherId": "researcher-32bb1c288e3a",
+    "role": "author"
+  },
+  {
+    "paperId": "oa-W2636773388",
+    "researcherId": "researcher-1daed17fbee7",
+    "role": "author"
+  },
+  {
+    "paperId": "oa-W2636773388",
+    "researcherId": "researcher-422c5f573a69",
+    "role": "author"
+  },
+  {
+    "paperId": "oa-W2636773388",
+    "researcherId": "researcher-85be24fae69c",
+    "role": "author"
+  },
+  {
+    "paperId": "oa-W2559148811",
+    "researcherId": "researcher-695290743b14",
+    "role": "author"
+  },
+  {
+    "paperId": "oa-W2908542802",
+    "researcherId": "researcher-75b82d2813ba",
+    "role": "author"
+  },
+  {
+    "paperId": "oa-W2908542802",
+    "researcherId": "researcher-e056ed5a4cda",
+    "role": "author"
+  },
+  {
+    "paperId": "oa-W2908542802",
+    "researcherId": "researcher-757f2dde4313",
+    "role": "author"
+  },
+  {
+    "paperId": "oa-W2908542802",
+    "researcherId": "researcher-4e40820aeb4f",
+    "role": "author"
+  },
+  {
+    "paperId": "oa-W2908542802",
+    "researcherId": "researcher-ad0a55f757ee",
+    "role": "author"
+  },
+  {
+    "paperId": "oa-W2116064024",
+    "researcherId": "researcher-64a21177b223",
+    "role": "author"
+  },
+  {
+    "paperId": "oa-W2116064024",
+    "researcherId": "researcher-3e43df57ac4f",
+    "role": "author"
+  },
+  {
+    "paperId": "oa-W2116064024",
+    "researcherId": "researcher-8f89eb2bf3dc",
+    "role": "author"
+  },
+  {
+    "paperId": "oa-W2065852943",
+    "researcherId": "researcher-29a8f3d1497c",
+    "role": "author"
+  },
+  {
+    "paperId": "oa-W2065852943",
+    "researcherId": "researcher-73723785fd86",
+    "role": "author"
+  },
+  {
+    "paperId": "oa-W2065852943",
+    "researcherId": "researcher-46e56bc99a89",
+    "role": "author"
+  },
+  {
+    "paperId": "oa-W2065852943",
+    "researcherId": "researcher-d1f569019208",
+    "role": "author"
+  },
+  {
+    "paperId": "oa-W2065852943",
+    "researcherId": "researcher-13b760f5fc63",
+    "role": "author"
+  },
+  {
+    "paperId": "oa-W3005657800",
+    "researcherId": "researcher-3d910c5703f9",
+    "role": "author"
+  },
+  {
+    "paperId": "oa-W3005657800",
+    "researcherId": "researcher-d3158b171a54",
+    "role": "author"
+  },
+  {
+    "paperId": "oa-W3005657800",
+    "researcherId": "researcher-3a94d6888f80",
+    "role": "author"
+  },
+  {
+    "paperId": "oa-W2110395021",
+    "researcherId": "researcher-15ef645335ed",
+    "role": "author"
+  },
+  {
+    "paperId": "oa-W2110395021",
+    "researcherId": "researcher-0d2bdec6e8da",
+    "role": "author"
+  },
+  {
+    "paperId": "oa-W2110395021",
+    "researcherId": "researcher-d69c3d614505",
+    "role": "author"
+  },
+  {
+    "paperId": "oa-W2753749122",
+    "researcherId": "researcher-0759fbbf584a",
+    "role": "author"
+  },
+  {
+    "paperId": "oa-W2169518199",
+    "researcherId": "researcher-8f89eb2bf3dc",
+    "role": "author"
+  },
+  {
+    "paperId": "oa-W2169518199",
+    "researcherId": "researcher-173b68e7298c",
+    "role": "author"
+  },
+  {
+    "paperId": "oa-W2169518199",
+    "researcherId": "researcher-4f9b7f1d5873",
+    "role": "author"
+  },
+  {
+    "paperId": "arxiv-2601.11503v1",
+    "researcherId": "researcher-7b520d4397d4",
+    "role": "author"
+  },
+  {
+    "paperId": "arxiv-2601.11503v1",
+    "researcherId": "researcher-421dd099db25",
+    "role": "author"
+  },
+  {
+    "paperId": "arxiv-2601.11503v1",
+    "researcherId": "researcher-d955f71971be",
+    "role": "author"
+  },
+  {
+    "paperId": "arxiv-2601.11503v1",
+    "researcherId": "researcher-5be2d6f33216",
+    "role": "author"
+  },
+  {
+    "paperId": "arxiv-2601.11446v1",
+    "researcherId": "researcher-412544b0de59",
+    "role": "author"
+  },
+  {
+    "paperId": "arxiv-2601.11446v1",
+    "researcherId": "researcher-0d8d15103f1b",
+    "role": "author"
+  },
+  {
+    "paperId": "arxiv-2601.11446v1",
+    "researcherId": "researcher-3a38ca625cab",
+    "role": "author"
+  },
+  {
+    "paperId": "arxiv-2601.11446v1",
+    "researcherId": "researcher-7c9eac57c005",
+    "role": "author"
+  },
+  {
+    "paperId": "arxiv-2601.11446v1",
+    "researcherId": "researcher-59d81bdb2af8",
+    "role": "author"
+  },
+  {
+    "paperId": "arxiv-2601.11446v1",
+    "researcherId": "researcher-5266b25a9330",
+    "role": "author"
+  },
+  {
+    "paperId": "arxiv-2601.11446v1",
+    "researcherId": "researcher-e715e06120a0",
+    "role": "author"
+  },
+  {
+    "paperId": "arxiv-2601.11446v1",
+    "researcherId": "researcher-2f7120b5dd95",
+    "role": "author"
+  },
+  {
+    "paperId": "arxiv-2601.11446v1",
+    "researcherId": "researcher-9475f8241254",
+    "role": "author"
+  },
+  {
+    "paperId": "arxiv-2601.11446v1",
+    "researcherId": "researcher-ff95fb8ac7ae",
+    "role": "author"
+  },
+  {
+    "paperId": "arxiv-2601.11446v1",
+    "researcherId": "researcher-9ab357016b0d",
+    "role": "author"
+  },
+  {
+    "paperId": "arxiv-2601.11446v1",
+    "researcherId": "researcher-2186139f728b",
+    "role": "author"
+  },
+  {
+    "paperId": "arxiv-2601.11446v1",
+    "researcherId": "researcher-c6295d411f1e",
+    "role": "author"
+  },
+  {
+    "paperId": "arxiv-2601.11331v1",
+    "researcherId": "researcher-c5514ae0d96d",
+    "role": "author"
+  },
+  {
+    "paperId": "arxiv-2601.11331v1",
+    "researcherId": "researcher-8e0544e14a74",
+    "role": "author"
+  },
+  {
+    "paperId": "arxiv-2601.11331v1",
+    "researcherId": "researcher-af3f641d9c6c",
+    "role": "author"
+  },
+  {
+    "paperId": "arxiv-2601.11331v1",
+    "researcherId": "researcher-76c2a924057e",
+    "role": "author"
+  },
+  {
+    "paperId": "arxiv-2601.11331v1",
+    "researcherId": "researcher-4f5f08edfee1",
+    "role": "author"
+  },
+  {
+    "paperId": "arxiv-2601.11331v1",
+    "researcherId": "researcher-53eb37f9aa09",
+    "role": "author"
+  },
+  {
+    "paperId": "arxiv-2601.11331v1",
+    "researcherId": "researcher-213d5fbf9152",
+    "role": "author"
+  },
+  {
+    "paperId": "arxiv-2601.11331v1",
+    "researcherId": "researcher-6cf78a98f09b",
+    "role": "author"
+  },
+  {
+    "paperId": "arxiv-2601.11064v1",
+    "researcherId": "researcher-95ce8f5255b0",
+    "role": "author"
+  },
+  {
+    "paperId": "arxiv-2601.11064v1",
+    "researcherId": "researcher-9ccb1abfe2a2",
+    "role": "author"
+  },
+  {
+    "paperId": "arxiv-2601.10997v1",
+    "researcherId": "researcher-58b9ceccd997",
+    "role": "author"
+  },
+  {
+    "paperId": "arxiv-2601.10997v1",
+    "researcherId": "researcher-fe85c72a3243",
+    "role": "author"
+  },
+  {
+    "paperId": "arxiv-2601.10997v1",
+    "researcherId": "researcher-4807b5f5b340",
+    "role": "author"
+  },
+  {
+    "paperId": "arxiv-2601.10997v1",
+    "researcherId": "researcher-a5ef4ae3025a",
+    "role": "author"
+  },
+  {
+    "paperId": "arxiv-2601.10997v1",
+    "researcherId": "researcher-5ff445c58ae6",
+    "role": "author"
+  },
+  {
+    "paperId": "arxiv-2601.10938v1",
+    "researcherId": "researcher-afb0b9659b7f",
+    "role": "author"
+  },
+  {
+    "paperId": "arxiv-2601.10938v1",
+    "researcherId": "researcher-5253642e37b2",
+    "role": "author"
+  },
+  {
+    "paperId": "arxiv-2601.10938v1",
+    "researcherId": "researcher-267437ac35c3",
+    "role": "author"
+  },
+  {
+    "paperId": "arxiv-2601.10703v1",
+    "researcherId": "researcher-ac108e5f54a0",
+    "role": "author"
+  },
+  {
+    "paperId": "arxiv-2601.10703v1",
+    "researcherId": "researcher-833c612f3291",
+    "role": "author"
+  },
+  {
+    "paperId": "arxiv-2601.10703v1",
+    "researcherId": "researcher-4a5a11399465",
+    "role": "author"
+  },
+  {
+    "paperId": "arxiv-2601.10703v1",
+    "researcherId": "researcher-90f611a98d93",
+    "role": "author"
+  },
+  {
+    "paperId": "arxiv-2601.10703v1",
+    "researcherId": "researcher-5fb168c87691",
+    "role": "author"
+  },
+  {
+    "paperId": "arxiv-2601.10693v1",
+    "researcherId": "researcher-3ac006e2f0a0",
+    "role": "author"
+  },
+  {
+    "paperId": "arxiv-2601.10693v1",
+    "researcherId": "researcher-6430a17bad1b",
+    "role": "author"
+  },
+  {
+    "paperId": "arxiv-2601.10634v1",
+    "researcherId": "researcher-8afff1ceeff6",
+    "role": "author"
+  },
+  {
+    "paperId": "arxiv-2601.10634v1",
+    "researcherId": "researcher-12fe4a52a290",
+    "role": "author"
+  },
+  {
+    "paperId": "arxiv-2601.10634v1",
+    "researcherId": "researcher-900134a7ee0b",
+    "role": "author"
+  },
+  {
+    "paperId": "arxiv-2601.10634v1",
+    "researcherId": "researcher-39db38ab4222",
+    "role": "author"
+  },
+  {
+    "paperId": "arxiv-2601.10634v1",
+    "researcherId": "researcher-6e51bf5eb286",
+    "role": "author"
+  },
+  {
+    "paperId": "arxiv-2601.10473v1",
+    "researcherId": "researcher-4d7916fe7c6c",
+    "role": "author"
+  },
+  {
+    "paperId": "arxiv-2601.10473v1",
+    "researcherId": "researcher-c593b0f999a7",
+    "role": "author"
+  },
+  {
+    "paperId": "arxiv-2601.10473v1",
+    "researcherId": "researcher-6cde6f85e062",
+    "role": "author"
+  },
+  {
+    "paperId": "arxiv-2601.10472v1",
+    "researcherId": "researcher-275b9840d407",
+    "role": "author"
+  },
+  {
+    "paperId": "arxiv-2601.10472v1",
+    "researcherId": "researcher-bc9b1d8162f0",
+    "role": "author"
+  },
+  {
+    "paperId": "arxiv-2601.10472v1",
+    "researcherId": "researcher-d265bc9adb6d",
+    "role": "author"
+  },
+  {
+    "paperId": "arxiv-2601.10472v1",
+    "researcherId": "researcher-5c2465ecc002",
+    "role": "author"
+  },
+  {
+    "paperId": "arxiv-2601.10472v1",
+    "researcherId": "researcher-2acc0b4bdd5a",
+    "role": "author"
+  },
+  {
+    "paperId": "arxiv-2601.10401v1",
+    "researcherId": "researcher-a2eee2cab183",
+    "role": "author"
+  },
+  {
+    "paperId": "arxiv-2601.10401v1",
+    "researcherId": "researcher-b3e1b74c5a67",
+    "role": "author"
+  },
+  {
+    "paperId": "arxiv-2601.10401v1",
+    "researcherId": "researcher-141b4159d2cc",
+    "role": "author"
+  },
+  {
+    "paperId": "arxiv-2601.10401v1",
+    "researcherId": "researcher-11f9f33403b6",
+    "role": "author"
+  },
+  {
+    "paperId": "arxiv-2601.10320v1",
+    "researcherId": "researcher-c4c7764abd5c",
+    "role": "author"
+  },
+  {
+    "paperId": "arxiv-2601.10320v1",
+    "researcherId": "researcher-d4db528734c2",
+    "role": "author"
+  },
+  {
+    "paperId": "arxiv-2601.10320v1",
+    "researcherId": "researcher-200dc34350f0",
+    "role": "author"
+  },
+  {
+    "paperId": "arxiv-2601.10293v1",
+    "researcherId": "researcher-8c4c46628b9c",
+    "role": "author"
+  },
+  {
+    "paperId": "arxiv-2601.10293v1",
+    "researcherId": "researcher-aa60af9caff4",
+    "role": "author"
+  },
+  {
+    "paperId": "arxiv-2601.10293v1",
+    "researcherId": "researcher-d83884dd99cf",
+    "role": "author"
+  },
+  {
+    "paperId": "arxiv-2601.10293v1",
+    "researcherId": "researcher-e71a6e94247c",
+    "role": "author"
+  },
+  {
+    "paperId": "arxiv-2601.10293v1",
+    "researcherId": "researcher-269898268f70",
+    "role": "author"
+  },
+  {
+    "paperId": "arxiv-2601.10293v1",
+    "researcherId": "researcher-3be304faa0ed",
+    "role": "author"
+  },
+  {
+    "paperId": "arxiv-2601.10293v1",
+    "researcherId": "researcher-63d1e42437c9",
+    "role": "author"
+  },
+  {
+    "paperId": "arxiv-2601.10186v1",
+    "researcherId": "researcher-8c6b6eacdc7a",
+    "role": "author"
+  },
+  {
+    "paperId": "arxiv-2601.10186v1",
+    "researcherId": "researcher-7816c7b2c3c9",
+    "role": "author"
+  },
+  {
+    "paperId": "arxiv-2601.10178v1",
+    "researcherId": "researcher-25720b006da5",
+    "role": "author"
+  },
+  {
+    "paperId": "arxiv-2601.10178v1",
+    "researcherId": "researcher-3851ab853de2",
+    "role": "author"
+  },
+  {
+    "paperId": "arxiv-2601.10178v1",
+    "researcherId": "researcher-ed84e2b444db",
+    "role": "author"
+  },
+  {
+    "paperId": "arxiv-2601.10178v1",
+    "researcherId": "researcher-a5138eaff768",
+    "role": "author"
+  },
+  {
+    "paperId": "arxiv-2601.10178v1",
+    "researcherId": "researcher-44f5be5a8cb6",
+    "role": "author"
+  },
+  {
+    "paperId": "arxiv-2601.10178v1",
+    "researcherId": "researcher-c9b620f33be4",
+    "role": "author"
+  },
+  {
+    "paperId": "arxiv-2601.10178v1",
+    "researcherId": "researcher-e5d0136d4bb6",
+    "role": "author"
+  },
+  {
+    "paperId": "arxiv-2601.10178v1",
+    "researcherId": "researcher-e8eb03f961bd",
+    "role": "author"
+  },
+  {
+    "paperId": "arxiv-2601.10178v1",
+    "researcherId": "researcher-e22015463fdf",
+    "role": "author"
+  },
+  {
+    "paperId": "arxiv-2601.10178v1",
+    "researcherId": "researcher-c5a6f03a7d98",
+    "role": "author"
+  },
+  {
+    "paperId": "arxiv-2601.10178v1",
+    "researcherId": "researcher-ba021da3328d",
+    "role": "author"
+  },
+  {
+    "paperId": "arxiv-2601.10178v1",
+    "researcherId": "researcher-b4be69e661f3",
+    "role": "author"
+  },
+  {
+    "paperId": "arxiv-2601.10174v1",
+    "researcherId": "researcher-77272bfd06c5",
+    "role": "author"
+  },
+  {
+    "paperId": "arxiv-2601.10174v1",
+    "researcherId": "researcher-c5f9e29710d4",
+    "role": "author"
+  },
+  {
+    "paperId": "arxiv-2601.10174v1",
+    "researcherId": "researcher-0a18ddc0a989",
+    "role": "author"
+  },
+  {
+    "paperId": "arxiv-2601.10174v1",
+    "researcherId": "researcher-a4b0697c5d18",
+    "role": "author"
+  },
+  {
+    "paperId": "arxiv-2601.10174v1",
+    "researcherId": "researcher-f4f8184fe018",
+    "role": "author"
+  },
+  {
+    "paperId": "arxiv-2601.10174v1",
+    "researcherId": "researcher-f2ed2e0c0adf",
+    "role": "author"
+  },
+  {
+    "paperId": "arxiv-2601.10174v1",
+    "researcherId": "researcher-75c71391e3b2",
+    "role": "author"
+  },
+  {
+    "paperId": "arxiv-2601.10174v1",
+    "researcherId": "researcher-f4b0dfc47c00",
+    "role": "author"
+  },
+  {
+    "paperId": "arxiv-2601.10174v1",
+    "researcherId": "researcher-51a2036721c7",
+    "role": "author"
+  },
+  {
+    "paperId": "arxiv-2601.10140v1",
+    "researcherId": "researcher-8dbcb2073b12",
+    "role": "author"
+  },
+  {
+    "paperId": "arxiv-2601.10140v1",
+    "researcherId": "researcher-2bee35a90b1b",
+    "role": "author"
+  },
+  {
+    "paperId": "arxiv-2601.10140v1",
+    "researcherId": "researcher-e979e98017a1",
+    "role": "author"
+  },
+  {
+    "paperId": "arxiv-2601.10140v1",
+    "researcherId": "researcher-8258534753e8",
+    "role": "author"
+  },
+  {
+    "paperId": "arxiv-2601.10140v1",
+    "researcherId": "researcher-483ed893e434",
+    "role": "author"
+  },
+  {
+    "paperId": "arxiv-2601.10140v1",
+    "researcherId": "researcher-dc9989efae21",
+    "role": "author"
+  },
+  {
+    "paperId": "arxiv-2601.10140v1",
+    "researcherId": "researcher-da9afaadcdbe",
+    "role": "author"
+  },
+  {
+    "paperId": "arxiv-2601.10136v1",
+    "researcherId": "researcher-532ff371095a",
+    "role": "author"
+  },
+  {
+    "paperId": "arxiv-2601.10136v1",
+    "researcherId": "researcher-1803021201bc",
+    "role": "author"
+  },
+  {
+    "paperId": "arxiv-2601.10136v1",
+    "researcherId": "researcher-9d954afd935f",
+    "role": "author"
+  },
+  {
+    "paperId": "arxiv-2601.10039v1",
+    "researcherId": "researcher-85cb7f2b2722",
+    "role": "author"
+  },
+  {
+    "paperId": "arxiv-2601.10039v1",
+    "researcherId": "researcher-18874d33e177",
+    "role": "author"
+  },
+  {
+    "paperId": "s2-be7c1c7664fd855f7215b79d35857be664bd64b2",
+    "researcherId": "researcher-260aace1660a",
+    "role": "author"
+  },
+  {
+    "paperId": "s2-be7c1c7664fd855f7215b79d35857be664bd64b2",
+    "researcherId": "researcher-7bb7cca6d3c3",
+    "role": "author"
+  },
+  {
+    "paperId": "s2-ab388cf99b6c06714fd1fc6b6fc55436b3d607dc",
+    "researcherId": "researcher-a7ec79f86721",
+    "role": "author"
+  },
+  {
+    "paperId": "s2-ab388cf99b6c06714fd1fc6b6fc55436b3d607dc",
+    "researcherId": "researcher-33fbf019fa0b",
+    "role": "author"
+  },
+  {
+    "paperId": "s2-ab388cf99b6c06714fd1fc6b6fc55436b3d607dc",
+    "researcherId": "researcher-bc7167ef3450",
+    "role": "author"
+  },
+  {
+    "paperId": "s2-ab388cf99b6c06714fd1fc6b6fc55436b3d607dc",
+    "researcherId": "researcher-7f2f237397b6",
+    "role": "author"
+  },
+  {
+    "paperId": "s2-a983a25907d54c890a3d53499dfd0633cc547d2b",
+    "researcherId": "researcher-24913515d3e4",
+    "role": "author"
+  },
+  {
+    "paperId": "s2-a983a25907d54c890a3d53499dfd0633cc547d2b",
+    "researcherId": "researcher-b27e742ecc08",
+    "role": "author"
+  },
+  {
+    "paperId": "s2-a983a25907d54c890a3d53499dfd0633cc547d2b",
+    "researcherId": "researcher-da9c93870e23",
+    "role": "author"
+  },
+  {
+    "paperId": "s2-7eb8d966834cccbd08d7e6407699e45c22b409be",
+    "researcherId": "researcher-bdf83b7b97df",
+    "role": "author"
+  },
+  {
+    "paperId": "s2-7eb8d966834cccbd08d7e6407699e45c22b409be",
+    "researcherId": "researcher-0d338be0e0a0",
+    "role": "author"
+  },
+  {
+    "paperId": "s2-7eb8d966834cccbd08d7e6407699e45c22b409be",
+    "researcherId": "researcher-cfe11e1a1262",
+    "role": "author"
+  },
+  {
+    "paperId": "s2-7eb8d966834cccbd08d7e6407699e45c22b409be",
+    "researcherId": "researcher-a10f248ada12",
+    "role": "author"
+  },
+  {
+    "paperId": "s2-7eb8d966834cccbd08d7e6407699e45c22b409be",
+    "researcherId": "researcher-84edf84561fd",
+    "role": "author"
+  },
+  {
+    "paperId": "s2-7eb8d966834cccbd08d7e6407699e45c22b409be",
+    "researcherId": "researcher-dbf1a183b94b",
+    "role": "author"
+  },
+  {
+    "paperId": "s2-7eb8d966834cccbd08d7e6407699e45c22b409be",
+    "researcherId": "researcher-babb93bc9920",
+    "role": "author"
+  },
+  {
+    "paperId": "s2-7eb8d966834cccbd08d7e6407699e45c22b409be",
+    "researcherId": "researcher-bfeda5a00f55",
+    "role": "author"
+  },
+  {
+    "paperId": "s2-7eb8d966834cccbd08d7e6407699e45c22b409be",
+    "researcherId": "researcher-772a50789ab5",
+    "role": "author"
+  },
+  {
+    "paperId": "s2-7eb8d966834cccbd08d7e6407699e45c22b409be",
+    "researcherId": "researcher-bac1730a42c6",
+    "role": "author"
+  },
+  {
+    "paperId": "s2-7eb8d966834cccbd08d7e6407699e45c22b409be",
+    "researcherId": "researcher-c58bd6daac74",
+    "role": "author"
+  },
+  {
+    "paperId": "s2-7eb8d966834cccbd08d7e6407699e45c22b409be",
+    "researcherId": "researcher-a0e6356b4fe8",
+    "role": "author"
+  },
+  {
+    "paperId": "s2-7eb8d966834cccbd08d7e6407699e45c22b409be",
+    "researcherId": "researcher-c1def0d2ef19",
+    "role": "author"
+  },
+  {
+    "paperId": "s2-7eb8d966834cccbd08d7e6407699e45c22b409be",
+    "researcherId": "researcher-251d54d6c2a1",
+    "role": "author"
+  },
+  {
+    "paperId": "s2-1a5ed3b95d131954b010c38016491b076466f8bd",
+    "researcherId": "researcher-279add654fc1",
+    "role": "author"
+  },
+  {
+    "paperId": "s2-1a5ed3b95d131954b010c38016491b076466f8bd",
+    "researcherId": "researcher-bfbd0ac16125",
+    "role": "author"
+  },
+  {
+    "paperId": "s2-1a5ed3b95d131954b010c38016491b076466f8bd",
+    "researcherId": "researcher-e1ff836c496c",
+    "role": "author"
+  },
+  {
+    "paperId": "s2-1a5ed3b95d131954b010c38016491b076466f8bd",
+    "researcherId": "researcher-d7757897dc09",
+    "role": "author"
+  },
+  {
+    "paperId": "s2-1a5ed3b95d131954b010c38016491b076466f8bd",
+    "researcherId": "researcher-1d694fd07bac",
+    "role": "author"
+  },
+  {
+    "paperId": "s2-1a5ed3b95d131954b010c38016491b076466f8bd",
+    "researcherId": "researcher-00efffcf8e8f",
+    "role": "author"
+  },
+  {
+    "paperId": "s2-1a5ed3b95d131954b010c38016491b076466f8bd",
+    "researcherId": "researcher-37ea5b28a99b",
+    "role": "author"
+  },
+  {
+    "paperId": "s2-1a5ed3b95d131954b010c38016491b076466f8bd",
+    "researcherId": "researcher-aa18968f59a5",
+    "role": "author"
+  },
+  {
+    "paperId": "s2-6c22b1b43e9f4beaa2ec1a5e3a188c64e6c0cc30",
+    "researcherId": "researcher-78f519e92091",
+    "role": "author"
+  },
+  {
+    "paperId": "s2-6c22b1b43e9f4beaa2ec1a5e3a188c64e6c0cc30",
+    "researcherId": "researcher-15ec2230bc2f",
+    "role": "author"
+  },
+  {
+    "paperId": "s2-6c22b1b43e9f4beaa2ec1a5e3a188c64e6c0cc30",
+    "researcherId": "researcher-3b546be6db92",
+    "role": "author"
+  },
+  {
+    "paperId": "s2-6c22b1b43e9f4beaa2ec1a5e3a188c64e6c0cc30",
+    "researcherId": "researcher-30a335bce3d7",
+    "role": "author"
+  },
+  {
+    "paperId": "s2-6c22b1b43e9f4beaa2ec1a5e3a188c64e6c0cc30",
+    "researcherId": "researcher-c79ecfd947b0",
+    "role": "author"
+  },
+  {
+    "paperId": "s2-6c22b1b43e9f4beaa2ec1a5e3a188c64e6c0cc30",
+    "researcherId": "researcher-36ac0eedd3f3",
+    "role": "author"
+  },
+  {
+    "paperId": "s2-1f52cb103746c46f2e2a0fd0d8d3c4ee414fdbd3",
+    "researcherId": "researcher-f0533a908198",
+    "role": "author"
+  },
+  {
+    "paperId": "s2-1f52cb103746c46f2e2a0fd0d8d3c4ee414fdbd3",
+    "researcherId": "researcher-e59b56a7deb7",
+    "role": "author"
+  },
+  {
+    "paperId": "s2-1f52cb103746c46f2e2a0fd0d8d3c4ee414fdbd3",
+    "researcherId": "researcher-ed0792a36dee",
+    "role": "author"
+  },
+  {
+    "paperId": "s2-1f52cb103746c46f2e2a0fd0d8d3c4ee414fdbd3",
+    "researcherId": "researcher-b4fa93c6be48",
+    "role": "author"
+  },
+  {
+    "paperId": "s2-1f52cb103746c46f2e2a0fd0d8d3c4ee414fdbd3",
+    "researcherId": "researcher-93de99d6e81a",
+    "role": "author"
+  },
+  {
+    "paperId": "s2-1f52cb103746c46f2e2a0fd0d8d3c4ee414fdbd3",
+    "researcherId": "researcher-cd325c157a91",
+    "role": "author"
+  },
+  {
+    "paperId": "s2-d0e0f47530e2ab508db003d47c180f7b016b732e",
+    "researcherId": "researcher-7825f15fdda2",
+    "role": "author"
+  },
+  {
+    "paperId": "s2-fa8c55e3a455eec9de9d363e18b697b5d2fb263c",
+    "researcherId": "researcher-2f1df50deeac",
+    "role": "author"
+  },
+  {
+    "paperId": "s2-fa8c55e3a455eec9de9d363e18b697b5d2fb263c",
+    "researcherId": "researcher-14759dafd32d",
+    "role": "author"
+  },
+  {
+    "paperId": "s2-fa8c55e3a455eec9de9d363e18b697b5d2fb263c",
+    "researcherId": "researcher-2907b6ad5a42",
+    "role": "author"
+  },
+  {
+    "paperId": "s2-fa8c55e3a455eec9de9d363e18b697b5d2fb263c",
+    "researcherId": "researcher-42b3ea645b7c",
+    "role": "author"
+  },
+  {
+    "paperId": "s2-fa8c55e3a455eec9de9d363e18b697b5d2fb263c",
+    "researcherId": "researcher-2be0a59b27a2",
+    "role": "author"
+  },
+  {
+    "paperId": "s2-fa8c55e3a455eec9de9d363e18b697b5d2fb263c",
+    "researcherId": "researcher-7f1057c83cc9",
+    "role": "author"
+  },
+  {
+    "paperId": "s2-fa8c55e3a455eec9de9d363e18b697b5d2fb263c",
+    "researcherId": "researcher-14982083cb41",
+    "role": "author"
+  },
+  {
+    "paperId": "s2-91c2639bd188266d384d8f8116dc291c5df98873",
+    "researcherId": "researcher-f863a595d0a6",
+    "role": "author"
+  },
+  {
+    "paperId": "s2-91c2639bd188266d384d8f8116dc291c5df98873",
+    "researcherId": "researcher-970b96449855",
+    "role": "author"
+  },
+  {
+    "paperId": "s2-91c2639bd188266d384d8f8116dc291c5df98873",
+    "researcherId": "researcher-21927a0ca15b",
+    "role": "author"
+  },
+  {
+    "paperId": "s2-91c2639bd188266d384d8f8116dc291c5df98873",
+    "researcherId": "researcher-0cb2bce0d26b",
+    "role": "author"
+  },
+  {
+    "paperId": "s2-daf5f775ef07cbcb60911e044c8a0aaf50ca4ed0",
+    "researcherId": "researcher-00efffcf8e8f",
+    "role": "author"
+  },
+  {
+    "paperId": "s2-daf5f775ef07cbcb60911e044c8a0aaf50ca4ed0",
+    "researcherId": "researcher-279add654fc1",
+    "role": "author"
+  },
+  {
+    "paperId": "s2-daf5f775ef07cbcb60911e044c8a0aaf50ca4ed0",
+    "researcherId": "researcher-d7757897dc09",
+    "role": "author"
+  },
+  {
+    "paperId": "s2-daf5f775ef07cbcb60911e044c8a0aaf50ca4ed0",
+    "researcherId": "researcher-1d694fd07bac",
+    "role": "author"
+  },
+  {
+    "paperId": "s2-daf5f775ef07cbcb60911e044c8a0aaf50ca4ed0",
+    "researcherId": "researcher-bfbd0ac16125",
+    "role": "author"
+  },
+  {
+    "paperId": "s2-daf5f775ef07cbcb60911e044c8a0aaf50ca4ed0",
+    "researcherId": "researcher-e1ff836c496c",
+    "role": "author"
+  },
+  {
+    "paperId": "s2-daf5f775ef07cbcb60911e044c8a0aaf50ca4ed0",
+    "researcherId": "researcher-37ea5b28a99b",
+    "role": "author"
+  },
+  {
+    "paperId": "s2-daf5f775ef07cbcb60911e044c8a0aaf50ca4ed0",
+    "researcherId": "researcher-0f9a0e7d6690",
+    "role": "author"
+  },
+  {
+    "paperId": "s2-fe0929dafe6b6dee41185c294372c26a573bca03",
+    "researcherId": "researcher-10c2f07ab9d3",
+    "role": "author"
+  },
+  {
+    "paperId": "s2-fe0929dafe6b6dee41185c294372c26a573bca03",
+    "researcherId": "researcher-c1685c79e435",
+    "role": "author"
+  },
+  {
+    "paperId": "s2-fe0929dafe6b6dee41185c294372c26a573bca03",
+    "researcherId": "researcher-6f26f1e6c0df",
+    "role": "author"
+  },
+  {
+    "paperId": "s2-fe0929dafe6b6dee41185c294372c26a573bca03",
+    "researcherId": "researcher-7cc0bf7989f4",
+    "role": "author"
+  },
+  {
+    "paperId": "s2-53c1840b47486fdc0e31cd02985eea59c535eeee",
+    "researcherId": "researcher-86fc6966133b",
+    "role": "author"
+  },
+  {
+    "paperId": "s2-53c1840b47486fdc0e31cd02985eea59c535eeee",
+    "researcherId": "researcher-0c91d9acfb08",
+    "role": "author"
+  },
+  {
+    "paperId": "s2-53c1840b47486fdc0e31cd02985eea59c535eeee",
+    "researcherId": "researcher-a9ebb9838150",
+    "role": "author"
+  },
+  {
+    "paperId": "s2-53c1840b47486fdc0e31cd02985eea59c535eeee",
+    "researcherId": "researcher-8af2c3a06d41",
+    "role": "author"
+  },
+  {
+    "paperId": "s2-53c1840b47486fdc0e31cd02985eea59c535eeee",
+    "researcherId": "researcher-293f918ca443",
+    "role": "author"
+  },
+  {
+    "paperId": "s2-9bf8a94eda2c9dc0a7cf78157e4a5f0a2ff00496",
+    "researcherId": "researcher-a8c3fa44e8dd",
+    "role": "author"
+  },
+  {
+    "paperId": "s2-9bf8a94eda2c9dc0a7cf78157e4a5f0a2ff00496",
+    "researcherId": "researcher-bba3ff6829f1",
+    "role": "author"
+  },
+  {
+    "paperId": "s2-9bf8a94eda2c9dc0a7cf78157e4a5f0a2ff00496",
+    "researcherId": "researcher-94dd9b2bb1f9",
+    "role": "author"
+  },
+  {
+    "paperId": "s2-9bf8a94eda2c9dc0a7cf78157e4a5f0a2ff00496",
+    "researcherId": "researcher-3d996bf164f5",
+    "role": "author"
+  },
+  {
+    "paperId": "s2-9bf8a94eda2c9dc0a7cf78157e4a5f0a2ff00496",
+    "researcherId": "researcher-f1bf3c112262",
+    "role": "author"
+  },
+  {
+    "paperId": "s2-9bf8a94eda2c9dc0a7cf78157e4a5f0a2ff00496",
+    "researcherId": "researcher-628164536bef",
+    "role": "author"
+  },
+  {
+    "paperId": "s2-9bf8a94eda2c9dc0a7cf78157e4a5f0a2ff00496",
+    "researcherId": "researcher-3a1d23973bcb",
+    "role": "author"
+  },
+  {
+    "paperId": "s2-9bf8a94eda2c9dc0a7cf78157e4a5f0a2ff00496",
+    "researcherId": "researcher-1db7004cfe35",
+    "role": "author"
+  },
+  {
+    "paperId": "s2-9bf8a94eda2c9dc0a7cf78157e4a5f0a2ff00496",
+    "researcherId": "researcher-ae885735581b",
+    "role": "author"
+  },
+  {
+    "paperId": "s2-9bf8a94eda2c9dc0a7cf78157e4a5f0a2ff00496",
+    "researcherId": "researcher-71f4398250ab",
+    "role": "author"
+  },
+  {
+    "paperId": "s2-9bf8a94eda2c9dc0a7cf78157e4a5f0a2ff00496",
+    "researcherId": "researcher-5ded2be0fa03",
+    "role": "author"
+  },
+  {
+    "paperId": "s2-9bf8a94eda2c9dc0a7cf78157e4a5f0a2ff00496",
+    "researcherId": "researcher-5bfcd403bfb6",
+    "role": "author"
+  },
+  {
+    "paperId": "s2-9bf8a94eda2c9dc0a7cf78157e4a5f0a2ff00496",
+    "researcherId": "researcher-d751e26f08d1",
+    "role": "author"
+  },
+  {
+    "paperId": "s2-9bf8a94eda2c9dc0a7cf78157e4a5f0a2ff00496",
+    "researcherId": "researcher-3801582eeb97",
+    "role": "author"
+  },
+  {
+    "paperId": "s2-a9762ed6fea42adf0d2049ed1c05f9fcb399d1a6",
+    "researcherId": "researcher-1691cd7e9b0c",
+    "role": "author"
+  },
+  {
+    "paperId": "s2-a9762ed6fea42adf0d2049ed1c05f9fcb399d1a6",
+    "researcherId": "researcher-d0ce30c715f5",
+    "role": "author"
+  },
+  {
+    "paperId": "s2-a9762ed6fea42adf0d2049ed1c05f9fcb399d1a6",
+    "researcherId": "researcher-82d1dff75bcd",
+    "role": "author"
+  },
+  {
+    "paperId": "s2-a9762ed6fea42adf0d2049ed1c05f9fcb399d1a6",
+    "researcherId": "researcher-4788416748d7",
+    "role": "author"
+  },
+  {
+    "paperId": "s2-a9762ed6fea42adf0d2049ed1c05f9fcb399d1a6",
+    "researcherId": "researcher-5a0a542ed67b",
+    "role": "author"
+  },
+  {
+    "paperId": "s2-a9762ed6fea42adf0d2049ed1c05f9fcb399d1a6",
+    "researcherId": "researcher-970b96449855",
+    "role": "author"
+  },
+  {
+    "paperId": "s2-a9762ed6fea42adf0d2049ed1c05f9fcb399d1a6",
+    "researcherId": "researcher-289c221fd59c",
+    "role": "author"
+  },
+  {
+    "paperId": "s2-a507a3991ad68e10495202cfa3ef9f425529893a",
+    "researcherId": "researcher-863dc05831b2",
+    "role": "author"
+  },
+  {
+    "paperId": "s2-a507a3991ad68e10495202cfa3ef9f425529893a",
+    "researcherId": "researcher-9e9f6a32f335",
+    "role": "author"
+  },
+  {
+    "paperId": "s2-a507a3991ad68e10495202cfa3ef9f425529893a",
+    "researcherId": "researcher-0cb2bce0d26b",
+    "role": "author"
+  },
+  {
+    "paperId": "s2-a507a3991ad68e10495202cfa3ef9f425529893a",
+    "researcherId": "researcher-ad4b98792949",
+    "role": "author"
+  },
+  {
+    "paperId": "s2-a507a3991ad68e10495202cfa3ef9f425529893a",
+    "researcherId": "researcher-970b96449855",
+    "role": "author"
+  },
+  {
+    "paperId": "s2-a507a3991ad68e10495202cfa3ef9f425529893a",
+    "researcherId": "researcher-4cfd0ec143c8",
+    "role": "author"
+  },
+  {
+    "paperId": "s2-a72d22c0663a2c77d702b0a20680751b0ca1630b",
+    "researcherId": "researcher-c7985ee161ad",
+    "role": "author"
+  },
+  {
+    "paperId": "s2-a72d22c0663a2c77d702b0a20680751b0ca1630b",
+    "researcherId": "researcher-a4eabe6400c6",
+    "role": "author"
+  },
+  {
+    "paperId": "s2-a72d22c0663a2c77d702b0a20680751b0ca1630b",
+    "researcherId": "researcher-2c5885c526d8",
+    "role": "author"
+  },
+  {
+    "paperId": "s2-a72d22c0663a2c77d702b0a20680751b0ca1630b",
+    "researcherId": "researcher-cb5d38862a04",
+    "role": "author"
+  },
+  {
+    "paperId": "s2-a72d22c0663a2c77d702b0a20680751b0ca1630b",
+    "researcherId": "researcher-bf576923ca64",
+    "role": "author"
+  },
+  {
+    "paperId": "s2-a72d22c0663a2c77d702b0a20680751b0ca1630b",
+    "researcherId": "researcher-90fd5f88dffe",
+    "role": "author"
+  },
+  {
+    "paperId": "s2-a72d22c0663a2c77d702b0a20680751b0ca1630b",
+    "researcherId": "researcher-57b3827e8361",
+    "role": "author"
+  },
+  {
+    "paperId": "s2-a72d22c0663a2c77d702b0a20680751b0ca1630b",
+    "researcherId": "researcher-e4e01b68daff",
+    "role": "author"
+  },
+  {
+    "paperId": "s2-dd0533f10303df86ab7285da5d198bf152204a30",
+    "researcherId": "researcher-651e81f25586",
+    "role": "author"
+  },
+  {
+    "paperId": "s2-dd0533f10303df86ab7285da5d198bf152204a30",
+    "researcherId": "researcher-663ec76ce360",
+    "role": "author"
+  },
+  {
+    "paperId": "s2-dd0533f10303df86ab7285da5d198bf152204a30",
+    "researcherId": "researcher-7623c81bd977",
+    "role": "author"
+  },
+  {
+    "paperId": "s2-dd0533f10303df86ab7285da5d198bf152204a30",
+    "researcherId": "researcher-63bb6e89a744",
+    "role": "author"
+  },
+  {
+    "paperId": "s2-dd0533f10303df86ab7285da5d198bf152204a30",
+    "researcherId": "researcher-519539cfec0c",
+    "role": "author"
+  },
+  {
+    "paperId": "s2-dd0533f10303df86ab7285da5d198bf152204a30",
+    "researcherId": "researcher-2a4c9d5fd5a6",
+    "role": "author"
+  },
+  {
+    "paperId": "s2-dd0533f10303df86ab7285da5d198bf152204a30",
+    "researcherId": "researcher-627d6012044d",
+    "role": "author"
+  },
+  {
+    "paperId": "s2-dd0533f10303df86ab7285da5d198bf152204a30",
+    "researcherId": "researcher-2e09e84921a1",
+    "role": "author"
+  },
+  {
+    "paperId": "s2-dd0533f10303df86ab7285da5d198bf152204a30",
+    "researcherId": "researcher-6e9d45ad5252",
+    "role": "author"
+  },
+  {
+    "paperId": "s2-dd0533f10303df86ab7285da5d198bf152204a30",
+    "researcherId": "researcher-f42520222f46",
+    "role": "author"
+  },
+  {
+    "paperId": "s2-dd0533f10303df86ab7285da5d198bf152204a30",
+    "researcherId": "researcher-13cef86f09c3",
+    "role": "author"
+  },
+  {
+    "paperId": "s2-dd0533f10303df86ab7285da5d198bf152204a30",
+    "researcherId": "researcher-54847f37d254",
+    "role": "author"
+  },
+  {
+    "paperId": "s2-dd0533f10303df86ab7285da5d198bf152204a30",
+    "researcherId": "researcher-bf72478a7822",
+    "role": "author"
+  },
+  {
+    "paperId": "s2-dd0533f10303df86ab7285da5d198bf152204a30",
+    "researcherId": "researcher-c8d1ec2e4e3c",
+    "role": "author"
+  },
+  {
+    "paperId": "s2-dd0533f10303df86ab7285da5d198bf152204a30",
+    "researcherId": "researcher-f7ac5d805ff6",
+    "role": "author"
+  },
+  {
+    "paperId": "s2-dd0533f10303df86ab7285da5d198bf152204a30",
+    "researcherId": "researcher-e7f607099061",
+    "role": "author"
+  },
+  {
+    "paperId": "s2-dd0533f10303df86ab7285da5d198bf152204a30",
+    "researcherId": "researcher-7232a47f7e7c",
+    "role": "author"
+  },
+  {
+    "paperId": "s2-cd4608b4746fd5af3369574412ce802c239e02c0",
+    "researcherId": "researcher-63590c3b677c",
+    "role": "author"
+  },
+  {
+    "paperId": "s2-cd4608b4746fd5af3369574412ce802c239e02c0",
+    "researcherId": "researcher-15b445206192",
+    "role": "author"
+  },
+  {
+    "paperId": "s2-cd4608b4746fd5af3369574412ce802c239e02c0",
+    "researcherId": "researcher-57c804009ce1",
+    "role": "author"
+  },
+  {
+    "paperId": "s2-cd4608b4746fd5af3369574412ce802c239e02c0",
+    "researcherId": "researcher-2d8487c95b24",
+    "role": "author"
+  },
+  {
+    "paperId": "s2-cd4608b4746fd5af3369574412ce802c239e02c0",
+    "researcherId": "researcher-9a6b1fe607c7",
+    "role": "author"
+  },
+  {
+    "paperId": "s2-cd4608b4746fd5af3369574412ce802c239e02c0",
+    "researcherId": "researcher-863ae77ecdff",
+    "role": "author"
+  },
+  {
+    "paperId": "s2-cd4608b4746fd5af3369574412ce802c239e02c0",
+    "researcherId": "researcher-dd9601f7f7ba",
+    "role": "author"
+  },
+  {
+    "paperId": "s2-cd4608b4746fd5af3369574412ce802c239e02c0",
+    "researcherId": "researcher-2eeba9d9f019",
+    "role": "author"
+  },
+  {
+    "paperId": "s2-cd4608b4746fd5af3369574412ce802c239e02c0",
+    "researcherId": "researcher-0060e389fd14",
+    "role": "author"
+  },
+  {
+    "paperId": "s2-cd4608b4746fd5af3369574412ce802c239e02c0",
+    "researcherId": "researcher-443ba148c232",
+    "role": "author"
+  },
+  {
+    "paperId": "s2-ae6318ae650dfb772bb2278b2c38314a6f8f2706",
+    "researcherId": "researcher-be68f01436c6",
+    "role": "author"
+  },
+  {
+    "paperId": "s2-ae6318ae650dfb772bb2278b2c38314a6f8f2706",
+    "researcherId": "researcher-5e5d429b0598",
+    "role": "author"
+  },
+  {
+    "paperId": "s2-ae6318ae650dfb772bb2278b2c38314a6f8f2706",
+    "researcherId": "researcher-42292765d350",
+    "role": "author"
+  },
+  {
+    "paperId": "s2-ae6318ae650dfb772bb2278b2c38314a6f8f2706",
+    "researcherId": "researcher-225b29b0357a",
+    "role": "author"
+  },
+  {
+    "paperId": "s2-ae6318ae650dfb772bb2278b2c38314a6f8f2706",
+    "researcherId": "researcher-1c789aadb38e",
+    "role": "author"
+  },
+  {
+    "paperId": "oa-W1626854854",
+    "researcherId": "researcher-a75418bb2c1d",
+    "role": "author"
+  },
+  {
+    "paperId": "oa-W1626854854",
+    "researcherId": "researcher-272dee2827d9",
+    "role": "author"
+  },
+  {
+    "paperId": "oa-W1626854854",
+    "researcherId": "researcher-5773e8416d31",
+    "role": "author"
+  },
+  {
+    "paperId": "oa-W1626854854",
+    "researcherId": "researcher-9d7c224a3654",
+    "role": "author"
+  },
+  {
+    "paperId": "oa-W1626854854",
+    "researcherId": "researcher-9684d459298a",
+    "role": "author"
+  },
+  {
+    "paperId": "oa-W2077937117",
+    "researcherId": "researcher-cad7378a9b10",
+    "role": "author"
+  },
+  {
+    "paperId": "oa-W2077937117",
+    "researcherId": "researcher-d39a78d67148",
+    "role": "author"
+  },
+  {
+    "paperId": "oa-W2077937117",
+    "researcherId": "researcher-0867206a4e4a",
+    "role": "author"
+  },
+  {
+    "paperId": "oa-W2077937117",
+    "researcherId": "researcher-df7762691101",
+    "role": "author"
+  },
+  {
+    "paperId": "oa-W2077937117",
+    "researcherId": "researcher-3c5b4f950396",
+    "role": "author"
+  },
+  {
+    "paperId": "oa-W2077937117",
+    "researcherId": "researcher-ae2c25b63364",
+    "role": "author"
+  },
+  {
+    "paperId": "oa-W2077937117",
+    "researcherId": "researcher-098c69d573ae",
+    "role": "author"
+  },
+  {
+    "paperId": "oa-W2077937117",
+    "researcherId": "researcher-9500850e4fc6",
+    "role": "author"
+  },
+  {
+    "paperId": "oa-W2077937117",
+    "researcherId": "researcher-c89d50519ec8",
+    "role": "author"
+  },
+  {
+    "paperId": "oa-W2077937117",
+    "researcherId": "researcher-29e55da37ca2",
+    "role": "author"
+  },
+  {
+    "paperId": "oa-W2079985616",
+    "researcherId": "researcher-b4fa93c6be48",
+    "role": "author"
+  },
+  {
+    "paperId": "oa-W2079985616",
+    "researcherId": "researcher-be9e1c7ef1e3",
+    "role": "author"
+  },
+  {
+    "paperId": "oa-W2079985616",
+    "researcherId": "researcher-269cfbd90c82",
+    "role": "author"
+  },
+  {
+    "paperId": "oa-W2079985616",
+    "researcherId": "researcher-f6bcdf4111d9",
+    "role": "author"
+  },
+  {
+    "paperId": "oa-W2079985616",
+    "researcherId": "researcher-5c44c411976c",
+    "role": "author"
+  },
+  {
+    "paperId": "oa-W2156562079",
+    "researcherId": "researcher-7a8954294c3c",
+    "role": "author"
+  },
+  {
+    "paperId": "oa-W2156562079",
+    "researcherId": "researcher-0083c3b468c5",
+    "role": "author"
+  },
+  {
+    "paperId": "oa-W2156562079",
+    "researcherId": "researcher-dbc93100f58d",
+    "role": "author"
+  },
+  {
+    "paperId": "oa-W2032952916",
+    "researcherId": "researcher-b0d310236973",
+    "role": "author"
+  },
+  {
+    "paperId": "oa-W2032952916",
+    "researcherId": "researcher-bed27dfab110",
+    "role": "author"
+  },
+  {
+    "paperId": "oa-W2032952916",
+    "researcherId": "researcher-2ad76843e637",
+    "role": "author"
+  },
+  {
+    "paperId": "oa-W2032952916",
+    "researcherId": "researcher-d4b893dbb758",
+    "role": "author"
+  },
+  {
+    "paperId": "oa-W2032952916",
+    "researcherId": "researcher-4a06877c5dca",
+    "role": "author"
+  },
+  {
+    "paperId": "oa-W2032952916",
+    "researcherId": "researcher-3f3f02848592",
+    "role": "author"
+  },
+  {
+    "paperId": "oa-W2796854462",
+    "researcherId": "researcher-1533c63e9005",
+    "role": "author"
+  },
+  {
+    "paperId": "oa-W2796854462",
+    "researcherId": "researcher-e506355ce5ee",
+    "role": "author"
+  },
+  {
+    "paperId": "oa-W2796854462",
+    "researcherId": "researcher-7e150e72a32f",
+    "role": "author"
+  },
+  {
+    "paperId": "oa-W2796854462",
+    "researcherId": "researcher-a0e8a7574358",
+    "role": "author"
+  },
+  {
+    "paperId": "oa-W2636773388",
+    "researcherId": "researcher-a250eea38129",
+    "role": "author"
+  },
+  {
+    "paperId": "oa-W2636773388",
+    "researcherId": "researcher-c1685c79e435",
+    "role": "author"
+  },
+  {
+    "paperId": "oa-W2636773388",
+    "researcherId": "researcher-6f26f1e6c0df",
+    "role": "author"
+  },
+  {
+    "paperId": "oa-W2636773388",
+    "researcherId": "researcher-f0479a6753c1",
+    "role": "author"
+  },
+  {
+    "paperId": "oa-W2559148811",
+    "researcherId": "researcher-4f36f94b19d3",
+    "role": "author"
+  },
+  {
+    "paperId": "oa-W2908542802",
+    "researcherId": "researcher-a41d49bfd846",
+    "role": "author"
+  },
+  {
+    "paperId": "oa-W2908542802",
+    "researcherId": "researcher-02789d546a0e",
+    "role": "author"
+  },
+  {
+    "paperId": "oa-W2908542802",
+    "researcherId": "researcher-b9667128f334",
+    "role": "author"
+  },
+  {
+    "paperId": "oa-W2908542802",
+    "researcherId": "researcher-1343cfbe1de4",
+    "role": "author"
+  },
+  {
+    "paperId": "oa-W2908542802",
+    "researcherId": "researcher-d402fea6b26f",
+    "role": "author"
+  },
+  {
+    "paperId": "oa-W2116064024",
+    "researcherId": "researcher-0e340e26db75",
+    "role": "author"
+  },
+  {
+    "paperId": "oa-W2116064024",
+    "researcherId": "researcher-d182ba74f8cc",
+    "role": "author"
+  },
+  {
+    "paperId": "oa-W2116064024",
+    "researcherId": "researcher-318cf898ab25",
+    "role": "author"
+  },
+  {
+    "paperId": "oa-W2065852943",
+    "researcherId": "researcher-41a3edde0c1a",
+    "role": "author"
+  },
+  {
+    "paperId": "oa-W2065852943",
+    "researcherId": "researcher-654b853a44d8",
+    "role": "author"
+  },
+  {
+    "paperId": "oa-W2065852943",
+    "researcherId": "researcher-3ed961c3b4ef",
+    "role": "author"
+  },
+  {
+    "paperId": "oa-W2065852943",
+    "researcherId": "researcher-019c5804d590",
+    "role": "author"
+  },
+  {
+    "paperId": "oa-W2065852943",
+    "researcherId": "researcher-de3f97c77ad6",
+    "role": "author"
+  },
+  {
+    "paperId": "oa-W3005657800",
+    "researcherId": "researcher-f018dcf9ca1f",
+    "role": "author"
+  },
+  {
+    "paperId": "oa-W3005657800",
+    "researcherId": "researcher-1d84eb977131",
+    "role": "author"
+  },
+  {
+    "paperId": "oa-W3005657800",
+    "researcherId": "researcher-bffd35e9772c",
+    "role": "author"
+  },
+  {
+    "paperId": "oa-W2110395021",
+    "researcherId": "researcher-555ef888eb06",
+    "role": "author"
+  },
+  {
+    "paperId": "oa-W2110395021",
+    "researcherId": "researcher-5c9420e5abb1",
+    "role": "author"
+  },
+  {
+    "paperId": "oa-W2110395021",
+    "researcherId": "researcher-7518cc5d3a37",
+    "role": "author"
+  },
+  {
+    "paperId": "oa-W2753749122",
+    "researcherId": "researcher-aede917bb9dc",
+    "role": "author"
+  },
+  {
+    "paperId": "oa-W2169518199",
+    "researcherId": "researcher-318cf898ab25",
+    "role": "author"
+  },
+  {
+    "paperId": "oa-W2169518199",
+    "researcherId": "researcher-cca4cc68cf63",
+    "role": "author"
+  },
+  {
+    "paperId": "oa-W2169518199",
+    "researcherId": "researcher-35382c0b42c0",
+    "role": "author"
+  },
+  {
+    "paperId": "arxiv-2601.11503v1",
+    "researcherId": "researcher-02094b04e4ad",
+    "role": "author"
+  },
+  {
+    "paperId": "arxiv-2601.11503v1",
+    "researcherId": "researcher-f83722cfedb4",
+    "role": "author"
+  },
+  {
+    "paperId": "arxiv-2601.11503v1",
+    "researcherId": "researcher-990f1c5e2ca2",
+    "role": "author"
+  },
+  {
+    "paperId": "arxiv-2601.11503v1",
+    "researcherId": "researcher-a6a696178de1",
+    "role": "author"
+  },
+  {
+    "paperId": "arxiv-2601.11446v1",
+    "researcherId": "researcher-6e736dbc97d3",
+    "role": "author"
+  },
+  {
+    "paperId": "arxiv-2601.11446v1",
+    "researcherId": "researcher-cb876de4e94f",
+    "role": "author"
+  },
+  {
+    "paperId": "arxiv-2601.11446v1",
+    "researcherId": "researcher-80a096445cb1",
+    "role": "author"
+  },
+  {
+    "paperId": "arxiv-2601.11446v1",
+    "researcherId": "researcher-3dcd43c3485f",
+    "role": "author"
+  },
+  {
+    "paperId": "arxiv-2601.11446v1",
+    "researcherId": "researcher-12a61e34d624",
+    "role": "author"
+  },
+  {
+    "paperId": "arxiv-2601.11446v1",
+    "researcherId": "researcher-75863db49f2f",
+    "role": "author"
+  },
+  {
+    "paperId": "arxiv-2601.11446v1",
+    "researcherId": "researcher-9d8412b8d348",
+    "role": "author"
+  },
+  {
+    "paperId": "arxiv-2601.11446v1",
+    "researcherId": "researcher-b5f0e2817c0f",
+    "role": "author"
+  },
+  {
+    "paperId": "arxiv-2601.11446v1",
+    "researcherId": "researcher-f9f557a5aa56",
+    "role": "author"
+  },
+  {
+    "paperId": "arxiv-2601.11446v1",
+    "researcherId": "researcher-40142c020478",
+    "role": "author"
+  },
+  {
+    "paperId": "arxiv-2601.11446v1",
+    "researcherId": "researcher-5c06c62e8da4",
+    "role": "author"
+  },
+  {
+    "paperId": "arxiv-2601.11446v1",
+    "researcherId": "researcher-5cf1e6de6dfa",
+    "role": "author"
+  },
+  {
+    "paperId": "arxiv-2601.11446v1",
+    "researcherId": "researcher-2498a21579b2",
+    "role": "author"
+  },
+  {
+    "paperId": "arxiv-2601.11331v1",
+    "researcherId": "researcher-ae3bab3671c8",
+    "role": "author"
+  },
+  {
+    "paperId": "arxiv-2601.11331v1",
+    "researcherId": "researcher-ffe2a44bb217",
+    "role": "author"
+  },
+  {
+    "paperId": "arxiv-2601.11331v1",
+    "researcherId": "researcher-980cc541b2ef",
+    "role": "author"
+  },
+  {
+    "paperId": "arxiv-2601.11331v1",
+    "researcherId": "researcher-4cb34ed49f3a",
+    "role": "author"
+  },
+  {
+    "paperId": "arxiv-2601.11331v1",
+    "researcherId": "researcher-da4fb2fc39d2",
+    "role": "author"
+  },
+  {
+    "paperId": "arxiv-2601.11331v1",
+    "researcherId": "researcher-03f84428cb1e",
+    "role": "author"
+  },
+  {
+    "paperId": "arxiv-2601.11331v1",
+    "researcherId": "researcher-86846cbe7f13",
+    "role": "author"
+  },
+  {
+    "paperId": "arxiv-2601.11331v1",
+    "researcherId": "researcher-919b3b5f3abf",
+    "role": "author"
+  },
+  {
+    "paperId": "arxiv-2601.11064v1",
+    "researcherId": "researcher-0d32a34660f9",
+    "role": "author"
+  },
+  {
+    "paperId": "arxiv-2601.11064v1",
+    "researcherId": "researcher-5e926fafe4b8",
+    "role": "author"
+  },
+  {
+    "paperId": "arxiv-2601.10997v1",
+    "researcherId": "researcher-43d94b4614e1",
+    "role": "author"
+  },
+  {
+    "paperId": "arxiv-2601.10997v1",
+    "researcherId": "researcher-5ed48a4988f6",
+    "role": "author"
+  },
+  {
+    "paperId": "arxiv-2601.10997v1",
+    "researcherId": "researcher-5e304f9cc719",
+    "role": "author"
+  },
+  {
+    "paperId": "arxiv-2601.10997v1",
+    "researcherId": "researcher-3ba4bcdc6a53",
+    "role": "author"
+  },
+  {
+    "paperId": "arxiv-2601.10997v1",
+    "researcherId": "researcher-9050cb7a1a7e",
+    "role": "author"
+  },
+  {
+    "paperId": "arxiv-2601.10938v1",
+    "researcherId": "researcher-6d70a4897546",
+    "role": "author"
+  },
+  {
+    "paperId": "arxiv-2601.10938v1",
+    "researcherId": "researcher-f9cf7cbe584b",
+    "role": "author"
+  },
+  {
+    "paperId": "arxiv-2601.10938v1",
+    "researcherId": "researcher-d02f06498db2",
+    "role": "author"
+  },
+  {
+    "paperId": "arxiv-2601.10703v1",
+    "researcherId": "researcher-50eead4278c1",
+    "role": "author"
+  },
+  {
+    "paperId": "arxiv-2601.10703v1",
+    "researcherId": "researcher-3431ce68fdc2",
+    "role": "author"
+  },
+  {
+    "paperId": "arxiv-2601.10703v1",
+    "researcherId": "researcher-e9ed049c889e",
+    "role": "author"
+  },
+  {
+    "paperId": "arxiv-2601.10703v1",
+    "researcherId": "researcher-5d0f9e3894d6",
+    "role": "author"
+  },
+  {
+    "paperId": "arxiv-2601.10703v1",
+    "researcherId": "researcher-e1a981435b85",
+    "role": "author"
+  },
+  {
+    "paperId": "arxiv-2601.10693v1",
+    "researcherId": "researcher-b3bec270a2e9",
+    "role": "author"
+  },
+  {
+    "paperId": "arxiv-2601.10693v1",
+    "researcherId": "researcher-afa62429d3c2",
+    "role": "author"
+  },
+  {
+    "paperId": "arxiv-2601.10634v1",
+    "researcherId": "researcher-543dbcfe701a",
+    "role": "author"
+  },
+  {
+    "paperId": "arxiv-2601.10634v1",
+    "researcherId": "researcher-c634715827bd",
+    "role": "author"
+  },
+  {
+    "paperId": "arxiv-2601.10634v1",
+    "researcherId": "researcher-649bf2125d52",
+    "role": "author"
+  },
+  {
+    "paperId": "arxiv-2601.10634v1",
+    "researcherId": "researcher-fac3f562af0c",
+    "role": "author"
+  },
+  {
+    "paperId": "arxiv-2601.10634v1",
+    "researcherId": "researcher-ccad22ccc0e6",
+    "role": "author"
+  },
+  {
+    "paperId": "arxiv-2601.10473v1",
+    "researcherId": "researcher-da2588345237",
+    "role": "author"
+  },
+  {
+    "paperId": "arxiv-2601.10473v1",
+    "researcherId": "researcher-543000689a2d",
+    "role": "author"
+  },
+  {
+    "paperId": "arxiv-2601.10473v1",
+    "researcherId": "researcher-8d2c226d91c6",
+    "role": "author"
+  },
+  {
+    "paperId": "arxiv-2601.10472v1",
+    "researcherId": "researcher-4e7f0c4ab07f",
+    "role": "author"
+  },
+  {
+    "paperId": "arxiv-2601.10472v1",
+    "researcherId": "researcher-7ba6fc4feb08",
+    "role": "author"
+  },
+  {
+    "paperId": "arxiv-2601.10472v1",
+    "researcherId": "researcher-f7cc30e9b546",
+    "role": "author"
+  },
+  {
+    "paperId": "arxiv-2601.10472v1",
+    "researcherId": "researcher-85c945b9839e",
+    "role": "author"
+  },
+  {
+    "paperId": "arxiv-2601.10472v1",
+    "researcherId": "researcher-4745a7151d46",
+    "role": "author"
+  },
+  {
+    "paperId": "arxiv-2601.10401v1",
+    "researcherId": "researcher-334f506d6659",
+    "role": "author"
+  },
+  {
+    "paperId": "arxiv-2601.10401v1",
+    "researcherId": "researcher-e4b82bb69143",
+    "role": "author"
+  },
+  {
+    "paperId": "arxiv-2601.10401v1",
+    "researcherId": "researcher-087a3be95016",
+    "role": "author"
+  },
+  {
+    "paperId": "arxiv-2601.10401v1",
+    "researcherId": "researcher-0a00b92915f0",
+    "role": "author"
+  },
+  {
+    "paperId": "arxiv-2601.10320v1",
+    "researcherId": "researcher-61380c3fa298",
+    "role": "author"
+  },
+  {
+    "paperId": "arxiv-2601.10320v1",
+    "researcherId": "researcher-0e33e9338a74",
+    "role": "author"
+  },
+  {
+    "paperId": "arxiv-2601.10320v1",
+    "researcherId": "researcher-a1ebb48122f8",
+    "role": "author"
+  },
+  {
+    "paperId": "arxiv-2601.10293v1",
+    "researcherId": "researcher-8b7f83b815ca",
+    "role": "author"
+  },
+  {
+    "paperId": "arxiv-2601.10293v1",
+    "researcherId": "researcher-7446158131d8",
+    "role": "author"
+  },
+  {
+    "paperId": "arxiv-2601.10293v1",
+    "researcherId": "researcher-0bb57f97e978",
+    "role": "author"
+  },
+  {
+    "paperId": "arxiv-2601.10293v1",
+    "researcherId": "researcher-6dc6e23f0662",
+    "role": "author"
+  },
+  {
+    "paperId": "arxiv-2601.10293v1",
+    "researcherId": "researcher-1248a2e10641",
+    "role": "author"
+  },
+  {
+    "paperId": "arxiv-2601.10293v1",
+    "researcherId": "researcher-abd1f616d584",
+    "role": "author"
+  },
+  {
+    "paperId": "arxiv-2601.10293v1",
+    "researcherId": "researcher-cf1a3bf64f49",
+    "role": "author"
+  },
+  {
+    "paperId": "arxiv-2601.10186v1",
+    "researcherId": "researcher-17d1c8d9bfd8",
+    "role": "author"
+  },
+  {
+    "paperId": "arxiv-2601.10186v1",
+    "researcherId": "researcher-79365292c73b",
+    "role": "author"
+  },
+  {
+    "paperId": "arxiv-2601.10178v1",
+    "researcherId": "researcher-ee7ef626a805",
+    "role": "author"
+  },
+  {
+    "paperId": "arxiv-2601.10178v1",
+    "researcherId": "researcher-1bea6458752b",
+    "role": "author"
+  },
+  {
+    "paperId": "arxiv-2601.10178v1",
+    "researcherId": "researcher-8fc9cd888246",
+    "role": "author"
+  },
+  {
+    "paperId": "arxiv-2601.10178v1",
+    "researcherId": "researcher-d8d80df07de5",
+    "role": "author"
+  },
+  {
+    "paperId": "arxiv-2601.10178v1",
+    "researcherId": "researcher-adcab06d4c8b",
+    "role": "author"
+  },
+  {
+    "paperId": "arxiv-2601.10178v1",
+    "researcherId": "researcher-a11520da019e",
+    "role": "author"
+  },
+  {
+    "paperId": "arxiv-2601.10178v1",
+    "researcherId": "researcher-8fc6a13ed405",
+    "role": "author"
+  },
+  {
+    "paperId": "arxiv-2601.10178v1",
+    "researcherId": "researcher-65e0674a6154",
+    "role": "author"
+  },
+  {
+    "paperId": "arxiv-2601.10178v1",
+    "researcherId": "researcher-3fb89b22125f",
+    "role": "author"
+  },
+  {
+    "paperId": "arxiv-2601.10178v1",
+    "researcherId": "researcher-d26b93d0b331",
+    "role": "author"
+  },
+  {
+    "paperId": "arxiv-2601.10178v1",
+    "researcherId": "researcher-a19e942f6d4e",
+    "role": "author"
+  },
+  {
+    "paperId": "arxiv-2601.10178v1",
+    "researcherId": "researcher-3ca57c81accd",
+    "role": "author"
+  },
+  {
+    "paperId": "arxiv-2601.10174v1",
+    "researcherId": "researcher-321c70ce2ecf",
+    "role": "author"
+  },
+  {
+    "paperId": "arxiv-2601.10174v1",
+    "researcherId": "researcher-605100313dbb",
+    "role": "author"
+  },
+  {
+    "paperId": "arxiv-2601.10174v1",
+    "researcherId": "researcher-eb8d8bbc9144",
+    "role": "author"
+  },
+  {
+    "paperId": "arxiv-2601.10174v1",
+    "researcherId": "researcher-2dcf33dbe105",
+    "role": "author"
+  },
+  {
+    "paperId": "arxiv-2601.10174v1",
+    "researcherId": "researcher-a07befad3145",
+    "role": "author"
+  },
+  {
+    "paperId": "arxiv-2601.10174v1",
+    "researcherId": "researcher-692ea0c83014",
+    "role": "author"
+  },
+  {
+    "paperId": "arxiv-2601.10174v1",
+    "researcherId": "researcher-c491659351e6",
+    "role": "author"
+  },
+  {
+    "paperId": "arxiv-2601.10174v1",
+    "researcherId": "researcher-d266b0041a6b",
+    "role": "author"
+  },
+  {
+    "paperId": "arxiv-2601.10174v1",
+    "researcherId": "researcher-1107e260a6fc",
+    "role": "author"
+  },
+  {
+    "paperId": "arxiv-2601.10140v1",
+    "researcherId": "researcher-ccd06840415f",
+    "role": "author"
+  },
+  {
+    "paperId": "arxiv-2601.10140v1",
+    "researcherId": "researcher-80c475e18a38",
+    "role": "author"
+  },
+  {
+    "paperId": "arxiv-2601.10140v1",
+    "researcherId": "researcher-77f24be51d05",
+    "role": "author"
+  },
+  {
+    "paperId": "arxiv-2601.10140v1",
+    "researcherId": "researcher-bb830a7a207e",
+    "role": "author"
+  },
+  {
+    "paperId": "arxiv-2601.10140v1",
+    "researcherId": "researcher-920ecf45a339",
+    "role": "author"
+  },
+  {
+    "paperId": "arxiv-2601.10140v1",
+    "researcherId": "researcher-d6630e525265",
+    "role": "author"
+  },
+  {
+    "paperId": "arxiv-2601.10140v1",
+    "researcherId": "researcher-5be95f10c2a1",
+    "role": "author"
+  },
+  {
+    "paperId": "arxiv-2601.10136v1",
+    "researcherId": "researcher-68bfdd7fbb1c",
+    "role": "author"
+  },
+  {
+    "paperId": "arxiv-2601.10136v1",
+    "researcherId": "researcher-f51b1b02db1f",
+    "role": "author"
+  },
+  {
+    "paperId": "arxiv-2601.10136v1",
+    "researcherId": "researcher-67b891763f9a",
+    "role": "author"
+  },
+  {
+    "paperId": "arxiv-2601.10039v1",
+    "researcherId": "researcher-40b145aba498",
+    "role": "author"
+  },
+  {
+    "paperId": "arxiv-2601.10039v1",
+    "researcherId": "researcher-9d0a11795f85",
+    "role": "author"
+  },
+  {
+    "paperId": "oa-W2808025896",
+    "researcherId": "researcher-9ed2332e3e0f",
+    "role": "author"
+  },
+  {
+    "paperId": "oa-W2808025896",
+    "researcherId": "researcher-43ee41d5bc8a",
+    "role": "author"
+  },
+  {
+    "paperId": "oa-W2808025896",
+    "researcherId": "researcher-274a5e12b445",
+    "role": "author"
+  },
+  {
+    "paperId": "oa-W2808025896",
+    "researcherId": "researcher-666917e96ea6",
+    "role": "author"
+  },
+  {
+    "paperId": "oa-W1626854854",
+    "researcherId": "researcher-3f1656a8346f",
+    "role": "author"
+  },
+  {
+    "paperId": "oa-W1626854854",
+    "researcherId": "researcher-02a4f6f9a819",
+    "role": "author"
+  },
+  {
+    "paperId": "oa-W1626854854",
+    "researcherId": "researcher-f4f248958aa7",
+    "role": "author"
+  },
+  {
+    "paperId": "oa-W1626854854",
+    "researcherId": "researcher-da7a9083a041",
+    "role": "author"
+  },
+  {
+    "paperId": "oa-W1626854854",
+    "researcherId": "researcher-2df0ec762512",
+    "role": "author"
+  },
+  {
+    "paperId": "oa-W2077937117",
+    "researcherId": "researcher-a668ede438ea",
+    "role": "author"
+  },
+  {
+    "paperId": "oa-W2077937117",
+    "researcherId": "researcher-a7662de67344",
+    "role": "author"
+  },
+  {
+    "paperId": "oa-W2077937117",
+    "researcherId": "researcher-b50735a64c81",
+    "role": "author"
+  },
+  {
+    "paperId": "oa-W2077937117",
+    "researcherId": "researcher-619a5a243e34",
+    "role": "author"
+  },
+  {
+    "paperId": "oa-W2077937117",
+    "researcherId": "researcher-3f09f01167aa",
+    "role": "author"
+  },
+  {
+    "paperId": "oa-W2077937117",
+    "researcherId": "researcher-9996b0bded63",
+    "role": "author"
+  },
+  {
+    "paperId": "oa-W2077937117",
+    "researcherId": "researcher-04199c0e0baf",
+    "role": "author"
+  },
+  {
+    "paperId": "oa-W2077937117",
+    "researcherId": "researcher-cf261dbd83d0",
+    "role": "author"
+  },
+  {
+    "paperId": "oa-W2077937117",
+    "researcherId": "researcher-d85a37d18096",
+    "role": "author"
+  },
+  {
+    "paperId": "oa-W2077937117",
+    "researcherId": "researcher-c912e1e092cc",
+    "role": "author"
+  },
+  {
+    "paperId": "oa-W2079985616",
+    "researcherId": "researcher-8e9fe92e5689",
+    "role": "author"
+  },
+  {
+    "paperId": "oa-W2079985616",
+    "researcherId": "researcher-e80d7a8c3977",
+    "role": "author"
+  },
+  {
+    "paperId": "oa-W2079985616",
+    "researcherId": "researcher-4293d4e75ec9",
+    "role": "author"
+  },
+  {
+    "paperId": "oa-W2079985616",
+    "researcherId": "researcher-77954038aaca",
+    "role": "author"
+  },
+  {
+    "paperId": "oa-W2079985616",
+    "researcherId": "researcher-02b2bf2b41ec",
+    "role": "author"
+  },
+  {
+    "paperId": "oa-W2328134238",
+    "researcherId": "researcher-a3ebf7c36f5e",
+    "role": "author"
+  },
+  {
+    "paperId": "oa-W2328134238",
+    "researcherId": "researcher-d7288d284268",
+    "role": "author"
+  },
+  {
+    "paperId": "oa-W2983762108",
+    "researcherId": "researcher-c59b5058d7e8",
+    "role": "author"
+  },
+  {
+    "paperId": "oa-W2983762108",
+    "researcherId": "researcher-0e2e472d1eff",
+    "role": "author"
+  },
+  {
+    "paperId": "oa-W2983762108",
+    "researcherId": "researcher-56bc4389da5b",
+    "role": "author"
+  },
+  {
+    "paperId": "oa-W2983762108",
+    "researcherId": "researcher-eb70f61f8531",
+    "role": "author"
+  },
+  {
+    "paperId": "oa-W2983762108",
+    "researcherId": "researcher-5b3d646a9575",
+    "role": "author"
+  },
+  {
+    "paperId": "oa-W2983762108",
+    "researcherId": "researcher-1dc89b747f8e",
+    "role": "author"
+  },
+  {
+    "paperId": "oa-W2983762108",
+    "researcherId": "researcher-ed3eceeaf841",
+    "role": "author"
+  },
+  {
+    "paperId": "oa-W2983762108",
+    "researcherId": "researcher-a69b41d37526",
+    "role": "author"
+  },
+  {
+    "paperId": "oa-W2983762108",
+    "researcherId": "researcher-d0baa448e4d8",
+    "role": "author"
+  },
+  {
+    "paperId": "oa-W2983762108",
+    "researcherId": "researcher-1a571366bf9a",
+    "role": "author"
+  },
+  {
+    "paperId": "oa-W2983762108",
+    "researcherId": "researcher-3f98cba81126",
+    "role": "author"
+  },
+  {
+    "paperId": "oa-W2983762108",
+    "researcherId": "researcher-3b0a9d8b5fab",
+    "role": "author"
+  },
+  {
+    "paperId": "oa-W2983762108",
+    "researcherId": "researcher-16db0373fee3",
+    "role": "author"
+  },
+  {
+    "paperId": "oa-W2983762108",
+    "researcherId": "researcher-a3e30383475e",
+    "role": "author"
+  },
+  {
+    "paperId": "oa-W3013252775",
+    "researcherId": "researcher-93fa68ec3eea",
+    "role": "author"
+  },
+  {
+    "paperId": "oa-W2618037459",
+    "researcherId": "researcher-12a7eb0e9662",
+    "role": "author"
+  },
+  {
+    "paperId": "oa-W2618037459",
+    "researcherId": "researcher-02b2bf2b41ec",
+    "role": "author"
+  },
+  {
+    "paperId": "oa-W2618037459",
+    "researcherId": "researcher-140ec2c1d5fd",
+    "role": "author"
+  },
+  {
+    "paperId": "oa-W2618037459",
+    "researcherId": "researcher-8e9fe92e5689",
+    "role": "author"
+  },
+  {
+    "paperId": "oa-W2618037459",
+    "researcherId": "researcher-6ecfe997be1c",
+    "role": "author"
+  },
+  {
+    "paperId": "oa-W2618037459",
+    "researcherId": "researcher-3c04d5beffd4",
+    "role": "author"
+  },
+  {
+    "paperId": "oa-W2156562079",
+    "researcherId": "researcher-8238d106ca09",
+    "role": "author"
+  },
+  {
+    "paperId": "oa-W2156562079",
+    "researcherId": "researcher-8763d5323601",
+    "role": "author"
+  },
+  {
+    "paperId": "oa-W2156562079",
+    "researcherId": "researcher-2feb53d2db7b",
+    "role": "author"
+  },
+  {
+    "paperId": "oa-W2032952916",
+    "researcherId": "researcher-f7561aded4c1",
+    "role": "author"
+  },
+  {
+    "paperId": "oa-W2032952916",
+    "researcherId": "researcher-fc552ea74f91",
+    "role": "author"
+  },
+  {
+    "paperId": "oa-W2032952916",
+    "researcherId": "researcher-96f2631456fb",
+    "role": "author"
+  },
+  {
+    "paperId": "oa-W2032952916",
+    "researcherId": "researcher-48601f3eed99",
+    "role": "author"
+  },
+  {
+    "paperId": "oa-W2032952916",
+    "researcherId": "researcher-d67c90987c37",
+    "role": "author"
+  },
+  {
+    "paperId": "oa-W2032952916",
+    "researcherId": "researcher-893c40008128",
+    "role": "author"
+  },
+  {
+    "paperId": "oa-W2796854462",
+    "researcherId": "researcher-ceb8c73d3848",
+    "role": "author"
+  },
+  {
+    "paperId": "oa-W2796854462",
+    "researcherId": "researcher-89f4f0d2bfa6",
+    "role": "author"
+  },
+  {
+    "paperId": "oa-W2796854462",
+    "researcherId": "researcher-0bc88a854837",
+    "role": "author"
+  },
+  {
+    "paperId": "oa-W2796854462",
+    "researcherId": "researcher-10413b2a1e25",
+    "role": "author"
+  },
+  {
+    "paperId": "oa-W2636773388",
+    "researcherId": "researcher-0313c300cebb",
+    "role": "author"
+  },
+  {
+    "paperId": "oa-W2636773388",
+    "researcherId": "researcher-ceb23cf742d1",
+    "role": "author"
+  },
+  {
+    "paperId": "oa-W2636773388",
+    "researcherId": "researcher-a74e1b9f9d4e",
+    "role": "author"
+  },
+  {
+    "paperId": "oa-W2636773388",
+    "researcherId": "researcher-56d09501cce4",
+    "role": "author"
+  },
+  {
+    "paperId": "oa-W2559148811",
+    "researcherId": "researcher-128655137138",
+    "role": "author"
+  },
+  {
+    "paperId": "oa-W2908542802",
+    "researcherId": "researcher-e4f80c014600",
+    "role": "author"
+  },
+  {
+    "paperId": "oa-W2908542802",
+    "researcherId": "researcher-a68d207a2a24",
+    "role": "author"
+  },
+  {
+    "paperId": "oa-W2908542802",
+    "researcherId": "researcher-a4cd1d6b6df5",
+    "role": "author"
+  },
+  {
+    "paperId": "oa-W2908542802",
+    "researcherId": "researcher-9037cfea99f3",
+    "role": "author"
+  },
+  {
+    "paperId": "oa-W2908542802",
+    "researcherId": "researcher-6e79482d9a7e",
+    "role": "author"
+  },
+  {
+    "paperId": "oa-W2116064024",
+    "researcherId": "researcher-43dd80be1767",
+    "role": "author"
+  },
+  {
+    "paperId": "oa-W2116064024",
+    "researcherId": "researcher-71ead857ad0c",
+    "role": "author"
+  },
+  {
+    "paperId": "oa-W2116064024",
+    "researcherId": "researcher-aaa6654a1b57",
+    "role": "author"
+  },
+  {
+    "paperId": "oa-W2065852943",
+    "researcherId": "researcher-4a4901f10402",
+    "role": "author"
+  },
+  {
+    "paperId": "oa-W2065852943",
+    "researcherId": "researcher-e07b287841c0",
+    "role": "author"
+  },
+  {
+    "paperId": "oa-W2065852943",
+    "researcherId": "researcher-0ab626a17780",
+    "role": "author"
+  },
+  {
+    "paperId": "oa-W2065852943",
+    "researcherId": "researcher-63d280f210b7",
+    "role": "author"
+  },
+  {
+    "paperId": "oa-W2065852943",
+    "researcherId": "researcher-17dccd4c2f4d",
+    "role": "author"
+  },
+  {
+    "paperId": "oa-W3005657800",
+    "researcherId": "researcher-47eadb5bc958",
+    "role": "author"
+  },
+  {
+    "paperId": "oa-W3005657800",
+    "researcherId": "researcher-1d64b65a858b",
+    "role": "author"
+  },
+  {
+    "paperId": "oa-W3005657800",
+    "researcherId": "researcher-a43d0497a6de",
+    "role": "author"
+  },
+  {
+    "paperId": "oa-W2110395021",
+    "researcherId": "researcher-b6205363c253",
+    "role": "author"
+  },
+  {
+    "paperId": "oa-W2110395021",
+    "researcherId": "researcher-9b2e73dfa493",
+    "role": "author"
+  },
+  {
+    "paperId": "oa-W2110395021",
+    "researcherId": "researcher-3b1181d55d60",
+    "role": "author"
+  },
+  {
+    "paperId": "oa-W2753749122",
+    "researcherId": "researcher-93fa68ec3eea",
+    "role": "author"
+  },
+  {
+    "paperId": "oa-W2169518199",
+    "researcherId": "researcher-aaa6654a1b57",
+    "role": "author"
+  },
+  {
+    "paperId": "oa-W2169518199",
+    "researcherId": "researcher-6a6d02973871",
+    "role": "author"
+  },
+  {
+    "paperId": "oa-W2169518199",
+    "researcherId": "researcher-61ac2cc1c2af",
+    "role": "author"
+  }
+]

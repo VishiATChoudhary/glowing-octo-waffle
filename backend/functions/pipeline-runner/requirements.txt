@@ -1,0 +1,8 @@
+functions-framework==3.*
+requests==2.*
+flask==3.*
+python-dotenv==1.*
+
+# Testing dependencies (dev only)
+pytest>=7.0.0
+pytest-cov>=4.0.0
