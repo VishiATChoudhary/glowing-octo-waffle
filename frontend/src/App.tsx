@@ -11,6 +11,7 @@ import Graph from "./pages/Graph";
 import SearchPapers from "./pages/SearchPapers";
 import Researchers from "./pages/Researchers";
 import TotalRevenue from "./pages/TotalRevenue";
+import TalentPipeline from "./pages/TalentPipeline";
 import FastestRisingTopics from "./pages/FastestRisingTopics";
 import NotFound from "./pages/NotFound";
 import { SearchProvider } from "./contexts/SearchContext";
@@ -41,6 +42,7 @@ const App = () => (
                       <Route path="/settings" element={<Settings />} />
                       <Route path="/graph" element={<Graph />} />
                       <Route path="/total-revenue" element={<TotalRevenue />} />
+                      <Route path="/talent-pipeline" element={<TalentPipeline />} />
                       <Route path="/fastest-rising-topics" element={<FastestRisingTopics />} />
                       <Route path="*" element={<NotFound />} />
                     </Routes>
