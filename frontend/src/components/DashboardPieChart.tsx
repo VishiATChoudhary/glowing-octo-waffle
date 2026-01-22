@@ -6,7 +6,6 @@ import {
   ChartConfig,
   ChartContainer,
   ChartTooltip,
-  ChartTooltipContent,
 } from "@/components/ui/pie-chart";
 
 const chartData = [
@@ -14,7 +13,7 @@ const chartData = [
   { category: "scalability", score: 4.2, fill: "var(--color-scalability)" },
   { category: "advantage", score: 3.8, fill: "var(--color-advantage)" },
   { category: "readiness", score: 4.5, fill: "var(--color-readiness)" },
-  { category: "demand", score: 5, fill: "var(--color-demand)" },
+  { category: "demand", score: 4.8, fill: "var(--color-demand)" },
 ];
 
 // Sort the data by score in ascending order (smallest to largest)
@@ -50,29 +49,43 @@ const chartConfig = {
   },
 } satisfies ChartConfig;
 
+const CustomTooltip = ({ active, payload }: any) => {
+  if (active && payload && payload.length) {
+    const data = payload[0].payload;
+    const config = chartConfig[data.category as keyof typeof chartConfig];
+
+    return (
+      <div className="bg-background border border-border/50 rounded-lg p-3 shadow-xl">
+        <p className="text-sm font-medium mb-2">{config.label}</p>
+        <div className="flex items-end gap-2">
+          <span className="text-3xl font-semibold">{data.score}</span>
+          <span className="text-sm text-muted-foreground pb-1">score</span>
+        </div>
+      </div>
+    );
+  }
+  return null;
+};
+
 export default function DashboardPieChart() {
   return (
-    <div className="flex flex-col w-full">
-      <div className="items-center pb-4 text-center">
-        <h2 className="text-2xl font-semibold">Average Entrepreneurial Potential</h2>
-      </div>
-      <div className="flex-1 flex flex-row justify-center items-center gap-6">
+    <div className="flex flex-col w-full items-center">
+      <h2 className="text-lg font-semibold text-center">Average Entrepreneurial Potential</h2>
+      <div className="flex flex-col items-center gap-3">
         <ChartContainer
           config={chartConfig}
-          className="[&_.recharts-text]:fill-background w-[450px] h-[450px]"
+          className="[&_.recharts-text]:fill-background w-[550px] h-[550px]"
         >
           <PieChart>
-            <ChartTooltip
-              content={<ChartTooltipContent nameKey="score" hideLabel />}
-            />
+            <ChartTooltip content={<CustomTooltip />} />
             {sortedChartData.map((entry, index) => (
               <Pie
                 key={`pie-${index}`}
                 data={[entry]}
-                innerRadius={50}
-                outerRadius={85 + index * 22}
+                innerRadius={65}
+                outerRadius={140 + index * 30}
                 dataKey="score"
-                cornerRadius={4}
+                cornerRadius={5}
                 startAngle={
                   // Calculate the percentage of total score up to current index
                   (sortedChartData
@@ -94,7 +107,7 @@ export default function DashboardPieChart() {
                 <LabelList
                   dataKey="score"
                   stroke="none"
-                  fontSize={14}
+                  fontSize={16}
                   fontWeight={500}
                   fill="currentColor"
                   formatter={(value: number) => value.toString()}
@@ -103,7 +116,7 @@ export default function DashboardPieChart() {
             ))}
           </PieChart>
         </ChartContainer>
-        <div className="flex flex-col gap-4 text-sm max-w-[320px]">
+        <div className="grid grid-cols-2 gap-x-8 gap-y-3 text-sm w-[550px]">
           {sortedChartData.map((item) => {
             const config = chartConfig[item.category as keyof typeof chartConfig];
             return (
