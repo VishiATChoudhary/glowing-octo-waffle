@@ -4,21 +4,21 @@
     "marketSize": 4,
     "feasibility": 3,
     "timing": 4,
-    "analysis": "Understanding halide diffusion is crucial for improving the stability and performance of perovskite solar cells and other optoelectronic devices. While the research is not immediately ready for commercialization, the insights gained can guide the development of more stable and efficient perovskite-based technologies, which have a large potential market in renewable energy."
+    "analysis": "Understanding halide diffusion is crucial for improving the stability and performance of perovskite solar cells and other optoelectronic devices. While the research is not immediately ready for commercialization, the insights gained can guide the development of more stable and efficient perovskite-based technologies, potentially impacting a large market."
   },
   "arxiv-2601.11446v1": {
     "novelty": 4,
     "marketSize": 3,
     "feasibility": 2,
     "timing": 3,
-    "analysis": "The concept of coupling free electrons to trapped ions for quantum-enhanced microscopy is innovative, but significant technological hurdles remain before commercialization. While the potential market for advanced microscopy techniques is substantial, the current feasibility of building such a complex system is low, making the timing somewhat premature."
+    "analysis": "The concept of quantum-enhanced electron microscopy is promising, but the practical realization of coupling free electrons to trapped ions faces significant technological hurdles. While the potential market for improved microscopy techniques is substantial, the current feasibility of this specific approach limits its short-term commercial viability."
   },
   "arxiv-2601.11331v1": {
     "novelty": 4,
     "marketSize": 3,
     "feasibility": 3,
     "timing": 3,
-    "analysis": "The research presents a novel fabrication method for nanoscale SQUIDs, potentially enabling new applications in nanoscale magnetic sensing and imaging. While the market for SQUIDs exists, the specific niche of nanoscale, on-tip devices needs further development and market validation to determine its true commercial potential. The feasibility is moderate, requiring further refinement of the fabrication process and demonstration of reliable, high-performance devices."
+    "analysis": "The research presents a novel fabrication method for nanoscale SQUIDs, which could be valuable for high-sensitivity magnetic field measurements. While the market for SQUIDs is established, the nanoscale aspect and on-tip integration could open new applications, but further development is needed to improve scalability and demonstrate clear advantages over existing technologies."
   },
   "arxiv-2601.11064v1": {
     "novelty": 3,
@@ -70,25 +70,25 @@
     "analysis": "No LLM API key configured"
   },
   "oa-W2808025896": {
-    "novelty": 3,
-    "marketSize": 3,
-    "feasibility": 3,
-    "timing": 3,
-    "analysis": "No LLM API key configured"
+    "novelty": 2,
+    "marketSize": 5,
+    "feasibility": 5,
+    "timing": 5,
+    "analysis": "This paper is a review of existing Lithium-Ion battery technology, so it does not present novel research. However, given the massive and growing market for LIBs, and the fact that the technology is already mature, a comprehensive review would be commercially valuable for those seeking to enter or better understand the market."
   },
   "oa-W1626854854": {
     "novelty": 3,
     "marketSize": 5,
     "feasibility": 3,
-    "timing": 5,
-    "analysis": "Lithium-ion batteries are a massive and growing market, and improvements to electrode materials are constantly being sought. While transition metal oxides are not entirely novel, nano-sizing could offer performance advantages, but scalability and cost-effectiveness will be key to commercial success."
+    "timing": 4,
+    "analysis": "Lithium-ion batteries have a massive and growing market, and improvements to electrode materials are always in demand. While nano-sized transition-metal oxides are not a completely new concept, advancements in their application as negative electrodes could offer incremental improvements in battery performance, making them commercially attractive if production costs are manageable."
   },
   "oa-W2077937117": {
     "novelty": 3,
     "marketSize": 5,
     "feasibility": 4,
     "timing": 5,
-    "analysis": "Understanding aging mechanisms in lithium-ion batteries is crucial for improving battery life and performance, which directly impacts the massive and growing electric vehicle and energy storage markets. Research in this area is highly commercially viable as it can lead to more durable, efficient, and safer batteries, providing a competitive advantage for manufacturers."
+    "analysis": "Understanding aging mechanisms in lithium-ion batteries is crucial for improving battery life, performance, and safety. Given the massive and rapidly growing market for electric vehicles and energy storage, research in this area has significant commercial potential, especially if it leads to practical solutions for extending battery lifespan or reducing degradation."
   },
   "oa-W2079985616": {
     "novelty": 3,
@@ -106,10 +106,10 @@
   },
   "oa-W2983762108": {
     "novelty": 3,
-    "marketSize": 3,
-    "feasibility": 3,
-    "timing": 3,
-    "analysis": "No LLM API key configured"
+    "marketSize": 5,
+    "feasibility": 4,
+    "timing": 5,
+    "analysis": "Recycling lithium-ion batteries is commercially viable due to the increasing number of end-of-life electric vehicle batteries and the value of recovered materials. The timing is excellent as battery recycling infrastructure needs to be developed to support the growth of the EV market."
   },
   "oa-W3013252775": {
     "novelty": 3,
@@ -144,42 +144,42 @@
     "marketSize": 5,
     "feasibility": 2,
     "timing": 3,
-    "analysis": "Post-lithium-ion batteries represent a potentially massive market opportunity, but significant technological hurdles remain before they can be commercially viable. While the timing is good to explore alternatives, widespread adoption is still years away."
+    "analysis": "Post-lithium-ion batteries represent a potentially massive market opportunity, but significant technological hurdles remain before widespread commercialization. While the research area is active, the actual realization of high energy density alternatives is still some years away, making the timing somewhat premature but strategically important to explore now."
   },
   "s2-ab388cf99b6c06714fd1fc6b6fc55436b3d607dc": {
     "novelty": 2,
     "marketSize": 5,
     "feasibility": 5,
     "timing": 5,
-    "analysis": "This review paper on the history and development of lithium-ion batteries has strong commercial potential due to the massive market for batteries and the current demand for improvements in battery technology. While the review itself isn't novel research, it provides valuable context and insights that could inform future research and development efforts, indirectly contributing to commercially viable innovations."
+    "analysis": "This review paper on the history and development of lithium-ion batteries has limited commercial potential in itself. However, the insights into material science advancements and future research directions could be valuable for companies already invested in or looking to invest in battery technology, informing their R&D strategies and investment decisions."
   },
   "s2-a983a25907d54c890a3d53499dfd0633cc547d2b": {
     "novelty": 3,
     "marketSize": 5,
     "feasibility": 3,
     "timing": 4,
-    "analysis": "Sodium-ion batteries are being explored as a cheaper alternative to lithium-ion, targeting large markets like grid storage and electric vehicles. While not yet commercially dominant, the research suggests a strong potential for future competitiveness, making it a viable area for investment and development."
+    "analysis": "Sodium-ion batteries are being explored as a cheaper and more sustainable alternative to lithium-ion. The commercial potential is high if sodium-ion batteries can achieve competitive performance and cost, especially given the growing demand for energy storage and electric vehicles."
   },
   "arxiv-2601.11513v1": {
     "novelty": 3,
     "marketSize": 4,
     "feasibility": 4,
     "timing": 4,
-    "analysis": "The research highlights a critical limitation of applying standard machine learning to capacity-constrained admissions processes, which is relevant to many institutions. There's commercial potential in developing tools or consulting services that help organizations better understand and mitigate the impact of applicant pool shifts on admissions predictability, potentially improving fairness and efficiency."
+    "analysis": "The research highlights a critical flaw in applying standard machine learning to capacity-constrained admissions, which is relevant to many institutions. There's commercial potential in developing more robust and reliable prediction models that account for these constraints, potentially as a consulting service or specialized software for admissions departments."
   },
   "arxiv-2601.11457v1": {
     "novelty": 3,
     "marketSize": 4,
     "feasibility": 4,
     "timing": 5,
-    "analysis": "The research demonstrates the clear advantages of neutral-host networks in addressing indoor connectivity challenges, a growing concern for businesses and consumers. With the increasing demand for seamless indoor coverage and the availability of shared spectrum like CBRS, the commercial potential for neutral-host solutions is significant, making this a timely and relevant area for investment and deployment."
+    "analysis": "The research demonstrates the clear benefits of neutral-host networks in addressing indoor connectivity challenges, a growing concern for businesses and consumers. With the increasing demand for seamless indoor coverage and the availability of shared spectrum like CBRS, the commercial potential is significant, especially for venues like offices, shopping malls, and stadiums."
   },
   "arxiv-2601.11423v1": {
     "novelty": 3,
     "marketSize": 5,
     "feasibility": 3,
     "timing": 4,
-    "analysis": "The application of quantum-inspired techniques to address class imbalance in industrial fault detection is relatively novel. The market size is massive, given the widespread need for condition monitoring and predictive maintenance across various industries. While QSMOTE shows promise, the mixed results with linear models and the need for specialized quantum or quantum-inspired computing resources may hinder immediate commercialization, but the timing is good as industries are increasingly adopting AI for predictive maintenance."
+    "analysis": "The use of quantum-inspired techniques for fault detection is relatively novel, but the application to a large and important market like industrial and energy systems gives it significant commercial potential. While full quantum computing implementation may be further out, quantum-inspired algorithms could be implemented sooner, making the timing favorable for exploring these approaches now."
   },
   "s2-535bd5e9cc73950ebd56ded874bab37f68219693": {
     "novelty": 2,
@@ -207,21 +207,21 @@
     "marketSize": 5,
     "feasibility": 5,
     "timing": 5,
-    "analysis": "Lithium-ion battery degradation is a well-known issue, so a review paper is unlikely to be highly novel. However, the market for solutions addressing battery degradation is massive and the timing is excellent, given the rapid growth of electric vehicles and energy storage. Since this is a review, the feasibility of implementing the findings is high."
+    "analysis": "Lithium-ion battery degradation is a well-known issue, so a review paper is unlikely to be highly novel, but it addresses a critical aspect of a massive and growing market. Understanding and mitigating degradation is immediately relevant and commercially valuable for battery manufacturers, users, and recyclers."
   },
   "oa-W2417460170": {
     "novelty": 3,
     "marketSize": 5,
     "feasibility": 4,
     "timing": 5,
-    "analysis": "The research addresses a critical need for accurate battery degradation modeling, which is essential for the economic viability of grid-level energy storage. Given the growing market for lithium-ion batteries in grid applications and the model's adaptability, there's strong commercial potential, especially if the model can be easily integrated into existing energy management systems."
+    "analysis": "The research addresses a critical need for accurate battery degradation modeling in the rapidly growing energy storage market. While the semi-empirical approach might not be entirely novel, its adaptability and application to real-world scenarios like PJM regulation make it commercially attractive, especially given the current push for grid-scale energy storage and the need for optimized battery management systems."
   },
   "oa-W3139510216": {
     "novelty": 2,
     "marketSize": 5,
     "feasibility": 5,
     "timing": 5,
-    "analysis": "While the topic of lithium-ion battery degradation isn't new, a comprehensive understanding is crucial for optimizing battery performance and lifespan. The market for improved battery technology is massive, and research in this area is highly relevant given the current push for electric vehicles and renewable energy storage, making it commercially viable."
+    "analysis": "While the topic of lithium-ion battery degradation is not new, the market size and timing are excellent due to the increasing adoption of electric vehicles and energy storage systems. Understanding and mitigating battery degradation is crucial for the long-term viability and cost-effectiveness of these technologies, making this research commercially relevant."
   },
   "arxiv-2601.11505v1": {
     "novelty": 3,
@@ -270,21 +270,21 @@
     "marketSize": 2,
     "feasibility": 3,
     "timing": 2,
-    "analysis": "This research explores theoretical improvements in joint source-channel coding for Markov channels. While potentially valuable for specific applications involving communication over channels with memory, its commercial potential is limited by the highly theoretical nature and the niche market for advanced coding techniques. The timing may be premature as practical implementations and demonstrable advantages over existing solutions are needed to drive adoption."
+    "analysis": "This research delves into theoretical aspects of joint source-channel coding over Markov channels, which could lead to more efficient communication systems in the long run. However, the current focus on theoretical bounds and specific channel models suggests that practical applications and commercial viability are still some time away, targeting a niche market of advanced communication systems."
   },
   "arxiv-2601.11514v1": {
     "novelty": 4,
     "marketSize": 4,
     "feasibility": 3,
     "timing": 4,
-    "analysis": "ShapeR addresses a key limitation in 3D shape generation by enabling it from casual captures, which significantly broadens its applicability. The potential market is large, spanning areas like AR/VR content creation, robotics, and e-commerce, but commercialization hinges on further improving the robustness and automation of the pipeline."
+    "analysis": "ShapeR addresses a key limitation in 3D shape generation by focusing on real-world, casually captured data, which significantly broadens its applicability. The potential market is substantial, spanning areas like AR/VR content creation, robotics, and automated scene understanding, but further refinement and computational efficiency improvements are needed before widespread commercial deployment."
   },
   "arxiv-2601.11509v1": {
     "novelty": 3,
     "marketSize": 3,
     "feasibility": 4,
     "timing": 4,
-    "analysis": "The research presents a valuable tool for materials science, particularly for analyzing copper redox processes. Its commercial potential lies in accelerating materials discovery and optimization in fields like catalysis, battery technology, and semiconductors, where understanding oxidation states is critical. The model's ability to handle noisy and misaligned data enhances its practical applicability, making it attractive to researchers and industries utilizing XAS and EELS techniques."
+    "analysis": "The research offers a practical solution for quantitative analysis of spectroscopic data, which is valuable in materials science and chemistry. Its commercial potential lies in accelerating research and development in areas like battery materials, catalysts, and semiconductors by providing faster and more accurate material characterization. The feasibility is high given the use of established machine learning techniques and existing spectroscopic data."
   },
   "s2-dfa85a88b66b3443d7902bdd82a0306b0f134170": {
     "novelty": 3,
@@ -333,56 +333,56 @@
     "marketSize": 1,
     "feasibility": 4,
     "timing": 2,
-    "analysis": "The research explores a specific enzymatic reaction under radiofrequency, which is somewhat novel but has a very niche application. While feasible to study further, the commercial potential is limited unless a specific application with significant market demand can be identified, such as in specialized food preservation or bioprocessing techniques, and the timing is early as the practical applications are not yet clear."
+    "analysis": "The research explores a specific enzyme's response to radiofrequency, which has limited direct commercial applications. While the feasibility of replicating the experiment is high, the niche nature of the enzyme and the lack of a clear market application make its commercial potential low."
   },
   "arxiv-2601.11288v1": {
     "novelty": 3,
     "marketSize": 2,
     "feasibility": 5,
     "timing": 3,
-    "analysis": "The research itself is not directly commercializable. However, the application of neutron diffraction and tomography to analyze historical artifacts could be marketed as a service to museums, archaeological institutions, and art collectors. The market is relatively niche, focusing on non-destructive analysis techniques for valuable artifacts."
+    "analysis": "The research itself is valuable for archaeological understanding and preservation. However, the direct commercial potential is limited to niche applications like specialized heritage analysis services or potentially informing the creation of highly accurate replicas for museums or collectors, but the market size is small."
   },
   "arxiv-2601.11092v1": {
     "novelty": 3,
     "marketSize": 2,
     "feasibility": 5,
     "timing": 4,
-    "analysis": "The research provides valuable insights into galaxy evolution using JWST data, which is timely and relevant. While the direct commercial applications are limited, the data and analysis could be valuable for companies involved in space exploration, astronomical instrumentation, or educational resources related to astronomy, albeit in a niche market."
+    "analysis": "This research provides valuable insights into galaxy evolution and ISM conditions using JWST data. While the immediate commercial applications are limited, the data and analysis techniques could be valuable for companies involved in space-based instrumentation, data processing, and astronomical research tools, especially those focused on JWST data exploitation. The timing is good as JWST is currently producing a wealth of data."
   },
   "oa-W2130893993": {
     "novelty": 3,
     "marketSize": 5,
     "feasibility": 4,
     "timing": 5,
-    "analysis": "The research addresses a critical issue (low power capability) in a widely used battery technology (LiFePO4). The model developed has commercial potential as a tool for optimizing cell design and improving battery performance, which is highly valuable in the large and growing lithium-ion battery market."
+    "analysis": "Lithium Iron Phosphate (LFP) batteries are already a significant part of the battery market, so improvements to their performance are commercially valuable. The model developed in this paper could be used to optimize LFP battery design, leading to increased power capability and wider adoption, especially in applications where safety and cost are critical."
   },
   "oa-W2048612231": {
     "novelty": 3,
     "marketSize": 5,
     "feasibility": 4,
     "timing": 5,
-    "analysis": "Hydrothermal synthesis is a well-established method, so the novelty is moderate. However, lithium iron phosphate cathodes are crucial for the growing electric vehicle and energy storage markets, making the commercial potential very high if the synthesis method is cost-effective and scalable."
+    "analysis": "Lithium iron phosphate (LFP) cathodes are already a significant part of the battery market, so while the hydrothermal synthesis method might offer improvements, it's not entirely novel. The market for batteries, particularly for electric vehicles and energy storage, is massive and growing rapidly, and LFP is a key player. Hydrothermal synthesis is a well-established technique, suggesting good feasibility, and the timing is excellent given the current demand for improved battery technologies."
   },
   "oa-W1987065012": {
     "novelty": 2,
     "marketSize": 5,
     "feasibility": 4,
     "timing": 5,
-    "analysis": "Lithium iron phosphate (LFP) batteries are already in use, so the research is not highly novel, but improvements to cycle life are always valuable. The market for batteries is massive, and improving LFP batteries is feasible with current technology, making the timing ideal as demand increases."
+    "analysis": "Lithium iron phosphate (LFP) batteries are already in use, so this research is more incremental than groundbreaking. However, the market for batteries is massive, and improving cycle life is always valuable, making this research commercially relevant and well-timed given the current demand for energy storage solutions."
   },
   "arxiv-2601.11521v1": {
     "novelty": 3,
     "marketSize": 1,
     "feasibility": 4,
     "timing": 3,
-    "analysis": "The research is novel in its application of X-ray polarimetry to study intrabinary shocks, but the market is extremely niche, primarily limited to the scientific community. While the technology is feasible, its commercial potential is low due to the lack of direct applications outside of academic research."
+    "analysis": "This research is primarily of interest to the astrophysics community. While the findings contribute to our understanding of pulsar wind dynamics and magnetic field structures, the direct commercial applications are limited, resulting in a niche market size. The use of existing technology (IXPE) suggests good feasibility, but the timing is dependent on the broader progress and funding within astrophysics research."
   },
   "arxiv-2601.11501v1": {
     "novelty": 3,
     "marketSize": 3,
     "feasibility": 4,
     "timing": 3,
-    "analysis": "The research addresses a specific challenge in DNA data storage, a growing field. While the coding schemes show promise, the commercial potential depends on the broader adoption of DNA storage and the cost-effectiveness of implementing these schemes at scale. The technology seems relatively feasible, but the timing is dependent on the overall progress and demand for DNA data storage solutions."
+    "analysis": "The research addresses a key challenge in DNA data storage, which is the degradation of DNA strands. While DNA storage is still an emerging field, the development of robust coding schemes to combat data loss could be commercially valuable as the technology matures and finds wider applications in archival data storage."
   },
   "s2-33048ebbc9564a5ec289a9abd6cba04fc5b68e47": {
     "novelty": 3,
@@ -418,5 +418,446 @@
     "feasibility": 2,
     "timing": 3,
     "analysis": "Li-O2 and Li-S batteries, if realized, could revolutionize energy storage due to their high energy density, addressing a critical need in electric vehicles and grid storage. However, significant technological hurdles remain before these batteries can be commercially viable, impacting near-term market entry."
+  },
+  "oa-W2054021102": {
+    "novelty": 3,
+    "marketSize": 5,
+    "feasibility": 3,
+    "timing": 4,
+    "analysis": "The research explores enhancing Li-ion battery capacity using MXenes, a promising area for next-generation batteries. While the concept isn't entirely new, the focus on surface structure and specific materials like Cr2C adds a valuable contribution, but commercialization is gated by scalable manufacturing of MXenes and demonstrating long-term stability."
+  },
+  "oa-W2085852740": {
+    "novelty": 3,
+    "marketSize": 5,
+    "feasibility": 4,
+    "timing": 5,
+    "analysis": "The use of amine-assisted delamination for MXene production is a potentially valuable refinement to existing methods. Given the large and growing market for Li-ion batteries and the demonstrated stability of the material, this research has strong commercial potential, especially if the production costs are competitive."
+  },
+  "oa-W1972419859": {
+    "novelty": 3,
+    "marketSize": 5,
+    "feasibility": 4,
+    "timing": 5,
+    "analysis": "The research addresses a critical challenge in Li-ion battery technology, the SEI layer, which directly impacts battery performance and lifespan. By providing atomistic-level insights, this research has strong commercial potential for improving battery design and electrolyte composition, leading to enhanced energy storage solutions."
+  },
+  "oa-W2042391643": {
+    "novelty": 3,
+    "marketSize": 5,
+    "feasibility": 3,
+    "timing": 4,
+    "analysis": "Solid-state lithium batteries address key limitations of current lithium-ion technology, positioning them for significant market penetration in electric vehicles and energy storage. While challenges remain in scaling production and achieving cost parity, the timing is favorable due to increasing demand for safer and higher-performance batteries."
+  },
+  "oa-W3009608688": {
+    "novelty": 3,
+    "marketSize": 5,
+    "feasibility": 3,
+    "timing": 4,
+    "analysis": "All-solid-state lithium batteries address key limitations of current lithium-ion technology, positioning them for significant market penetration in electric vehicles and grid storage. While challenges remain in scaling production and achieving cost parity, the timing is favorable due to increasing demand for safer and higher-energy-density batteries."
+  },
+  "oa-W2792592857": {
+    "novelty": 3,
+    "marketSize": 5,
+    "feasibility": 3,
+    "timing": 5,
+    "analysis": "All-solid-state lithium batteries address critical needs in the rapidly growing electric vehicle market, making them commercially attractive. While challenges remain in scaling production and improving interface compatibility, the timing is excellent due to the strong demand for safer, higher-energy-density batteries."
+  },
+  "s2-3a0158c4388d02524ec6aa2f901e4daceb4cb873": {
+    "novelty": 3,
+    "marketSize": 4,
+    "feasibility": 4,
+    "timing": 5,
+    "analysis": "Eliminating Class-9 hazards in lithium-ion recycling addresses a critical safety and environmental concern, increasing its commercial appeal. The growing demand for lithium-ion batteries and the push for sustainable practices make this technology commercially promising, especially if it can be implemented cost-effectively."
+  },
+  "s2-df4508968f97c84a707d25ad3e29c3d822312d7b": {
+    "novelty": 3,
+    "marketSize": 4,
+    "feasibility": 3,
+    "timing": 5,
+    "analysis": "Lithium-ion battery recycling is a rapidly growing field, making the recovery of valuable materials like magnetic nanosized sorbents highly relevant. The commercial potential hinges on the cost-effectiveness and scalability of the recovery process, as well as the performance of the recovered sorbents in subsequent applications."
+  },
+  "s2-47cacd35d4fcf2ddda468afe64695e33675ac2b1": {
+    "novelty": 3,
+    "marketSize": 5,
+    "feasibility": 4,
+    "timing": 5,
+    "analysis": "The commercial potential for lithium-ion battery recycling is high due to the rapidly growing electric vehicle market and increasing concerns about resource scarcity and environmental impact. While the specific recycling processes compared may not be entirely novel, optimizing and implementing them at scale is crucial, making this research highly relevant and commercially viable."
+  },
+  "oa-W2981164368": {
+    "novelty": 3,
+    "marketSize": 5,
+    "feasibility": 4,
+    "timing": 5,
+    "analysis": "Recycling EV batteries is commercially viable due to the rapidly growing EV market and increasing concerns about resource scarcity and environmental impact. While the core concept isn't entirely new, improvements in efficiency and cost-effectiveness make it a promising area for investment and development."
+  },
+  "oa-W2886175257": {
+    "novelty": 3,
+    "marketSize": 5,
+    "feasibility": 4,
+    "timing": 5,
+    "analysis": "Recycling of lithium-ion batteries is a rapidly growing field due to the increasing demand for electric vehicles and energy storage. While the research may not present a breakthrough technology, the market size and perfect timing due to environmental concerns and resource scarcity make it commercially viable."
+  },
+  "arxiv-2601.14191v1": {
+    "novelty": 4,
+    "marketSize": 3,
+    "feasibility": 3,
+    "timing": 4,
+    "analysis": "The research presents a novel device-independent method for certifying quantum memories, a crucial component for quantum technologies. While the quantum computing market is still developing, the ability to reliably certify quantum memory performance is essential for building trust and validating these systems, making it a timely and valuable contribution. However, the technology is not fully mature and requires further development before widespread commercial adoption."
+  },
+  "arxiv-2601.14120v1": {
+    "novelty": 3,
+    "marketSize": 1,
+    "feasibility": 5,
+    "timing": 1,
+    "analysis": "The research is likely novel within a specific mathematical domain, but its direct commercial applications are unclear. It's fundamental research that may contribute to future technologies, but currently lacks a clear market and is too early for direct commercialization."
+  },
+  "arxiv-2601.14035v1": {
+    "novelty": 3,
+    "marketSize": 2,
+    "feasibility": 4,
+    "timing": 2,
+    "analysis": "The research presents a novel method for measuring binding energies, but its immediate commercial potential is limited by the niche applications of cryogenic dielectric surfaces. While the methodology is broadly applicable, demonstrating value in more mainstream applications is needed to improve its commercial viability and timing."
+  },
+  "arxiv-2601.14244v1": {
+    "novelty": 3,
+    "marketSize": 4,
+    "feasibility": 4,
+    "timing": 4,
+    "analysis": "The research addresses a critical challenge in massive MIMO localization, which is essential for 5G and beyond. The demonstrated improvement in localization accuracy using real-world measurements suggests strong commercial potential, particularly for applications requiring precise positioning, such as autonomous vehicles and indoor navigation. The timing is good as 5G deployment is ongoing and there is increasing demand for high-accuracy location services."
+  },
+  "arxiv-2601.14243v1": {
+    "novelty": 4,
+    "marketSize": 5,
+    "feasibility": 4,
+    "timing": 5,
+    "analysis": "The research addresses a critical bottleneck in RL for LLMs, a rapidly growing area. By improving efficiency and stability, Jet-RL has strong commercial potential for companies developing and deploying LLMs, especially those focused on resource optimization and cost reduction."
+  },
+  "arxiv-2601.14233v1": {
+    "novelty": 3,
+    "marketSize": 4,
+    "feasibility": 4,
+    "timing": 4,
+    "analysis": "The research addresses a critical need for efficient resource allocation in LEO satellite networks, a rapidly growing market. The proposed burst-aware forecasting solution has strong commercial potential, especially given the increasing demand for reliable and high-throughput satellite communication and its applicability to other wireless networks."
+  },
+  "arxiv-2601.14215v1": {
+    "novelty": 3,
+    "marketSize": 2,
+    "feasibility": 4,
+    "timing": 3,
+    "analysis": "While the research offers advancements in understanding planet formation in binary systems, its direct commercial applications are limited. The primary value lies in its contribution to astronomical knowledge and potentially informing future space exploration strategies, rather than creating a directly marketable product or service."
+  },
+  "arxiv-2601.14214v1": {
+    "novelty": 3,
+    "marketSize": 2,
+    "feasibility": 4,
+    "timing": 4,
+    "analysis": "While the research addresses a growing area of exoplanet study (planets in binary systems), its direct commercial potential is limited. The model developed could be valuable for informing future telescope design and data analysis strategies, but it's primarily a tool for academic research and furthering our understanding of planet formation rather than a directly marketable product."
+  },
+  "arxiv-2601.14200v1": {
+    "novelty": 4,
+    "marketSize": 2,
+    "feasibility": 2,
+    "timing": 3,
+    "analysis": "The research explores altermagnetism in a specific lattice structure, which is a relatively new and exciting area in condensed matter physics. While altermagnetism has potential applications in spintronics, the specific material system and the need for further material development and experimental verification limit the immediate commercial potential and address a niche market."
+  },
+  "oa-W1971627509": {
+    "novelty": 3,
+    "marketSize": 5,
+    "feasibility": 4,
+    "timing": 5,
+    "analysis": "The research focuses on optimizing a widely used cathode material (NCM) for lithium-ion batteries, suggesting incremental improvements rather than a radical breakthrough. Given the massive and growing market for lithium-ion batteries in electric vehicles and energy storage, even small improvements in performance or cost can have significant commercial value, and the research appears to be focused on compositions that are relatively close to commercial deployment."
+  },
+  "oa-W2169070800": {
+    "novelty": 2,
+    "marketSize": 5,
+    "feasibility": 4,
+    "timing": 5,
+    "analysis": "Li-ion batteries are a massive market, and understanding electrode-electrolyte interactions is crucial for improving battery performance and longevity. While this review paper likely doesn't present breakthrough novelties, it addresses a critical area for current and future battery development, making it commercially relevant."
+  },
+  "oa-W2752566719": {
+    "novelty": 4,
+    "marketSize": 5,
+    "feasibility": 3,
+    "timing": 4,
+    "analysis": "The research addresses a critical problem in the development of high-performance Li-ion batteries, specifically the degradation of Ni-rich cathodes. While the computational approach is established, the discovery of previously unknown Ni-rich phases and the unified lattice Hamiltonian could lead to improved cathode materials and battery performance, making it commercially attractive if the findings can be experimentally validated and translated into material design."
+  },
+  "arxiv-2601.14140v1": {
+    "novelty": 3,
+    "marketSize": 4,
+    "feasibility": 3,
+    "timing": 4,
+    "analysis": "The research addresses a critical challenge in embodied AI: energy efficiency and reliability. There's growing demand for efficient embodied AI systems, but the feasibility score is moderate because it requires hardware-software co-design and further validation in real-world deployments before commercialization."
+  },
+  "arxiv-2601.13571v1": {
+    "novelty": 3,
+    "marketSize": 4,
+    "feasibility": 4,
+    "timing": 5,
+    "analysis": "The research addresses a timely and growing need for efficient EV charging management. The use of a Stackelberg game framework with heterogeneous user behavior modeling offers a potentially more realistic and scalable approach compared to traditional methods, making it commercially attractive for charging station operators looking to optimize pricing and reduce congestion."
+  },
+  "arxiv-2601.12986v1": {
+    "novelty": 4,
+    "marketSize": 4,
+    "feasibility": 4,
+    "timing": 5,
+    "analysis": "The increasing importance of protecting large language models (LLMs) from theft creates a strong commercial opportunity for effective fingerprinting techniques. KinGuard's knowledge-based approach offers a potentially more robust and stealthy solution compared to existing methods, making it attractive to companies investing heavily in LLMs."
+  },
+  "s2-6885db7d7a8976b8173172b33da9d64f7251c3a4": {
+    "novelty": 3,
+    "marketSize": 5,
+    "feasibility": 2,
+    "timing": 4,
+    "analysis": "Lithium-sulfur batteries have the potential to disrupt the energy storage market due to their high theoretical energy density and low cost of sulfur. However, significant challenges remain in terms of cycle life and rate capability, hindering near-term commercial viability despite the strong market demand for improved battery technology."
+  },
+  "s2-4400b27b9b5b8b49c016269a8f4b23c259a33289": {
+    "novelty": 3,
+    "marketSize": 5,
+    "feasibility": 3,
+    "timing": 4,
+    "analysis": "Lithium-sulfur batteries are a promising technology for next-generation energy storage, addressing a large and growing market. While the research focuses on improving existing catalysts rather than a completely new battery chemistry, the incremental improvements in catalytic performance can have significant commercial impact if the feasibility challenges related to scalability and long-term stability can be overcome."
+  },
+  "s2-5332d0055c4ce85b1f35a443662844467d4bdca6": {
+    "novelty": 4,
+    "marketSize": 5,
+    "feasibility": 3,
+    "timing": 4,
+    "analysis": "The research presents a novel approach using a metal-coordinated COF for Li-S batteries, addressing key limitations like polysulfide shuttling and lithium dendrite formation. While the market for improved battery technology is massive, commercial viability hinges on scaling up COF synthesis and demonstrating long-term stability and cost-effectiveness compared to existing solutions."
+  },
+  "oa-W2482083820": {
+    "novelty": 4,
+    "marketSize": 5,
+    "feasibility": 2,
+    "timing": 4,
+    "analysis": "Lithium-sulfur batteries offer the potential for high energy density, making them attractive for various applications. However, challenges related to cycle life and scalability hinder immediate commercialization, though the timing is right given the push for EVs and energy storage."
+  },
+  "oa-W2476116270": {
+    "novelty": 3,
+    "marketSize": 5,
+    "feasibility": 3,
+    "timing": 4,
+    "analysis": "Lithium-sulfur batteries are a promising technology for high-energy storage, addressing a critical need in electric vehicles and grid storage. While not ready for immediate commercialization, ongoing research and development suggest significant market potential in the near future as feasibility improves."
+  },
+  "oa-W1974789788": {
+    "novelty": 3,
+    "marketSize": 5,
+    "feasibility": 2,
+    "timing": 4,
+    "analysis": "Lithium-sulfur batteries offer a potentially significant improvement in energy density compared to current lithium-ion technology, addressing a critical need in electric vehicles and energy storage. While the underlying chemistry is well-established, significant challenges remain in terms of cycle life and stability, hindering near-term commercial viability despite the strong market demand."
+  },
+  "arxiv-2601.14208v1": {
+    "novelty": 3,
+    "marketSize": 4,
+    "feasibility": 4,
+    "timing": 4,
+    "analysis": "The system addresses a real-world problem with a practical solution. The market potential is significant, especially with the growth of online vehicle sales and the need for efficient inspection processes, making it a viable commercial opportunity."
+  },
+  "arxiv-2601.14198v1": {
+    "novelty": 3,
+    "marketSize": 3,
+    "feasibility": 3,
+    "timing": 3,
+    "analysis": "The research presents a potentially valuable technique for improving the accuracy of EIT, particularly in scenarios where focusing on a specific region is crucial. While the market for medical imaging and diagnostics is substantial, the specific niche of localized EIT may require further development and validation before widespread commercial adoption. Further research and clinical trials are needed to establish its practical utility and demonstrate its advantages over existing methods."
+  },
+  "arxiv-2601.14181v1": {
+    "novelty": 3,
+    "marketSize": 3,
+    "feasibility": 3,
+    "timing": 3,
+    "analysis": "The research presents a novel finding ($r>1$) regarding grain boundary diffusion, which could lead to improvements in materials science. While the market size for perovskite-type oxides is considerable, the specific application of this finding to commercial products may require further research and development to improve feasibility. The timing seems appropriate as materials science is an active area of research, but practical applications may take some time to materialize."
+  },
+  "oa-W2163108953": {
+    "novelty": 3,
+    "marketSize": 5,
+    "feasibility": 4,
+    "timing": 5,
+    "analysis": "Contactless EV charging addresses a clear consumer need for convenience and automation. While the core technology isn't entirely new, improvements in efficiency and cost reduction make it increasingly viable for widespread adoption, especially given the growing EV market."
+  },
+  "oa-W3007976006": {
+    "novelty": 2,
+    "marketSize": 5,
+    "feasibility": 4,
+    "timing": 5,
+    "analysis": "Electric vehicle batteries are a hot topic, but the paper likely summarizes existing knowledge rather than presenting groundbreaking innovation, hence the low novelty score. However, the market for EV batteries is undeniably massive and rapidly expanding, making the timing ideal for research in this area, and the technology is relatively mature."
+  },
+  "oa-W2107367628": {
+    "novelty": 3,
+    "marketSize": 4,
+    "feasibility": 4,
+    "timing": 5,
+    "analysis": "The paper addresses a relevant problem in EV charging, focusing on optimizing ICPT systems. While not necessarily a breakthrough, the proposed design factor and comparative analysis of topologies add value. The market for EV charging solutions is rapidly expanding, and the technology seems relatively feasible for near-term commercialization, making the timing ideal."
+  },
+  "arxiv-2601.14256v1": {
+    "novelty": 3,
+    "marketSize": 3,
+    "feasibility": 3,
+    "timing": 3,
+    "analysis": "No LLM API key configured (set GEMINI_API_KEY or OPENAI_API_KEY)"
+  },
+  "arxiv-2601.14254v1": {
+    "novelty": 3,
+    "marketSize": 2,
+    "feasibility": 4,
+    "timing": 4,
+    "analysis": "The research offers a novel method for characterizing exoplanet atmospheres, which is valuable for understanding planetary formation and habitability. While the direct market size is niche (focused on exoplanet research), the techniques and data produced could indirectly benefit companies involved in space exploration, telescope development, and data analysis software."
+  },
+  "arxiv-2601.14251v1": {
+    "novelty": 4,
+    "marketSize": 5,
+    "feasibility": 4,
+    "timing": 5,
+    "analysis": "The development of a smaller, faster, and more accurate OCR model with multilingual capabilities has significant commercial potential. The open-source release and accompanying dataset further enhance its appeal and facilitate adoption across various industries needing document processing and automation, making it very attractive for commercialization."
+  },
+  "s2-f8e59267d97670656aeecd9ef88938276e07a481": {
+    "novelty": 3,
+    "marketSize": 5,
+    "feasibility": 5,
+    "timing": 5,
+    "analysis": "Understanding consumer barriers to plant-based foods is crucial for market growth. The plant-based market is experiencing rapid expansion, making research into consumer preferences and obstacles highly valuable for companies seeking to capitalize on this trend."
+  },
+  "oa-W4400026919": {
+    "novelty": 1,
+    "marketSize": 3,
+    "feasibility": 5,
+    "timing": 3,
+    "analysis": "The Journal of Family and Consumer Sciences covers a broad field, suggesting a moderate market size. Its commercial potential is limited without a specific, innovative application or product derived from its research, as it primarily serves an academic and informational purpose."
+  },
+  "arxiv-2601.14257v1": {
+    "novelty": 4,
+    "marketSize": 2,
+    "feasibility": 2,
+    "timing": 3,
+    "analysis": "The research presents a novel explanation for an unusual observation in a recent GRB, but its direct commercial applications are limited. While understanding GRBs is fundamentally important, the immediate market size is niche, primarily focused on scientific research and potentially informing future space-based technologies. The feasibility of directly leveraging this specific finding for commercial purposes is low in the short term, as it requires further validation and development of technologies to observe and analyze similar events."
+  },
+  "oa-W2084180803": {
+    "novelty": 2,
+    "marketSize": 5,
+    "feasibility": 5,
+    "timing": 4,
+    "analysis": "Consumer behavior analysis is a well-established field, so the novelty is low, but the potential market size is massive as all businesses benefit from understanding consumer behavior. The research described seems readily applicable, and the timing is right as businesses are increasingly focused on data-driven decision-making."
+  },
+  "arxiv-2601.14255v1": {
+    "novelty": 4,
+    "marketSize": 4,
+    "feasibility": 3,
+    "timing": 4,
+    "analysis": "The research presents a novel approach to video matting using generative priors and pseudo-labeling, which could significantly reduce the cost and effort required for high-quality video editing and special effects. The potential market is large, encompassing video production, augmented reality, and potentially even autonomous driving (understanding dynamic environments), but further refinement and computational efficiency improvements are likely needed before widespread commercial adoption."
+  },
+  "oa-W1967442942": {
+    "novelty": 1,
+    "marketSize": 3,
+    "feasibility": 5,
+    "timing": 4,
+    "analysis": "As a republication of a classic textbook, the novelty is low, but the continued demand from universities suggests a viable market. The feasibility is high as it's a reprint, and the timing is good given the ongoing relevance of public economics."
+  },
+  "oa-W2105128371": {
+    "novelty": 2,
+    "marketSize": 5,
+    "feasibility": 4,
+    "timing": 3,
+    "analysis": "The research addresses a very large market (food), but the novelty is incremental as it focuses on safety evaluation, a well-trodden area. While not ready for immediate commercialization, the feasibility is relatively high, but the timing is only moderate, as public perception and regulatory hurdles still present significant challenges to widespread GM food adoption, especially in Europe."
+  },
+  "oa-W2015930340": {
+    "novelty": 5,
+    "marketSize": 5,
+    "feasibility": 5,
+    "timing": 5,
+    "analysis": "This paper, \"The Nature of the Firm,\" laid the groundwork for transaction cost economics and organizational economics. Its commercial potential is immense as it provides a fundamental framework for understanding firm structure and boundaries, impacting management strategy, organizational design, and outsourcing decisions across all industries."
+  },
+  "arxiv-2601.14252v1": {
+    "novelty": 3,
+    "marketSize": 2,
+    "feasibility": 4,
+    "timing": 3,
+    "analysis": "The research presents a theoretical framework for optimizing classification systems under resource constraints, which could be valuable in specific applications like database management or biological taxonomy. However, the abstract suggests a focus on theoretical limits and combinatorial structures, potentially limiting immediate commercial applications to specialized areas where resource optimization is critical."
+  },
+  "s2-a01e1ffdd0b8abb5c7622aa7f2a5347b84df027d": {
+    "novelty": 2,
+    "marketSize": 5,
+    "feasibility": 4,
+    "timing": 5,
+    "analysis": "The aging population in America presents a massive market for various products and services. While the research itself may not be groundbreaking, its findings can be readily applied to existing businesses and new ventures targeting the senior demographic, making it commercially viable."
+  },
+  "oa-W1518611452": {
+    "novelty": 2,
+    "marketSize": 4,
+    "feasibility": 5,
+    "timing": 4,
+    "analysis": "Family resource management principles are well-established, so the novelty is incremental. However, the market for applications related to family well-being and resource optimization is substantial, and practical applications are readily feasible and timely given current economic pressures and societal focus on family support."
+  },
+  "arxiv-2601.13196v1": {
+    "novelty": 3,
+    "marketSize": 4,
+    "feasibility": 3,
+    "timing": 4,
+    "analysis": "The research addresses a key challenge in precision agriculture: efficient weed mapping using UAVs. While the core technology (UAVs, GPs) is established, the focus on discrete GP representations for improved planning offers a valuable optimization with commercial potential for companies developing agricultural drone solutions. Further research and development are needed to translate this into a deployable product."
+  },
+  "oa-W1993094622": {
+    "novelty": 2,
+    "marketSize": 3,
+    "feasibility": 4,
+    "timing": 2,
+    "analysis": "The research, while potentially insightful for understanding ant ecology in cocoa farms, is based on data from 1970, limiting its direct commercial application today. Modern agricultural practices and environmental changes may have significantly altered the ant mosaic, making the findings outdated and less relevant for current market needs."
+  },
+  "arxiv-2601.14249v1": {
+    "novelty": 3,
+    "marketSize": 4,
+    "feasibility": 4,
+    "timing": 5,
+    "analysis": "The research addresses a critical need in the rapidly growing field of LLM distillation and optimization. The proposed metric, RSR, offers a practical and effective way to improve student model performance, making it attractive to companies developing and deploying LLMs. Given the current focus on efficient and high-performing AI models, the timing is excellent for commercial applications."
+  },
+  "s2-5f1b308d2c42247fb16026a56c8e118f2bef2752": {
+    "novelty": 3,
+    "marketSize": 3,
+    "feasibility": 4,
+    "timing": 4,
+    "analysis": "The discovery of novel fungal species associated with cocoa crops presents opportunities for developing bio-inoculants to improve cocoa yield and quality. The feasibility is relatively high given existing mycorrhizal applications, and the timing is good due to increasing interest in sustainable agriculture and fine aroma cocoa."
+  },
+  "oa-W2029212442": {
+    "novelty": 2,
+    "marketSize": 3,
+    "feasibility": 4,
+    "timing": 3,
+    "analysis": "Understanding the specific arbuscular mycorrhizal fungi (AMF) associated with cacao could lead to the development of targeted biofertilizers. While the market for biofertilizers is growing, the specific application to cacao in Venezuela limits the immediate commercial potential, though broader applications are possible."
+  },
+  "oa-W3070087734": {
+    "novelty": 3,
+    "marketSize": 4,
+    "feasibility": 4,
+    "timing": 5,
+    "analysis": "The research confirms the benefits of cocoa agroforestry, which aligns with growing consumer demand for sustainable products and corporate commitments to ethical sourcing. The findings on yield diversification and climate change mitigation present strong commercial opportunities for companies investing in or sourcing from agroforestry systems, potentially leading to premium pricing and enhanced brand reputation."
+  },
+  "oa-W2054769692": {
+    "novelty": 3,
+    "marketSize": 3,
+    "feasibility": 4,
+    "timing": 4,
+    "analysis": "The research presents a potentially valuable method for cocoa bean quality assessment, addressing a real need for standardization and efficiency in the industry. While hyperspectral imaging and fuzzy logic are established techniques, their application to cocoa bean assessment offers a novel approach with good commercial potential, especially if it can demonstrably reduce waste and improve quality control."
+  },
+  "arxiv-2601.14196v1": {
+    "novelty": 3,
+    "marketSize": 4,
+    "feasibility": 4,
+    "timing": 5,
+    "analysis": "The concept of optimizing pickup points to reduce emissions in last-mile delivery has commercial potential, especially with growing environmental concerns and increasing e-commerce. The reinforcement learning approach adds a layer of sophistication that could be valuable, and the focus on dense urban areas is strategic given the challenges in those environments. The timing is excellent as companies face pressure to reduce their carbon footprint."
+  },
+  "oa-W2108937398": {
+    "novelty": 2,
+    "marketSize": 3,
+    "feasibility": 5,
+    "timing": 4,
+    "analysis": "The research focuses on improving existing cocoa farming practices through extension programs, which is incremental rather than breakthrough. While the cocoa market is substantial, this study targets a specific region (Sabah, Malaysia), limiting its immediate commercial potential to that area, but the findings are readily implementable and address a current need to improve cocoa production, making it commercially viable in the short term."
+  },
+  "arxiv-2601.14242v1": {
+    "novelty": 3,
+    "marketSize": 4,
+    "feasibility": 4,
+    "timing": 5,
+    "analysis": "The APEX-Agents benchmark directly addresses the growing need for evaluating and improving AI agents in professional settings. By focusing on high-value tasks and providing open-source resources, it can accelerate the development and adoption of AI agents in industries like finance, consulting, and law, creating significant commercial opportunities for agent developers and enterprise solution providers."
+  },
+  "oa-W2025501435": {
+    "novelty": 3,
+    "marketSize": 5,
+    "feasibility": 4,
+    "timing": 5,
+    "analysis": "Phytophthora pod rot is a major constraint to cocoa production, particularly in Ghana. Solutions addressing this disease have significant commercial potential due to the large market size and immediate need for effective management strategies, making it a viable area for investment."
   }
 }

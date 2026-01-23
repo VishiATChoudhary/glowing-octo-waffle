@@ -1,123 +1,49 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { Plus, Key, Eye, EyeOff, Check } from 'lucide-react';
+import { Key, AlertTriangle, Trash2, Loader2, ChevronRight, Database, MessageSquare, Users } from 'lucide-react';
 import { Button } from '@/components/ui/button';
-import { Input } from '@/components/ui/input';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
-import IntegrationCard from '@/components/IntegrationCard';
-import IntegrationModal from '@/components/IntegrationModal';
-import { Integration } from '@/types';
-import { useSettings } from '@/contexts/SettingsContext';
+import { useSettings, defaultPrompts } from '@/contexts/SettingsContext';
 import { useToast } from '@/hooks/use-toast';
+import { checkDevMode, clearDatabase } from '@/services/pipelineService';
+import { useResearchers } from '@/contexts/ResearchersContext';
+import { usePapers } from '@/contexts/PapersContext';
+import { useAuth } from '@/contexts/AuthContext';
 
 const Settings = () => {
   const {
     openaiApiKey,
-    setOpenaiApiKey,
     geminiApiKey,
-    setGeminiApiKey,
     integrations,
-    toggleIntegration,
-    updateIntegration,
-    addIntegration,
+    prompts,
   } = useSettings();
 
-  const [editingIntegration, setEditingIntegration] = useState<Integration | null>(null);
-  const [isModalOpen, setIsModalOpen] = useState(false);
-  const [isNewIntegration, setIsNewIntegration] = useState(false);
-  const [apiKeyInput, setApiKeyInput] = useState(openaiApiKey);
-  const [showApiKey, setShowApiKey] = useState(false);
-  const [apiKeySaved, setApiKeySaved] = useState(false);
-  const [geminiKeyInput, setGeminiKeyInput] = useState(geminiApiKey);
-  const [showGeminiKey, setShowGeminiKey] = useState(false);
-  const [geminiKeySaved, setGeminiKeySaved] = useState(false);
+  const { loadFromDatabase: reloadResearchers } = useResearchers();
+  const { loadPapers: reloadPapers } = usePapers();
+  const { isAdmin } = useAuth();
+
   const { toast } = useToast();
 
-  const handleToggle = (id: string, enabled: boolean) => {
-    toggleIntegration(id, enabled);
-    const integration = integrations.find((int) => int.id === id);
-    toast({
-      title: enabled ? 'Integration Enabled' : 'Integration Disabled',
-      description: `${integration?.name} has been ${enabled ? 'enabled' : 'disabled'}.`,
-    });
-  };
+  // Dev Mode state
+  const [devMode, setDevMode] = useState(false);
+  const [isClearing, setIsClearing] = useState(false);
+  const [showClearConfirm, setShowClearConfirm] = useState(false);
 
-  const handleEdit = (integration: Integration) => {
-    setEditingIntegration(integration);
-    setIsNewIntegration(false);
-    setIsModalOpen(true);
-  };
-
-  const handleAdd = () => {
-    setEditingIntegration(null);
-    setIsNewIntegration(true);
-    setIsModalOpen(true);
-  };
-
-  const handleSave = (integration: Integration) => {
-    if (isNewIntegration) {
-      addIntegration(integration);
-      toast({
-        title: 'Integration Added',
-        description: `${integration.name} has been added successfully.`,
-      });
-    } else {
-      updateIntegration(integration);
-      toast({
-        title: 'Integration Updated',
-        description: `${integration.name} has been updated.`,
-      });
-    }
-  };
-
-  const handleSaveApiKey = () => {
-    setOpenaiApiKey(apiKeyInput);
-    setApiKeySaved(true);
-    toast({
-      title: 'API Key Saved',
-      description: 'Your OpenAI API key has been saved.',
-    });
-    setTimeout(() => setApiKeySaved(false), 2000);
-  };
-
-  const handleClearApiKey = () => {
-    setApiKeyInput('');
-    setOpenaiApiKey('');
-    toast({
-      title: 'API Key Cleared',
-      description: 'Your OpenAI API key has been removed.',
-    });
-  };
-
-  const handleSaveGeminiKey = () => {
-    setGeminiApiKey(geminiKeyInput);
-    setGeminiKeySaved(true);
-    toast({
-      title: 'API Key Saved',
-      description: 'Your Gemini API key has been saved.',
-    });
-    setTimeout(() => setGeminiKeySaved(false), 2000);
-  };
-
-  const handleClearGeminiKey = () => {
-    setGeminiKeyInput('');
-    setGeminiApiKey('');
-    toast({
-      title: 'API Key Cleared',
-      description: 'Your Gemini API key has been removed.',
-    });
-  };
+  // Check if DEV_MODE is enabled
+  useEffect(() => {
+    checkDevMode().then(setDevMode);
+  }, []);
 
   const enabledCount = integrations.filter((int) => int.enabled).length;
-
-  // Mask API key for display
-  const maskedApiKey = apiKeyInput
-    ? `${apiKeyInput.slice(0, 7)}${'•'.repeat(Math.max(0, apiKeyInput.length - 11))}${apiKeyInput.slice(-4)}`
-    : '';
-
-  const maskedGeminiKey = geminiKeyInput
-    ? `${geminiKeyInput.slice(0, 7)}${'•'.repeat(Math.max(0, geminiKeyInput.length - 11))}${geminiKeyInput.slice(-4)}`
-    : '';
+  const configuredKeysCount = [openaiApiKey, geminiApiKey].filter(Boolean).length;
+  const modifiedPromptsCount = prompts.filter(p => {
+    const defaultPrompt = defaultPrompts.find(d => d.id === p.id);
+    return defaultPrompt && (
+      p.systemPrompt !== defaultPrompt.systemPrompt ||
+      p.userPrompt !== defaultPrompt.userPrompt
+    );
+  }).length;
 
   return (
     <div className="h-screen overflow-y-auto">
@@ -129,179 +55,192 @@ const Settings = () => {
       </div>
 
       <div className="p-6 space-y-6">
-        {/* API Keys Section */}
+        {/* API Keys Link */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
         >
-          <Card>
-            <CardHeader>
-              <CardTitle className="text-base flex items-center gap-2">
-                <Key className="w-4 h-4" />
-                API Keys
-              </CardTitle>
-              <CardDescription>
-                Configure API keys for AI-powered features
-              </CardDescription>
-            </CardHeader>
-            <CardContent className="space-y-4">
-              <div className="space-y-2">
-                <label className="text-sm font-medium">OpenAI API Key</label>
-                <div className="flex gap-2">
-                  <div className="relative flex-1">
-                    <Input
-                      type={showApiKey ? 'text' : 'password'}
-                      value={showApiKey ? apiKeyInput : maskedApiKey}
-                      onChange={(e) => setApiKeyInput(e.target.value)}
-                      onFocus={() => setShowApiKey(true)}
-                      placeholder="sk-..."
-                      className="pr-10"
-                    />
-                    <button
-                      type="button"
-                      onClick={() => setShowApiKey(!showApiKey)}
-                      className="absolute right-3 top-1/2 -translate-y-1/2 text-muted-foreground hover:text-foreground"
-                    >
-                      {showApiKey ? (
-                        <EyeOff className="w-4 h-4" />
-                      ) : (
-                        <Eye className="w-4 h-4" />
-                      )}
-                    </button>
-                  </div>
-                  <Button
-                    onClick={handleSaveApiKey}
-                    disabled={!apiKeyInput || apiKeyInput === openaiApiKey}
-                    className="gap-1"
-                  >
-                    {apiKeySaved ? <Check className="w-4 h-4" /> : null}
-                    {apiKeySaved ? 'Saved' : 'Save'}
-                  </Button>
-                  {openaiApiKey && (
-                    <Button variant="outline" onClick={handleClearApiKey}>
-                      Clear
-                    </Button>
-                  )}
+          <Link to="/settings/api-keys">
+            <Card className="hover:bg-accent/50 transition-colors cursor-pointer">
+              <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
+                <div className="flex items-center gap-2">
+                  <Key className="w-4 h-4" />
+                  <CardTitle className="text-base">API Keys</CardTitle>
                 </div>
-                <p className="text-xs text-muted-foreground">
-                  Required for market analysis features. Get your key from{' '}
-                  <a
-                    href="https://platform.openai.com/api-keys"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="underline hover:text-foreground"
-                  >
-                    OpenAI Platform
-                  </a>
-                </p>
-              </div>
-
-              <div className="space-y-2">
-                <label className="text-sm font-medium">Gemini API Key</label>
-                <div className="flex gap-2">
-                  <div className="relative flex-1">
-                    <Input
-                      type={showGeminiKey ? 'text' : 'password'}
-                      value={showGeminiKey ? geminiKeyInput : maskedGeminiKey}
-                      onChange={(e) => setGeminiKeyInput(e.target.value)}
-                      onFocus={() => setShowGeminiKey(true)}
-                      placeholder="AIza..."
-                      className="pr-10"
-                    />
-                    <button
-                      type="button"
-                      onClick={() => setShowGeminiKey(!showGeminiKey)}
-                      className="absolute right-3 top-1/2 -translate-y-1/2 text-muted-foreground hover:text-foreground"
-                    >
-                      {showGeminiKey ? (
-                        <EyeOff className="w-4 h-4" />
-                      ) : (
-                        <Eye className="w-4 h-4" />
-                      )}
-                    </button>
-                  </div>
-                  <Button
-                    onClick={handleSaveGeminiKey}
-                    disabled={!geminiKeyInput || geminiKeyInput === geminiApiKey}
-                    className="gap-1"
-                  >
-                    {geminiKeySaved ? <Check className="w-4 h-4" /> : null}
-                    {geminiKeySaved ? 'Saved' : 'Save'}
-                  </Button>
-                  {geminiApiKey && (
-                    <Button variant="outline" onClick={handleClearGeminiKey}>
-                      Clear
-                    </Button>
-                  )}
-                </div>
-                <p className="text-xs text-muted-foreground">
-                  Optional for AI-powered features. Get your key from{' '}
-                  <a
-                    href="https://aistudio.google.com/apikey"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="underline hover:text-foreground"
-                  >
-                    Google AI Studio
-                  </a>
-                </p>
-              </div>
-            </CardContent>
-          </Card>
+                <ChevronRight className="w-4 h-4 text-muted-foreground" />
+              </CardHeader>
+              <CardContent>
+                <CardDescription>
+                  {configuredKeysCount} of 2 keys configured
+                </CardDescription>
+              </CardContent>
+            </Card>
+          </Link>
         </motion.div>
 
-        {/* Paper Sources Section */}
+        {/* Paper Sources Link */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.1 }}
         >
-          <div className="flex items-center justify-between mb-4">
-            <div>
-              <h3 className="text-base font-semibold">Paper Sources</h3>
-              <p className="text-sm text-muted-foreground">
-                {enabledCount} of {integrations.length} sources active
-              </p>
-            </div>
-            <Button onClick={handleAdd} variant="outline" size="sm">
-              <Plus className="w-4 h-4 mr-2" />
-              Add Source
-            </Button>
-          </div>
-
-          <motion.div
-            initial="hidden"
-            animate="visible"
-            variants={{
-              hidden: { opacity: 0 },
-              visible: {
-                opacity: 1,
-                transition: {
-                  staggerChildren: 0.1,
-                },
-              },
-            }}
-            className="grid gap-4"
-          >
-            {integrations.map((integration) => (
-              <IntegrationCard
-                key={integration.id}
-                integration={integration}
-                onToggle={handleToggle}
-                onEdit={handleEdit}
-              />
-            ))}
-          </motion.div>
+          <Link to="/settings/paper-sources">
+            <Card className="hover:bg-accent/50 transition-colors cursor-pointer">
+              <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
+                <div className="flex items-center gap-2">
+                  <Database className="w-4 h-4" />
+                  <CardTitle className="text-base">Paper Sources</CardTitle>
+                </div>
+                <ChevronRight className="w-4 h-4 text-muted-foreground" />
+              </CardHeader>
+              <CardContent>
+                <CardDescription>
+                  {enabledCount} of {integrations.length} sources active
+                </CardDescription>
+              </CardContent>
+            </Card>
+          </Link>
         </motion.div>
-      </div>
 
-      <IntegrationModal
-        integration={editingIntegration}
-        isOpen={isModalOpen}
-        onClose={() => setIsModalOpen(false)}
-        onSave={handleSave}
-        isNew={isNewIntegration}
-      />
+        {/* Prompts Link */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.2 }}
+        >
+          <Link to="/settings/prompts">
+            <Card className="hover:bg-accent/50 transition-colors cursor-pointer">
+              <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
+                <div className="flex items-center gap-2">
+                  <MessageSquare className="w-4 h-4" />
+                  <CardTitle className="text-base">Prompts</CardTitle>
+                </div>
+                <ChevronRight className="w-4 h-4 text-muted-foreground" />
+              </CardHeader>
+              <CardContent>
+                <CardDescription>
+                  {modifiedPromptsCount > 0
+                    ? `${modifiedPromptsCount} of ${prompts.length} prompts customized`
+                    : `${prompts.length} prompts using defaults`}
+                </CardDescription>
+              </CardContent>
+            </Card>
+          </Link>
+        </motion.div>
+
+        {/* User Whitelist Link - Admin only */}
+        {isAdmin && (
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.3 }}
+          >
+            <Link to="/settings/whitelist">
+              <Card className="hover:bg-accent/50 transition-colors cursor-pointer">
+                <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
+                  <div className="flex items-center gap-2">
+                    <Users className="w-4 h-4" />
+                    <CardTitle className="text-base">User Whitelist</CardTitle>
+                  </div>
+                  <ChevronRight className="w-4 h-4 text-muted-foreground" />
+                </CardHeader>
+                <CardContent>
+                  <CardDescription>
+                    Manage which emails can register
+                  </CardDescription>
+                </CardContent>
+              </Card>
+            </Link>
+          </motion.div>
+        )}
+
+        {/* Danger Zone - Only visible in DEV_MODE */}
+        {devMode && (
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.4 }}
+          >
+            <Card className="border-destructive/50">
+              <CardHeader>
+                <div className="flex items-center gap-2">
+                  <AlertTriangle className="w-5 h-5 text-destructive" />
+                  <CardTitle className="text-destructive">Danger Zone</CardTitle>
+                </div>
+                <CardDescription>
+                  Destructive actions that cannot be undone. Only available in DEV_MODE.
+                </CardDescription>
+              </CardHeader>
+              <CardContent>
+                <div className="space-y-4">
+                  <div className="flex items-center justify-between p-4 border border-destructive/30 rounded-lg bg-destructive/5">
+                    <div>
+                      <h4 className="font-medium">Clear All Database Data</h4>
+                      <p className="text-sm text-muted-foreground">
+                        Permanently delete all researchers, papers, authorship links, and viability scores from the GCP database.
+                      </p>
+                    </div>
+                    {!showClearConfirm ? (
+                      <Button
+                        variant="destructive"
+                        onClick={() => setShowClearConfirm(true)}
+                        className="gap-2 ml-4"
+                      >
+                        <Trash2 className="w-4 h-4" />
+                        Clear Database
+                      </Button>
+                    ) : (
+                      <div className="flex gap-2 ml-4">
+                        <Button
+                          variant="outline"
+                          onClick={() => setShowClearConfirm(false)}
+                          disabled={isClearing}
+                        >
+                          Cancel
+                        </Button>
+                        <Button
+                          variant="destructive"
+                          disabled={isClearing}
+                          onClick={async () => {
+                            setIsClearing(true);
+                            try {
+                              const result = await clearDatabase();
+                              toast({
+                                title: 'Database Cleared',
+                                description: `Deleted ${result.papers_deleted} papers, ${result.researchers_deleted} researchers, ${result.authorship_deleted} authorship links, ${result.viability_deleted} viability scores.`,
+                              });
+                              // Reload the contexts to reflect empty data
+                              reloadResearchers();
+                              reloadPapers();
+                            } catch (error) {
+                              toast({
+                                title: 'Error',
+                                description: error instanceof Error ? error.message : 'Failed to clear database',
+                                variant: 'destructive',
+                              });
+                            } finally {
+                              setIsClearing(false);
+                              setShowClearConfirm(false);
+                            }
+                          }}
+                          className="gap-2"
+                        >
+                          {isClearing ? (
+                            <Loader2 className="w-4 h-4 animate-spin" />
+                          ) : (
+                            <Trash2 className="w-4 h-4" />
+                          )}
+                          {isClearing ? 'Clearing...' : 'Confirm Delete'}
+                        </Button>
+                      </div>
+                    )}
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+          </motion.div>
+        )}
+      </div>
     </div>
   );
 };

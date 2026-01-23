@@ -27,6 +27,10 @@ export interface Researcher {
   openAlexId?: string;
   publications?: Paper[];
   enrichedAt?: string;
+  // From database
+  lab?: string;
+  country?: string;
+  associated_papers?: { id: string; title: string; keywords: string[] }[];
 }
 
 export interface Paper {
@@ -103,4 +107,20 @@ export interface SearchSessionState {
   expansionDegrees: number;
   wasTruncated: boolean;
   expansionType?: 'authors' | 'citations';
+}
+
+// Paper Review Types
+export type ReviewStatus = 'pending' | 'saved' | 'under_review' | 'pass';
+
+export interface PassReasonTag {
+  id: number;
+  name: string;
+  createdAt?: string;
+}
+
+export interface GeneratedEmail {
+  subject: string;
+  greeting: string;
+  body: string;
+  closing: string;
 }

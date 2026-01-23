@@ -1,7 +1,17 @@
 import { ReactNode } from 'react';
 import { NavLink, useLocation } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { FileText, MessageSquare, Settings, Network, Users, Home } from 'lucide-react';
+import { Settings, Users, Home, Workflow, FileText, LogOut, User } from 'lucide-react';
+import { useAuth } from '@/contexts/AuthContext';
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuLabel,
+  DropdownMenuSeparator,
+  DropdownMenuTrigger,
+} from '@/components/ui/dropdown-menu';
+import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 
 interface LayoutProps {
   children: ReactNode;
@@ -9,15 +19,24 @@ interface LayoutProps {
 
 const navItems = [
   { to: '/', label: 'Home', icon: Home },
-  { to: '/search', label: 'Search Papers', icon: FileText },
+  { to: '/pipeline', label: 'Pipeline', icon: Workflow },
   { to: '/researchers', label: 'Researchers', icon: Users },
-  { to: '/query', label: 'Query', icon: MessageSquare },
-  { to: '/graph', label: 'Graph', icon: Network },
+  { to: '/papers', label: 'Papers', icon: FileText },
   { to: '/settings', label: 'Settings', icon: Settings },
 ];
 
 const Layout = ({ children }: LayoutProps) => {
   const location = useLocation();
+  const { user, logout } = useAuth();
+
+  const getInitials = (name: string) => {
+    return name
+      .split(' ')
+      .map(n => n[0])
+      .join('')
+      .toUpperCase()
+      .slice(0, 2);
+  };
 
   return (
     <div className="min-h-screen bg-background flex">
@@ -69,9 +88,40 @@ const Layout = ({ children }: LayoutProps) => {
           </ul>
         </nav>
 
-        {/* Footer */}
+        {/* User Profile */}
         <div className="p-4 border-t border-border">
-          <p className="text-xs text-muted-foreground">
+          {user && (
+            <DropdownMenu>
+              <DropdownMenuTrigger className="w-full">
+                <div className="flex items-center gap-3 p-2 rounded hover:bg-secondary transition-colors">
+                  <Avatar className="w-8 h-8">
+                    <AvatarImage src={user.picture || undefined} alt={user.name} />
+                    <AvatarFallback className="text-xs">
+                      {getInitials(user.name)}
+                    </AvatarFallback>
+                  </Avatar>
+                  <div className="flex-1 text-left min-w-0">
+                    <p className="text-sm font-medium truncate">{user.name}</p>
+                    <p className="text-xs text-muted-foreground truncate">{user.email}</p>
+                  </div>
+                </div>
+              </DropdownMenuTrigger>
+              <DropdownMenuContent align="start" className="w-56">
+                <DropdownMenuLabel>My Account</DropdownMenuLabel>
+                <DropdownMenuSeparator />
+                <DropdownMenuItem className="gap-2">
+                  <User className="w-4 h-4" />
+                  <span>{user.email}</span>
+                </DropdownMenuItem>
+                <DropdownMenuSeparator />
+                <DropdownMenuItem onClick={logout} className="gap-2 text-destructive focus:text-destructive">
+                  <LogOut className="w-4 h-4" />
+                  <span>Sign out</span>
+                </DropdownMenuItem>
+              </DropdownMenuContent>
+            </DropdownMenu>
+          )}
+          <p className="text-xs text-muted-foreground mt-2">
             Version 1.0.0
           </p>
         </div>

@@ -55,6 +55,7 @@ Search for their:
 1. Institutional/academic email address
 2. Current research lab, department, or research group name
 3. Current university or institution name
+4. Country where they are based
 
 Return accurate information only. If you cannot find specific information, leave it null."""
     else:
@@ -64,6 +65,7 @@ Search for their:
 1. Institutional/academic email address
 2. Current research lab, department, or research group name
 3. Current university or institution name
+4. Country where they are based
 
 Return accurate information only. If you cannot find specific information, leave it null."""
 
@@ -99,6 +101,10 @@ Return accurate information only. If you cannot find specific information, leave
                             "institution": {
                                 "type": "string",
                                 "description": "University or institution name",
+                            },
+                            "country": {
+                                "type": "string",
+                                "description": "Country where the researcher is based",
                             },
                             "found": {
                                 "type": "boolean",
@@ -144,6 +150,7 @@ def perplexity_enrich(request: Request):
         "email": "jsmith@mit.edu" or null,
         "lab": "AI Research Lab" or null,
         "institution": "Massachusetts Institute of Technology" or null,
+        "country": "United States" or null,
         "found": true
     }
     """
@@ -176,6 +183,7 @@ def perplexity_enrich(request: Request):
                     "email": result.get("email"),
                     "lab": result.get("lab"),
                     "institution": result.get("institution"),
+                    "country": result.get("country"),
                     "found": result.get("found", False),
                 }
             ),

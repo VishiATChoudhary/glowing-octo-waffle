@@ -4,14 +4,14 @@
 
 import { useEffect, useState } from 'react';
 import { useNavigate, useSearchParams } from 'react-router-dom';
-import { useGmail } from '@/contexts/GmailContext';
+import { useAuth } from '@/contexts/AuthContext';
 import { Loader2, AlertCircle } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
 export default function AuthCallback() {
   const [searchParams] = useSearchParams();
   const navigate = useNavigate();
-  const { handleOAuthCallback } = useGmail();
+  const { handleOAuthCallback } = useAuth();
   const [error, setError] = useState<string | null>(null);
   const [isProcessing, setIsProcessing] = useState(true);
 
@@ -40,8 +40,10 @@ export default function AuthCallback() {
       const success = await handleOAuthCallback(code, state);
 
       if (success) {
-        // Redirect to email page on success
-        navigate('/email', { replace: true });
+        // Get intended destination or default to home
+        const redirectTo = sessionStorage.getItem('auth_redirect') || '/';
+        sessionStorage.removeItem('auth_redirect');
+        navigate(redirectTo, { replace: true });
       } else {
         setError('Failed to complete authentication');
         setIsProcessing(false);
@@ -61,10 +63,10 @@ export default function AuthCallback() {
           <h1 className="text-2xl font-semibold">Authentication Failed</h1>
           <p className="text-muted-foreground">{error}</p>
           <div className="flex gap-2 justify-center">
-            <Button variant="outline" onClick={() => navigate('/settings')}>
-              Go to Settings
+            <Button variant="outline" onClick={() => navigate('/login')}>
+              Back to Login
             </Button>
-            <Button onClick={() => navigate('/')}>Go Home</Button>
+            <Button onClick={() => navigate('/login')}>Try Again</Button>
           </div>
         </div>
       </div>

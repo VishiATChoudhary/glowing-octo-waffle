@@ -8,17 +8,20 @@ Orchestrates the research paper discovery pipeline:
 4. Analyze market viability for each paper (LLM)
 5. Enrich researchers via Perplexity (email, lab, country)
 6. Aggregate viability scores per researcher
-7. Save to local storage
+7. Save to Cloud SQL PostgreSQL database
 
 Streams logs via Server-Sent Events (SSE).
 """
 
 import json
+import logging
 import os
 import time
+import traceback
 import uuid
 import xml.etree.ElementTree as ET
-from datetime import datetime
+from datetime import datetime, date
+from decimal import Decimal
 from pathlib import Path
 from typing import Generator
 
@@ -27,15 +30,39 @@ import requests
 from dotenv import load_dotenv
 from flask import Request, Response
 
-import storage
-
-# Load .env file from project root (3 levels up from this file)
+# Load .env file BEFORE importing database (which reads env vars at import time)
 _env_path = Path(__file__).resolve().parent.parent.parent.parent / ".env"
 if _env_path.exists():
     load_dotenv(_env_path)
 else:
     # Also try current directory
     load_dotenv()
+
+import database
+
+
+class DateTimeEncoder(json.JSONEncoder):
+    """Custom JSON encoder that handles datetime objects."""
+    def default(self, obj):
+        if isinstance(obj, (datetime, date)):
+            return obj.isoformat()
+        if isinstance(obj, Decimal):
+            return float(obj)
+        return super().default(obj)
+
+
+def json_dumps(obj) -> str:
+    """Serialize object to JSON string, handling datetime objects."""
+    return json.dumps(obj, cls=DateTimeEncoder)
+
+
+def error_payload(context: str, exc: Exception) -> dict:
+    """Build an error payload and include a stack trace when DEV_MODE is enabled."""
+    logging.exception("%s failed: %s", context, exc)
+    payload = {"success": False, "error": str(exc), "context": context}
+    if os.environ.get("DEV_MODE", "").upper() == "TRUE":
+        payload["trace"] = traceback.format_exc()
+    return payload
 
 # =============================================================================
 # Configuration
@@ -48,9 +75,20 @@ PERPLEXITY_API_URL = "https://api.perplexity.ai/chat/completions"
 OPENAI_API_URL = "https://api.openai.com/v1/chat/completions"
 GEMINI_API_URL = "https://generativelanguage.googleapis.com/v1beta/models"
 
+# Auth API URL for quota checks
+AUTH_API_URL = os.environ.get(
+    "AUTH_API_URL",
+    "https://us-central1-waffle-mm.cloudfunctions.net"
+)
+
 PERPLEXITY_MODEL = "sonar-pro"
 OPENAI_MODEL = "gpt-4o-mini"
 GEMINI_MODEL = "gemini-2.0-flash"
+
+# In-memory tracking for manual mode sessions (session_id -> uid)
+# This ensures search + continue counts as 1 run
+_session_users: dict[str, str] = {}
+_counted_sessions: set[str] = set()
 
 
 # =============================================================================
@@ -772,7 +810,325 @@ def compute_aggregate_viability(
 
 
 # =============================================================================
-# Pipeline Runner
+# Pipeline Phases (Split for manual mode)
+# =============================================================================
+
+def run_search_phase(
+    query: str,
+    sources: list[str],
+    max_results: int,
+    skip_viability: bool = False,
+    skip_expansion: bool = False,
+    num_keywords: int = 5,
+) -> Generator[str, None, None]:
+    """
+    Run Phase 1: keyword expansion, paper search, and optional viability analysis.
+    Yields log entries as SSE data.
+    Final event contains 'papers_ready' type with papers and viability scores.
+    """
+    all_papers = []
+    viability_scores = {}
+    session_id = uuid.uuid4().hex[:16]
+
+    # -------------------------------------------------------------------------
+    # Step 1: Expand Keywords
+    # -------------------------------------------------------------------------
+    search_queries = [query]  # Always include original query
+
+    if not skip_expansion:
+        yield create_log("expand", "start", f"Generating related keywords for \"{query}\"...")
+
+        try:
+            expanded = expand_keywords(query, num_keywords)
+            if expanded:
+                search_queries.extend(expanded)
+                yield create_log(
+                    "expand", "progress",
+                    f"Generated {len(expanded)} related keywords"
+                )
+                for kw in expanded:
+                    yield create_log("expand", "progress", f"  + {kw}")
+
+            yield create_log(
+                "expand", "complete",
+                f"Will search for {len(search_queries)} queries total",
+                {"keywords": search_queries, "keywordCount": len(search_queries)}
+            )
+        except Exception as e:
+            yield create_log("expand", "error", f"Keyword expansion failed: {str(e)}")
+            yield create_log("expand", "complete", "Continuing with original query only")
+    else:
+        yield create_log("expand", "complete", "Skipped keyword expansion")
+
+    # -------------------------------------------------------------------------
+    # Step 2: Search Papers (for each keyword)
+    # -------------------------------------------------------------------------
+    yield create_log("search", "start", f"Starting paper search for {len(search_queries)} queries...")
+
+    # Calculate results per query to stay within limits
+    results_per_query = max(1, max_results // len(search_queries))
+
+    for query_idx, search_query in enumerate(search_queries):
+        yield create_log(
+            "search", "progress",
+            f"Searching query {query_idx + 1}/{len(search_queries)}: \"{search_query}\""
+        )
+
+        # Search each source for this query
+        if "arxiv" in sources:
+            try:
+                arxiv_papers = search_arxiv(search_query, results_per_query)
+                all_papers.extend(arxiv_papers)
+                if arxiv_papers:
+                    yield create_log("search", "progress", f"  arXiv: {len(arxiv_papers)} papers")
+            except Exception as e:
+                yield create_log("search", "error", f"  arXiv failed: {str(e)}")
+
+        if "semantic-scholar" in sources:
+            try:
+                s2_papers = search_semantic_scholar(search_query, results_per_query)
+                all_papers.extend(s2_papers)
+                if s2_papers:
+                    yield create_log("search", "progress", f"  Semantic Scholar: {len(s2_papers)} papers")
+            except Exception as e:
+                yield create_log("search", "error", f"  Semantic Scholar failed: {str(e)}")
+
+        if "openalex" in sources:
+            try:
+                oa_papers = search_openalex(search_query, results_per_query)
+                all_papers.extend(oa_papers)
+                if oa_papers:
+                    yield create_log("search", "progress", f"  OpenAlex: {len(oa_papers)} papers")
+            except Exception as e:
+                yield create_log("search", "error", f"  OpenAlex failed: {str(e)}")
+
+        # Small delay between queries to avoid rate limiting
+        if query_idx < len(search_queries) - 1:
+            time.sleep(0.5)
+
+    # Deduplicate
+    unique_papers = deduplicate_papers(all_papers)
+    yield create_log(
+        "search", "complete",
+        f"Found {len(all_papers)} total, deduplicated to {len(unique_papers)} unique papers",
+        {"paperCount": len(unique_papers), "totalFound": len(all_papers)}
+    )
+
+    if not unique_papers:
+        yield create_log("search", "error", "No papers found. Try a different query.")
+        return
+
+    # -------------------------------------------------------------------------
+    # Step 3: Analyze Market Viability (optional)
+    # -------------------------------------------------------------------------
+    if not skip_viability:
+        yield create_log("viability", "start", f"Analyzing market viability (0/{len(unique_papers)})...")
+
+        for i, paper in enumerate(unique_papers):
+            if (i + 1) % 10 == 0 or i == len(unique_papers) - 1:
+                yield create_log(
+                    "viability", "progress",
+                    f"Analyzing market viability ({i + 1}/{len(unique_papers)})..."
+                )
+
+            scores = analyze_viability(paper)
+            viability_scores[paper["id"]] = scores
+
+            # Add aggregate score to the scores dict
+            agg = (scores["novelty"] + scores["marketSize"] + scores["feasibility"] + scores["timing"]) / 4
+            scores["aggregate"] = round(agg, 2)
+
+            # Small delay to avoid rate limiting
+            time.sleep(0.1)
+
+        yield create_log(
+            "viability", "complete",
+            f"Completed viability analysis for {len(unique_papers)} papers"
+        )
+    else:
+        yield create_log("viability", "complete", "Skipped viability analysis")
+
+    # -------------------------------------------------------------------------
+    # Emit final papers_ready event
+    # -------------------------------------------------------------------------
+    # Prepare papers with embedded viability for frontend
+    papers_with_viability = []
+    for paper in unique_papers:
+        p = dict(paper)
+        if paper["id"] in viability_scores:
+            p["viability"] = viability_scores[paper["id"]]
+        papers_with_viability.append(p)
+
+    final_data = {
+        "type": "papers_ready",
+        "sessionId": session_id,
+        "papers": papers_with_viability,
+        "keywords": search_queries,
+        "viabilityScores": viability_scores,
+    }
+    yield f"data: {json.dumps(final_data)}\n\n"
+
+
+def run_processing_phase(
+    session_id: str,
+    selected_papers: list[dict],
+    keywords: list[str],
+    viability_scores: dict[str, dict],
+    skip_enrichment: bool = False,
+    max_researchers: int = 0,
+) -> Generator[str, None, None]:
+    """
+    Run Phase 2: researcher extraction, enrichment, aggregation, and save.
+    Only processes papers that were selected by the user.
+    Yields log entries as SSE data.
+    """
+    # -------------------------------------------------------------------------
+    # Step 1: Extract Researchers from selected papers
+    # -------------------------------------------------------------------------
+    yield create_log("extract", "start", f"Extracting researchers from {len(selected_papers)} selected papers...")
+
+    researchers, authorship_links = extract_researchers(selected_papers)
+
+    yield create_log(
+        "extract", "complete",
+        f"Found {len(researchers)} unique researchers",
+        {"researcherCount": len(researchers)}
+    )
+
+    # -------------------------------------------------------------------------
+    # Step 2: Enrich Researchers
+    # -------------------------------------------------------------------------
+    enriched_count = 0
+    not_found_count = 0
+
+    if not skip_enrichment:
+        # Apply researcher limit if set
+        researchers_to_enrich = researchers
+        if max_researchers > 0 and len(researchers) > max_researchers:
+            researchers_to_enrich = researchers[:max_researchers]
+            yield create_log(
+                "enrich", "start",
+                f"Enriching {len(researchers_to_enrich)} of {len(researchers)} researchers (limit: {max_researchers})..."
+            )
+        else:
+            yield create_log("enrich", "start", f"Enriching {len(researchers_to_enrich)} researchers...")
+
+        for i, researcher in enumerate(researchers_to_enrich):
+            yield create_log(
+                "enrich", "progress",
+                f"[{i + 1}/{len(researchers_to_enrich)}] Enriching: {researcher['name']}..."
+            )
+
+            result = enrich_researcher(researcher["name"])
+
+            if result.get("found"):
+                researcher["email"] = result.get("email")
+                researcher["lab"] = result.get("lab")
+                researcher["institution"] = result.get("institution")
+                researcher["country"] = result.get("country")
+                researcher["enrichedAt"] = datetime.utcnow().isoformat()
+                enriched_count += 1
+
+                # Log detailed enrichment results
+                found_fields = []
+                if result.get("email"):
+                    found_fields.append(f"email: {result.get('email')}")
+                if result.get("institution"):
+                    found_fields.append(f"institution: {result.get('institution')}")
+                if result.get("lab"):
+                    found_fields.append(f"lab: {result.get('lab')}")
+                if result.get("country"):
+                    found_fields.append(f"country: {result.get('country')}")
+
+                if found_fields:
+                    yield create_log(
+                        "enrich", "progress",
+                        f"  Found: {', '.join(found_fields)}"
+                    )
+                else:
+                    yield create_log(
+                        "enrich", "progress",
+                        f"  Found but no contact details available"
+                    )
+            else:
+                not_found_count += 1
+                error_msg = result.get("error", "Not found")
+                yield create_log(
+                    "enrich", "progress",
+                    f"  Not found: {error_msg}"
+                )
+
+            # Delay to avoid rate limiting
+            time.sleep(0.5)
+
+        yield create_log(
+            "enrich", "complete",
+            f"Enriched {enriched_count}/{len(researchers_to_enrich)} researchers ({not_found_count} not found)",
+            {"enrichedCount": enriched_count, "notFoundCount": not_found_count}
+        )
+    else:
+        yield create_log("enrich", "complete", "Skipped researcher enrichment")
+
+    # -------------------------------------------------------------------------
+    # Step 3: Compute Aggregate Viability
+    # -------------------------------------------------------------------------
+    yield create_log("aggregate", "start", "Computing viability aggregates...")
+
+    for researcher in researchers:
+        aggregate = compute_aggregate_viability(
+            researcher["id"],
+            authorship_links,
+            selected_papers,
+            viability_scores
+        )
+        researcher["aggregateViability"] = aggregate
+
+    yield create_log(
+        "aggregate", "complete",
+        f"Computed aggregates for {len(researchers)} researchers"
+    )
+
+    # -------------------------------------------------------------------------
+    # Step 4: Save to Database
+    # -------------------------------------------------------------------------
+    yield create_log("save", "start", "Saving to database...")
+
+    try:
+        # Mark selected papers as flagged and embed viability scores
+        selected_ids = {p["id"] for p in selected_papers}
+        new_papers = database.save_papers(
+            selected_papers,
+            keywords,
+            viability_scores=viability_scores,
+            flagged_ids=selected_ids
+        )
+        new_researchers, researcher_id_mapping = database.save_researchers(researchers)
+        filtered_viability = {
+            paper_id: scores
+            for paper_id, scores in viability_scores.items()
+            if paper_id in selected_ids
+        }
+        database.save_viability(filtered_viability)  # Keep for backward compatibility
+        database.save_authorship(authorship_links, researcher_id_mapping)
+
+        stats = database.get_stats()
+        yield create_log(
+            "save", "complete",
+            "Pipeline complete!",
+            {
+                "papersTotal": stats["papers"],
+                "researchersTotal": stats["researchers"],
+                "newPapers": new_papers,
+                "newResearchers": new_researchers,
+            }
+        )
+
+    except Exception as e:
+        yield create_log("save", "error", f"Failed to save: {str(e)}")
+
+
+# =============================================================================
+# Pipeline Runner (Full - for Auto Mode)
 # =============================================================================
 
 def run_pipeline(
@@ -784,6 +1140,8 @@ def run_pipeline(
     skip_expansion: bool = False,
     num_keywords: int = 5,
     max_researchers: int = 0,
+    auto_mode: bool = False,
+    viability_threshold: float = 3.5,
 ) -> Generator[str, None, None]:
     """
     Run the complete pipeline with SSE log streaming.
@@ -883,20 +1241,7 @@ def run_pipeline(
         return
 
     # -------------------------------------------------------------------------
-    # Step 2: Extract Researchers
-    # -------------------------------------------------------------------------
-    yield create_log("extract", "start", f"Extracting researchers from {len(unique_papers)} papers...")
-
-    researchers, authorship_links = extract_researchers(unique_papers)
-
-    yield create_log(
-        "extract", "complete",
-        f"Found {len(researchers)} unique researchers",
-        {"researcherCount": len(researchers)}
-    )
-
-    # -------------------------------------------------------------------------
-    # Step 3: Analyze Market Viability
+    # Step 2: Analyze Market Viability (moved before extraction for auto-filter)
     # -------------------------------------------------------------------------
     if not skip_viability:
         yield create_log("viability", "start", f"Analyzing market viability (0/{len(unique_papers)})...")
@@ -920,6 +1265,49 @@ def run_pipeline(
         )
     else:
         yield create_log("viability", "complete", "Skipped viability analysis")
+
+    # -------------------------------------------------------------------------
+    # Auto-filter: Filter papers by viability score (Auto Mode only)
+    # -------------------------------------------------------------------------
+    papers_to_process = unique_papers  # Default: process all papers
+
+    if auto_mode and not skip_viability and viability_scores:
+        # Filter papers with aggregate viability score > threshold
+        filtered_papers = []
+        for paper in unique_papers:
+            scores = viability_scores.get(paper["id"], {})
+            if scores:
+                aggregate = (
+                    scores.get("novelty", 0) +
+                    scores.get("marketSize", 0) +
+                    scores.get("feasibility", 0) +
+                    scores.get("timing", 0)
+                ) / 4
+                if aggregate > viability_threshold:
+                    filtered_papers.append(paper)
+
+        yield create_log(
+            "viability", "progress",
+            f"Auto-filter: {len(filtered_papers)} of {len(unique_papers)} papers have viability > {viability_threshold}"
+        )
+        papers_to_process = filtered_papers
+
+        if not papers_to_process:
+            yield create_log("viability", "error", f"No papers passed the viability threshold ({viability_threshold})")
+            return
+
+    # -------------------------------------------------------------------------
+    # Step 3: Extract Researchers
+    # -------------------------------------------------------------------------
+    yield create_log("extract", "start", f"Extracting researchers from {len(papers_to_process)} papers...")
+
+    researchers, authorship_links = extract_researchers(papers_to_process)
+
+    yield create_log(
+        "extract", "complete",
+        f"Found {len(researchers)} unique researchers",
+        {"researcherCount": len(researchers)}
+    )
 
     # -------------------------------------------------------------------------
     # Step 4: Enrich Researchers
@@ -1004,7 +1392,7 @@ def run_pipeline(
         aggregate = compute_aggregate_viability(
             researcher["id"],
             authorship_links,
-            unique_papers,
+            papers_to_process,
             viability_scores
         )
         researcher["aggregateViability"] = aggregate
@@ -1015,25 +1403,37 @@ def run_pipeline(
     )
 
     # -------------------------------------------------------------------------
-    # Step 6: Save to Local Storage
+    # Step 6: Save to Database
     # -------------------------------------------------------------------------
-    yield create_log("save", "start", "Saving to local storage...")
+    yield create_log("save", "start", "Saving to database...")
 
     try:
-        storage.save_papers(unique_papers)
-        storage.save_researchers(researchers)
-        storage.save_viability(viability_scores)
-        storage.save_authorship(authorship_links)
+        # Mark processed papers as flagged and embed viability scores
+        processed_ids = {p["id"] for p in papers_to_process}
+        new_papers = database.save_papers(
+            papers_to_process,
+            search_queries,
+            viability_scores=viability_scores,
+            flagged_ids=processed_ids if auto_mode else None
+        )
+        new_researchers, researcher_id_mapping = database.save_researchers(researchers)
+        filtered_viability = {
+            paper_id: scores
+            for paper_id, scores in viability_scores.items()
+            if paper_id in processed_ids
+        }
+        database.save_viability(filtered_viability)  # Keep for backward compatibility
+        database.save_authorship(authorship_links, researcher_id_mapping)
 
-        stats = storage.get_stats()
+        stats = database.get_stats()
         yield create_log(
             "save", "complete",
             "Pipeline complete!",
             {
                 "papersTotal": stats["papers"],
                 "researchersTotal": stats["researchers"],
-                "newPapers": len(unique_papers),
-                "newResearchers": len(researchers),
+                "newPapers": new_papers,
+                "newResearchers": new_researchers,
             }
         )
 
@@ -1054,6 +1454,86 @@ def cors_headers(request: Request) -> dict:
         "Access-Control-Allow-Headers": "Content-Type, Authorization",
         "Access-Control-Max-Age": "3600",
     }
+
+
+def get_auth_uid(request: Request) -> str | None:
+    """
+    Extract user UID from Authorization header.
+    Returns None if not authenticated.
+    """
+    auth_header = request.headers.get("Authorization", "")
+    if not auth_header.startswith("Bearer "):
+        return None
+    return auth_header[7:]  # Remove "Bearer " prefix
+
+
+def check_quota(uid: str) -> dict:
+    """
+    Check if user can run pipeline via auth service.
+    Returns quota info dict with 'allowed' boolean.
+    """
+    try:
+        response = requests.get(
+            f"{AUTH_API_URL}/email-auth-quota",
+            headers={"Authorization": f"Bearer {uid}"},
+            timeout=10
+        )
+        if response.status_code == 200:
+            return response.json()
+        return {"allowed": False, "error": "Failed to check quota"}
+    except Exception as e:
+        logging.error(f"Quota check failed: {e}")
+        return {"allowed": False, "error": str(e)}
+
+
+def increment_quota(uid: str) -> bool:
+    """
+    Increment user's pipeline run count via auth service.
+    Returns True if successful.
+    """
+    try:
+        response = requests.post(
+            f"{AUTH_API_URL}/email-auth-quota",
+            headers={"Authorization": f"Bearer {uid}"},
+            timeout=10
+        )
+        if response.status_code == 200:
+            data = response.json()
+            return data.get("success", False)
+        return False
+    except Exception as e:
+        logging.error(f"Quota increment failed: {e}")
+        return False
+
+
+def require_auth_and_quota(request: Request) -> tuple[str | None, tuple | None]:
+    """
+    Check authentication and quota for a pipeline request.
+
+    Returns:
+        (uid, None) if authorized
+        (None, error_response) if not authorized
+    """
+    uid = get_auth_uid(request)
+    if not uid:
+        return None, (
+            json.dumps({"error": "Authentication required"}),
+            401,
+            {**cors_headers(request), "Content-Type": "application/json"}
+        )
+
+    quota = check_quota(uid)
+    if not quota.get("allowed"):
+        return None, (
+            json.dumps({
+                "error": "Pipeline quota exceeded",
+                "quota": quota
+            }),
+            403,
+            {**cors_headers(request), "Content-Type": "application/json"}
+        )
+
+    return uid, None
 
 
 @functions_framework.http
@@ -1084,6 +1564,11 @@ def pipeline_runner(request: Request):
     if request.method == "OPTIONS":
         return ("", 204, cors_headers(request))
 
+    # Check authentication and quota
+    uid, error_response = require_auth_and_quota(request)
+    if error_response:
+        return error_response
+
     # Parse request
     try:
         request_json = request.get_json(silent=True) or {}
@@ -1098,6 +1583,8 @@ def pipeline_runner(request: Request):
     skip_enrichment = request_json.get("skipEnrichment", False)
     skip_expansion = request_json.get("skipExpansion", False)
     num_keywords = min(10, max(1, request_json.get("numKeywords", 5)))
+    auto_mode = request_json.get("autoMode", False)
+    viability_threshold = float(request_json.get("viabilityThreshold", 3.5))
 
     # Set API keys from request (allows frontend to pass keys from settings)
     api_keys = request_json.get("apiKeys", {})
@@ -1115,11 +1602,208 @@ def pipeline_runner(request: Request):
             {**cors_headers(request), "Content-Type": "application/json"},
         )
 
+    # Increment quota for this pipeline run (auto mode counts as 1 full run)
+    increment_quota(uid)
+
     def generate():
         """Generator for SSE stream."""
         for log_entry in run_pipeline(
             query, sources, max_results, skip_viability, skip_enrichment,
-            skip_expansion, num_keywords, max_researchers
+            skip_expansion, num_keywords, max_researchers, auto_mode, viability_threshold
+        ):
+            yield log_entry
+
+    headers = {
+        **cors_headers(request),
+        "Content-Type": "text/event-stream",
+        "Cache-Control": "no-cache",
+        "Connection": "keep-alive",
+        "X-Accel-Buffering": "no",
+    }
+
+    return Response(generate(), mimetype="text/event-stream", headers=headers)
+
+
+# =============================================================================
+# Phase Endpoints (for Manual Mode)
+# =============================================================================
+
+@functions_framework.http
+def pipeline_search(request: Request):
+    """
+    Run Phase 1: keyword expansion, paper search, and optional viability analysis.
+    Returns papers ready for selection.
+
+    POST body:
+    {
+        "query": "search query",
+        "sources": ["arxiv", "semantic-scholar", "openalex"],
+        "maxResults": 20,
+        "skipViability": false,
+        "skipExpansion": false,
+        "numKeywords": 5,
+        "apiKeys": { ... }
+    }
+
+    Response: Server-Sent Events stream ending with papers_ready event
+    """
+    if request.method == "OPTIONS":
+        return ("", 204, cors_headers(request))
+
+    # Check authentication and quota (but don't increment yet - wait for continue)
+    uid, error_response = require_auth_and_quota(request)
+    if error_response:
+        return error_response
+
+    try:
+        request_json = request.get_json(silent=True) or {}
+    except:
+        request_json = {}
+
+    query = request_json.get("query", "")
+    sources = request_json.get("sources", ["arxiv", "semantic-scholar", "openalex"])
+    max_results = min(100, max(1, request_json.get("maxResults", 20)))
+    skip_viability = request_json.get("skipViability", False)
+    skip_expansion = request_json.get("skipExpansion", False)
+    num_keywords = min(10, max(1, request_json.get("numKeywords", 5)))
+
+    # Set API keys from request
+    api_keys = request_json.get("apiKeys", {})
+    if api_keys.get("gemini"):
+        os.environ["GEMINI_API_KEY"] = api_keys["gemini"]
+    if api_keys.get("openai"):
+        os.environ["OPENAI_API_KEY"] = api_keys["openai"]
+    if api_keys.get("perplexity"):
+        os.environ["PERPLEXITY_API_KEY"] = api_keys["perplexity"]
+
+    if not query:
+        return (
+            json.dumps({"error": "Search query required"}),
+            400,
+            {**cors_headers(request), "Content-Type": "application/json"},
+        )
+
+    def generate():
+        for log_entry in run_search_phase(
+            query, sources, max_results, skip_viability, skip_expansion, num_keywords
+        ):
+            # Intercept papers_ready event to track session -> user mapping
+            if '"type": "papers_ready"' in log_entry:
+                try:
+                    # Parse the SSE data to get session ID
+                    data_str = log_entry.replace("data: ", "").strip()
+                    data = json.loads(data_str)
+                    session_id = data.get("sessionId")
+                    if session_id:
+                        _session_users[session_id] = uid
+                except Exception:
+                    pass
+            yield log_entry
+
+    headers = {
+        **cors_headers(request),
+        "Content-Type": "text/event-stream",
+        "Cache-Control": "no-cache",
+        "Connection": "keep-alive",
+        "X-Accel-Buffering": "no",
+    }
+
+    return Response(generate(), mimetype="text/event-stream", headers=headers)
+
+
+@functions_framework.http
+def pipeline_continue(request: Request):
+    """
+    Run Phase 2: process selected papers only.
+    Extracts researchers, enriches, aggregates, and saves.
+
+    POST body:
+    {
+        "sessionId": "abc123",
+        "selectedPapers": [...],  // Papers selected by user
+        "keywords": [...],
+        "viabilityScores": {...},
+        "skipEnrichment": false,
+        "maxResearchers": 10,
+        "apiKeys": { ... }
+    }
+
+    Response: Server-Sent Events stream of log entries
+    """
+    if request.method == "OPTIONS":
+        return ("", 204, cors_headers(request))
+
+    # Check authentication
+    uid = get_auth_uid(request)
+    if not uid:
+        return (
+            json.dumps({"error": "Authentication required"}),
+            401,
+            {**cors_headers(request), "Content-Type": "application/json"}
+        )
+
+    try:
+        request_json = request.get_json(silent=True) or {}
+    except:
+        request_json = {}
+
+    session_id = request_json.get("sessionId", "")
+    selected_papers = request_json.get("selectedPapers", [])
+    keywords = request_json.get("keywords", [])
+    viability_scores = request_json.get("viabilityScores", {})
+    skip_enrichment = request_json.get("skipEnrichment", False)
+    max_researchers = max(0, request_json.get("maxResearchers", 0))
+
+    # Verify session belongs to this user (if we have tracking)
+    if session_id in _session_users:
+        if _session_users[session_id] != uid:
+            return (
+                json.dumps({"error": "Session does not belong to this user"}),
+                403,
+                {**cors_headers(request), "Content-Type": "application/json"}
+            )
+
+    # Check quota before proceeding
+    quota = check_quota(uid)
+    if not quota.get("allowed"):
+        return (
+            json.dumps({
+                "error": "Pipeline quota exceeded",
+                "quota": quota
+            }),
+            403,
+            {**cors_headers(request), "Content-Type": "application/json"}
+        )
+
+    # Increment quota only if this session hasn't been counted yet
+    # (search + continue = 1 combined run)
+    if session_id not in _counted_sessions:
+        increment_quota(uid)
+        _counted_sessions.add(session_id)
+        # Clean up session tracking
+        if session_id in _session_users:
+            del _session_users[session_id]
+
+    # Set API keys from request
+    api_keys = request_json.get("apiKeys", {})
+    if api_keys.get("gemini"):
+        os.environ["GEMINI_API_KEY"] = api_keys["gemini"]
+    if api_keys.get("openai"):
+        os.environ["OPENAI_API_KEY"] = api_keys["openai"]
+    if api_keys.get("perplexity"):
+        os.environ["PERPLEXITY_API_KEY"] = api_keys["perplexity"]
+
+    if not selected_papers:
+        return (
+            json.dumps({"error": "No papers selected"}),
+            400,
+            {**cors_headers(request), "Content-Type": "application/json"},
+        )
+
+    def generate():
+        for log_entry in run_processing_phase(
+            session_id, selected_papers, keywords, viability_scores,
+            skip_enrichment, max_researchers
         ):
             yield log_entry
 
@@ -1140,47 +1824,683 @@ def pipeline_runner(request: Request):
 
 @functions_framework.http
 def pipeline_status(request: Request):
-    """Get current storage statistics."""
+    """Get current database statistics."""
     if request.method == "OPTIONS":
         return ("", 204, cors_headers(request))
 
     headers = {**cors_headers(request), "Content-Type": "application/json"}
 
     try:
-        stats = storage.get_stats()
-        return (json.dumps({"success": True, **stats}), 200, headers)
+        stats = database.get_stats()
+        return (json_dumps({"success": True, **stats}), 200, headers)
     except Exception as e:
-        return (json.dumps({"success": False, "error": str(e)}), 500, headers)
+        return (json_dumps(error_payload("pipeline_status", e)), 500, headers)
 
 
 @functions_framework.http
 def get_researchers(request: Request):
-    """Get all researchers from storage."""
+    """Get all researchers with their associated papers."""
     if request.method == "OPTIONS":
         return ("", 204, cors_headers(request))
 
     headers = {**cors_headers(request), "Content-Type": "application/json"}
 
     try:
-        researchers = storage.load_researchers()
-        return (json.dumps({"success": True, "researchers": researchers}), 200, headers)
+        researchers = database.load_researchers_with_papers()
+        return (json_dumps({"success": True, "researchers": researchers}), 200, headers)
+    except Exception as e:
+        return (json_dumps(error_payload("get_researchers", e)), 500, headers)
+
+
+@functions_framework.http
+def get_papers(request: Request):
+    """Get all papers from database."""
+    if request.method == "OPTIONS":
+        return ("", 204, cors_headers(request))
+
+    headers = {**cors_headers(request), "Content-Type": "application/json"}
+
+    try:
+        papers = database.load_papers()
+        return (json_dumps({"success": True, "papers": papers}), 200, headers)
+    except Exception as e:
+        return (json_dumps(error_payload("get_papers", e)), 500, headers)
+
+
+@functions_framework.http
+def dev_status(request: Request):
+    """Check if DEV_MODE is enabled."""
+    if request.method == "OPTIONS":
+        return ("", 204, cors_headers(request))
+
+    headers = {**cors_headers(request), "Content-Type": "application/json"}
+
+    dev_mode = os.environ.get("DEV_MODE", "").upper() == "TRUE"
+    return (json.dumps({"success": True, "devMode": dev_mode}), 200, headers)
+
+
+@functions_framework.http
+def clear_database(request: Request):
+    """Clear all data from the database. Only available in DEV_MODE."""
+    if request.method == "OPTIONS":
+        return ("", 204, cors_headers(request))
+
+    headers = {**cors_headers(request), "Content-Type": "application/json"}
+
+    # Check if DEV_MODE is enabled
+    dev_mode = os.environ.get("DEV_MODE", "").upper() == "TRUE"
+    if not dev_mode:
+        return (json.dumps({
+            "success": False,
+            "error": "This endpoint is only available in DEV_MODE"
+        }), 403, headers)
+
+    try:
+        result = database.clear_all_data()
+        return (json.dumps({
+            "success": True,
+            "message": "All data cleared",
+            **result
+        }), 200, headers)
     except Exception as e:
         return (json.dumps({"success": False, "error": str(e)}), 500, headers)
 
 
 @functions_framework.http
-def get_papers(request: Request):
-    """Get all papers from storage."""
+def analyze_paper_viability(request: Request):
+    """
+    Analyze market viability for a single paper.
+
+    POST body:
+    {
+        "paper": {
+            "id": "...",
+            "title": "...",
+            "abstract": "..."
+        },
+        "apiKeys": {
+            "gemini": "...",
+            "openai": "..."
+        }
+    }
+
+    Response:
+    {
+        "success": true,
+        "paperId": "...",
+        "viability": {
+            "novelty": 4,
+            "marketSize": 3,
+            "feasibility": 5,
+            "timing": 4,
+            "analysis": "..."
+        }
+    }
+    """
     if request.method == "OPTIONS":
         return ("", 204, cors_headers(request))
 
     headers = {**cors_headers(request), "Content-Type": "application/json"}
 
     try:
-        papers = storage.load_papers()
-        return (json.dumps({"success": True, "papers": papers}), 200, headers)
+        request_json = request.get_json(silent=True) or {}
+        paper = request_json.get("paper")
+
+        if not paper:
+            return (json.dumps({
+                "success": False,
+                "error": "Paper data required"
+            }), 400, headers)
+
+        if not paper.get("title"):
+            return (json.dumps({
+                "success": False,
+                "error": "Paper title required"
+            }), 400, headers)
+
+        # Set API keys from request
+        api_keys = request_json.get("apiKeys", {})
+        if api_keys.get("gemini"):
+            os.environ["GEMINI_API_KEY"] = api_keys["gemini"]
+        if api_keys.get("openai"):
+            os.environ["OPENAI_API_KEY"] = api_keys["openai"]
+
+        # Analyze viability
+        viability = analyze_viability(paper)
+
+        # Calculate aggregate score
+        aggregate = (
+            viability.get("novelty", 0) +
+            viability.get("marketSize", 0) +
+            viability.get("feasibility", 0) +
+            viability.get("timing", 0)
+        ) / 4
+        viability["aggregate"] = round(aggregate, 2)
+
+        return (json.dumps({
+            "success": True,
+            "paperId": paper.get("id"),
+            "viability": viability
+        }), 200, headers)
+
     except Exception as e:
-        return (json.dumps({"success": False, "error": str(e)}), 500, headers)
+        return (json.dumps({
+            "success": False,
+            "error": str(e)
+        }), 500, headers)
+
+
+@functions_framework.http
+def save_papers(request: Request):
+    """
+    Save papers to the database. Useful for adding papers discovered outside the pipeline.
+
+    POST body:
+    {
+        "papers": [
+            {
+                "id": "...",
+                "title": "...",
+                "abstract": "...",
+                "authors": ["..."],
+                "year": 2024,
+                "doi": "...",
+                "arxivId": "...",
+                "source": "...",
+                "citations": 0,
+                "url": "...",
+                "pdfUrl": "..."
+            }
+        ],
+        "keywords": ["researcher-papers"]  // optional, defaults to ["imported"]
+    }
+
+    Response:
+    {
+        "success": true,
+        "savedCount": 5,
+        "message": "Saved 5 papers to database"
+    }
+    """
+    if request.method == "OPTIONS":
+        return ("", 204, cors_headers(request))
+
+    headers = {**cors_headers(request), "Content-Type": "application/json"}
+
+    try:
+        request_json = request.get_json(silent=True) or {}
+        papers_data = request_json.get("papers", [])
+        keywords = request_json.get("keywords", ["imported"])
+
+        if not papers_data:
+            return (json.dumps({
+                "success": False,
+                "error": "No papers provided"
+            }), 400, headers)
+
+        # Convert frontend format to backend format
+        papers = []
+        for p in papers_data:
+            papers.append({
+                "id": p.get("id", f"imported-{uuid.uuid4().hex[:12]}"),
+                "title": p.get("title", ""),
+                "abstract": p.get("abstract", ""),
+                "authors": p.get("authors", []),
+                "year": p.get("year"),
+                "doi": p.get("doi"),
+                "arxivId": p.get("arxivId"),
+                "source": p.get("source", "imported"),
+                "citations": p.get("citations"),
+                "url": p.get("url"),
+                "pdfUrl": p.get("pdfUrl"),
+            })
+
+        new_count = database.save_papers(papers, keywords)
+
+        return (json.dumps({
+            "success": True,
+            "savedCount": new_count,
+            "totalProvided": len(papers),
+            "message": f"Saved {new_count} new papers to database"
+        }), 200, headers)
+
+    except Exception as e:
+        return (json.dumps({
+            "success": False,
+            "error": str(e)
+        }), 500, headers)
+
+
+@functions_framework.http
+def test_database(request: Request):
+    """
+    Test database connectivity by saving and deleting a paper.
+    Only available in DEV_MODE.
+
+    Steps:
+    1. Search arXiv for 1 paper
+    2. Save it to database
+    3. Delete it
+    4. Return success/failure
+    """
+    if request.method == "OPTIONS":
+        return ("", 204, cors_headers(request))
+
+    headers = {**cors_headers(request), "Content-Type": "application/json"}
+
+    # Check if DEV_MODE is enabled
+    dev_mode = os.environ.get("DEV_MODE", "").upper() == "TRUE"
+    if not dev_mode:
+        return (json.dumps({
+            "success": False,
+            "error": "This endpoint is only available in DEV_MODE"
+        }), 403, headers)
+
+    test_paper_id = None
+    steps_completed = []
+
+    try:
+        # Step 1: Search arXiv for 1 paper
+        papers = search_arxiv("machine learning", max_results=1)
+        if not papers:
+            return (json.dumps({
+                "success": False,
+                "error": "No papers found from arXiv"
+            }), 500, headers)
+
+        test_paper = papers[0]
+        test_paper_id = test_paper["id"]
+        steps_completed.append(f"Found paper: {test_paper['title'][:50]}...")
+
+        # Step 2: Save to database
+        new_count = database.save_papers([test_paper], ["__db_test__"])
+        steps_completed.append(f"Saved paper to database (new: {new_count})")
+
+        # Step 3: Verify it was saved
+        stats_before = database.get_stats()
+        steps_completed.append(f"Database has {stats_before['papers']} papers")
+
+        # Step 4: Delete the test paper
+        deleted = database.delete_paper(test_paper_id)
+        if deleted:
+            steps_completed.append("Successfully deleted test paper")
+        else:
+            steps_completed.append("Paper was not found for deletion (may have been duplicate)")
+
+        # Step 5: Verify deletion
+        stats_after = database.get_stats()
+        steps_completed.append(f"Database now has {stats_after['papers']} papers")
+
+        return (json.dumps({
+            "success": True,
+            "message": "Database test completed successfully",
+            "steps": steps_completed,
+            "paperTested": {
+                "id": test_paper_id,
+                "title": test_paper["title"],
+            }
+        }), 200, headers)
+
+    except Exception as e:
+        # Try to clean up if we created a paper
+        if test_paper_id:
+            try:
+                database.delete_paper(test_paper_id)
+            except:
+                pass
+
+        return (json.dumps({
+            "success": False,
+            "error": str(e),
+            "steps": steps_completed,
+        }), 500, headers)
+
+
+# =============================================================================
+# Paper Review Endpoints
+# =============================================================================
+
+@functions_framework.http
+def update_paper_status(request: Request):
+    """
+    Update the review status of a paper.
+
+    POST body:
+    {
+        "paperId": "...",
+        "status": "saved" | "under_review" | "pass" | "pending",
+        "passReason": "..." (optional, used when status is "pass")
+    }
+
+    Response:
+    {
+        "success": true,
+        "paperId": "...",
+        "status": "saved"
+    }
+    """
+    if request.method == "OPTIONS":
+        return ("", 204, cors_headers(request))
+
+    headers = {**cors_headers(request), "Content-Type": "application/json"}
+
+    try:
+        request_json = request.get_json(silent=True) or {}
+        paper_id = request_json.get("paperId")
+        status = request_json.get("status")
+        pass_reason = request_json.get("passReason")
+
+        if not paper_id:
+            return (json.dumps({
+                "success": False,
+                "error": "Paper ID required"
+            }), 400, headers)
+
+        valid_statuses = {"pending", "saved", "under_review", "pass"}
+        if status not in valid_statuses:
+            return (json.dumps({
+                "success": False,
+                "error": f"Invalid status. Must be one of: {', '.join(valid_statuses)}"
+            }), 400, headers)
+
+        updated = database.update_paper_status(paper_id, status, pass_reason)
+
+        if updated:
+            return (json.dumps({
+                "success": True,
+                "paperId": paper_id,
+                "status": status,
+                "passReason": pass_reason
+            }), 200, headers)
+        else:
+            return (json.dumps({
+                "success": False,
+                "error": "Paper not found"
+            }), 404, headers)
+
+    except Exception as e:
+        return (json.dumps(error_payload("update_paper_status", e)), 500, headers)
+
+
+@functions_framework.http
+def get_papers_filtered(request: Request):
+    """
+    Get papers with filtering and sorting.
+
+    Query params:
+    - status: Filter by review status
+    - location: Search by institution/country
+    - sortBy: created_at, year, citations, viability_score
+    - sortOrder: asc, desc
+
+    Response:
+    {
+        "success": true,
+        "papers": [...]
+    }
+    """
+    if request.method == "OPTIONS":
+        return ("", 204, cors_headers(request))
+
+    headers = {**cors_headers(request), "Content-Type": "application/json"}
+
+    try:
+        status = request.args.get("status")
+        location = request.args.get("location")
+        sort_by = request.args.get("sortBy", "created_at")
+        sort_order = request.args.get("sortOrder", "desc")
+
+        papers = database.get_papers_filtered(status, location, sort_by, sort_order)
+        return (json_dumps({"success": True, "papers": papers}), 200, headers)
+
+    except Exception as e:
+        return (json_dumps(error_payload("get_papers_filtered", e)), 500, headers)
+
+
+@functions_framework.http
+def get_pass_reason_tags(request: Request):
+    """
+    Get all pass reason tags.
+
+    Response:
+    {
+        "success": true,
+        "tags": [{"id": 1, "name": "Not relevant", "createdAt": "..."}]
+    }
+    """
+    if request.method == "OPTIONS":
+        return ("", 204, cors_headers(request))
+
+    headers = {**cors_headers(request), "Content-Type": "application/json"}
+
+    try:
+        tags = database.get_pass_reason_tags()
+        return (json.dumps({"success": True, "tags": tags}), 200, headers)
+
+    except Exception as e:
+        return (json.dumps(error_payload("get_pass_reason_tags", e)), 500, headers)
+
+
+@functions_framework.http
+def create_pass_reason_tag(request: Request):
+    """
+    Create a new pass reason tag.
+
+    POST body:
+    {
+        "name": "Not relevant to our focus"
+    }
+
+    Response:
+    {
+        "success": true,
+        "tag": {"id": 1, "name": "Not relevant to our focus", "createdAt": "..."}
+    }
+    """
+    if request.method == "OPTIONS":
+        return ("", 204, cors_headers(request))
+
+    headers = {**cors_headers(request), "Content-Type": "application/json"}
+
+    try:
+        request_json = request.get_json(silent=True) or {}
+        name = request_json.get("name", "").strip()
+
+        if not name:
+            return (json.dumps({
+                "success": False,
+                "error": "Tag name required"
+            }), 400, headers)
+
+        if len(name) > 100:
+            return (json.dumps({
+                "success": False,
+                "error": "Tag name must be 100 characters or less"
+            }), 400, headers)
+
+        tag = database.create_pass_reason_tag(name)
+
+        if tag:
+            return (json.dumps({"success": True, "tag": tag}), 201, headers)
+        else:
+            return (json.dumps({
+                "success": False,
+                "error": "Tag already exists"
+            }), 409, headers)
+
+    except Exception as e:
+        return (json.dumps(error_payload("create_pass_reason_tag", e)), 500, headers)
+
+
+@functions_framework.http
+def generate_email(request: Request):
+    """
+    Generate outreach email for a researcher using Gemini.
+
+    POST body:
+    {
+        "researcher": {
+            "name": "Dr. Smith",
+            "email": "smith@university.edu",
+            "institution": "MIT",
+            "lab": "AI Lab"
+        },
+        "paper": {
+            "title": "...",
+            "abstract": "..."
+        },
+        "purpose": "collaboration",  // optional: collaboration, inquiry, feedback
+        "context": "Additional context..."  // optional
+        "apiKeys": {
+            "gemini": "..."
+        }
+    }
+
+    Response:
+    {
+        "success": true,
+        "email": {
+            "subject": "...",
+            "greeting": "Dear Dr. Smith,",
+            "body": "...",
+            "closing": "Best regards,"
+        }
+    }
+    """
+    if request.method == "OPTIONS":
+        return ("", 204, cors_headers(request))
+
+    headers = {**cors_headers(request), "Content-Type": "application/json"}
+
+    try:
+        request_json = request.get_json(silent=True) or {}
+        researcher = request_json.get("researcher", {})
+        paper = request_json.get("paper", {})
+        purpose = request_json.get("purpose", "collaboration")
+        context = request_json.get("context", "")
+
+        # Set API keys
+        api_keys = request_json.get("apiKeys", {})
+        if api_keys.get("gemini"):
+            os.environ["GEMINI_API_KEY"] = api_keys["gemini"]
+
+        if not researcher.get("name"):
+            return (json.dumps({
+                "success": False,
+                "error": "Researcher name required"
+            }), 400, headers)
+
+        api_key = os.environ.get("GEMINI_API_KEY")
+        if not api_key:
+            return (json.dumps({
+                "success": False,
+                "error": "Gemini API key required"
+            }), 400, headers)
+
+        # Build the prompt
+        researcher_info = f"Name: {researcher.get('name')}"
+        if researcher.get("institution"):
+            researcher_info += f"\nInstitution: {researcher.get('institution')}"
+        if researcher.get("lab"):
+            researcher_info += f"\nLab/Department: {researcher.get('lab')}"
+
+        paper_info = ""
+        if paper.get("title"):
+            paper_info = f"\nPaper Title: {paper.get('title')}"
+            if paper.get("abstract"):
+                paper_info += f"\nAbstract: {paper.get('abstract')[:500]}..."
+
+        purpose_desc = {
+            "collaboration": "proposing a research collaboration",
+            "inquiry": "asking about their research",
+            "feedback": "seeking feedback on related work",
+            "licensing": "discussing potential technology licensing or commercialization"
+        }.get(purpose, "professional outreach")
+
+        prompt = f"""Write a professional outreach email to an academic researcher.
+
+Researcher Information:
+{researcher_info}
+
+{paper_info}
+
+Purpose: {purpose_desc}
+{f'Additional Context: {context}' if context else ''}
+
+Requirements:
+- Professional but personable tone
+- Reference their specific work if paper info is provided
+- Clear purpose stated early
+- Concise (2-3 short paragraphs)
+- End with a specific call to action
+
+Return ONLY a JSON object with keys: subject, greeting, body, closing
+Example: {{"subject": "Collaboration Inquiry - [Topic]", "greeting": "Dear Dr. Smith,", "body": "...", "closing": "Best regards,"}}"""
+
+        url = f"{GEMINI_API_URL}/{GEMINI_MODEL}:generateContent?key={api_key}"
+        response = requests.post(
+            url,
+            headers={"Content-Type": "application/json"},
+            json={
+                "contents": [{
+                    "parts": [{"text": prompt}]
+                }],
+                "generationConfig": {
+                    "temperature": 0.7,
+                    "maxOutputTokens": 1000,
+                    "responseMimeType": "application/json",
+                }
+            },
+            timeout=30,
+        )
+        response.raise_for_status()
+
+        result = response.json()
+
+        # Extract content from Gemini response
+        if not result.get("candidates"):
+            return (json.dumps({
+                "success": False,
+                "error": "No response from Gemini API"
+            }), 500, headers)
+
+        content = result["candidates"][0]["content"]["parts"][0]["text"]
+
+        # Try to parse JSON from content (may be wrapped in markdown code blocks)
+        content = content.strip()
+        if content.startswith("```json"):
+            content = content[7:]
+        if content.startswith("```"):
+            content = content[3:]
+        if content.endswith("```"):
+            content = content[:-3]
+        content = content.strip()
+
+        email_data = json.loads(content)
+
+        # Validate required fields
+        required_fields = ["subject", "greeting", "body", "closing"]
+        for field in required_fields:
+            if field not in email_data:
+                email_data[field] = ""
+
+        return (json.dumps({
+            "success": True,
+            "email": email_data
+        }), 200, headers)
+
+    except requests.exceptions.RequestException as e:
+        return (json.dumps({
+            "success": False,
+            "error": f"API request failed: {str(e)}"
+        }), 500, headers)
+    except json.JSONDecodeError as e:
+        return (json.dumps({
+            "success": False,
+            "error": f"Failed to parse AI response: {str(e)}"
+        }), 500, headers)
+    except Exception as e:
+        return (json.dumps(error_payload("generate_email", e)), 500, headers)
 
 
 # =============================================================================
@@ -1210,12 +2530,36 @@ def main_handler(request: Request):
     # Route to appropriate handler
     if path in ("", "/pipeline-runner"):
         return pipeline_runner(request)
+    elif path == "/pipeline-search":
+        return pipeline_search(request)
+    elif path == "/pipeline-continue":
+        return pipeline_continue(request)
     elif path == "/pipeline-status":
         return pipeline_status(request)
     elif path == "/get-researchers":
         return get_researchers(request)
     elif path == "/get-papers":
         return get_papers(request)
+    elif path == "/dev-status":
+        return dev_status(request)
+    elif path == "/clear-database":
+        return clear_database(request)
+    elif path == "/test-database":
+        return test_database(request)
+    elif path == "/save-papers":
+        return save_papers(request)
+    elif path == "/analyze-viability":
+        return analyze_paper_viability(request)
+    elif path == "/update-paper-status":
+        return update_paper_status(request)
+    elif path == "/get-papers-filtered":
+        return get_papers_filtered(request)
+    elif path == "/get-pass-reason-tags":
+        return get_pass_reason_tags(request)
+    elif path == "/create-pass-reason-tag":
+        return create_pass_reason_tag(request)
+    elif path == "/generate-email":
+        return generate_email(request)
     else:
         headers = {**cors_headers(request), "Content-Type": "application/json"}
         return (json.dumps({"error": f"Unknown route: {path}"}), 404, headers)

@@ -8,6 +8,7 @@ export interface GmailUser {
   email: string;
   name: string;
   picture?: string;
+  role?: 'admin' | 'user';
 }
 
 export interface GmailAuthState {

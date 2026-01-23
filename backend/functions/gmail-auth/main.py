@@ -8,10 +8,12 @@ import secrets
 import hashlib
 import base64
 from urllib.parse import urlencode
+from typing import Optional, Dict, Any
 
 import functions_framework
 import requests
 from flask import Request
+from google.cloud import firestore
 
 from token_manager import (
     get_client_credentials,
@@ -23,6 +25,103 @@ from token_manager import (
 )
 
 PROJECT_ID = "waffle-mm"
+USERS_COLLECTION = "users"
+WHITELIST_COLLECTION = "whitelist"
+
+
+def get_firestore_client() -> firestore.Client:
+    """Get Firestore client."""
+    return firestore.Client(project=PROJECT_ID)
+
+
+# ============================================================================
+# Whitelist Functions
+# ============================================================================
+
+def get_whitelist_entry(email: str) -> Optional[Dict[str, Any]]:
+    """Check if email is in the whitelist."""
+    db = get_firestore_client()
+    email_lower = email.lower()
+    docs = db.collection(WHITELIST_COLLECTION).where("email", "==", email_lower).limit(1).stream()
+    for doc in docs:
+        return doc.to_dict()
+    return None
+
+
+def is_email_whitelisted(email: str) -> bool:
+    """Check if email is in the whitelist."""
+    return get_whitelist_entry(email) is not None
+
+
+def get_whitelisted_role(email: str) -> str:
+    """Get the role assigned to a whitelisted email."""
+    entry = get_whitelist_entry(email)
+    if entry:
+        return entry.get("role", "user")
+    return "user"
+
+
+# ============================================================================
+# User Functions
+# ============================================================================
+
+def get_user_from_users_collection(email: str) -> Optional[Dict[str, Any]]:
+    """Get user from users collection by email."""
+    db = get_firestore_client()
+    docs = db.collection(USERS_COLLECTION).where("email", "==", email).limit(1).stream()
+    for doc in docs:
+        return doc.to_dict()
+    return None
+
+
+def create_or_update_google_user(
+    uid: str,
+    email: str,
+    name: str,
+    picture: Optional[str] = None,
+    role: str = "user",
+) -> Dict[str, Any]:
+    """Create or update a user in the users collection from Google OAuth."""
+    db = get_firestore_client()
+
+    existing = get_user_from_users_collection(email)
+
+    if existing:
+        # Update existing user's last login
+        db.collection(USERS_COLLECTION).document(existing["uid"]).update({
+            "name": name,
+            "picture": picture,
+            "last_login": firestore.SERVER_TIMESTAMP,
+            "updated_at": firestore.SERVER_TIMESTAMP,
+        })
+        existing["name"] = name
+        existing["picture"] = picture
+        return existing
+
+    # Create new Google user
+    user_data = {
+        "uid": uid,
+        "email": email,
+        "auth_provider": "google",
+        "password_hash": None,
+        "email_verified": True,
+        "verification_token": None,
+        "verification_token_expires": None,
+        "reset_token": None,
+        "reset_token_expires": None,
+        "name": name,
+        "picture": picture,
+        "role": role,
+        "failed_login_attempts": 0,
+        "lockout_until": None,
+        "created_at": firestore.SERVER_TIMESTAMP,
+        "updated_at": firestore.SERVER_TIMESTAMP,
+        "last_login": firestore.SERVER_TIMESTAMP,
+    }
+
+    db.collection(USERS_COLLECTION).document(uid).set(user_data)
+
+    return user_data
 
 SCOPES = [
     "https://www.googleapis.com/auth/gmail.readonly",
@@ -185,13 +284,45 @@ def gmail_auth_callback(request: Request):
         user_name = user_info.get("name")
         user_picture = user_info.get("picture")
 
-        # Check if user already exists
+        # Check if user exists in users collection
+        existing_user_record = get_user_from_users_collection(user_email)
+
+        # If user doesn't exist, check whitelist
+        if not existing_user_record:
+            if not is_email_whitelisted(user_email):
+                return (
+                    json.dumps({
+                        "error": "This email is not authorized to register. Please contact an administrator.",
+                    }),
+                    403,
+                    headers,
+                )
+
+        # Check if user already exists in gmail_tokens
         existing_user = get_user_by_email(user_email)
         uid = existing_user.get("uid") if existing_user else generate_uid()
 
-        # Store tokens
-        store_tokens(
+        # Get role from whitelist or existing user
+        if existing_user_record:
+            role = existing_user_record.get("role", "user")
+        else:
+            role = get_whitelisted_role(user_email)
+
+        # Create or update user in users collection
+        user_record = create_or_update_google_user(
             uid=uid,
+            email=user_email,
+            name=user_name,
+            picture=user_picture,
+            role=role,
+        )
+
+        # Use uid from user_record (in case existing user had different uid)
+        final_uid = user_record.get("uid", uid)
+
+        # Store tokens in gmail_tokens collection (using final_uid to stay in sync)
+        store_tokens(
+            uid=final_uid,
             email=user_email,
             refresh_token=tokens.get("refresh_token"),
             access_token=tokens.get("access_token"),
@@ -205,12 +336,13 @@ def gmail_auth_callback(request: Request):
             json.dumps({
                 "success": True,
                 "user": {
-                    "uid": uid,
+                    "uid": final_uid,
                     "email": user_email,
                     "name": user_name,
                     "picture": user_picture,
+                    "role": user_record.get("role", "user"),
                 },
-                "session_token": uid,
+                "session_token": final_uid,
                 "expires_in": tokens.get("expires_in"),
             }),
             200,
@@ -240,6 +372,10 @@ def gmail_auth_status(request: Request):
     if not tokens:
         return (json.dumps({"authenticated": False}), 200, headers)
 
+    # Get role from users collection
+    user_record = get_user_from_users_collection(tokens.get("email"))
+    role = user_record.get("role", "user") if user_record else "user"
+
     return (
         json.dumps({
             "authenticated": True,
@@ -248,6 +384,7 @@ def gmail_auth_status(request: Request):
                 "email": tokens.get("email"),
                 "name": tokens.get("name"),
                 "picture": tokens.get("picture"),
+                "role": role,
             },
         }),
         200,
