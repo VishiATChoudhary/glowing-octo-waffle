@@ -3,7 +3,9 @@ import { useNavigate } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Search, Users, Building2, FileText, Quote, ExternalLink, Loader2, Mail, Globe, Link2, LayoutGrid, Table, Network, Sparkles } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import { ButtonColorful } from '@/components/ui/button-colorful';
 import { Input } from '@/components/ui/input';
+import { PlaceholdersAndVanishInput } from '@/components/ui/placeholders-and-vanish-input';
 import { Card, CardContent } from '@/components/ui/card';
 import { Researcher, GraphData, GraphNode, GraphLink } from '@/types';
 import { useResearchers } from '@/contexts/ResearchersContext';
@@ -215,36 +217,70 @@ const Researchers = () => {
   return (
     <div className="h-screen flex flex-col">
       {/* Header */}
-      <div className="p-6 border-b border-border">
-        <h2 className="text-lg font-semibold">Researchers</h2>
-        <p className="text-sm text-muted-foreground">
-          Search and discover academic researchers
-        </p>
+      <div className="relative overflow-hidden p-6 border-b border-border bg-background">
+        {/* Static Gradient Background */}
+        <div className="absolute inset-0 overflow-hidden">
+          <div className="absolute inset-0 blur-3xl">
+            <div
+              className="absolute w-[500px] h-[500px] rounded-full opacity-50"
+              style={{
+                background: '#FDE047',
+                top: '-30%',
+                left: '5%',
+              }}
+            />
+            <div
+              className="absolute w-[600px] h-[600px] rounded-full opacity-50"
+              style={{
+                background: '#FBBF24',
+                top: '-40%',
+                left: '35%',
+              }}
+            />
+            <div
+              className="absolute w-[700px] h-[700px] rounded-full opacity-60"
+              style={{
+                background: '#F59E0B',
+                top: '-50%',
+                right: '-20%',
+              }}
+            />
+          </div>
+        </div>
+        <div className="relative z-10">
+          <h2 className="text-lg font-semibold">Researchers</h2>
+          <p className="text-sm text-muted-foreground">
+            Search and discover academic researchers
+          </p>
+        </div>
       </div>
 
       {/* Search Form */}
       <div className="p-6 border-b border-border">
-        <form onSubmit={handleSearch} className="flex gap-2">
-          <div className="relative flex-1">
-            <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-muted-foreground" />
-            <Input
+        <div className="flex gap-2">
+          <div className="flex-1">
+            <PlaceholdersAndVanishInput
+              placeholders={[
+                "Search by name or affiliation...",
+                "Geoffrey Hinton",
+                "Stanford AI Lab",
+                "machine learning researchers",
+                "MIT CSAIL"
+              ]}
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
-              placeholder="Search by name or affiliation..."
-              className="pl-10"
+              onSubmit={handleSearch}
             />
           </div>
-          <Button type="submit" disabled={isSearching || !searchQuery.trim()}>
-            {isSearching ? (
-              <>
-                <Loader2 className="w-4 h-4 mr-2 animate-spin" />
-                Searching...
-              </>
-            ) : (
-              'Search'
-            )}
-          </Button>
-
+          <ButtonColorful
+            type="button"
+            onClick={(e) => {
+              e.preventDefault();
+              handleSearch(e as any);
+            }}
+            disabled={isSearching || !searchQuery.trim()}
+            label={isSearching ? 'Searching...' : 'Search'}
+          />
           {/* View Toggle */}
           <div className="flex border border-border rounded-md">
             <Button
@@ -268,7 +304,7 @@ const Researchers = () => {
               <Table className="w-4 h-4" />
             </Button>
           </div>
-        </form>
+        </div>
 
         {searchError && (
           <p className="mt-2 text-sm text-destructive">{searchError}</p>
@@ -326,7 +362,7 @@ const Researchers = () => {
                   <Button
                     onClick={handleEnrichAll}
                     variant="outline"
-                    className="gap-2"
+                    className="gap-2 bg-yellow-100/50 hover:bg-yellow-200/50 border-yellow-300 text-yellow-700"
                   >
                     <Sparkles className="w-4 h-4" />
                     Enrich All ({unenrichedCount})
@@ -436,8 +472,8 @@ const ResearchersTable = ({ researchers, onSelect, onEnrich, enrichingIds }: Res
             >
               <td className="px-4 py-3">
                 <div className="flex items-center gap-2">
-                  <div className="w-8 h-8 rounded-full bg-node-researcher flex items-center justify-center flex-shrink-0">
-                    <Users className="w-4 h-4 text-node-researcher-border" />
+                  <div className="w-8 h-8 rounded-full flex items-center justify-center flex-shrink-0 border-2 border-yellow-400 bg-transparent">
+                    <Users className="w-4 h-4 text-yellow-500" />
                   </div>
                   <span className="font-medium text-sm">{researcher.name}</span>
                 </div>
@@ -516,8 +552,8 @@ const ResearcherCard = ({ researcher, onClick, onEnrich, isEnriching }: Research
     >
       <CardContent className="p-4">
         <div className="flex items-start gap-3">
-          <div className="w-10 h-10 rounded-full bg-node-researcher flex items-center justify-center flex-shrink-0">
-            <Users className="w-5 h-5 text-node-researcher-border" />
+          <div className="w-10 h-10 rounded-full flex items-center justify-center flex-shrink-0 border-2 border-yellow-400 bg-transparent">
+            <Users className="w-5 h-5 text-yellow-500" />
           </div>
           <div className="flex-1 min-w-0">
             <div className="flex items-center gap-2">
@@ -610,8 +646,8 @@ const ResearcherPopup = ({ researcher, onClose }: ResearcherPopupProps) => {
               <Card className="flex flex-col overflow-hidden">
                 <CardContent className="p-6 overflow-y-auto">
                   <div className="flex items-start gap-4">
-                    <div className="w-14 h-14 rounded-full bg-node-researcher flex items-center justify-center flex-shrink-0">
-                      <Users className="w-7 h-7 text-node-researcher-border" />
+                    <div className="w-14 h-14 rounded-full flex items-center justify-center flex-shrink-0 border-2 border-yellow-400 bg-transparent">
+                      <Users className="w-7 h-7 text-yellow-500" />
                     </div>
                     <div className="flex-1">
                       <h2 className="text-lg font-semibold">{researcher.name}</h2>
@@ -793,8 +829,8 @@ const EnrichmentPopup = ({ result, onClose }: EnrichmentPopupProps) => {
                 <CardContent className="p-6">
                   {/* Header */}
                   <div className="flex items-center gap-3 mb-4">
-                    <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center">
-                      <Sparkles className="w-5 h-5 text-primary" />
+                    <div className="w-10 h-10 rounded-full flex items-center justify-center border-2 border-yellow-400 bg-transparent">
+                      <Sparkles className="w-5 h-5 text-yellow-500" />
                     </div>
                     <div>
                       <h3 className="font-semibold">Enrichment Results</h3>

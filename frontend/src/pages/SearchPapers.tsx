@@ -2,7 +2,9 @@ import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Search, FileText, Calendar, Users, Quote, TrendingUp, Star, ExternalLink, AlertCircle, Filter, ChevronDown, ChevronUp, CheckCircle, XCircle, UserPlus, Info, Sparkles, X } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import { ButtonColorful } from '@/components/ui/button-colorful';
 import { Input } from '@/components/ui/input';
+import { PlaceholdersAndVanishInput } from '@/components/ui/placeholders-and-vanish-input';
 import { Card, CardContent } from '@/components/ui/card';
 import { Label } from '@/components/ui/label';
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components/ui/tooltip';
@@ -241,49 +243,90 @@ const SearchPapers = () => {
   return (
     <div className="h-screen flex flex-col">
       {/* Header */}
-      <div className="p-6 border-b border-border">
-        <h2 className="text-lg font-semibold">Search Papers</h2>
-        <p className="text-sm text-muted-foreground">
-          Search across {getEnabledSources().length} academic databases
-        </p>
+      <div className="relative overflow-hidden p-6 border-b border-border bg-background">
+        {/* Static Gradient Background */}
+        <div className="absolute inset-0 overflow-hidden">
+          <div className="absolute inset-0 blur-3xl">
+            <div
+              className="absolute w-[500px] h-[500px] rounded-full opacity-50"
+              style={{
+                background: '#FDE047',
+                top: '-30%',
+                left: '5%',
+              }}
+            />
+            <div
+              className="absolute w-[600px] h-[600px] rounded-full opacity-50"
+              style={{
+                background: '#FBBF24',
+                top: '-40%',
+                left: '35%',
+              }}
+            />
+            <div
+              className="absolute w-[700px] h-[700px] rounded-full opacity-60"
+              style={{
+                background: '#F59E0B',
+                top: '-50%',
+                right: '-20%',
+              }}
+            />
+          </div>
+        </div>
+        <div className="relative z-10">
+          <h2 className="text-lg font-semibold">Search Papers</h2>
+          <p className="text-sm text-muted-foreground">
+            Search across {getEnabledSources().length} academic databases
+          </p>
+        </div>
       </div>
 
       {/* Search Form */}
       <div className="p-6 border-b border-border">
-        <form onSubmit={handleSearch} className="flex gap-2">
-          <div className="relative flex-1">
-            <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-muted-foreground" />
-            <Input
+        <div className="flex gap-2">
+          <div className="flex-1">
+            <PlaceholdersAndVanishInput
+              placeholders={[
+                "Search by title, author, or topic...",
+                "transformer attention mechanisms",
+                "neural network optimization",
+                "deep learning applications",
+                "machine learning algorithms"
+              ]}
               value={state.query}
               onChange={(e) => setQuery(e.target.value)}
-              placeholder="Search by title, author, or topic..."
-              className="pl-10"
+              onSubmit={handleSearch}
             />
           </div>
+          <ButtonColorful
+            type="button"
+            onClick={(e) => {
+              e.preventDefault();
+              handleSearch(e as any);
+            }}
+            disabled={isSearching || !state.query.trim()}
+            label={isSearching ? 'Searching...' : 'Search'}
+          />
           <Button
             type="button"
-            variant="outline"
             onClick={() => setShowFilters(!showFilters)}
-            className={hasActiveFilters ? 'border-primary' : ''}
+            className="bg-gradient-to-r from-yellow-400 via-yellow-500 to-amber-500 hover:from-yellow-300 hover:via-yellow-400 hover:to-amber-400 transition-all duration-200 text-zinc-900 font-medium"
           >
             <Filter className="w-4 h-4 mr-1" />
             Filters
-            {hasActiveFilters && <span className="ml-1 w-2 h-2 bg-primary rounded-full" />}
+            {hasActiveFilters && <span className="ml-1 w-2 h-2 bg-zinc-900 rounded-full" />}
             {showFilters ? <ChevronUp className="w-4 h-4 ml-1" /> : <ChevronDown className="w-4 h-4 ml-1" />}
-          </Button>
-          <Button type="submit" disabled={isSearching || !state.query.trim()}>
-            {isSearching ? 'Searching...' : 'Search'}
           </Button>
           <TooltipProvider>
             <Tooltip>
               <TooltipTrigger asChild>
                 <Button
                   type="button"
-                  variant="outline"
                   onClick={handleGetKeywords}
                   disabled={isLoadingKeywords || !state.query.trim()}
+                  className="h-10 w-10 p-0 bg-gradient-to-r from-yellow-400 via-yellow-500 to-amber-500 hover:from-yellow-300 hover:via-yellow-400 hover:to-amber-400 transition-all duration-200"
                 >
-                  <Sparkles className="w-4 h-4" />
+                  <Sparkles className="w-4 h-4 text-zinc-900" />
                 </Button>
               </TooltipTrigger>
               <TooltipContent>
@@ -291,7 +334,7 @@ const SearchPapers = () => {
               </TooltipContent>
             </Tooltip>
           </TooltipProvider>
-        </form>
+        </div>
 
         {/* Keyword Suggestions Panel */}
         <AnimatePresence>
@@ -372,7 +415,7 @@ const SearchPapers = () => {
               exit={{ opacity: 0, height: 0 }}
               className="overflow-hidden"
             >
-              <div className="mt-4 p-4 bg-secondary/50 rounded-lg">
+              <div className="mt-4 p-4 bg-yellow-50/80 rounded-lg border border-yellow-200">
                 <div className="flex items-center justify-between mb-3">
                   <span className="text-sm font-medium">Filter Results</span>
                   {hasActiveFilters && (
@@ -672,7 +715,7 @@ const PaperCard = ({ paper, viability, onViabilityCalculated, llmProvider, llmAp
   };
 
   return (
-    <Card className="hover:shadow-md transition-shadow">
+    <Card className="hover:shadow-md transition-shadow bg-white border-amber-500">
       <CardContent className="p-4">
         <h3 className="font-medium text-sm mb-2">{paper.title}</h3>
         <div className="flex flex-wrap gap-4 text-xs text-muted-foreground">

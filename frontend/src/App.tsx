@@ -13,6 +13,7 @@ import Researchers from "./pages/Researchers";
 import TotalRevenue from "./pages/TotalRevenue";
 import TalentPipeline from "./pages/TalentPipeline";
 import FastestRisingTopics from "./pages/FastestRisingTopics";
+import EmergingHubs from "./pages/EmergingHubs";
 import NotFound from "./pages/NotFound";
 import { SearchProvider } from "./contexts/SearchContext";
 import { QueryProvider } from "./contexts/QueryContext";
@@ -44,6 +45,7 @@ const App = () => (
                       <Route path="/total-revenue" element={<TotalRevenue />} />
                       <Route path="/talent-pipeline" element={<TalentPipeline />} />
                       <Route path="/fastest-rising-topics" element={<FastestRisingTopics />} />
+                      <Route path="/emerging-hubs" element={<EmergingHubs />} />
                       <Route path="*" element={<NotFound />} />
                     </Routes>
                   </Layout>

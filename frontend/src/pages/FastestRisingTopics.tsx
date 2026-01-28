@@ -123,18 +123,47 @@ const FastestRisingTopics: React.FC = () => {
     <div className="w-full h-full flex flex-col bg-background">
       {/* Header */}
       <motion.div
-        className="px-6 py-4 border-b border-border flex items-center gap-4"
+        className="relative overflow-hidden px-6 py-4 border-b border-border flex items-center gap-4 bg-background"
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}
       >
+        {/* Static Gradient Background */}
+        <div className="absolute inset-0 overflow-hidden">
+          <div className="absolute inset-0 blur-3xl">
+            <div
+              className="absolute w-[500px] h-[500px] rounded-full opacity-50"
+              style={{
+                background: '#FDE047',
+                top: '-30%',
+                left: '5%',
+              }}
+            />
+            <div
+              className="absolute w-[600px] h-[600px] rounded-full opacity-50"
+              style={{
+                background: '#FBBF24',
+                top: '-40%',
+                left: '35%',
+              }}
+            />
+            <div
+              className="absolute w-[700px] h-[700px] rounded-full opacity-60"
+              style={{
+                background: '#F59E0B',
+                top: '-50%',
+                right: '-20%',
+              }}
+            />
+          </div>
+        </div>
         <button
           onClick={() => navigate("/")}
-          className="p-2 hover:bg-accent rounded-lg transition-colors"
+          className="relative z-10 p-2 hover:bg-accent rounded-lg transition-colors"
         >
           <ArrowLeft className="w-5 h-5" />
         </button>
-        <div>
+        <div className="relative z-10">
           <h1 className="text-2xl font-bold text-foreground">
             Fastest Rising Topics
           </h1>

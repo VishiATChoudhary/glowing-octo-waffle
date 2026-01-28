@@ -59,12 +59,14 @@ const AnimatedGradientDemo: React.FC = () => {
           />
         </Link>
         <div className="md:col-span-2">
-          <BentoCard
-            title="Top Emerging Hubs"
-            value="TU Delft"
-            subtitle="Highest volume of high-potential papers over the last four weeks"
-            colors={["#3B82F6", "#A78BFA", "#FBCFE8"]}
-          />
+          <Link to="/emerging-hubs">
+            <BentoCard
+              title="Top Emerging Hubs"
+              value="TU Delft"
+              subtitle="Highest volume of high-potential papers over the last four weeks"
+              colors={["#3B82F6", "#A78BFA", "#FBCFE8"]}
+            />
+          </Link>
         </div>
         <div className="md:col-span-3">
           <Link to="/fastest-rising-topics">

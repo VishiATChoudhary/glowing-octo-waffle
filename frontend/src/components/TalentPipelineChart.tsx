@@ -2,6 +2,7 @@
 
 import React, { useState } from "react";
 import { Area, AreaChart, CartesianGrid, XAxis } from "recharts";
+import { Progress } from "@ark-ui/react/progress";
 import {
   Card,
   CardContent,
@@ -32,6 +33,14 @@ const fullChartData = [
   { month: "December", saved: 68, contacted: 38, meeting: 21 },
 ];
 
+// Weekly data for 4 weeks view
+const weeklyData = [
+  { month: "CW 01", saved: 58, contacted: 32, meeting: 17 },
+  { month: "CW 02", saved: 62, contacted: 34, meeting: 18 },
+  { month: "CW 03", saved: 65, contacted: 36, meeting: 20 },
+  { month: "CW 04", saved: 68, contacted: 38, meeting: 21 },
+];
+
 const chartConfig = {
   saved: {
     label: "Saved",
@@ -49,6 +58,16 @@ const chartConfig = {
 
 // Period configuration
 const PERIODS = {
+  '4w': {
+    key: '4w',
+    label: '4 weeks',
+    dateRange: 'Last 4 weeks',
+  },
+  '3m': {
+    key: '3m',
+    label: '3 months',
+    dateRange: 'Oct - Dec 2024',
+  },
   '6m': {
     key: '6m',
     label: '6 months',
@@ -97,10 +116,14 @@ export default function TalentPipelineChart() {
   // Filter data based on selected period
   const getFilteredData = () => {
     switch (selectedPeriod) {
+      case '4w':
+        return weeklyData; // Last 4 weeks
+      case '3m':
+        return fullChartData.slice(-3); // Last 3 months (Oct-Dec)
       case '6m':
-        return fullChartData.slice(-6);
+        return fullChartData.slice(-6); // Last 6 months (Jul-Dec)
       case '12m':
-        return fullChartData;
+        return fullChartData; // Full year (Jan-Dec)
       default:
         return fullChartData;
     }
@@ -108,6 +131,11 @@ export default function TalentPipelineChart() {
 
   const filteredData = getFilteredData();
   const currentPeriod = PERIODS[selectedPeriod];
+
+  // Calculate answer rate percentage
+  const totalContacted = filteredData.reduce((sum, item) => sum + item.contacted, 0);
+  const totalSaved = filteredData.reduce((sum, item) => sum + item.saved, 0);
+  const answerRate = totalSaved > 0 ? Math.round((totalContacted / totalSaved) * 100) : 0;
 
   return (
     <Card>
@@ -130,6 +158,29 @@ export default function TalentPipelineChart() {
         </Select>
       </CardHeader>
       <CardContent>
+        <div className="mb-6">
+          <Progress.Root value={answerRate} className="inline-flex items-center">
+            <div className="relative">
+              <Progress.Circle className="w-16 h-16 [--size:64px] [--thickness:6px]">
+                <Progress.CircleTrack
+                  className="stroke-gray-200 dark:stroke-gray-700"
+                  strokeWidth="6"
+                  fill="none"
+                />
+                <Progress.CircleRange
+                  className="stroke-[#FFD500] transition-all duration-300 ease-out"
+                  strokeWidth="6"
+                  fill="none"
+                  strokeLinecap="round"
+                />
+              </Progress.Circle>
+              <div className="absolute inset-0 flex items-center justify-center">
+                <span className="text-sm font-semibold text-foreground">{answerRate}%</span>
+              </div>
+            </div>
+            <span className="ml-3 text-sm font-medium text-muted-foreground">Answer Rate</span>
+          </Progress.Root>
+        </div>
         <ChartContainer config={chartConfig}>
           <AreaChart accessibilityLayer data={filteredData}>
             <CartesianGrid vertical={false} strokeDasharray="3 3" />
@@ -141,7 +192,7 @@ export default function TalentPipelineChart() {
               tickLine={false}
               axisLine={false}
               tickMargin={8}
-              tickFormatter={(value) => value.slice(0, 3)}
+              tickFormatter={(value) => value.startsWith("CW") ? value : value.slice(0, 3)}
             />
             <ChartTooltip cursor={false} content={<CustomTooltip />} />
             <Area
