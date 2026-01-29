@@ -208,6 +208,7 @@ const Graph = () => {
           title="Query Graph"
           subtitle="Ask questions about the knowledge graph"
           placeholder="Ask about researchers or papers..."
+          showOrangePurpleGradient={true}
         />
       </div>
 

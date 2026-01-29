@@ -4,113 +4,161 @@ import { ArrowLeft } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 import TopicNebula, { TopicNebulaData } from "@/components/TopicNebula";
 
-// Mock data for Metal-Air Batteries topic
+// Mock data for Melta Air Batteries topic - based on 2025-2026 research
 const mockTopicData: TopicNebulaData = {
   centralNode: {
     id: "central-1",
-    text: "Metal-Air Batteries",
+    text: "Melta Air Batteries",
     weight: 100,
     type: "core",
   },
   relatedNodes: [
-    // Application/Startup examples (High Weight)
+    // Application examples (High Weight) - Current emerging uses
     {
       id: "app-1",
-      text: "Heavy-lift Drones",
-      weight: 85,
+      text: "Electric Vehicle Range Extenders",
+      weight: 92,
       type: "application",
     },
     {
       id: "app-2",
-      text: "eVTOL",
+      text: "Grid Energy Storage",
       weight: 90,
       type: "application",
     },
     {
       id: "app-3",
-      text: "Grid Storage",
+      text: "eVTOL Aircraft",
       weight: 88,
       type: "application",
     },
     {
       id: "app-4",
-      text: "Urban Air Mobility (UAM)",
-      weight: 82,
+      text: "Renewable Energy Storage",
+      weight: 85,
       type: "application",
     },
     {
       id: "app-5",
-      text: "Long-range IoT",
-      weight: 78,
+      text: "Heavy-lift Drones",
+      weight: 82,
       type: "application",
     },
     {
       id: "app-6",
-      text: "Emergency Backup Power",
+      text: "Railway Signaling Systems",
+      weight: 78,
+      type: "application",
+    },
+    {
+      id: "app-7",
+      text: "Medical Devices",
       weight: 75,
       type: "application",
     },
-    // Technical examples (High Weight)
+    {
+      id: "app-8",
+      text: "Emergency Backup Power",
+      weight: 72,
+      type: "application",
+    },
+    // Technical terms (High Weight) - Current research focus 2025-2026
     {
       id: "tech-1",
-      text: "Zinc-Air",
-      weight: 85,
+      text: "Oxygen Reduction Reaction (ORR)",
+      weight: 90,
       type: "technical",
     },
     {
       id: "tech-2",
       text: "Bifunctional Catalysts",
-      weight: 82,
+      weight: 88,
       type: "technical",
     },
-    // Technical examples (Medium Weight)
     {
       id: "tech-3",
-      text: "High Energy Density",
-      weight: 70,
+      text: "Zinc-Air Chemistry",
+      weight: 86,
       type: "technical",
     },
     {
       id: "tech-4",
-      text: "Rechargeability Challenges",
-      weight: 65,
+      text: "Air-Breathing Cathodes",
+      weight: 84,
       type: "technical",
     },
+    // Technical terms (Medium Weight)
     {
       id: "tech-5",
-      text: "Cycle Life Optimization",
-      weight: 68,
+      text: "Oxygen Evolution Reaction (OER)",
+      weight: 80,
       type: "technical",
     },
     {
       id: "tech-6",
-      text: "Air Electrode Design",
-      weight: 72,
+      text: "Potassium-Air Systems",
+      weight: 78,
       type: "technical",
     },
-    // Technical examples (Low Weight)
     {
       id: "tech-7",
-      text: "Dendrite Formation",
-      weight: 55,
+      text: "Aluminum-Air Technology",
+      weight: 76,
       type: "technical",
     },
     {
       id: "tech-8",
-      text: "Aqueous Electrolyte",
-      weight: 58,
+      text: "Nanostructured Materials",
+      weight: 74,
       type: "technical",
     },
     {
       id: "tech-9",
-      text: "Carbon Dioxide Management",
-      weight: 52,
+      text: "Hybrid Electrolyte Systems",
+      weight: 72,
       type: "technical",
     },
     {
       id: "tech-10",
-      text: "Oxygen Reduction Reaction",
+      text: "Round-Trip Efficiency",
+      weight: 70,
+      type: "technical",
+    },
+    {
+      id: "tech-11",
+      text: "Dendrite Growth Mitigation",
+      weight: 68,
+      type: "technical",
+    },
+    // Technical terms (Lower Weight) - Ongoing challenges
+    {
+      id: "tech-12",
+      text: "Metal Anode Corrosion",
+      weight: 65,
+      type: "technical",
+    },
+    {
+      id: "tech-13",
+      text: "Parasitic Corrosion",
+      weight: 62,
+      type: "technical",
+    },
+    {
+      id: "tech-14",
+      text: "Hydrogen Evolution",
       weight: 60,
+      type: "technical",
+    },
+    {
+      id: "tech-15",
+      text: "Coulomb Efficiency",
+      weight: 58,
+      type: "technical",
+    },
+    {
+      id: "tech-16",
+      text: "Electrolyte Stability",
+      weight: 56,
       type: "technical",
     },
   ],
@@ -173,28 +221,39 @@ const FastestRisingTopics: React.FC = () => {
         </div>
       </motion.div>
 
-      {/* Main Content - Two sections */}
-      <div className="flex-1 flex flex-col overflow-hidden">
-        {/* Top Section: Topic Nebula - 50% height */}
+      {/* Main Content - Full page visualization */}
+      <div className="flex-1 flex flex-col overflow-hidden bg-white">
         <motion.div
-          className="h-1/2 w-full border-b border-border p-4"
+          className="flex-1 w-full p-4 relative bg-white"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.6, delay: 0.2 }}
         >
-          <div className="w-full h-full">
+          <div className="w-full h-full bg-white">
             <TopicNebula data={mockTopicData} />
           </div>
-        </motion.div>
 
-        {/* Bottom Section: Reserved for future content - 50% height */}
-        <motion.div
-          className="h-1/2 w-full"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 0.6, delay: 0.4 }}
-        >
-          {/* Left blank for future content */}
+          {/* Legend */}
+          <div className="absolute bottom-8 right-8 bg-white/90 backdrop-blur-sm border border-border rounded-lg p-4 shadow-sm">
+            <h3 className="text-sm font-semibold mb-3">Legend</h3>
+            <div className="space-y-2 text-xs">
+              <div className="flex items-center gap-2">
+                <div className="w-3 h-3 rounded-full" style={{ backgroundColor: '#FDBA74' }} />
+                <span>Main Topic</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <div className="w-3 h-3 rounded-full" style={{ backgroundColor: '#93C5FD' }} />
+                <span>Applications</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <div className="w-3 h-3 rounded-full" style={{ backgroundColor: '#D8B4FE' }} />
+                <span>Technical Terms</span>
+              </div>
+            </div>
+            <p className="text-xs text-muted-foreground mt-3">
+              Circle size indicates frequency
+            </p>
+          </div>
         </motion.div>
       </div>
     </div>

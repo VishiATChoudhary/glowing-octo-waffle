@@ -22,16 +22,16 @@ type Hub = {
 };
 
 const fullYearData: Hub[] = [
-  { id: "4", hub: "Stanford", location: "USA", averageScore: 4.2, papersPublished: 467 },
-  { id: "2", hub: "MIT", location: "USA", averageScore: 4.1, papersPublished: 528 },
-  { id: "1", hub: "TU Delft", location: "Netherlands", averageScore: 3.9, papersPublished: 342 },
-  { id: "9", hub: "Caltech", location: "USA", averageScore: 3.8, papersPublished: 245 },
-  { id: "8", hub: "Oxford", location: "UK", averageScore: 3.7, papersPublished: 356 },
-  { id: "3", hub: "ETH Zurich", location: "Switzerland", averageScore: 3.6, papersPublished: 298 },
-  { id: "7", hub: "Tsinghua", location: "China", averageScore: 3.5, papersPublished: 412 },
-  { id: "5", hub: "Cambridge", location: "UK", averageScore: 3.4, papersPublished: 389 },
-  { id: "10", hub: "Imperial", location: "UK", averageScore: 3.2, papersPublished: 318 },
-  { id: "6", hub: "NUS", location: "Singapore", averageScore: 3.1, papersPublished: 276 },
+  { id: "4", hub: "Stanford", location: "USA", flag: "🇺🇸", averageScore: 4.2, papersPublished: 467 },
+  { id: "2", hub: "MIT", location: "USA", flag: "🇺🇸", averageScore: 4.1, papersPublished: 528 },
+  { id: "1", hub: "TU Delft", location: "Netherlands", flag: "🇳🇱", averageScore: 3.9, papersPublished: 342 },
+  { id: "9", hub: "Caltech", location: "USA", flag: "🇺🇸", averageScore: 3.8, papersPublished: 245 },
+  { id: "8", hub: "Oxford", location: "UK", flag: "🇬🇧", averageScore: 3.7, papersPublished: 356 },
+  { id: "3", hub: "ETH Zurich", location: "Switzerland", flag: "🇨🇭", averageScore: 3.6, papersPublished: 298 },
+  { id: "7", hub: "Tsinghua", location: "China", flag: "🇨🇳", averageScore: 3.5, papersPublished: 412 },
+  { id: "5", hub: "Cambridge", location: "UK", flag: "🇬🇧", averageScore: 3.4, papersPublished: 389 },
+  { id: "10", hub: "Imperial", location: "UK", flag: "🇬🇧", averageScore: 3.2, papersPublished: 318 },
+  { id: "6", hub: "NUS", location: "Singapore", flag: "🇸🇬", averageScore: 3.1, papersPublished: 276 },
 ];
 
 const columns: ColumnDef<Hub>[] = [
@@ -43,21 +43,27 @@ const columns: ColumnDef<Hub>[] = [
   {
     header: "Location",
     accessorKey: "location",
+    cell: ({ row }) => (
+      <div className="flex items-center gap-2">
+        <span className="text-xl">{row.original.flag}</span>
+        <span>{row.getValue("location")}</span>
+      </div>
+    ),
   },
   {
-    header: "Average Score",
+    header: () => <div className="text-center">Average Score</div>,
     accessorKey: "averageScore",
     cell: ({ row }) => {
       const score = parseFloat(row.getValue("averageScore"));
-      return <div>{score.toFixed(1)}</div>;
+      return <div className="text-center">{score.toFixed(1)}</div>;
     },
   },
   {
-    header: () => <div className="text-right">Papers Published</div>,
+    header: () => <div className="text-center">Papers Published</div>,
     accessorKey: "papersPublished",
     cell: ({ row }) => {
       const papers = parseInt(row.getValue("papersPublished"));
-      return <div className="text-right">{papers.toLocaleString()}</div>;
+      return <div className="text-center">{papers.toLocaleString()}</div>;
     },
   },
 ];
@@ -166,13 +172,13 @@ export default function EmergingHubs() {
       </div>
 
       <div className="flex-1 p-8">
-        <div className="bg-background rounded-lg border">
+        <div className="bg-background rounded-lg border border-amber-500">
         <Table>
-          <TableHeader>
+          <TableHeader className="[&_tr]:border-b-amber-500">
             {table.getHeaderGroups().map((headerGroup) => (
-              <TableRow key={headerGroup.id} className="hover:bg-transparent">
+              <TableRow key={headerGroup.id} className="hover:bg-transparent border-b-amber-500">
                 {headerGroup.headers.map((header) => (
-                  <TableHead key={header.id}>
+                  <TableHead key={header.id} className="text-amber-700 font-medium">
                     {header.isPlaceholder
                       ? null
                       : flexRender(header.column.columnDef.header, header.getContext())}
@@ -181,7 +187,7 @@ export default function EmergingHubs() {
               </TableRow>
             ))}
           </TableHeader>
-          <TableBody>
+          <TableBody className="[&_tr]:border-0">
             {table.getRowModel().rows?.length ? (
               table.getRowModel().rows.map((row) => (
                 <TableRow key={row.id}>

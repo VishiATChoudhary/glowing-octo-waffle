@@ -72,7 +72,7 @@ const AnimatedGradientDemo: React.FC = () => {
           <Link to="/fastest-rising-topics">
             <BentoCard
               title="Fastest Rising Topics"
-              value="Metal-Air Batteries"
+              value="Melta Air Batteries"
               subtitle="Highest % growth in mention frequency over the last four weeks"
               colors={["#EC4899", "#F472B6", "#3B82F6"]}
             />

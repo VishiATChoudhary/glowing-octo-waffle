@@ -12,12 +12,14 @@ interface RuixenQueryBoxProps {
   onSend?: (message: string) => void;
   placeholder?: string;
   disabled?: boolean;
+  showGradient?: boolean;
 }
 
 export default function RuixenQueryBox({
   onSend,
   placeholder = "Ask anything...",
-  disabled = false
+  disabled = false,
+  showGradient = true
 }: RuixenQueryBoxProps) {
   const { textareaRef, adjustHeight } = useAutoResizeTextarea({
     minHeight: 56,
@@ -43,36 +45,38 @@ export default function RuixenQueryBox({
 
   return (
     <div className="w-full px-4 py-6">
-      <div className="relative w-full rounded-2xl border border-yellow-200 shadow-sm overflow-hidden" style={{ backgroundColor: 'white' }}>
+      <div className={`relative w-full rounded-2xl shadow-sm overflow-hidden ${showGradient ? 'border border-yellow-200' : 'border border-border'}`} style={{ backgroundColor: 'white' }}>
         {/* Soft Pastel Yellow Gradient Background - matching title card */}
-        <div className="absolute inset-0 overflow-hidden">
-          <div className="absolute inset-0 blur-3xl">
-            <div
-              className="absolute w-[500px] h-[500px] rounded-full opacity-40"
-              style={{
-                background: '#FDE047',
-                top: '-50%',
-                left: '5%',
-              }}
-            />
-            <div
-              className="absolute w-[600px] h-[600px] rounded-full opacity-40"
-              style={{
-                background: '#FBBF24',
-                top: '-60%',
-                left: '40%',
-              }}
-            />
-            <div
-              className="absolute w-[700px] h-[700px] rounded-full opacity-50"
-              style={{
-                background: '#F59E0B',
-                top: '-70%',
-                right: '-10%',
-              }}
-            />
+        {showGradient && (
+          <div className="absolute inset-0 overflow-hidden">
+            <div className="absolute inset-0 blur-3xl">
+              <div
+                className="absolute w-[500px] h-[500px] rounded-full opacity-40"
+                style={{
+                  background: '#FDE047',
+                  top: '-50%',
+                  left: '5%',
+                }}
+              />
+              <div
+                className="absolute w-[600px] h-[600px] rounded-full opacity-40"
+                style={{
+                  background: '#FBBF24',
+                  top: '-60%',
+                  left: '40%',
+                }}
+              />
+              <div
+                className="absolute w-[700px] h-[700px] rounded-full opacity-50"
+                style={{
+                  background: '#F59E0B',
+                  top: '-70%',
+                  right: '-10%',
+                }}
+              />
+            </div>
           </div>
-        </div>
+        )}
 
         <Textarea
           id="ai-textarea"

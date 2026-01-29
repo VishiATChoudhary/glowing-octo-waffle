@@ -34,71 +34,66 @@ const Query = () => {
   };
 
   return (
-    <div className="h-screen flex flex-col">
-      {/* Header */}
-      <div className="relative overflow-hidden p-6 border-b border-border" style={{ backgroundColor: 'white' }}>
-        {/* Static Gradient Background */}
-        <div className="absolute inset-0 overflow-hidden">
-          <div className="absolute inset-0 blur-3xl">
-            <div
-              className="absolute w-[500px] h-[500px] rounded-full opacity-50"
-              style={{
-                background: '#FDE047',
-                top: '-30%',
-                left: '5%',
-              }}
-            />
-            <div
-              className="absolute w-[600px] h-[600px] rounded-full opacity-50"
-              style={{
-                background: '#FBBF24',
-                top: '-40%',
-                left: '35%',
-              }}
-            />
-            <div
-              className="absolute w-[700px] h-[700px] rounded-full opacity-60"
-              style={{
-                background: '#F59E0B',
-                top: '-50%',
-                right: '-20%',
-              }}
-            />
-          </div>
-        </div>
-        <div className="relative z-10">
-          <h2 className="text-lg font-semibold">Query Papers</h2>
-          <p className="text-sm text-muted-foreground">
-            Search across arXiv, Google Scholar, and Elsevier
-          </p>
-        </div>
-      </div>
+    <div className="h-screen flex flex-col relative overflow-hidden">
+      {/* Subtle background gradient */}
+      <div className="absolute inset-0" style={{
+        background: 'linear-gradient(to bottom, #fafaf9 0%, #ffffff 50%, #fafaf9 100%)'
+      }} />
 
       {/* Messages Area */}
-      <div className="flex-1 overflow-y-auto p-6">
+      <div className="flex-1 overflow-y-auto p-6 relative z-10">
         {messages.length === 0 ? (
-          <div className="flex flex-col items-center justify-center h-full text-center">
-            <p className="text-muted-foreground text-sm max-w-md mb-4">
-              Start by asking a question about academic papers. Try something like:
+          <div className="flex flex-col items-center justify-center h-full text-center px-4">
+            {/* Waffle Icon */}
+            <div className="text-8xl mb-6">🧇</div>
+
+            {/* Welcome Text */}
+            <h2 className="text-3xl font-semibold mb-2">Waffles.Chat</h2>
+            <p className="text-muted-foreground text-sm max-w-md mb-8">
+              Ask questions about academic papers and research
             </p>
-            <div className="space-y-2">
+
+            {/* Example Question Cards */}
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-4 max-w-4xl mb-6">
               {[
-                "Find papers on transformer architectures",
-                "What are the latest advances in NLP?",
-                "Show me papers by Geoffrey Hinton",
-              ].map((suggestion, i) => (
+                {
+                  icon: "📊",
+                  title: "Find Papers",
+                  description: "Search for papers on transformer architectures",
+                  query: "Find papers on transformer architectures"
+                },
+                {
+                  icon: "🔬",
+                  title: "Latest Research",
+                  description: "What are the latest advances in NLP?",
+                  query: "What are the latest advances in NLP?"
+                },
+                {
+                  icon: "👨‍🔬",
+                  title: "By Author",
+                  description: "Show me papers by Geoffrey Hinton",
+                  query: "Show me papers by Geoffrey Hinton"
+                },
+              ].map((card, i) => (
                 <button
                   key={i}
-                  onClick={() => handleSendMessage(suggestion)}
-                  className="block w-full text-left px-4 py-2 text-sm border border-border rounded hover:bg-secondary transition-colors"
+                  onClick={() => handleSendMessage(card.query)}
+                  className="p-4 border border-border rounded-xl hover:border-amber-500 hover:shadow-md transition-all text-left bg-white"
                 >
-                  "{suggestion}"
+                  <div className="text-3xl mb-2">{card.icon}</div>
+                  <h3 className="font-semibold text-sm mb-1">{card.title}</h3>
+                  <p className="text-xs text-muted-foreground">{card.description}</p>
                 </button>
               ))}
             </div>
+
+            {/* Disclaimer */}
+            <p className="text-xs text-muted-foreground/70">
+              Results are based on available academic databases. Please verify important information.
+            </p>
           </div>
         ) : (
-          <div className="max-w-3xl mx-auto space-y-4">
+          <div className="max-w-3xl mx-auto space-y-4 py-8">
             <AnimatePresence mode="popLayout">
               {messages.map((message) => (
                 <motion.div
@@ -109,14 +104,45 @@ const Query = () => {
                   className={`flex ${message.role === 'user' ? 'justify-end' : 'justify-start'}`}
                 >
                   <div
-                    className={`max-w-[80%] px-4 py-3 rounded-lg ${
+                    className={`max-w-[80%] px-4 py-3 rounded-lg relative overflow-hidden ${
                       message.role === 'user'
-                        ? 'bg-gradient-to-r from-yellow-400 via-yellow-500 to-amber-500 text-zinc-900'
+                        ? 'text-zinc-900 border border-amber-500'
                         : 'bg-secondary text-secondary-foreground'
                     }`}
+                    style={message.role === 'user' ? { backgroundColor: 'white' } : {}}
                   >
-                    <p className="text-sm whitespace-pre-wrap">{message.content}</p>
-                    <p className="text-xs opacity-60 mt-1">
+                    {message.role === 'user' && (
+                      <div className="absolute inset-0 overflow-hidden">
+                        <div className="absolute inset-0 blur-3xl">
+                          <div
+                            className="absolute w-[250px] h-[250px] rounded-full opacity-40"
+                            style={{
+                              background: '#FDE047',
+                              top: '-50%',
+                              left: '5%',
+                            }}
+                          />
+                          <div
+                            className="absolute w-[300px] h-[300px] rounded-full opacity-40"
+                            style={{
+                              background: '#FBBF24',
+                              top: '-60%',
+                              left: '40%',
+                            }}
+                          />
+                          <div
+                            className="absolute w-[350px] h-[350px] rounded-full opacity-50"
+                            style={{
+                              background: '#F59E0B',
+                              top: '-70%',
+                              right: '-10%',
+                            }}
+                          />
+                        </div>
+                      </div>
+                    )}
+                    <p className="text-sm whitespace-pre-wrap relative z-10">{message.content}</p>
+                    <p className="text-xs opacity-60 mt-1 relative z-10">
                       {message.timestamp.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })}
                     </p>
                   </div>
@@ -128,11 +154,12 @@ const Query = () => {
       </div>
 
       {/* Query Box */}
-      <div className="border-t border-border">
+      <div className="border-t border-border/50 relative z-10" style={{ backgroundColor: 'rgba(255, 255, 255, 0.8)', backdropFilter: 'blur(10px)' }}>
         <RuixenQueryBox
           onSend={handleSendMessage}
-          placeholder="Search for papers, authors, or topics..."
+          placeholder="Ask about papers, authors, or research topics..."
           disabled={isLoading}
+          showGradient={true}
         />
       </div>
     </div>

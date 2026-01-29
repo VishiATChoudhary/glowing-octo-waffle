@@ -446,10 +446,10 @@ interface ResearchersTableProps {
 }
 
 const ResearchersTable = ({ researchers, onSelect, onEnrich, enrichingIds }: ResearchersTableProps) => (
-  <div className="border border-border rounded-lg overflow-hidden">
+  <div className="border border-amber-500 rounded-lg overflow-hidden">
     <table className="w-full">
-      <thead className="bg-secondary">
-        <tr className="text-left text-xs font-medium text-muted-foreground">
+      <thead className="bg-secondary border-b border-amber-500">
+        <tr className="text-left text-xs font-medium text-amber-700">
           <th className="px-4 py-3">Name</th>
           <th className="px-4 py-3">Affiliation</th>
           <th className="px-4 py-3 text-center">h-index</th>
@@ -459,7 +459,7 @@ const ResearchersTable = ({ researchers, onSelect, onEnrich, enrichingIds }: Res
           <th className="px-4 py-3 text-center">Actions</th>
         </tr>
       </thead>
-      <tbody className="divide-y divide-border">
+      <tbody>
         {researchers.map((researcher) => {
           const isEnriching = enrichingIds.has(researcher.id);
           const isEnriched = !!researcher.enrichedAt;
@@ -547,7 +547,7 @@ const ResearcherCard = ({ researcher, onClick, onEnrich, isEnriching }: Research
 
   return (
     <Card
-      className="hover:shadow-md transition-shadow cursor-pointer"
+      className="hover:shadow-md transition-shadow cursor-pointer border-amber-500"
       onClick={onClick}
     >
       <CardContent className="p-4">
@@ -643,7 +643,7 @@ const ResearcherPopup = ({ researcher, onClose }: ResearcherPopupProps) => {
               exit={{ opacity: 0, scale: 0.95, y: 20 }}
               className="w-full max-w-lg pointer-events-auto max-h-[90vh] overflow-hidden flex flex-col"
             >
-              <Card className="flex flex-col overflow-hidden">
+              <Card className="flex flex-col overflow-hidden border-amber-500">
                 <CardContent className="p-6 overflow-y-auto">
                   <div className="flex items-start gap-4">
                     <div className="w-14 h-14 rounded-full flex items-center justify-center flex-shrink-0 border-2 border-yellow-400 bg-transparent">
@@ -825,7 +825,7 @@ const EnrichmentPopup = ({ result, onClose }: EnrichmentPopupProps) => {
               exit={{ opacity: 0, scale: 0.95, y: 20 }}
               className="w-full max-w-lg pointer-events-auto"
             >
-              <Card>
+              <Card className="border-amber-500">
                 <CardContent className="p-6">
                   {/* Header */}
                   <div className="flex items-center gap-3 mb-4">

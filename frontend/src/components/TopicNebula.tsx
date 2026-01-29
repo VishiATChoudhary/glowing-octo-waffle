@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { motion } from "framer-motion";
-import { WordcloudChart, WordData } from "@/components/ui/word-cloud";
+import { CirclePacking, CircleNode } from "@/components/ui/circle-packing";
 
 export interface NebulaNode {
   id: string;
@@ -44,32 +44,58 @@ const TopicNebula: React.FC<TopicNebulaProps> = ({
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
-  // Convert TopicNebulaData to WordData format
-  const words: WordData[] = React.useMemo(() => {
-    if (!data) return [];
+  // Convert TopicNebulaData to hierarchical CircleNode format
+  const circleData: CircleNode = React.useMemo(() => {
+    if (!data) return { name: "Root", children: [] };
 
-    const allNodes = [data.centralNode, ...data.relatedNodes];
-    return allNodes.map((node) => ({
-      text: node.text,
-      value: node.weight,
-      type: node.type,
-    }));
+    // Group related nodes by type
+    const applicationNodes = data.relatedNodes
+      .filter(node => node.type === 'application')
+      .map(node => ({
+        name: node.text,
+        value: node.weight,
+        type: node.type
+      }));
+
+    const technicalNodes = data.relatedNodes
+      .filter(node => node.type === 'technical')
+      .map(node => ({
+        name: node.text,
+        value: node.weight,
+        type: node.type
+      }));
+
+    return {
+      name: data.centralNode.text,
+      type: 'core',
+      children: [
+        ...(applicationNodes.length > 0 ? [{
+          name: 'Applications',
+          type: 'application' as const,
+          children: applicationNodes
+        }] : []),
+        ...(technicalNodes.length > 0 ? [{
+          name: 'Technical',
+          type: 'technical' as const,
+          children: technicalNodes
+        }] : [])
+      ]
+    };
   }, [data]);
 
   return (
     <motion.div
       ref={containerRef}
-      className="w-full h-full relative bg-background"
+      className="w-full h-full relative bg-white"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 0.8 }}
     >
       {dimensions.width > 0 && dimensions.height > 0 && (
-        <WordcloudChart
+        <CirclePacking
+          data={circleData}
           width={dimensions.width}
           height={dimensions.height}
-          words={words}
-          showControls={false}
         />
       )}
     </motion.div>

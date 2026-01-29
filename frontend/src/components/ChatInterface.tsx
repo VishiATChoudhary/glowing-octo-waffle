@@ -13,6 +13,7 @@ interface ChatInterfaceProps {
   title?: string;
   subtitle?: string;
   showGradientHeader?: boolean;
+  showOrangePurpleGradient?: boolean;
 }
 
 const ChatInterface = ({
@@ -23,6 +24,7 @@ const ChatInterface = ({
   title = "Query Papers",
   subtitle = "Search across your enabled integrations",
   showGradientHeader = false,
+  showOrangePurpleGradient = false,
 }: ChatInterfaceProps) => {
   const [input, setInput] = useState('');
   const messagesEndRef = useRef<HTMLDivElement>(null);
@@ -46,7 +48,67 @@ const ChatInterface = ({
   return (
     <div className="flex flex-col h-full">
       {/* Header */}
-      {showGradientHeader ? (
+      {showOrangePurpleGradient ? (
+        <div className="relative overflow-hidden p-6 border-b border-border" style={{ backgroundColor: 'white' }}>
+          {/* Orange to Pink Gradient Background - only on header card */}
+          <div className="absolute inset-0 overflow-hidden">
+            <div className="absolute inset-0 blur-3xl">
+              <div
+                className="absolute w-[400px] h-[500px] rounded-full opacity-[0.08]"
+                style={{
+                  background: '#FDBA74',
+                  top: '-50%',
+                  left: '-40%',
+                }}
+              />
+              <div
+                className="absolute w-[350px] h-[450px] rounded-full opacity-[0.10]"
+                style={{
+                  background: '#FB923C',
+                  top: '-45%',
+                  left: '-20%',
+                }}
+              />
+              <div
+                className="absolute w-[320px] h-[420px] rounded-full opacity-[0.08]"
+                style={{
+                  background: '#F97316',
+                  top: '-40%',
+                  left: '0%',
+                }}
+              />
+              <div
+                className="absolute w-[300px] h-[400px] rounded-full opacity-[0.06]"
+                style={{
+                  background: '#FED7AA',
+                  top: '-35%',
+                  left: '20%',
+                }}
+              />
+              <div
+                className="absolute w-[320px] h-[420px] rounded-full opacity-[0.07]"
+                style={{
+                  background: '#F9A8D4',
+                  top: '-50%',
+                  right: '-25%',
+                }}
+              />
+              <div
+                className="absolute w-[280px] h-[380px] rounded-full opacity-[0.08]"
+                style={{
+                  background: '#F472B6',
+                  top: '-45%',
+                  right: '-5%',
+                }}
+              />
+            </div>
+          </div>
+          <div className="relative z-10">
+            <h2 className="text-lg font-semibold">{title}</h2>
+            <p className="text-sm text-muted-foreground">{subtitle}</p>
+          </div>
+        </div>
+      ) : showGradientHeader ? (
         <div className="relative overflow-hidden p-6 border-b border-border" style={{ backgroundColor: 'white' }}>
           {/* Static Gradient Background */}
           <div className="absolute inset-0 overflow-hidden">
@@ -153,8 +215,62 @@ const ChatInterface = ({
       </div>
 
       {/* Input */}
-      <form onSubmit={handleSubmit} className="p-4 border-t border-border">
-        <div className="flex gap-2">
+      <form onSubmit={handleSubmit} className={`p-4 border-t border-border ${showOrangePurpleGradient ? 'relative overflow-hidden' : ''}`} style={showOrangePurpleGradient ? { backgroundColor: 'white' } : {}}>
+        {showOrangePurpleGradient && (
+          <div className="absolute inset-0 overflow-hidden">
+            <div className="absolute inset-0 blur-3xl">
+              <div
+                className="absolute w-[400px] h-[500px] rounded-full opacity-[0.08]"
+                style={{
+                  background: '#FDBA74',
+                  bottom: '-50%',
+                  left: '-40%',
+                }}
+              />
+              <div
+                className="absolute w-[350px] h-[450px] rounded-full opacity-[0.10]"
+                style={{
+                  background: '#FB923C',
+                  bottom: '-45%',
+                  left: '-20%',
+                }}
+              />
+              <div
+                className="absolute w-[320px] h-[420px] rounded-full opacity-[0.08]"
+                style={{
+                  background: '#F97316',
+                  bottom: '-40%',
+                  left: '0%',
+                }}
+              />
+              <div
+                className="absolute w-[300px] h-[400px] rounded-full opacity-[0.06]"
+                style={{
+                  background: '#FED7AA',
+                  bottom: '-35%',
+                  left: '20%',
+                }}
+              />
+              <div
+                className="absolute w-[320px] h-[420px] rounded-full opacity-[0.07]"
+                style={{
+                  background: '#F9A8D4',
+                  bottom: '-50%',
+                  right: '-25%',
+                }}
+              />
+              <div
+                className="absolute w-[280px] h-[380px] rounded-full opacity-[0.08]"
+                style={{
+                  background: '#F472B6',
+                  bottom: '-45%',
+                  right: '-5%',
+                }}
+              />
+            </div>
+          </div>
+        )}
+        <div className={`flex gap-2 ${showOrangePurpleGradient ? 'relative z-10' : ''}`}>
           <Input
             value={input}
             onChange={(e) => setInput(e.target.value)}
