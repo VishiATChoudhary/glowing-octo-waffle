@@ -10,11 +10,15 @@ ARG VITE_PIPELINE_API_URL=https://us-central1-waffle-mm.cloudfunctions.net
 ARG VITE_API_BASE_URL=https://us-central1-waffle-mm.cloudfunctions.net
 ARG VITE_GMAIL_API_URL=https://us-central1-waffle-mm.cloudfunctions.net
 ARG VITE_AUTH_API_URL=https://us-central1-waffle-mm.cloudfunctions.net
+ARG VITE_DEMO_MODE=false
+ARG VITE_GEMINI_API_KEY
 
 ENV VITE_PIPELINE_API_URL=$VITE_PIPELINE_API_URL
 ENV VITE_API_BASE_URL=$VITE_API_BASE_URL
 ENV VITE_GMAIL_API_URL=$VITE_GMAIL_API_URL
 ENV VITE_AUTH_API_URL=$VITE_AUTH_API_URL
+ENV VITE_DEMO_MODE=$VITE_DEMO_MODE
+ENV VITE_GEMINI_API_KEY=$VITE_GEMINI_API_KEY
 
 RUN npm run build
 

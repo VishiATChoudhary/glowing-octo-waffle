@@ -24,6 +24,7 @@ import Register from "./pages/Register";
 import ForgotPassword from "./pages/ForgotPassword";
 import ResetPassword from "./pages/ResetPassword";
 import TotalRevenue from "./pages/TotalRevenue";
+import TalentPipeline from "./pages/TalentPipeline";
 import FastestRisingTopics from "./pages/FastestRisingTopics";
 import NotFound from "./pages/NotFound";
 import { SearchProvider } from "./contexts/SearchContext";
@@ -132,7 +133,8 @@ const App = () => (
                                 <Layout><TotalRevenue /></Layout>
                               </ProtectedRoute>
                             } />
-                            <Route path="/fastest-rising-topics" element={
+                            <Route path="/talent-pipeline" element={<TalentPipeline />} />
+                      <Route path="/fastest-rising-topics" element={
                               <ProtectedRoute>
                                 <Layout><FastestRisingTopics /></Layout>
                               </ProtectedRoute>

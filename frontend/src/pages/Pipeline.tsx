@@ -190,6 +190,9 @@ function LogLine({ log, index }: { log: LogEntry; index: number }) {
 // =============================================================================
 
 const Pipeline = () => {
+  // Check demo mode (frontend env var)
+  const demoMode = import.meta.env.VITE_DEMO_MODE === 'true';
+
   // Contexts
   const { openaiApiKey, geminiApiKey, getIntegration } = useSettings();
   const { loadFromDatabase: loadResearchers } = useResearchers();
@@ -212,7 +215,7 @@ const Pipeline = () => {
 
   // Form state
   const [query, setQuery] = useState(pipelineState.lastQuery);
-  const [maxResults, setMaxResults] = useState(20);
+  const [maxResults, setMaxResults] = useState(demoMode ? 5 : 20);
   const [sources, setSources] = useState({
     arxiv: true,
     semanticScholar: true,
@@ -291,8 +294,13 @@ const Pipeline = () => {
 
   // Handle log entry
   const handleLog = useCallback((log: LogEntry) => {
+    // In demo mode, suppress scraping source errors (search step errors)
+    if (demoMode && log.status === 'error' && log.step === 'search') {
+      // Silently ignore scraping errors
+      return;
+    }
     addLog(log);
-  }, [addLog]);
+  }, [addLog, demoMode]);
 
   // Build sources array helper
   const getSelectedSources = (): ('arxiv' | 'semantic-scholar' | 'openalex')[] => {
@@ -306,6 +314,16 @@ const Pipeline = () => {
   // Get API keys from settings helper
   const getApiKeys = () => {
     const perplexityIntegration = getIntegration('perplexity');
+
+    // In demo mode, use API keys from environment variables
+    if (demoMode) {
+      return {
+        gemini: import.meta.env.VITE_GEMINI_API_KEY || undefined,
+        openai: import.meta.env.VITE_OPENAI_API_KEY || undefined,
+        perplexity: import.meta.env.VITE_PERPLEXITY_API_KEY || undefined,
+      };
+    }
+
     return {
       gemini: geminiApiKey || undefined,
       openai: openaiApiKey || undefined,
@@ -640,8 +658,11 @@ const Pipeline = () => {
                 max={100}
                 value={maxResults}
                 onChange={(e) => setMaxResults(parseInt(e.target.value) || 20)}
-                disabled={isRunning}
+                disabled={isRunning || demoMode}
               />
+              {demoMode && (
+                <p className="text-xs text-muted-foreground">Fixed to 5 in demo mode</p>
+              )}
             </div>
 
             {/* Auto Mode Toggle */}
@@ -651,7 +672,9 @@ const Pipeline = () => {
                   Auto Mode
                 </Label>
                 <p className="text-xs text-muted-foreground mt-0.5">
-                  {autoMode
+                  {demoMode
+                    ? 'Fixed to manual mode in demo'
+                    : autoMode
                     ? 'Auto-filter papers by viability (>3.5)'
                     : 'Manual paper selection after search'}
                 </p>
@@ -660,7 +683,7 @@ const Pipeline = () => {
                 id="autoMode"
                 checked={autoMode}
                 onCheckedChange={setAutoMode}
-                disabled={isRunning}
+                disabled={isRunning || demoMode}
               />
             </div>
 
@@ -748,9 +771,12 @@ const Pipeline = () => {
                           max={500}
                           value={maxResearchers}
                           onChange={(e) => setMaxResearchers(parseInt(e.target.value) || 0)}
-                          disabled={isRunning}
+                          disabled={isRunning || demoMode}
                           className="h-8"
                         />
+                        {demoMode && (
+                          <p className="text-xs text-muted-foreground">Fixed to 10 in demo mode</p>
+                        )}
                       </div>
                     )}
                   </motion.div>

@@ -643,6 +643,18 @@ export function parseProgress(message: string): { current: number; total: number
 }
 
 // =============================================================================
+// Demo Mode
+// =============================================================================
+
+/**
+ * Check if VITE_DEMO_MODE is enabled (frontend-only, no backend call needed).
+ * Demo mode overrides certain settings for demonstration purposes.
+ */
+export function isDemoMode(): boolean {
+  return import.meta.env.VITE_DEMO_MODE === 'true';
+}
+
+// =============================================================================
 // Dev Mode
 // =============================================================================
 

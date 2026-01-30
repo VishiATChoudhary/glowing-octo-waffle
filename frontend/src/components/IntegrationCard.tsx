@@ -8,9 +8,10 @@ interface IntegrationCardProps {
   integration: Integration;
   onToggle: (id: string, enabled: boolean) => void;
   onEdit: (integration: Integration) => void;
+  disabled?: boolean;
 }
 
-const IntegrationCard = ({ integration, onToggle, onEdit }: IntegrationCardProps) => {
+const IntegrationCard = ({ integration, onToggle, onEdit, disabled }: IntegrationCardProps) => {
   const needsEmail = integration.configFields?.includes('email');
   const needsApiKey = integration.requiresKey || integration.configFields?.includes('apiKey');
   const hasEmail = !!integration.email;
@@ -50,12 +51,14 @@ const IntegrationCard = ({ integration, onToggle, onEdit }: IntegrationCardProps
             size="icon"
             onClick={() => onEdit(integration)}
             className="h-8 w-8"
+            disabled={disabled}
           >
             <Settings className="w-4 h-4" />
           </Button>
           <Switch
             checked={integration.enabled}
             onCheckedChange={(checked) => onToggle(integration.id, checked)}
+            disabled={disabled}
           />
         </div>
       </div>

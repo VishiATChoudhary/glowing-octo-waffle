@@ -940,8 +940,13 @@ const ResearcherPopup = ({ researcher, onClose, onSavePapers }: ResearcherPopupP
   const [analyzingPaperIds, setAnalyzingPaperIds] = useState<Set<string>>(new Set());
   const [viabilityErrors, setViabilityErrors] = useState<Record<string, string>>({});
 
-  // Get API keys from settings
+  // Check demo mode (frontend env var)
+  const demoMode = import.meta.env.VITE_DEMO_MODE === 'true';
+
+  // Get API keys from settings (or env vars in demo mode)
   const { geminiApiKey, openaiApiKey } = useSettings();
+  const effectiveGeminiKey = demoMode ? import.meta.env.VITE_GEMINI_API_KEY : geminiApiKey;
+  const effectiveOpenaiKey = demoMode ? import.meta.env.VITE_OPENAI_API_KEY : openaiApiKey;
 
   // Reset state when researcher changes
   const handleClose = () => {
@@ -992,8 +997,8 @@ const ResearcherPopup = ({ researcher, onClose, onSavePapers }: ResearcherPopupP
           abstract: paper.abstract,
         },
         {
-          gemini: geminiApiKey || undefined,
-          openai: openaiApiKey || undefined,
+          gemini: effectiveGeminiKey || undefined,
+          openai: effectiveOpenaiKey || undefined,
         }
       );
 
@@ -1446,7 +1451,11 @@ interface EmailDraftPopupProps {
 }
 
 const EmailDraftPopup = ({ researcher, onClose }: EmailDraftPopupProps) => {
+  // Check demo mode (frontend env var)
+  const demoMode = import.meta.env.VITE_DEMO_MODE === 'true';
+
   const { geminiApiKey } = useSettings();
+  const effectiveGeminiKey = demoMode ? import.meta.env.VITE_GEMINI_API_KEY : geminiApiKey;
 
   // Form state
   const [toEmail, setToEmail] = useState('');
@@ -1495,7 +1504,7 @@ const EmailDraftPopup = ({ researcher, onClose }: EmailDraftPopupProps) => {
         selectedPaper ? { title: selectedPaper.title } : undefined,
         purpose,
         undefined,
-        { gemini: geminiApiKey || undefined }
+        { gemini: effectiveGeminiKey || undefined }
       );
 
       if (result.success && result.email) {
@@ -1642,7 +1651,7 @@ const EmailDraftPopup = ({ researcher, onClose }: EmailDraftPopupProps) => {
                     {/* Generate Button */}
                     <Button
                       onClick={handleGenerate}
-                      disabled={isGenerating || !geminiApiKey}
+                      disabled={isGenerating || !effectiveGeminiKey}
                       className="w-full gap-2"
                       variant={generateError ? 'destructive' : 'default'}
                     >
@@ -1659,7 +1668,7 @@ const EmailDraftPopup = ({ researcher, onClose }: EmailDraftPopupProps) => {
                       )}
                     </Button>
 
-                    {!geminiApiKey && (
+                    {!effectiveGeminiKey && (
                       <p className="text-xs text-muted-foreground text-center">
                         Add Gemini API key in Settings to enable AI generation
                       </p>

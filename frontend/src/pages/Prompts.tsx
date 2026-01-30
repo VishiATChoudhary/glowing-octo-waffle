@@ -27,6 +27,9 @@ import { useSettings, defaultPrompts, PromptConfig } from '@/contexts/SettingsCo
 import { useToast } from '@/hooks/use-toast';
 
 const Prompts = () => {
+  // Check demo mode (frontend env var)
+  const demoMode = import.meta.env.VITE_DEMO_MODE === 'true';
+
   const { prompts, updatePrompt, resetPrompt, resetAllPrompts } = useSettings();
   const { toast } = useToast();
 
@@ -134,13 +137,14 @@ const Prompts = () => {
               Customize AI prompts for various features
             </p>
           </div>
-          <AlertDialog>
-            <AlertDialogTrigger asChild>
-              <Button variant="outline" size="sm">
-                <RotateCcw className="w-4 h-4 mr-2" />
-                Reset All
-              </Button>
-            </AlertDialogTrigger>
+          {!demoMode && (
+            <AlertDialog>
+              <AlertDialogTrigger asChild>
+                <Button variant="outline" size="sm">
+                  <RotateCcw className="w-4 h-4 mr-2" />
+                  Reset All
+                </Button>
+              </AlertDialogTrigger>
             <AlertDialogContent>
               <AlertDialogHeader>
                 <AlertDialogTitle>Reset all prompts?</AlertDialogTitle>
@@ -154,8 +158,17 @@ const Prompts = () => {
               </AlertDialogFooter>
             </AlertDialogContent>
           </AlertDialog>
+          )}
         </div>
       </div>
+
+      {demoMode && (
+        <div className="mx-6 mt-4 p-3 bg-amber-500/10 border border-amber-500/20 rounded-md">
+          <p className="text-sm text-amber-600 dark:text-amber-400">
+            Prompt customization is disabled in demo mode. In production, you can fully customize all AI prompts to match your workflow.
+          </p>
+        </div>
+      )}
 
       <div className="p-6">
         <Accordion type="single" collapsible className="space-y-4">
@@ -195,6 +208,7 @@ const Prompts = () => {
                         onChange={(e) => handleChange(prompt.id, 'systemPrompt', e.target.value)}
                         placeholder="Enter system prompt..."
                         className="min-h-[120px] font-mono text-sm"
+                        disabled={demoMode}
                       />
                       <p className="text-xs text-muted-foreground">
                         Sets the AI's behavior and role for this task
@@ -209,53 +223,56 @@ const Prompts = () => {
                         onChange={(e) => handleChange(prompt.id, 'userPrompt', e.target.value)}
                         placeholder="Enter user prompt template..."
                         className="min-h-[200px] font-mono text-sm"
+                        disabled={demoMode}
                       />
                       <p className="text-xs text-muted-foreground">
                         Template with placeholders like {'{variable}'} that get filled in at runtime
                       </p>
                     </div>
 
-                    <div className="flex justify-end gap-2 pt-2">
-                      <AlertDialog>
-                        <AlertDialogTrigger asChild>
-                          <Button
-                            variant="outline"
-                            size="sm"
-                            disabled={!isModifiedFromDefault(prompt.id) && !hasChanges(prompt.id)}
-                          >
-                            <RotateCcw className="w-4 h-4 mr-2" />
-                            Reset to Default
-                          </Button>
-                        </AlertDialogTrigger>
-                        <AlertDialogContent>
-                          <AlertDialogHeader>
-                            <AlertDialogTitle>Reset this prompt?</AlertDialogTitle>
-                            <AlertDialogDescription>
-                              This will reset "{prompt.name}" to its default value. Your customizations will be lost.
-                            </AlertDialogDescription>
-                          </AlertDialogHeader>
-                          <AlertDialogFooter>
-                            <AlertDialogCancel>Cancel</AlertDialogCancel>
-                            <AlertDialogAction onClick={() => handleReset(prompt.id)}>
-                              Reset
-                            </AlertDialogAction>
-                          </AlertDialogFooter>
-                        </AlertDialogContent>
-                      </AlertDialog>
-                      <Button
-                        size="sm"
-                        onClick={() => handleSave(prompt.id)}
-                        disabled={!hasChanges(prompt.id)}
-                        className="gap-1"
-                      >
-                        {savedPrompts[prompt.id] ? (
-                          <Check className="w-4 h-4" />
-                        ) : (
-                          <Save className="w-4 h-4" />
-                        )}
-                        {savedPrompts[prompt.id] ? 'Saved' : 'Save'}
-                      </Button>
-                    </div>
+                    {!demoMode && (
+                      <div className="flex justify-end gap-2 pt-2">
+                        <AlertDialog>
+                          <AlertDialogTrigger asChild>
+                            <Button
+                              variant="outline"
+                              size="sm"
+                              disabled={!isModifiedFromDefault(prompt.id) && !hasChanges(prompt.id)}
+                            >
+                              <RotateCcw className="w-4 h-4 mr-2" />
+                              Reset to Default
+                            </Button>
+                          </AlertDialogTrigger>
+                          <AlertDialogContent>
+                            <AlertDialogHeader>
+                              <AlertDialogTitle>Reset this prompt?</AlertDialogTitle>
+                              <AlertDialogDescription>
+                                This will reset "{prompt.name}" to its default value. Your customizations will be lost.
+                              </AlertDialogDescription>
+                            </AlertDialogHeader>
+                            <AlertDialogFooter>
+                              <AlertDialogCancel>Cancel</AlertDialogCancel>
+                              <AlertDialogAction onClick={() => handleReset(prompt.id)}>
+                                Reset
+                              </AlertDialogAction>
+                            </AlertDialogFooter>
+                          </AlertDialogContent>
+                        </AlertDialog>
+                        <Button
+                          size="sm"
+                          onClick={() => handleSave(prompt.id)}
+                          disabled={!hasChanges(prompt.id)}
+                          className="gap-1"
+                        >
+                          {savedPrompts[prompt.id] ? (
+                            <Check className="w-4 h-4" />
+                          ) : (
+                            <Save className="w-4 h-4" />
+                          )}
+                          {savedPrompts[prompt.id] ? 'Saved' : 'Save'}
+                        </Button>
+                      </div>
+                    )}
                   </div>
                 </AccordionContent>
               </AccordionItem>

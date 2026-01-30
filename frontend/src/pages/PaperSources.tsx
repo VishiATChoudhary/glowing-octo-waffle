@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { Plus, ChevronLeft, Database } from 'lucide-react';
+import { Plus, ChevronLeft, Database, Mail } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import IntegrationCard from '@/components/IntegrationCard';
 import IntegrationModal from '@/components/IntegrationModal';
@@ -9,13 +9,26 @@ import { Integration } from '@/types';
 import { useSettings } from '@/contexts/SettingsContext';
 import { useToast } from '@/hooks/use-toast';
 
+// Sources enabled by default in demo mode
+const DEMO_ENABLED_SOURCES = ['arxiv', 'semantic-scholar', 'openalex'];
+
 const PaperSources = () => {
+  // Check demo mode (frontend env var)
+  const demoMode = import.meta.env.VITE_DEMO_MODE === 'true';
   const {
     integrations,
     toggleIntegration,
     updateIntegration,
     addIntegration,
   } = useSettings();
+
+  // In demo mode, override enabled state to only show arxiv, semantic-scholar, openalex
+  const displayIntegrations = demoMode
+    ? integrations.map(int => ({
+        ...int,
+        enabled: DEMO_ENABLED_SOURCES.includes(int.id),
+      }))
+    : integrations;
 
   const [editingIntegration, setEditingIntegration] = useState<Integration | null>(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -24,7 +37,7 @@ const PaperSources = () => {
 
   const handleToggle = (id: string, enabled: boolean) => {
     toggleIntegration(id, enabled);
-    const integration = integrations.find((int) => int.id === id);
+    const integration = displayIntegrations.find((int) => int.id === id);
     toast({
       title: enabled ? 'Integration Enabled' : 'Integration Disabled',
       description: `${integration?.name} has been ${enabled ? 'enabled' : 'disabled'}.`,
@@ -59,7 +72,7 @@ const PaperSources = () => {
     }
   };
 
-  const enabledCount = integrations.filter((int) => int.enabled).length;
+  const enabledCount = displayIntegrations.filter((int) => int.enabled).length;
 
   return (
     <div className="h-screen overflow-y-auto">
@@ -75,13 +88,27 @@ const PaperSources = () => {
           <div>
             <h2 className="text-lg font-semibold">Paper Sources</h2>
             <p className="text-sm text-muted-foreground">
-              {enabledCount} of {integrations.length} sources active
+              {enabledCount} of {displayIntegrations.length} sources active
             </p>
           </div>
-          <Button onClick={handleAdd} variant="outline" size="sm">
-            <Plus className="w-4 h-4 mr-2" />
-            Add Source
-          </Button>
+          <div className="flex items-center gap-2">
+            {demoMode && (
+              <Button
+                variant="outline"
+                size="sm"
+                onClick={() => window.location.href = 'mailto:vishi.waffle@gmail.com?subject=Integration%20Request'}
+              >
+                <Mail className="w-4 h-4 mr-2" />
+                Request Integration
+              </Button>
+            )}
+            {!demoMode && (
+              <Button onClick={handleAdd} variant="outline" size="sm">
+                <Plus className="w-4 h-4 mr-2" />
+                Add Source
+              </Button>
+            )}
+          </div>
         </div>
       </div>
 
@@ -100,12 +127,13 @@ const PaperSources = () => {
           }}
           className="grid gap-4"
         >
-          {integrations.map((integration) => (
+          {displayIntegrations.map((integration) => (
             <IntegrationCard
               key={integration.id}
               integration={integration}
               onToggle={handleToggle}
               onEdit={handleEdit}
+              disabled={demoMode}
             />
           ))}
         </motion.div>
